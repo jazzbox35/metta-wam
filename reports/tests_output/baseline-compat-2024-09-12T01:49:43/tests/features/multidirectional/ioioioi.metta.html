@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+<title></title>
+<style type="text/css"
+>
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi36 { color: #00aaaa; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content"
+>
+Script started on 2024-09-12 03:07:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
+;           (set_option_value  prolog false)
+
+P;HTML|
+;           (set_option_value  compat auto)
+
+P;HTML|
+;           (set_option_value  compatio true)
+P;HTML|
+;            (is_cmd_option  prescan halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  prescan stdin --stdin=tty tty)
+P;HTML|
+;             (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  prescan stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  prescan stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;            (set_option_value  prolog false)
+P;HTML|
+;            (set_option_value  compat auto)
+P;HTML|
+;            (set_option_value  compatio true)
+P;HTML|
+;          (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;           (set_option_value  python enable)
+P;HTML|
+;          (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;           (set_option_value  timeout 40)
+P;HTML|
+;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/ ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (set_option_value  output ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (is_cmd_option  execute html --html true)
+P;HTML|
+;            (set_option_value  html true)
+P;HTML|
+;           (is_cmd_option  execute test --test true)
+P;HTML|
+;            (set_option_value  test true)
+
+; (load_metta_file  &self tests/features/multidirectional/ioioioi.metta)
+P;HTML|
+;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/features/multidirectional/ioioioi.metta)
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/features/multidirectional/ioioioi.metta.answers /home/runner/work/metta-wam/metta-wam/tests/features/multidirectional/ioioioi.metta)
+P;HTML|
+;                                           (= 1  "[()]")
+P;HTML|
+;                                           (= 2  "[()]")
+P;HTML|
+;                                           (= 3  "[()]")
+P;HTML|
+;                                           (= 4  "[()]")
+P;HTML|
+;                                           (= 5  "[()]")
+P;HTML|
+;                                           (= 6  "0.10user 0.00system 0:00.11elapsed 98%CPU (0avgtext+0avgdata 35020maxresident)k")
+P;HTML|
+;                                           (= 6  "0inputs+0outputs (0major+3900minor)pagefaults 0swaps")
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/features/multidirectional/ioioioi.metta.answers /home/runner/work/metta-wam/metta-wam/tests/features/multidirectional/ioioioi.metta)
+
+;;;; Test if we can implemnt Multidirectional append
+;;; append([], L, L).
+<span class="ansi38-255165000"
+>  (= 
+    (append Nil $L $L) True)
+</span>;;; append([H|T], L, [H|R]) :- append(T, L, R).
+<span class="ansi38-255165000"
+>  (= 
+    (append 
+      (Cons $H $T) $L 
+      (Cons $H $R)) 
+    (append $T $L $R))
+</span>;;; (append ++ ++ -- )
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (let $ 
+      (append 
+        (Cons 1 
+          (Cons 2 Nil)) 
+        (Cons 3 
+          (Cons 4 Nil)) $Out) $Out) 
+    ( (Cons 1 
+        (Cons 2 
+          (Cons 3 
+            (Cons 4 Nil))))))
+
+</span>[
+
+;<h3 id="MULTIDIRECTIONAL.IOIOIOI.01"
+>;; MULTIDIRECTIONAL.IOIOIOI.01</h3>
+; 
+; EVAL TEST
+; took 0.004 secs. (3.72 milliseconds) 
+
+  !(assertEqualToResult 
+    (let $ 
+      (append 
+        (Cons 1 
+          (Cons 2 Nil)) 
+        (Cons 3 
+          (Cons 4 Nil)) $Out) $Out) 
+    ( (Cons 1 
+        (Cons 2 
+          (Cons 3 
+            (Cons 4 Nil))))))
+
+<span class="ansi36"
+>  (loonit_success  
+    (equal_enough_for_test  
+      ( (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil))))) 
+      ( (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil)))))))
+</span>
+Deterministic: ()
+()]
+;;; (append ++ -- ++ )
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (let $ 
+      (append 
+        (Cons 1 
+          (Cons 2 Nil)) $Out 
+        (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil))))) $Out) 
+    ( (Cons 3 
+        (Cons 4 Nil))))
+
+</span>[
+
+;<h3 id="MULTIDIRECTIONAL.IOIOIOI.02"
+>;; MULTIDIRECTIONAL.IOIOIOI.02</h3>
+; 
+; EVAL TEST
+; took 0.003 secs. (3.24 milliseconds) 
+
+  !(assertEqualToResult 
+    (let $ 
+      (append 
+        (Cons 1 
+          (Cons 2 Nil)) $Out 
+        (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil))))) $Out) 
+    ( (Cons 3 
+        (Cons 4 Nil))))
+
+<span class="ansi36"
+>  (loonit_success  
+    (equal_enough_for_test  
+      ( (Cons 3 
+          (Cons 4 Nil))) 
+      ( (Cons 3 
+          (Cons 4 Nil)))))
+</span>
+Deterministic: ()
+()]
+;;; (append -- -- ++ )
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (let $ 
+      (append $What $Out 
+        (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil))))) 
+      ($What $Out)) 
+    ( ( (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil)))) Nil) 
+      ( (Cons 1 
+          (Cons 2 
+            (Cons 3 Nil))) (Cons 4 Nil)) 
+      ( (Cons 1 
+          (Cons 2 Nil)) (Cons 3 (Cons 4 Nil))) 
+      ( (Cons 1 Nil) (Cons 2 (Cons 3 (Cons 4 Nil)))) 
+      (Nil (Cons 1 (Cons 2 (Cons 3 (Cons 4 Nil)))))))
+
+</span>[
+
+;<h3 id="MULTIDIRECTIONAL.IOIOIOI.03"
+>;; MULTIDIRECTIONAL.IOIOIOI.03</h3>
+; 
+; EVAL TEST
+; took 0.013 secs. (13.46 milliseconds) 
+
+  !(assertEqualToResult 
+    (let $ 
+      (append $What $Out 
+        (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil))))) 
+      ($What $Out)) 
+    ( ( (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil)))) Nil) 
+      ( (Cons 1 
+          (Cons 2 
+            (Cons 3 Nil))) (Cons 4 Nil)) 
+      ( (Cons 1 
+          (Cons 2 Nil)) (Cons 3 (Cons 4 Nil))) 
+      ( (Cons 1 Nil) (Cons 2 (Cons 3 (Cons 4 Nil)))) 
+      (Nil (Cons 1 (Cons 2 (Cons 3 (Cons 4 Nil)))))))
+
+<span class="ansi36"
+>  (loonit_success  
+    (equal_enough_for_test  
+      ( (Nil (Cons 1 (Cons 2 (Cons 3 (Cons 4 Nil))))) 
+        ( (Cons 1 Nil) (Cons 2 (Cons 3 (Cons 4 Nil)))) 
+        ( (Cons 1 
+            (Cons 2 Nil)) (Cons 3 (Cons 4 Nil))) 
+        ( (Cons 1 
+            (Cons 2 
+              (Cons 3 Nil))) (Cons 4 Nil)) 
+        ( (Cons 1 
+            (Cons 2 
+              (Cons 3 
+                (Cons 4 Nil)))) Nil)) 
+      ( ( (Cons 1 
+            (Cons 2 
+              (Cons 3 
+                (Cons 4 Nil)))) Nil) 
+        ( (Cons 1 
+            (Cons 2 
+              (Cons 3 Nil))) (Cons 4 Nil)) 
+        ( (Cons 1 
+            (Cons 2 Nil)) (Cons 3 (Cons 4 Nil))) 
+        ( (Cons 1 Nil) (Cons 2 (Cons 3 (Cons 4 Nil)))) 
+        (Nil (Cons 1 (Cons 2 (Cons 3 (Cons 4 Nil))))))))
+</span>
+Deterministic: ()
+()]
+;;; (append ++ -- + )
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (let $ 
+      (append 
+        (Cons 1 
+          (Cons 2 Nil)) $Out 
+        (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil))))) $Out) 
+    ( (Cons 3 
+        (Cons 4 Nil))))
+
+</span>[
+
+;<h3 id="MULTIDIRECTIONAL.IOIOIOI.04"
+>;; MULTIDIRECTIONAL.IOIOIOI.04</h3>
+; 
+; EVAL TEST
+; took 0.003 secs. (3.24 milliseconds) 
+
+  !(assertEqualToResult 
+    (let $ 
+      (append 
+        (Cons 1 
+          (Cons 2 Nil)) $Out 
+        (Cons 1 
+          (Cons 2 
+            (Cons 3 
+              (Cons 4 Nil))))) $Out) 
+    ( (Cons 3 
+        (Cons 4 Nil))))
+
+<span class="ansi36"
+>  (loonit_success  
+    (equal_enough_for_test  
+      ( (Cons 3 
+          (Cons 4 Nil))) 
+      ( (Cons 3 
+          (Cons 4 Nil)))))
+</span>
+Deterministic: ()
+()]
+;;; (append ++ -- + )
+<span class="ansi38-013099040"
+>  !(assertEqual 
+    (let $ 
+      (append 
+        (Cons 1 
+          (Cons 2 Nil)) $Out 
+        (Cons 1 
+          (Cons 2 $What))) 
+      (== $Out $What)) True)
+
+</span>[
+
+;<h3 id="MULTIDIRECTIONAL.IOIOIOI.05"
+>;; MULTIDIRECTIONAL.IOIOIOI.05</h3>
+; 
+; EVAL TEST
+; took 0.002 secs. (1.77 milliseconds) 
+
+  !(assertEqual 
+    (let $ 
+      (append 
+        (Cons 1 
+          (Cons 2 Nil)) $Out 
+        (Cons 1 
+          (Cons 2 $What))) 
+      (== $Out $What)) True)
+
+<span class="ansi36"
+>  (loonit_success  
+    (equal_enough_for_test  
+      (True) 
+      (True)))
+</span>
+Deterministic: ()
+()]
+;;;!(and (== (append (Cons 1 (Cons 2 Nil)) (Cons 3 (Cons 4 Nil)) $Out) True) (println! $Out))
+<span class="ansi32"
+>% 395,338 inferences, 0.093 CPU in 0.093 seconds (100% CPU, 4253392 Lips)
+</span>P;HTML|
+;                         (= /home/runner/work/metta-wam/metta-wam/tests/features/multidirectional/ioioioi.metta  0)
+<span class="ansi1"
+>LoonIt Report
+</span>------------
+<span class="ansi32"
+>Successes: 5
+</span><span class="ansi32"
+>Failures: 0
+</span><br/> <a href="#" onclick="window.history.back(); return false;"
+>Return to summaries</a><br/>
+P;HTML|
+;           (is_cmd_option  execute halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  execute stdin --stdin=tty tty)
+P;HTML|
+;            (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  execute stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  execute stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;           (set_option_value  prolog false)
+P;HTML|
+;           (set_option_value  compat auto)
+P;HTML|
+;           (set_option_value  compatio true)
+
+Script done on 2024-09-12 03:07:59+00:00 [COMMAND_EXIT_CODE="7"]
+
+</pre>
+</body>
+
+</html>
+\033[0;32mCompleted successfully (EXITCODE=7) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/' --timeout=40 --html --repl=false  --test "tests/features/multidirectional/ioioioi.metta" --halt=true\033[0m

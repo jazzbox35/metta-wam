@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+<title></title>
+<style type="text/css"
+>
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165009 { color: #FFA509; }
+.ansi38-255238088 { color: #FFEE58; }
+.ansi38-013099040 { color: #0D6328; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content"
+>
+Script started on 2024-09-12 02:19:58+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
+;           (set_option_value  prolog false)
+
+P;HTML|
+;           (set_option_value  compat auto)
+
+P;HTML|
+;           (set_option_value  compatio true)
+P;HTML|
+;            (is_cmd_option  prescan halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  prescan stdin --stdin=tty tty)
+P;HTML|
+;             (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  prescan stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  prescan stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;            (set_option_value  prolog false)
+P;HTML|
+;            (set_option_value  compat auto)
+P;HTML|
+;            (set_option_value  compatio true)
+P;HTML|
+;          (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;           (set_option_value  python enable)
+P;HTML|
+;          (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;           (set_option_value  timeout 40)
+P;HTML|
+;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/ ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (set_option_value  output ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (is_cmd_option  execute html --html true)
+P;HTML|
+;            (set_option_value  html true)
+P;HTML|
+;           (is_cmd_option  execute test --test true)
+P;HTML|
+;            (set_option_value  test true)
+
+; (load_metta_file  &self tests/extended_compat/metta-examples/stack-based/interpreter.metta)
+P;HTML|
+;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/stack-based/interpreter.metta)
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/stack-based/interpreter.metta.answers /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/stack-based/interpreter.metta)
+P;HTML|
+;                                           (= 1  "Doing: timeout --foreground --kill-after=5 --signal=SIGINT 61 time metta /opt/logicmoo_workspace/packs_sys/logicmoo_opencog/MeTTa/hyperon-wam/reports/extended_compat/metta-examples/stack-based/interpreter.metta")
+P;HTML|
+;                                           (= 1  "5")
+P;HTML|
+;                                           (= 1  "[(basic E)]")
+P;HTML|
+;                                           (= 2  "0.05user 0.02system 0:00.08elapsed 100%CPU (0avgtext+0avgdata 33412maxresident)k")
+P;HTML|
+;                                           (= 2  "0inputs+0outputs (0major+3658minor)pagefaults 0swaps")
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/stack-based/interpreter.metta.answers /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/stack-based/interpreter.metta)
+<span class="ansi38-255165000"
+>  (= 
+    ( (basic $s) (put $x)) 
+    (basic ($s $x)))
+</span><span class="ansi38-255165000"
+>  (= 
+    ( (basic (($s $x) $y)) add) 
+    (basic ($s (+ $x $y))))
+</span><span class="ansi38-255165000"
+>  (= 
+    ( (basic ($s $x)) say) 
+    (let $ 
+      (println! $x) 
+      (basic $s)))
+</span><span class="ansi38-255165000"
+>  (= 
+    (f1 $int) 
+    ( ( ( ($int (put 2)) (put 3)) add) say))
+</span><span class="ansi38-255165009"
+>;; In file as:  
+</span><span class="ansi1 ansi38-255238088"
+>  !(f1 (basic E))
+</span>;; To unit test case:
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (f1 (basic E)) 
+    ( (basic E)))
+
+</span>[
+
+;<h3 id="STACK-BASED.INTERPRETER.01"
+>;; STACK-BASED.INTERPRETER.01</h3>
+$_95746
+(+ 2 $_7326)
+_7326
+2
+2
+_48874
+; 
+; EVAL TEST
+; took 0.008 secs. (7.93 milliseconds) 
+
+  !(assertEqualToResult 
+    (f1 (basic E)) 
+    ( (basic E)))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      ( (basic ((E 2) $_60252)) 
+        (basic E) 
+        (basic E) 
+        (basic E)) 
+      ( (basic E))))
+</span>
+Deterministic: ((Error  (got  ((basic ((E 2) $_60252)) (basic E) (basic E) (basic E))) (expected  ((basic E)))))
+  ( (Error  
+      (got  
+        ( (basic ((E 2) $_60252)) 
+          (basic E) 
+          (basic E) 
+          (basic E))) 
+      (expected  
+
+        ( (basic E)))))]
+<span class="ansi32"
+>% 174,115 inferences, 0.060 CPU in 0.060 seconds (100% CPU, 2919913 Lips)
+</span>P;HTML|
+;                         (= /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/stack-based/interpreter.metta  0)
+<span class="ansi1"
+>LoonIt Report
+</span>------------
+<span class="ansi32"
+>Successes: 0
+</span><span class="ansi31"
+>Failures: 1
+</span><br/> <a href="#" onclick="window.history.back(); return false;"
+>Return to summaries</a><br/>
+P;HTML|
+;           (is_cmd_option  execute halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  execute stdin --stdin=tty tty)
+P;HTML|
+;            (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  execute stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  execute stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;           (set_option_value  prolog false)
+P;HTML|
+;           (set_option_value  compat auto)
+P;HTML|
+;           (set_option_value  compatio true)
+
+Script done on 2024-09-12 02:20:02+00:00 [COMMAND_EXIT_CODE="7"]
+
+</pre>
+</body>
+
+</html>
+\033[0;32mCompleted successfully (EXITCODE=7) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/' --timeout=40 --html --repl=false  --test "tests/extended_compat/metta-examples/stack-based/interpreter.metta" --halt=true\033[0m

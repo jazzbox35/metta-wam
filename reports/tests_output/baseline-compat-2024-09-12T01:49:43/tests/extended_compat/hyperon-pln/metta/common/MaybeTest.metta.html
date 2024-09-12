@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+<title></title>
+<style type="text/css"
+>
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi36 { color: #00aaaa; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165009 { color: #FFA509; }
+.ansi38-255238088 { color: #FFEE58; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165009 { color: #FFA509; }
+.ansi38-255238088 { color: #FFEE58; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165009 { color: #FFA509; }
+.ansi38-255238088 { color: #FFEE58; }
+.ansi38-013099040 { color: #0D6328; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content"
+>
+Script started on 2024-09-12 02:28:51+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
+;           (set_option_value  prolog false)
+
+P;HTML|
+;           (set_option_value  compat auto)
+
+P;HTML|
+;           (set_option_value  compatio true)
+P;HTML|
+;            (is_cmd_option  prescan halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  prescan stdin --stdin=tty tty)
+P;HTML|
+;             (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  prescan stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  prescan stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;            (set_option_value  prolog false)
+P;HTML|
+;            (set_option_value  compat auto)
+P;HTML|
+;            (set_option_value  compatio true)
+P;HTML|
+;          (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;           (set_option_value  python enable)
+P;HTML|
+;          (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;           (set_option_value  timeout 40)
+P;HTML|
+;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/ ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (set_option_value  output ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (is_cmd_option  execute html --html true)
+P;HTML|
+;            (set_option_value  html true)
+P;HTML|
+;           (is_cmd_option  execute test --test true)
+P;HTML|
+;            (set_option_value  test true)
+
+; (load_metta_file  &self tests/extended_compat/hyperon-pln/metta/common/MaybeTest.metta)
+P;HTML|
+;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/MaybeTest.metta)
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/MaybeTest.metta.answers /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/MaybeTest.metta)
+P;HTML|
+;                                           (= 1  "+ '[' 0 -eq 1 ']'")
+P;HTML|
+;                                           (= 1  "+ echo 'Doing: timeout --foreground --kill-after=5 --signal=SIGINT 61 time metta /opt/logicmoo_opencog/hyperon-wam/examples/baseline_compat/hyperon-pln_metta/common/MaybeTest.metta'")
+P;HTML|
+;                                           (= 1  "Doing: timeout --foreground --kill-after=5 --signal=SIGINT 61 time metta /opt/logicmoo_opencog/hyperon-wam/examples/baseline_compat/hyperon-pln_metta/common/MaybeTest.metta")
+P;HTML|
+;                                           (= 1  "+ eval 'timeout --foreground --kill-after=5 --signal=SIGINT 61 time metta /opt/logicmoo_opencog/hyperon-wam/examples/baseline_compat/hyperon-pln_metta/common/MaybeTest.metta'")
+P;HTML|
+;                                           (= 1  "++ timeout --foreground --kill-after=5 --signal=SIGINT 61 time metta /opt/logicmoo_opencog/hyperon-wam/examples/baseline_compat/hyperon-pln_metta/common/MaybeTest.metta")
+P;HTML|
+;                                           (= 1  "[()]")
+P;HTML|
+;                                           (= 2  "[True]")
+P;HTML|
+;                                           (= 3  "[False]")
+P;HTML|
+;                                           (= 4  "[True]")
+P;HTML|
+;                                           (= 5  "0.02user 0.00system 0:00.02elapsed 96%CPU (0avgtext+0avgdata 24812maxresident)k")
+P;HTML|
+;                                           (= 5  "0inputs+0outputs (0major+2951minor)pagefaults 0swaps")
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/MaybeTest.metta.answers /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/MaybeTest.metta)
+
+<span class="ansi38-013099040"
+>  !(import! &self Maybe.metta)
+
+</span>[P;HTML|
+;                                           (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/Maybe.metta.answers /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/Maybe.metta)
+P;HTML|
+;                                           (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/Maybe.metta.answers /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/Maybe.metta)
+
+;;;; Define Maybe type
+<span class="ansi38-255165000"
+>  (: Maybe 
+    (-> $a Type))
+</span><span class="ansi38-255165000"
+>  (: Nothing 
+    (Maybe $a))
+</span><span class="ansi38-255165000"
+>  (: Just 
+    (-> $a 
+      (Maybe $a)))
+</span>;;;; Define greater than operator for Maybe (overloading is not
+;;;; supported at this point).
+<span class="ansi38-255165000"
+>  (= 
+    (Maybe< 
+      (Just $x) 
+      (Just $y)) 
+    (< $x $y))
+</span><span class="ansi38-255165000"
+>  (= 
+    (Maybe< 
+      (Just $x) Nothing) False)
+</span><span class="ansi38-255165000"
+>  (= 
+    (Maybe< Nothing 
+      (Just $x)) True)
+</span>
+Deterministic: ()
+()]
+;;;; Test Maybe
+<span class="ansi38-255165009"
+>;; In file as:  
+</span><span class="ansi1 ansi38-255238088"
+>  !(Maybe< 
+    (Just 10) 
+    (Just 20))
+</span>;; To unit test case:
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (Maybe< 
+      (Just 10) 
+      (Just 20)) 
+    (True))
+
+</span>[
+
+;<h3 id="COMMON.MAYBETEST.01"
+>;; COMMON.MAYBETEST.01</h3>
+; 
+; EVAL TEST
+; took 0.001 secs. (1.07 milliseconds) 
+
+  !(assertEqualToResult 
+    (Maybe< 
+      (Just 10) 
+      (Just 20)) 
+    (True))
+
+<span class="ansi36"
+>  (loonit_success  
+    (equal_enough_for_test  
+      (True) 
+      (True)))
+</span>
+Deterministic: ()
+()]
+<span class="ansi38-255165009"
+>;; In file as:  
+</span><span class="ansi1 ansi38-255238088"
+>  !(Maybe< 
+    (Just 10) Nothing)
+</span>;; To unit test case:
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (Maybe< 
+      (Just 10) Nothing) 
+    (False))
+
+</span>[
+
+;<h3 id="COMMON.MAYBETEST.02"
+>;; COMMON.MAYBETEST.02</h3>
+; 
+; EVAL TEST
+; took 0.000548 secs. (547.81 microseconds) 
+
+  !(assertEqualToResult 
+    (Maybe< 
+      (Just 10) Nothing) 
+    (False))
+
+<span class="ansi36"
+>  (loonit_success  
+    (equal_enough_for_test  
+      (False) 
+      (False)))
+</span>
+Deterministic: ()
+()]
+<span class="ansi38-255165009"
+>;; In file as:  
+</span><span class="ansi1 ansi38-255238088"
+>  !(Maybe< Nothing 
+    (Just 10))
+</span>;; To unit test case:
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (Maybe< Nothing 
+      (Just 10)) 
+    (True))
+
+</span>[
+
+;<h3 id="COMMON.MAYBETEST.03"
+>;; COMMON.MAYBETEST.03</h3>
+; 
+; EVAL TEST
+; took 0.000573 secs. (573.49 microseconds) 
+
+  !(assertEqualToResult 
+    (Maybe< Nothing 
+      (Just 10)) 
+    (True))
+
+<span class="ansi36"
+>  (loonit_success  
+    (equal_enough_for_test  
+      (True) 
+      (True)))
+</span>
+Deterministic: ()
+()]
+<span class="ansi32"
+>% 222,275 inferences, 0.074 CPU in 0.074 seconds (100% CPU, 3010862 Lips)
+</span>P;HTML|
+;                         (= /home/runner/work/metta-wam/metta-wam/tests/extended_compat/hyperon-pln/metta/common/MaybeTest.metta  0)
+<span class="ansi1"
+>LoonIt Report
+</span>------------
+<span class="ansi32"
+>Successes: 3
+</span><span class="ansi32"
+>Failures: 0
+</span><br/> <a href="#" onclick="window.history.back(); return false;"
+>Return to summaries</a><br/>
+P;HTML|
+;           (is_cmd_option  execute halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  execute stdin --stdin=tty tty)
+P;HTML|
+;            (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  execute stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  execute stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;           (set_option_value  prolog false)
+P;HTML|
+;           (set_option_value  compat auto)
+P;HTML|
+;           (set_option_value  compatio true)
+
+Script done on 2024-09-12 02:28:55+00:00 [COMMAND_EXIT_CODE="7"]
+
+</pre>
+</body>
+
+</html>
+\033[0;32mCompleted successfully (EXITCODE=7) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/' --timeout=40 --html --repl=false  --test "tests/extended_compat/hyperon-pln/metta/common/MaybeTest.metta" --halt=true\033[0m

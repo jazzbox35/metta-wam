@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+<title></title>
+<style type="text/css"
+>
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content"
+>
+Script started on 2024-09-12 03:14:36+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
+;           (set_option_value  prolog false)
+
+P;HTML|
+;           (set_option_value  compat auto)
+
+P;HTML|
+;           (set_option_value  compatio true)
+P;HTML|
+;            (is_cmd_option  prescan halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  prescan stdin --stdin=tty tty)
+P;HTML|
+;             (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  prescan stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  prescan stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;            (set_option_value  prolog false)
+P;HTML|
+;            (set_option_value  compat auto)
+P;HTML|
+;            (set_option_value  compatio true)
+P;HTML|
+;          (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;           (set_option_value  python enable)
+P;HTML|
+;          (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;           (set_option_value  timeout 40)
+P;HTML|
+;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/ ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (set_option_value  output ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (is_cmd_option  execute html --html true)
+P;HTML|
+;            (set_option_value  html true)
+P;HTML|
+;           (is_cmd_option  execute test --test true)
+P;HTML|
+;            (set_option_value  test true)
+
+; (load_metta_file  &self tests/performance/basic/pathfinding-easy-f.metta)
+P;HTML|
+;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy-f.metta)
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy-f.metta.answers /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy-f.metta)
+P;HTML|
+;                                           (= 1  "[]")
+P;HTML|
+;                                           (= 2  "[(assertTrue True)]")
+P;HTML|
+;                                           (= 3  "[(assertFalse False)]")
+P;HTML|
+;                                           (= 4  "0.11user 0.02system 0:00.14elapsed 99%CPU (0avgtext+0avgdata 28412maxresident)k")
+P;HTML|
+;                                           (= 4  "0inputs+0outputs (0major+3275minor)pagefaults 0swaps")
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy-f.metta.answers /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy-f.metta)
+
+;;; Pathfinding using a simple graph
+;;; Graph is represented as one-way edge-f functions
+<span class="ansi38-013099040"
+>  !(pragma! compile full)
+
+</span>[P;HTML|
+;                                           (set_option_value  compile full)
+
+
+Deterministic: ()
+()]
+<span class="ansi38-255165000"
+>  (: edge-f 
+    (-> Symbol Symbol))
+</span><span class="ansi38-255165000"
+>  (= 
+    (edge-f a) b)
+</span><span class="ansi38-255165000"
+>  (= 
+    (edge-f b) c)
+</span><span class="ansi38-255165000"
+>  (= 
+    (edge-f c) d)
+</span><span class="ansi38-255165000"
+>  (= 
+    (edge-f e) f)
+</span>;;; Pathfinding rule
+<span class="ansi38-255165000"
+>  (: epath-f 
+    (-> Symbol Symbol))
+</span>;;; recursive case
+<span class="ansi38-255165000"
+>  (= 
+    (epath-f $x) 
+    (epath-f (edge-f $x)))
+</span>;;; was base case, node to itself
+<span class="ansi38-255165000"
+>  (= 
+    (epath-f $x) $x)
+</span>;;; Pathfinding rule
+<span class="ansi38-255165000"
+>  (: path-f 
+    (-> Symbol Symbol))
+</span>;;; was base case, node to itself
+<span class="ansi38-255165000"
+>  (= 
+    (path-f $x) $x)
+</span>;;; recursive case
+<span class="ansi38-255165000"
+>  (= 
+    (path-f $x) 
+    (edge-f (path-f $x)))
+</span>;;; Present
+<span class="ansi38-013099040"
+>  !(assertTrue (== (edge-f a) b))
+
+</span>[
+
+;<h3 id="BASIC.PATHFINDING-EASY-F.01"
+>;; BASIC.PATHFINDING-EASY-F.01</h3>
+; 
+; EVAL TEST
+; took 0.000026 secs. (26.33 microseconds) 
+
+  !(assertTrue (== (edge-f a) b))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      (True) 
+      (True)))
+</span>
+
+  (failed  once 
+    (write_pass_fail  
+      (assertTrue (== (edge-f a) b)) FAIL 
+      (equal_enough_for_test  
+        (True) 
+        (True))))
+
+
+
+
+  (failed  once 
+    (write_pass_fail  
+      (assertTrue (== (edge-f a) b)) FAIL 
+      (equal_enough_for_test  
+        (True) 
+        (True))))
+
+
+^  <span class="ansi1 ansi32"
+>Call: </span>(248) [user] call(user:once, user:write_pass_fail([assertTrue, [==, ['edge-f', a], b]], 'FAIL', equal_enough_for_test(['True'], ['True'])))
+^  <span class="ansi1 ansi32"
+>Call: </span>(249) [user] once(user:write_pass_fail([assertTrue, [==, ['edge-f', a], b]], 'FAIL', equal_enough_for_test(['True'], ['True'])))
+^  <span class="ansi1 ansi32"
+>Call: </span>(250) [user] write_pass_fail([assertTrue, [==, ['edge-f', a], b]], 'FAIL', equal_enough_for_test(['True'], ['True']))
+^  <span class="ansi1 ansi31"
+>Fail: </span>(250) [user] write_pass_fail([assertTrue, [==, ['edge-f', a], b]], 'FAIL', equal_enough_for_test(['True'], ['True']))
+^  <span class="ansi1 ansi31"
+>Fail: </span>(248) [system] call(user:once, user:write_pass_fail([assertTrue, [==, ['edge-f', a], b]], 'FAIL', equal_enough_for_test(['True'], ['True'])))
+^  <span class="ansi1 ansi32"
+>Call: </span>(248) [bugger] bugger:mquietly_if(true, rtrace:pop_tracer)
+   <span class="ansi1 ansi32"
+>Call: </span>(250) [system] var(rtrace:pop_tracer)
+   <span class="ansi1 ansi31"
+>Fail: </span>(250) [system] var(rtrace:pop_tracer)
+^  <span class="ansi1 ansi32"
+>Call: </span>(252) [system] setup_call_cleanup('$notrace'(_21128, _21130), once(rtrace:retract(t_l:tracer_reset(_21118))), '$restore_trace'(_21128, _21130))
+^  <span class="ansi1 ansi32"
+>Call: </span>(253) [system] sig_atomic(system:'$notrace'(_21128, _21130))
+^  <span class="ansi1 ansi32"
+>Exit: </span>(252) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(rtrace:retract(t_l:tracer_reset(tAt_normal))), system:'$restore_trace'(3, -1))
+^  <span class="ansi1 ansi32"
+>Call: </span>(252) [rtrace] tAt(false, 271, 271, false)
+<no-results>
+
+]
+;;; Not present
+<span class="ansi38-013099040"
+>  !(assertFalse (== (edge-f a) d))
+
+</span>[
+
+;<h3 id="BASIC.PATHFINDING-EASY-F.02"
+>;; BASIC.PATHFINDING-EASY-F.02</h3>
+; 
+; EVAL TEST
+; took 0.000021 secs. (21.41 microseconds) 
+
+  !(assertFalse (== (edge-f a) d))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      (False) 
+      (False)))
+</span>
+
+  (failed  once 
+    (write_pass_fail  
+      (assertFalse (== (edge-f a) d)) FAIL 
+      (equal_enough_for_test  
+        (False) 
+        (False))))
+
+
+
+
+  (failed  once 
+    (write_pass_fail  
+      (assertFalse (== (edge-f a) d)) FAIL 
+      (equal_enough_for_test  
+        (False) 
+        (False))))
+
+
+^  <span class="ansi1 ansi32"
+>Call: </span>(248) [user] call(user:once, user:write_pass_fail([assertFalse, [==, ['edge-f', a], d]], 'FAIL', equal_enough_for_test(['False'], ['False'])))
+^  <span class="ansi1 ansi32"
+>Call: </span>(249) [user] once(user:write_pass_fail([assertFalse, [==, ['edge-f', a], d]], 'FAIL', equal_enough_for_test(['False'], ['False'])))
+^  <span class="ansi1 ansi32"
+>Call: </span>(250) [user] write_pass_fail([assertFalse, [==, ['edge-f', a], d]], 'FAIL', equal_enough_for_test(['False'], ['False']))
+^  <span class="ansi1 ansi31"
+>Fail: </span>(250) [user] write_pass_fail([assertFalse, [==, ['edge-f', a], d]], 'FAIL', equal_enough_for_test(['False'], ['False']))
+^  <span class="ansi1 ansi31"
+>Fail: </span>(248) [system] call(user:once, user:write_pass_fail([assertFalse, [==, ['edge-f', a], d]], 'FAIL', equal_enough_for_test(['False'], ['False'])))
+^  <span class="ansi1 ansi32"
+>Call: </span>(248) [bugger] bugger:mquietly_if(true, rtrace:pop_tracer)
+   <span class="ansi1 ansi32"
+>Call: </span>(250) [system] var(rtrace:pop_tracer)
+   <span class="ansi1 ansi31"
+>Fail: </span>(250) [system] var(rtrace:pop_tracer)
+^  <span class="ansi1 ansi32"
+>Call: </span>(252) [system] setup_call_cleanup('$notrace'(_21136, _21138), once(rtrace:retract(t_l:tracer_reset(_21126))), '$restore_trace'(_21136, _21138))
+^  <span class="ansi1 ansi32"
+>Call: </span>(253) [system] sig_atomic(system:'$notrace'(_21136, _21138))
+^  <span class="ansi1 ansi32"
+>Exit: </span>(252) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(rtrace:retract(t_l:tracer_reset(tAt_normal))), system:'$restore_trace'(3, -1))
+^  <span class="ansi1 ansi32"
+>Call: </span>(252) [rtrace] tAt(false, 271, 271, false)
+<no-results>
+
+]
+;;; Pathfinding tests
+<span class="ansi32"
+>% 192,635 inferences, 0.067 CPU in 0.067 seconds (100% CPU, 2885491 Lips)
+</span>P;HTML|
+;                         (= /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy-f.metta  0)
+<span class="ansi1"
+>LoonIt Report
+</span>------------
+<span class="ansi32"
+>Successes: 0
+</span><span class="ansi31"
+>Failures: 2
+</span><br/> <a href="#" onclick="window.history.back(); return false;"
+>Return to summaries</a><br/>
+P;HTML|
+;           (is_cmd_option  execute halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  execute stdin --stdin=tty tty)
+P;HTML|
+;            (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  execute stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  execute stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;           (set_option_value  prolog false)
+P;HTML|
+;           (set_option_value  compat auto)
+P;HTML|
+;           (set_option_value  compatio true)
+
+Script done on 2024-09-12 03:14:40+00:00 [COMMAND_EXIT_CODE="7"]
+
+</pre>
+</body>
+
+</html>
+\033[0;32mCompleted successfully (EXITCODE=7) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/' --timeout=40 --html --repl=false  --test "tests/performance/basic/pathfinding-easy-f.metta" --halt=true\033[0m

@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+<title></title>
+<style type="text/css"
+>
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content"
+>
+Script started on 2024-09-12 03:14:41+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
+;           (set_option_value  prolog false)
+
+P;HTML|
+;           (set_option_value  compat auto)
+
+P;HTML|
+;           (set_option_value  compatio true)
+P;HTML|
+;            (is_cmd_option  prescan halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  prescan stdin --stdin=tty tty)
+P;HTML|
+;             (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  prescan stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  prescan stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;            (set_option_value  prolog false)
+P;HTML|
+;            (set_option_value  compat auto)
+P;HTML|
+;            (set_option_value  compatio true)
+P;HTML|
+;          (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;           (set_option_value  python enable)
+P;HTML|
+;          (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;           (set_option_value  timeout 40)
+P;HTML|
+;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/ ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (set_option_value  output ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (is_cmd_option  execute html --html true)
+P;HTML|
+;            (set_option_value  html true)
+P;HTML|
+;           (is_cmd_option  execute test --test true)
+P;HTML|
+;            (set_option_value  test true)
+
+; (load_metta_file  &self tests/performance/basic/pathfinding-easy.metta)
+P;HTML|
+;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy.metta)
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy.metta.answers /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy.metta)
+P;HTML|
+;                                           (= 1  "[]")
+P;HTML|
+;                                           (= 2  "[(Error (assertEqual (edge a c) False) ")
+P;HTML|
+;                                           (= 2  "Expected: [False]")
+P;HTML|
+;                                           (= 2  "Got: [(edge a c)]")
+P;HTML|
+;                                           (= 3  "Missed result: False)]")
+P;HTML|
+;                                           (= 3  "0.12user 0.01system 0:00.13elapsed 99%CPU (0avgtext+0avgdata 28548maxresident)k")
+P;HTML|
+;                                           (= 3  "0inputs+0outputs (0major+3283minor)pagefaults 0swaps")
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy.metta.answers /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy.metta)
+
+;;; Pathfinding using a simple graph
+;;; Graph is represented as facts: (= (edge A B) True) means there''s an one-way edge from A to B.
+<span class="ansi38-013099040"
+>  !(pragma! compile full)
+
+</span>[P;HTML|
+;                                           (set_option_value  compile full)
+
+
+Deterministic: ()
+()]
+<span class="ansi38-255165000"
+>  (: edge 
+    (-> Symbol Symbol Bool))
+</span><span class="ansi38-255165000"
+>  (= 
+    (edge a b) True)
+</span><span class="ansi38-255165000"
+>  (= 
+    (edge b c) True)
+</span><span class="ansi38-255165000"
+>  (= 
+    (edge c d) True)
+</span><span class="ansi38-255165000"
+>  (= 
+    (edge e f) True)
+</span>;;;a -> b -> c -> d
+;;;     \
+;;;      e -> f
+;;; Pathfinding rule
+<span class="ansi38-255165000"
+>  (: path 
+    (-> Symbol Symbol Bool))
+</span>;;; was base case, node to itself
+<span class="ansi38-255165000"
+>  (= 
+    (path $x $x) True)
+</span><span class="ansi38-255165000"
+>  (= 
+    (path $x $y) 
+    (and 
+      (edge $x $z) 
+      (path $z $y)))
+</span>;;; recursive case
+;;; Not asserted
+<span class="ansi38-013099040"
+>  !(assertEqual 
+    (edge a c) False)
+
+</span>[
+
+;<h3 id="BASIC.PATHFINDING-EASY.01"
+>;; BASIC.PATHFINDING-EASY.01</h3>
+; 
+; EVAL TEST
+; took 0.000364 secs. (364.50 microseconds) 
+
+  !(assertEqual 
+    (edge a c) False)
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      ( (edge a c)) 
+      (False)))
+</span>
+Deterministic: ((Error  (got  ((edge a c))) (expected  (False))))
+$Src_1 = 
+  (assertEqual 
+    (edge a c) False)
+$FARL_1 = 
+  ( (edge a c))
+$FARL_2 = (False)
+$FA_1 = $_116876
+$FA_2 = $_117294
+((Error  (got  ((edge a c))) (expected  (False))))]
+;;; Should be only one dirrection
+<span class="ansi32"
+>% 162,985 inferences, 0.056 CPU in 0.056 seconds (100% CPU, 2924645 Lips)
+</span>P;HTML|
+;                         (= /home/runner/work/metta-wam/metta-wam/tests/performance/basic/pathfinding-easy.metta  0)
+<span class="ansi1"
+>LoonIt Report
+</span>------------
+<span class="ansi32"
+>Successes: 0
+</span><span class="ansi31"
+>Failures: 1
+</span><br/> <a href="#" onclick="window.history.back(); return false;"
+>Return to summaries</a><br/>
+P;HTML|
+;           (is_cmd_option  execute halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  execute stdin --stdin=tty tty)
+P;HTML|
+;            (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  execute stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  execute stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;           (set_option_value  prolog false)
+P;HTML|
+;           (set_option_value  compat auto)
+P;HTML|
+;           (set_option_value  compatio true)
+
+Script done on 2024-09-12 03:14:45+00:00 [COMMAND_EXIT_CODE="7"]
+
+</pre>
+</body>
+
+</html>
+\033[0;32mCompleted successfully (EXITCODE=7) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/' --timeout=40 --html --repl=false  --test "tests/performance/basic/pathfinding-easy.metta" --halt=true\033[0m

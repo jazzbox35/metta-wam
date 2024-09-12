@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+<title></title>
+<style type="text/css"
+>
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi36 { color: #00aaaa; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165009 { color: #FFA509; }
+.ansi38-255238088 { color: #FFEE58; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content"
+>
+Script started on 2024-09-12 03:11:30+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
+;           (set_option_value  prolog false)
+
+P;HTML|
+;           (set_option_value  compat auto)
+
+P;HTML|
+;           (set_option_value  compatio true)
+P;HTML|
+;            (is_cmd_option  prescan halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  prescan stdin --stdin=tty tty)
+P;HTML|
+;             (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  prescan stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  prescan stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;            (set_option_value  prolog false)
+P;HTML|
+;            (set_option_value  compat auto)
+P;HTML|
+;            (set_option_value  compatio true)
+P;HTML|
+;          (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;           (set_option_value  python enable)
+P;HTML|
+;          (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;           (set_option_value  timeout 40)
+P;HTML|
+;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/ ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (set_option_value  output ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (is_cmd_option  execute html --html true)
+P;HTML|
+;            (set_option_value  html true)
+P;HTML|
+;           (is_cmd_option  execute test --test true)
+P;HTML|
+;            (set_option_value  test true)
+
+; (load_metta_file  &self tests/performance/basic/fibo-as-pred.metta)
+P;HTML|
+;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/performance/basic/fibo-as-pred.metta)
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/performance/basic/fibo-as-pred.metta.answers /home/runner/work/metta-wam/metta-wam/tests/performance/basic/fibo-as-pred.metta)
+P;HTML|
+;                                           (= 1  "[]")
+P;HTML|
+;                                           (= 2  "[]")
+P;HTML|
+;                                           (= 3  "[]")
+P;HTML|
+;                                           (= 4  "0.11user 0.01system 0:00.12elapsed 99%CPU (0avgtext+0avgdata 28332maxresident)k")
+P;HTML|
+;                                           (= 4  "0inputs+0outputs (0major+3276minor)pagefaults 0swaps")
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/performance/basic/fibo-as-pred.metta.answers /home/runner/work/metta-wam/metta-wam/tests/performance/basic/fibo-as-pred.metta)
+
+<span class="ansi38-013099040"
+>  !(pragma! compile full)
+
+</span>[P;HTML|
+;                                           (set_option_value  compile full)
+
+
+Deterministic: ()
+()]
+;;;!(memoize fibonacci)
+<span class="ansi38-255165000"
+>  (= 
+    (equals $X $X) True)
+</span><span class="ansi38-255165000"
+>  (= 
+    (fibonacci 0 0) True)
+</span><span class="ansi38-255165000"
+>  (= 
+    (fibonacci 1 1) True)
+</span><span class="ansi38-255165000"
+>  (= 
+    (fibonacci $N1 $N4) 
+    (and 
+      (> $N1 1) 
+      (equals $N2 
+        (- $N1 1)) 
+      (equals $N3 
+        (- $N1 2)) 
+      (fibonacci $N2 $N5) 
+      (fibonacci $N3 $N6) 
+      (equals $N4 
+        (+ $N5 $N6)) True))
+</span><span class="ansi38-255165009"
+>;; In file as:  
+</span><span class="ansi1 ansi38-255238088"
+>  !(match &self 
+    (fibonacci 10 $W) $W)
+</span>;; To unit test case:
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (match &self 
+      (fibonacci 10 $W) $W) ())
+
+</span>[
+
+;<h3 id="BASIC.FIBO-AS-PRED.01"
+>;; BASIC.FIBO-AS-PRED.01</h3>
+; 
+; EVAL TEST
+; took 0.000049 secs. (48.94 microseconds) 
+
+  !(assertEqualToResult 
+    (match &self 
+      (fibonacci 10 $W) $W) ())
+
+<span class="ansi36"
+>  (loonit_success  
+    (equal_enough_for_test  () ()))
+</span>
+Deterministic: ()
+()]
+<span class="ansi38-013099040"
+>  !(assertEqual 
+    (fibonacci 1 $W) True)
+
+</span>[
+
+;<h3 id="BASIC.FIBO-AS-PRED.02"
+>;; BASIC.FIBO-AS-PRED.02</h3>
+
+Script done on 2024-09-12 03:12:10+00:00 [COMMAND_EXIT_CODE="143"]
+
+</pre>
+</body>
+
+</html>
+\033[1;33mCompleted (EXITCODE=143) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/' --timeout=40 --html --repl=false  --test "tests/performance/basic/fibo-as-pred.metta" --halt=true\033[0m

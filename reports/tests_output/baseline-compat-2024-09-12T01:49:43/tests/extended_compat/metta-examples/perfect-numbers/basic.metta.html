@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+<title></title>
+<style type="text/css"
+>
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content"
+>
+Script started on 2024-09-12 02:16:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
+;           (set_option_value  prolog false)
+
+P;HTML|
+;           (set_option_value  compat auto)
+
+P;HTML|
+;           (set_option_value  compatio true)
+P;HTML|
+;            (is_cmd_option  prescan halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  prescan stdin --stdin=tty tty)
+P;HTML|
+;             (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  prescan stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  prescan stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;            (set_option_value  prolog false)
+P;HTML|
+;            (set_option_value  compat auto)
+P;HTML|
+;            (set_option_value  compatio true)
+P;HTML|
+;          (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;           (set_option_value  python enable)
+P;HTML|
+;          (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;           (set_option_value  timeout 40)
+P;HTML|
+;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/ ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (set_option_value  output ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (is_cmd_option  execute html --html true)
+P;HTML|
+;            (set_option_value  html true)
+P;HTML|
+;           (is_cmd_option  execute test --test true)
+P;HTML|
+;            (set_option_value  test true)
+
+; (load_metta_file  &self tests/extended_compat/metta-examples/perfect-numbers/basic.metta)
+P;HTML|
+;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/perfect-numbers/basic.metta)
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/perfect-numbers/basic.metta.answers /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/perfect-numbers/basic.metta)
+P;HTML|
+;                                           (= 1  "timeout: failed to run command 'time': No such file or directory")
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/perfect-numbers/basic.metta.answers /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/perfect-numbers/basic.metta)
+P;HTML|
+;                                           (= 1  "timeout: failed to run command 'time': No such file or directory")
+
+;;; this takes a minute on hyperon-experimental.
+;;; > (range 1 10 3))
+;;; [1, 4, 7]
+<span class="ansi38-255165000"
+>  (= 
+    (range $start $end $step) 
+    (if 
+      (< $start $end) $start 
+      (empty)))
+</span><span class="ansi38-255165000"
+>  (= 
+    (range $start $end $step) 
+    (if 
+      (< $start $end) 
+      (range 
+        (+ $start $step) $end $step) 
+      (empty)))
+</span>;;; > (sumh (1 2 3))
+;;; [6]
+<span class="ansi38-255165000"
+>  (= 
+    (sumh $xs) 
+    (if 
+      (== $xs ()) 0 
+      (+ 
+        (sumh (cdr-atom $xs)) 
+        (car-atom $xs))))
+</span><span class="ansi38-255165000"
+>  (= 
+    (pcond $x $r) 
+    (if 
+      (== 
+        (% $r $x) 0) $x 
+      (empty)))
+</span><span class="ansi38-255165000"
+>  (= 
+    (psum $x) 
+    (sumh (collapse (pcond (range 1 (- $x 1) 1) $x))))
+</span><span class="ansi38-255165000"
+>  (= 
+    (isPerfect $x) 
+    (if 
+      (== 
+        (psum $x) $x) $x 
+      (empty)))
+</span>;;; > (allPerfect 50)
+;;; [6, 28]
+<span class="ansi38-255165000"
+>  (= 
+    (allPerfect $n) 
+    (isPerfect (range 1 $n 1)))
+</span><span class="ansi38-013099040"
+>  !(allPerfect 50)
+
+</span>
+
+NDet Result(1): Empty
+[Empty
+
+NDet Result(2): Empty
+Empty
+
+NDet Result(3): Empty
+Empty
+
+NDet Result(4): Empty
+Empty
+
+NDet Result(5): Empty
+Empty
+
+NDet Result(6): 6
+6
+
+
+NDet Result(7): Empty
+, Empty
+
+NDet Result(8): Empty
+Empty
+
+NDet Result(9): Empty
+Empty
+
+NDet Result(10): Empty
+Empty
+
+NDet Result(11): Empty
+Empty
+
+NDet Result(12): Empty
+Empty
+
+NDet Result(13): Empty
+Empty
+
+NDet Result(14): Empty
+Empty
+
+NDet Result(15): Empty
+Empty
+
+NDet Result(16): Empty
+Empty
+
+NDet Result(17): Empty
+Empty
+
+NDet Result(18): Empty
+Empty
+
+NDet Result(19): Empty
+Empty
+
+NDet Result(20): Empty
+Empty
+
+NDet Result(21): Empty
+Empty
+
+NDet Result(22): Empty
+Empty
+
+NDet Result(23): Empty
+Empty
+
+NDet Result(24): Empty
+Empty
+
+NDet Result(25): Empty
+Empty
+
+NDet Result(26): Empty
+Empty
+
+NDet Result(27): Empty
+Empty
+
+NDet Result(28): 28
+28
+
+
+NDet Result(29): Empty
+, Empty
+
+NDet Result(30): Empty
+Empty
+
+NDet Result(31): Empty
+Empty
+
+NDet Result(32): Empty
+Empty
+
+NDet Result(33): Empty
+Empty
+
+NDet Result(34): Empty
+Empty
+
+NDet Result(35): Empty
+Empty
+
+NDet Result(36): Empty
+Empty
+
+NDet Result(37): Empty
+Empty
+
+NDet Result(38): Empty
+Empty
+
+NDet Result(39): Empty
+Empty
+
+NDet Result(40): Empty
+Empty
+
+NDet Result(41): Empty
+Empty
+
+NDet Result(42): Empty
+Empty
+
+NDet Result(43): Empty
+Empty
+
+NDet Result(44): Empty
+Empty
+
+NDet Result(45): Empty
+Empty
+
+NDet Result(46): Empty
+Empty
+
+NDet Result(47): Empty
+Empty
+
+NDet Result(48): Empty
+Empty
+
+NDet Result(49): Empty
+Empty
+
+NDet Result(50): Empty
+Empty
+
+Last Result(51): Empty
+Empty]
+<span class="ansi32"
+>% 7,942,727 inferences, 1.349 CPU in 1.349 seconds (100% CPU, 5888092 Lips)
+</span>P;HTML|
+;                         (= /home/runner/work/metta-wam/metta-wam/tests/extended_compat/metta-examples/perfect-numbers/basic.metta  0)
+<br/> <a href="#" onclick="window.history.back(); return false;"
+>Return to summaries</a><br/>
+P;HTML|
+;           (is_cmd_option  execute halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  execute stdin --stdin=tty tty)
+P;HTML|
+;            (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  execute stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  execute stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;           (set_option_value  prolog false)
+P;HTML|
+;           (set_option_value  compat auto)
+P;HTML|
+;           (set_option_value  compatio true)
+
+Script done on 2024-09-12 02:17:00+00:00 [COMMAND_EXIT_CODE="7"]
+
+</pre>
+</body>
+
+</html>
+\033[0;32mCompleted successfully (EXITCODE=7) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/' --timeout=40 --html --repl=false  --test "tests/extended_compat/metta-examples/perfect-numbers/basic.metta" --halt=true\033[0m

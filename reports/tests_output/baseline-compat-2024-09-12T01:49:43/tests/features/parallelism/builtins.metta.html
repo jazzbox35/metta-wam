@@ -1,0 +1,616 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+<title></title>
+<style type="text/css"
+>
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content"
+>
+Script started on 2024-09-12 03:08:17+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
+;           (set_option_value  prolog false)
+
+P;HTML|
+;           (set_option_value  compat auto)
+
+P;HTML|
+;           (set_option_value  compatio true)
+P;HTML|
+;            (is_cmd_option  prescan halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  prescan stdin --stdin=tty tty)
+P;HTML|
+;             (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  prescan stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  prescan stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;            (set_option_value  prolog false)
+P;HTML|
+;            (set_option_value  compat auto)
+P;HTML|
+;            (set_option_value  compatio true)
+P;HTML|
+;          (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;           (set_option_value  python enable)
+P;HTML|
+;          (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;           (set_option_value  timeout 40)
+P;HTML|
+;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/ ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (set_option_value  output ./reports/tests_output/baseline-compat-2024-09-12T01:49:43/)
+P;HTML|
+;           (is_cmd_option  execute html --html true)
+P;HTML|
+;            (set_option_value  html true)
+P;HTML|
+;           (is_cmd_option  execute test --test true)
+P;HTML|
+;            (set_option_value  test true)
+
+; (load_metta_file  &self tests/features/parallelism/builtins.metta)
+P;HTML|
+;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/features/parallelism/builtins.metta)
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/features/parallelism/builtins.metta.answers /home/runner/work/metta-wam/metta-wam/tests/features/parallelism/builtins.metta)
+P;HTML|
+;                                           (= 1  "+ '[' 0 -eq 1 ']'")
+P;HTML|
+;                                           (= 1  "+ echo 'Doing: timeout --foreground --kill-after=5 --signal=SIGINT 121 time metta /opt/logicmoo_opencog/hyperon-wam/examples/features/parallelism/builtins.metta'")
+P;HTML|
+;                                           (= 1  "Doing: timeout --foreground --kill-after=5 --signal=SIGINT 121 time metta /opt/logicmoo_opencog/hyperon-wam/examples/features/parallelism/builtins.metta")
+P;HTML|
+;                                           (= 1  "+ eval 'timeout --foreground --kill-after=5 --signal=SIGINT 121 time metta /opt/logicmoo_opencog/hyperon-wam/examples/features/parallelism/builtins.metta'")
+P;HTML|
+;                                           (= 1  "++ timeout --foreground --kill-after=5 --signal=SIGINT 121 time metta /opt/logicmoo_opencog/hyperon-wam/examples/features/parallelism/builtins.metta")
+P;HTML|
+;                                           (= 1  "thread 'main' panicked at src/metta_shim.rs:168:20:")
+P;HTML|
+;                                           (= 1  "called `Result::unwrap()` on an `Err` value: PyErr { type: <class 'RuntimeError'>, value: RuntimeError('Unexpected right bracket'), traceback: Some(<traceback object at 0x7f17eacb3040>) }")
+P;HTML|
+;                                           (= 1  "stack backtrace:")
+P;HTML|
+;                                           (= 1  "   0:     0x56346bfd8d3c - std::backtrace_rs::backtrace::libunwind::trace::h67a838aed1f4d6ec")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/../../backtrace/src/backtrace/libunwind.rs:93:5")
+P;HTML|
+;                                           (= 1  "   1:     0x56346bfd8d3c - std::backtrace_rs::backtrace::trace_unsynchronized::h1d1786bb1962baf8")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5")
+P;HTML|
+;                                           (= 1  "   2:     0x56346bfd8d3c - std::sys_common::backtrace::_print_fmt::h5a0b1f807a002d23")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:67:5")
+P;HTML|
+;                                           (= 1  "   3:     0x56346bfd8d3c - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::hf84ab6ad0b91784c")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:44:22")
+P;HTML|
+;                                           (= 1  "   4:     0x56346bffb85c - core::fmt::rt::Argument::fmt::h28f463bd1fdabed5")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/fmt/rt.rs:138:9")
+P;HTML|
+;                                           (= 1  "   5:     0x56346bffb85c - core::fmt::write::ha37c23b175e921b3")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/fmt/mod.rs:1114:21")
+P;HTML|
+;                                           (= 1  "   6:     0x56346bfd5eee - std::io::Write::write_fmt::haa1b000741bcbbe1")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/io/mod.rs:1763:15")
+P;HTML|
+;                                           (= 1  "   7:     0x56346bfd8b24 - std::sys_common::backtrace::_print::h1ff1030b04dfb157")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:47:5")
+P;HTML|
+;                                           (= 1  "   8:     0x56346bfd8b24 - std::sys_common::backtrace::print::hb982056c6f29541c")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:34:9")
+P;HTML|
+;                                           (= 1  "   9:     0x56346bfda0a3 - std::panicking::default_hook::{{closure}}::h11f92f82c62fbd68")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:272:22")
+P;HTML|
+;                                           (= 1  "  10:     0x56346bfd9dc4 - std::panicking::default_hook::hb8810fe276772c66")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:292:9")
+P;HTML|
+;                                           (= 1  "  11:     0x56346bfda625 - std::panicking::rust_panic_with_hook::hd2f0efd2fec86cb0")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:731:13")
+P;HTML|
+;                                           (= 1  "  12:     0x56346bfda521 - std::panicking::begin_panic_handler::{{closure}}::h3651b7fc4f61d784")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:609:13")
+P;HTML|
+;                                           (= 1  "  13:     0x56346bfd9266 - std::sys_common::backtrace::__rust_end_short_backtrace::hbc468e4b98c7ae04")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:170:18")
+P;HTML|
+;                                           (= 1  "  14:     0x56346bfda272 - rust_begin_unwind")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:597:5")
+P;HTML|
+;                                           (= 1  "  15:     0x56346be31545 - core::panicking::panic_fmt::h979245e2fdb2fabd")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/panicking.rs:72:14")
+P;HTML|
+;                                           (= 1  "  16:     0x56346be319e3 - core::result::unwrap_failed::h8c4b86241881fbbb")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/result.rs:1652:5")
+P;HTML|
+;                                           (= 1  "  17:     0x56346be42318 - metta::metta_shim::metta_interface_mod::MettaShim::exec::he664f34e01237be7")
+P;HTML|
+;                                           (= 1  "  18:     0x56346be4752c - metta::main::h4061cff84c875f01")
+P;HTML|
+;                                           (= 1  "  19:     0x56346be4ef93 - std::sys_common::backtrace::__rust_begin_short_backtrace::h9ba8fef5bf9c9a16")
+P;HTML|
+;                                           (= 1  "  20:     0x56346be5436d - std::rt::lang_start::{{closure}}::h44f0433eb5c0c983")
+P;HTML|
+;                                           (= 1  "  21:     0x56346bfd065b - core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once::hf9057cfaeeb252e2")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/ops/function.rs:284:13")
+P;HTML|
+;                                           (= 1  "  22:     0x56346bfd065b - std::panicking::try::do_call::h629e203a624883e4")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:504:40")
+P;HTML|
+;                                           (= 1  "  23:     0x56346bfd065b - std::panicking::try::h7b61614724d6a4f1")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:468:19")
+P;HTML|
+;                                           (= 1  "  24:     0x56346bfd065b - std::panic::catch_unwind::h354ac1c0268491d8")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panic.rs:142:14")
+P;HTML|
+;                                           (= 1  "  25:     0x56346bfd065b - std::rt::lang_start_internal::{{closure}}::h919fee3c5ba8f617")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:148:48")
+P;HTML|
+;                                           (= 1  "  26:     0x56346bfd065b - std::panicking::try::do_call::h54583f67455bff32")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:504:40")
+P;HTML|
+;                                           (= 1  "  27:     0x56346bfd065b - std::panicking::try::hb0e12c4e01d39dc2")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:468:19")
+P;HTML|
+;                                           (= 1  "  28:     0x56346bfd065b - std::panic::catch_unwind::h367b6339e3ca9a3b")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panic.rs:142:14")
+P;HTML|
+;                                           (= 1  "  29:     0x56346bfd065b - std::rt::lang_start_internal::ha5ce8533eaa0fda8")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:148:20")
+P;HTML|
+;                                           (= 1  "  30:     0x56346be498d5 - main")
+P;HTML|
+;                                           (= 1  "  31:     0x7f17ec31118a - <unknown>")
+P;HTML|
+;                                           (= 1  "  32:     0x7f17ec311245 - __libc_start_main")
+P;HTML|
+;                                           (= 1  "  33:     0x56346be31ca1 - _start")
+P;HTML|
+;                                           (= 1  "  34:                0x0 - <unknown>")
+P;HTML|
+;                                           (= 1  "Command exited with non-zero status 101")
+P;HTML|
+;                                           (= 1  "0.16user 0.01system 0:00.18elapsed 95%CPU (0avgtext+0avgdata 40720maxresident)k")
+P;HTML|
+;                                           (= 1  "8936inputs+0outputs (48major+4266minor)pagefaults 0swaps")
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/features/parallelism/builtins.metta.answers /home/runner/work/metta-wam/metta-wam/tests/features/parallelism/builtins.metta)
+P;HTML|
+;                                           (= 1  "+ '[' 0 -eq 1 ']'")
+P;HTML|
+;                                           (= 1  "+ echo 'Doing: timeout --foreground --kill-after=5 --signal=SIGINT 121 time metta /opt/logicmoo_opencog/hyperon-wam/examples/features/parallelism/builtins.metta'")
+P;HTML|
+;                                           (= 1  "Doing: timeout --foreground --kill-after=5 --signal=SIGINT 121 time metta /opt/logicmoo_opencog/hyperon-wam/examples/features/parallelism/builtins.metta")
+P;HTML|
+;                                           (= 1  "+ eval 'timeout --foreground --kill-after=5 --signal=SIGINT 121 time metta /opt/logicmoo_opencog/hyperon-wam/examples/features/parallelism/builtins.metta'")
+P;HTML|
+;                                           (= 1  "++ timeout --foreground --kill-after=5 --signal=SIGINT 121 time metta /opt/logicmoo_opencog/hyperon-wam/examples/features/parallelism/builtins.metta")
+P;HTML|
+;                                           (= 1  "thread 'main' panicked at src/metta_shim.rs:168:20:")
+P;HTML|
+;                                           (= 1  "called `Result::unwrap()` on an `Err` value: PyErr { type: <class 'RuntimeError'>, value: RuntimeError('Unexpected right bracket'), traceback: Some(<traceback object at 0x7f17eacb3040>) }")
+P;HTML|
+;                                           (= 1  "stack backtrace:")
+P;HTML|
+;                                           (= 1  "   0:     0x56346bfd8d3c - std::backtrace_rs::backtrace::libunwind::trace::h67a838aed1f4d6ec")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/../../backtrace/src/backtrace/libunwind.rs:93:5")
+P;HTML|
+;                                           (= 1  "   1:     0x56346bfd8d3c - std::backtrace_rs::backtrace::trace_unsynchronized::h1d1786bb1962baf8")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5")
+P;HTML|
+;                                           (= 1  "   2:     0x56346bfd8d3c - std::sys_common::backtrace::_print_fmt::h5a0b1f807a002d23")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:67:5")
+P;HTML|
+;                                           (= 1  "   3:     0x56346bfd8d3c - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::hf84ab6ad0b91784c")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:44:22")
+P;HTML|
+;                                           (= 1  "   4:     0x56346bffb85c - core::fmt::rt::Argument::fmt::h28f463bd1fdabed5")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/fmt/rt.rs:138:9")
+P;HTML|
+;                                           (= 1  "   5:     0x56346bffb85c - core::fmt::write::ha37c23b175e921b3")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/fmt/mod.rs:1114:21")
+P;HTML|
+;                                           (= 1  "   6:     0x56346bfd5eee - std::io::Write::write_fmt::haa1b000741bcbbe1")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/io/mod.rs:1763:15")
+P;HTML|
+;                                           (= 1  "   7:     0x56346bfd8b24 - std::sys_common::backtrace::_print::h1ff1030b04dfb157")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:47:5")
+P;HTML|
+;                                           (= 1  "   8:     0x56346bfd8b24 - std::sys_common::backtrace::print::hb982056c6f29541c")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:34:9")
+P;HTML|
+;                                           (= 1  "   9:     0x56346bfda0a3 - std::panicking::default_hook::{{closure}}::h11f92f82c62fbd68")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:272:22")
+P;HTML|
+;                                           (= 1  "  10:     0x56346bfd9dc4 - std::panicking::default_hook::hb8810fe276772c66")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:292:9")
+P;HTML|
+;                                           (= 1  "  11:     0x56346bfda625 - std::panicking::rust_panic_with_hook::hd2f0efd2fec86cb0")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:731:13")
+P;HTML|
+;                                           (= 1  "  12:     0x56346bfda521 - std::panicking::begin_panic_handler::{{closure}}::h3651b7fc4f61d784")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:609:13")
+P;HTML|
+;                                           (= 1  "  13:     0x56346bfd9266 - std::sys_common::backtrace::__rust_end_short_backtrace::hbc468e4b98c7ae04")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:170:18")
+P;HTML|
+;                                           (= 1  "  14:     0x56346bfda272 - rust_begin_unwind")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:597:5")
+P;HTML|
+;                                           (= 1  "  15:     0x56346be31545 - core::panicking::panic_fmt::h979245e2fdb2fabd")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/panicking.rs:72:14")
+P;HTML|
+;                                           (= 1  "  16:     0x56346be319e3 - core::result::unwrap_failed::h8c4b86241881fbbb")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/result.rs:1652:5")
+P;HTML|
+;                                           (= 1  "  17:     0x56346be42318 - metta::metta_shim::metta_interface_mod::MettaShim::exec::he664f34e01237be7")
+P;HTML|
+;                                           (= 1  "  18:     0x56346be4752c - metta::main::h4061cff84c875f01")
+P;HTML|
+;                                           (= 1  "  19:     0x56346be4ef93 - std::sys_common::backtrace::__rust_begin_short_backtrace::h9ba8fef5bf9c9a16")
+P;HTML|
+;                                           (= 1  "  20:     0x56346be5436d - std::rt::lang_start::{{closure}}::h44f0433eb5c0c983")
+P;HTML|
+;                                           (= 1  "  21:     0x56346bfd065b - core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once::hf9057cfaeeb252e2")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/ops/function.rs:284:13")
+P;HTML|
+;                                           (= 1  "  22:     0x56346bfd065b - std::panicking::try::do_call::h629e203a624883e4")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:504:40")
+P;HTML|
+;                                           (= 1  "  23:     0x56346bfd065b - std::panicking::try::h7b61614724d6a4f1")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:468:19")
+P;HTML|
+;                                           (= 1  "  24:     0x56346bfd065b - std::panic::catch_unwind::h354ac1c0268491d8")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panic.rs:142:14")
+P;HTML|
+;                                           (= 1  "  25:     0x56346bfd065b - std::rt::lang_start_internal::{{closure}}::h919fee3c5ba8f617")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:148:48")
+P;HTML|
+;                                           (= 1  "  26:     0x56346bfd065b - std::panicking::try::do_call::h54583f67455bff32")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:504:40")
+P;HTML|
+;                                           (= 1  "  27:     0x56346bfd065b - std::panicking::try::hb0e12c4e01d39dc2")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:468:19")
+P;HTML|
+;                                           (= 1  "  28:     0x56346bfd065b - std::panic::catch_unwind::h367b6339e3ca9a3b")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panic.rs:142:14")
+P;HTML|
+;                                           (= 1  "  29:     0x56346bfd065b - std::rt::lang_start_internal::ha5ce8533eaa0fda8")
+P;HTML|
+;                                           (= 1  "                               at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:148:20")
+P;HTML|
+;                                           (= 1  "  30:     0x56346be498d5 - main")
+P;HTML|
+;                                           (= 1  "  31:     0x7f17ec31118a - <unknown>")
+P;HTML|
+;                                           (= 1  "  32:     0x7f17ec311245 - __libc_start_main")
+P;HTML|
+;                                           (= 1  "  33:     0x56346be31ca1 - _start")
+P;HTML|
+;                                           (= 1  "  34:                0x0 - <unknown>")
+P;HTML|
+;                                           (= 1  "Command exited with non-zero status 101")
+P;HTML|
+;                                           (= 1  "0.16user 0.01system 0:00.18elapsed 95%CPU (0avgtext+0avgdata 40720maxresident)k")
+P;HTML|
+;                                           (= 1  "8936inputs+0outputs (48major+4266minor)pagefaults 0swaps")
+
+<span class="ansi38-013099040"
+>  !(pragma! eval True)
+
+</span>[P;HTML|
+;                                           (set_option_value  eval True)
+
+
+Deterministic: ()
+()]
+<span class="ansi38-013099040"
+>  !(pragma! trace-on-eval False)
+
+</span>[P;HTML|
+;                                           (set_option_value  trace-on-eval False)
+P;HTML|
+;                                           (set_debug  eval false)
+P;HTML|
+;                                           (set_debug  eval False)
+
+
+Deterministic: ()
+()]
+;;; =============================================================
+;;; Purpose: Test parallel execution with 'concurrent-forall!'
+;;; Operation: Launches a sleep task concurrently across 4 threads.
+;;; Expectation: Total execution time should be significantly reduced, demonstrating parallel processing.
+;;; Note: `get-time!` is the host system function `get_time(X)`
+;;;       If a function is not found that contains ! it searches the host system for the function definition.
+;;; =============================================================
+<span class="ansi38-255165000"
+>  (: concurrent-forall! 
+    (-> Atom Atom $t))
+</span><span class="ansi38-255165000"
+>  (: concurrent-forall! 
+    (-> Atom Atom Atom $t))
+</span>;;; Store the start CPU time in $start
+;;; Begin a sequential block
+;;; For each number between 1 and 4
+;;; Sleep for 5 seconds
+;;; Use 4 separate threads for the operation
+<span class="ansi38-013099040"
+>  !(let $start 
+    (get-time!) 
+    (sequential 
+      (concurrent-forall! 
+        (between! 1 4) 
+        (sleep! 5) 
+        (threads 4)) 
+      (< 
+        (- 
+          (get-time!) $start) 12)))
+
+</span>[P;HTML|P;HTML|
+%~             (eval_call
+%~                 (apply  sleep
+%~         (eval_call
+%~           (apply  sleep
+%~             (5)) $TF)
+%~         (5)) $TF)
+P;HTML|P;HTML|
+%~               (eval_call
+%~                 (apply  sleep
+%~                       (5)) $TF)
+%~               (eval_call
+%~                     (apply  sleep
+%~                         (5)) $TF)
+
+
+Deterministic: (sequential () True)
+
+$start = 1726110501.9252656
+          (sequential () True)]
+<span class="ansi38-255165000"
+> )
+</span>;;; Check if the total time taken is less than 12 seconds
+<span class="ansi38-013099040"
+>          !("cpu_count=" (current-prolog-flag! cpu_count))
+
+</span>
+
+Deterministic: ("cpu_count=" 4)
+[("cpu_count=" 4)]
+;;; =============================================================
+;;; Purpose: Define predicate 'is-even' to check if a number is even.
+;;; Operation: Uses modulo operator to determine if a number is divisible by 2 without remainder.
+;;; Usage: General utility function for checking evenness of numbers.
+;;; =============================================================
+;;; Define 'is-even' predicate
+<span class="ansi38-255165000"
+>          (: is-even 
+            (-> Number Bool))
+</span><span class="ansi38-255165000"
+>          (= 
+            (is-even $X) 
+            (== 
+              (% $X 2) 0))
+</span>;;; =============================================================
+;;; Purpose: Define predicate 'incr' to increment a monadic state variable.
+;;; Operation: Increases state by 1 and retrieves the updated state, ensuring sequential processing.
+;;; Usage: Ideal for managing sequential state changes in concurrent environments.
+;;; =============================================================
+;;; Define 'incr' predicate
+<span class="ansi38-255165000"
+>          (: incr 
+            (-> 
+              (MonadicState Number) Number))
+</span><span class="ansi38-255165000"
+>          (= 
+            (incr $var) 
+            (sequential ((do (change-state! $var (+ 1 (get-state $var)))) (get-state $var))))
+</span>;;; =============================================================
+;;; Purpose: Showcase how concurrency handles shared state references
+;;; Operation: Concurrently processes numbers, incrementing '$odds' or '$evens' state based on numbers evenness.
+;;; Expectation: Parallel processing of a range of numbers, updating shared states.
+;;; =============================================================
+<span class="ansi38-013099040"
+>          !(let* 
+            ( ($odds (new-state 0)) ($evens (new-state 0))) 
+            (sequential 
+              (concurrent-forall! 
+                (== 
+                  (between! 1 100) $X) 
+                (if 
+                  (is-even $X) 
+                  (incr $evens) 
+                  (incr $odds))) 
+              (print! ("odds=" (get-state $odds) " evens=" (get-state $evens)))))
+
+</span>[P;HTML|
+;                                                   (eval_call
+;                                                     (apply  print
+;                                                       ( ("odds=" 0 " evens=" 0))) $TF)
+P;HTML|<span class="pl-functor"
+>[ </span>
+    <span class="pl-string"
+>"odds="</span>, <span class="pl-int"
+>0</span>, <span class="pl-string"
+>" evens="</span>, <span class="pl-int"
+>0</span>]
+
+Deterministic: (sequential () True)
+
+$odds =   (State  0 $_6266)
+$evens =  (State  0 $_6770)
+$X = $_4226
+          (sequential () True)]
+;;; =============================================================
+;;; Purpose: Illustrate handling of global bind states in a concurrent setting
+;;; Operation: Uses 'concurrent-forall!' to process numbers, updating global bind states based on numbers evenness.
+;;; Expectation: Parallel processing of a number range, efficiently updating global states.
+;;; =============================================================
+<span class="ansi38-013099040"
+>          !(sequential ((bind! &odds (new-state 0)) (bind! &evens (new-state 0)) (concurrent-forall! (== (between! 1 100) $X) (if (is-even $X) (incr &evens) (incr &odds))) (print! ("odds=" (get-state &odds) " evens=" (get-state &evens)))))
+
+</span>
+
+NDet Result(1): ()
+[()
+
+
+NDet Result(2): ()
+, ()
+
+
+NDet Result(3): ()
+, ()
+P;HTML|
+;                                                   (eval_call
+;                                                     (apply  print
+;                                                       ( ("odds=" 50 " evens=" 50))) $TF)
+P;HTML|<span class="pl-functor"
+>[ </span>
+    <span class="pl-string"
+>"odds="</span>, <span class="pl-int"
+>50</span>, <span class="pl-string"
+>" evens="</span>, <span class="pl-int"
+>50</span>]
+
+Last Result(4): True
+, True]
+;;; =============================================================
+;;; Purpose: Define `factorial` function for arithmetic operation.
+;;; Operation: Calculates the factorial of a number using a recursive approach.
+;;; Usage: Useful in scenarios requiring factorial computations.
+;;; =============================================================
+<span class="ansi38-255165000"
+>          (: factorial 
+            (-> Number Number))
+</span><span class="ansi38-255165000"
+>          (= 
+            (factorial $n) 
+            (if 
+              (== $n 0) 1 
+              (* $n 
+                (factorial (- $n 1)))))
+</span>;;; =============================================================
+;;; Purpose: Demonstrate parallel processing of a list using `concurrent-maplist`.
+;;; Operation: Applies `factorial` to each number in a list concurrently.
+;;; Expectation: Efficient computation of factorial for each list element in parallel.
+;;; =============================================================
+<span class="ansi38-255165000"
+>          (: concurrent-maplist! 
+            (-> Atom 
+              (List Atom) 
+              (List $t)))
+</span><span class="ansi38-255165000"
+>          (: concurrent-maplist! 
+            (-> Atom 
+              (List Atom) 
+              (List Atom) 
+              (List $t)))
+</span><span class="ansi38-255165000"
+>          (: concurrent-maplist! 
+            (-> Atom 
+              (List Atom) 
+              (List Atom) 
+              (List Atom) 
+              (List $t)))
+</span><span class="ansi38-013099040"
+>          !(concurrent-maplist! factorial 
+            (1 2 3 4 5 6 7 8 9))
+
+</span>
+Script done on 2024-09-12 03:08:57+00:00 [COMMAND_EXIT_CODE="143"]
+
+</pre>
+</body>
+
+</html>
+\033[1;33mCompleted (EXITCODE=143) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat-2024-09-12T01:49:43/' --timeout=40 --html --repl=false  --test "tests/features/parallelism/builtins.metta" --halt=true\033[0m
