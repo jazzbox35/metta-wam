@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"
+>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+>
+<title></title>
+<style type="text/css"
+>
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-013099040 { color: #0D6328; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-255165000 { color: #FFA500; }
+.ansi38-013099040 { color: #0D6328; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content"
+>
+Script started on 2024-09-23 21:02:11+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_support.pl:144:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRemOneSupport(+'P',(+'Fact',+'Trigger'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_support.pl:144: PlDoc: failed to process structured comment:
+%!  pfcRemOneSupport(+P, (+Fact, +Trigger)) is det.
+%
+%   Removes a specific support for the fact 'P' by retracting the '$spft$' assertion
+%   if it exists. This is used to efficiently handle cases where some of the arguments
+%   ('P', 'Fact', or 'Trigger') may not be bound, but at least one must be callable.
+%
+%   This predicate checks if at least one of 'P', 'Fact', or 'Trigger' is callable 
+%   and then retracts the support fact represented by '$spft$(P, Fact, Trigger)' 
+%   from the database. If none of them are callable, it will throw a warning or error.
+%
+%   @arg P       The primary fact or goal.
+%   @arg Fact    A fact that is supported by 'P'.
+%   @arg Trigger The condition or trigger that justifies the support of 'Fact'.
+%
+%   @example
+%     % Remove support for a fact with a given trigger.
+%     ?- pfcRemOneSupport(p(my_fact), (fact_details, trigger_details)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_support.pl:1006:
+Warning:    Invalid mode declaration in PlDoc comment: which_missing_argnum(+'_F',+'_A',+1,-_88308)is failure
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_support.pl:1022:
+Warning:    Clauses of </span><span class="ansi34"
+>which_missing_argnum/4</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_support.pl:1010
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous which_missing_argnum/4.</span><span class="ansi31"
+> to suppress this message
+</span>P;HTML|
+;           (set_option_value  prolog false)
+
+P;HTML|
+;           (set_option_value  compat auto)
+
+P;HTML|
+;           (set_option_value  compatio true)
+Verbosity set to level 1  
+Argv=['']  
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1:
+Warning:    Invalid mode declaration in PlDoc comment: metta_python_patcher(-'Content')is(dynamic)
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1: PlDoc: failed to process structured comment:
+%!  metta_python_patcher(-Content) is dynamic.
+%
+%   A dynamic predicate that stores the content of the Python file 'metta_python_patcher.py'.
+%   The content is read into a string and asserted as a fact for later use.
+%   This allows the Python code to be loaded and used at runtime in Prolog.
+%
+%   @arg Content A string representing the contents of the 'metta_python_patcher.py' file.
+%
+%   @example
+%   % Reading and asserting the Python patcher file content:
+%   ?- metta_python_patcher(Content).
+%   Content = "... Python code ...".
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21:
+Warning:    Invalid mode declaration in PlDoc comment: did_load_metta_python_patcher is (volatile)
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21: PlDoc: failed to process structured comment:
+%!  did_load_metta_python_patcher is volatile.
+%
+%   A volatile predicate used as a flag to track whether the Python patcher has been loaded.
+%   This predicate will not be saved across sessions and exists only for the current runtime.
+%
+%   @example
+%   % After loading the patcher, this will succeed:
+%   ?- did_load_metta_python_patcher.
+%
+
+</span>P;HTML|
+;            (is_cmd_option  prescan halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  prescan stdin --stdin=tty tty)
+P;HTML|
+;             (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  prescan stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  prescan stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;            (set_option_value  prolog false)
+P;HTML|
+;            (set_option_value  compat auto)
+P;HTML|
+;            (set_option_value  compatio true)
+P;HTML|
+;          (is_cmd_option  execute python --python=enable enable)
+P;HTML|
+;           (set_option_value  python enable)
+P;HTML|
+;          (is_cmd_option  execute timeout --timeout=40 40)
+P;HTML|
+;           (set_option_value  timeout 40)
+P;HTML|
+;           (is_cmd_option  execute output --output=./reports/tests_output/baseline-compat-2024-09-23T20:57:06/ ./reports/tests_output/baseline-compat-2024-09-23T20:57:06/)
+P;HTML|
+;           (set_option_value  output ./reports/tests_output/baseline-compat-2024-09-23T20:57:06/)
+P;HTML|
+;           (is_cmd_option  execute html --html true)
+P;HTML|
+;            (set_option_value  html true)
+P;HTML|
+;           (is_cmd_option  execute test --test true)
+P;HTML|
+;            (set_option_value  test true)
+
+; (load_metta_file  &self tests/baseline_compat/hyperon-experimental_scripts/d5_auto_types.metta)
+P;HTML|
+;                         (track_load_into_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d5_auto_types.metta)
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d5_auto_types.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d5_auto_types.metta)
+P;HTML|
+;                                           (= 1  "[()]")
+P;HTML|
+;                                           (= 2  "[()]")
+P;HTML|
+;                                           (= 3  "[()]")
+P;HTML|
+;                                           (= 4  "[()]")
+P;HTML|
+;                                           (= 5  "[()]")
+P;HTML|
+;                                           (= 6  "[()]")
+P;HTML|
+;                                           (= 7  "[()]")
+P;HTML|
+;                                           (= 8  "0.05user 0.01system 0:00.06elapsed 98%CPU (0avgtext+0avgdata 30928maxresident)k")
+P;HTML|
+;                                           (= 8  "0inputs+0outputs (0major+3665minor)pagefaults 0swaps")
+P;HTML|
+;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d5_auto_types.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d5_auto_types.metta)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Auto type-checking can be enabled
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+<span class="ansi38-013099040"
+>  !(pragma! type-check auto)
+
+</span>[P;HTML|
+;                                           (set_option_value  type-check auto)
+
+
+Deterministic: ()
+()]
+;;; checking grounded types
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (+ 5 "S") 
+    ( (Error "S" BadType)))
+
+</span>[
+
+;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.01"
+>;; HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.01</h3>
+; 
+; EVAL TEST
+; took 0.000216 secs. (215.52 microseconds) 
+
+  !(assertEqualToResult 
+    (+ 5 "S") 
+    ( (Error "S" BadType)))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      (88) 
+      ( (Error "S" BadType))))
+</span>
+Deterministic: ((Error  (got  (88)) (expected  ((Error "S" BadType)))))
+((Error  (got  (88)) (expected  ((Error "S" BadType)))))]
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (== 5 "S") 
+    ( (Error "S" BadType)))
+
+</span>[
+
+;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.02"
+>;; HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.02</h3>
+; 
+; EVAL TEST
+; took 0.000182 secs. (181.52 microseconds) 
+
+  !(assertEqualToResult 
+    (== 5 "S") 
+    ( (Error "S" BadType)))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      (False) 
+      ( (Error "S" BadType))))
+</span>
+Deterministic: ((Error  (got  (False)) (expected  ((Error "S" BadType)))))
+((Error  (got  (False)) (expected  ((Error "S" BadType)))))]
+;;; declaring some custom types
+<span class="ansi38-255165000"
+>  (: Entity Type)
+</span><span class="ansi38-255165000"
+>  (: Socrates Entity)
+</span><span class="ansi38-255165000"
+>  (: Human 
+    (-> Entity Type))
+</span><span class="ansi38-255165000"
+>  (: Mortal 
+    (-> Entity Type))
+</span><span class="ansi38-255165000"
+>  (: HumansAreMortal 
+    (-> 
+      (Human $t) 
+      (Mortal $t)))
+</span><span class="ansi38-255165000"
+>  (: SocratesIsHuman 
+    (Human Socrates))
+</span><span class="ansi38-255165000"
+>  (: SamIsMortal 
+    (Mortal Sam))
+</span>;;; well typed
+<span class="ansi38-255165000"
+>  (HumansAreMortal SocratesIsHuman)
+</span><span class="ansi38-255165000"
+>  (== Mortal Human)
+</span>;;; badly typed examples produce `Error` grounded values describing the issue:
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (== SocratesIsHuman SamIsMortal) 
+    ( (Error SamIsMortal BadType)))
+
+</span>[
+
+;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.03"
+>;; HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.03</h3>
+; 
+; EVAL TEST
+; took 0.000706 secs. (706.34 microseconds) 
+
+  !(assertEqualToResult 
+    (== SocratesIsHuman SamIsMortal) 
+    ( (Error SamIsMortal BadType)))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      (False) 
+      ( (Error SamIsMortal BadType))))
+</span>
+Deterministic: ((Error  (got  (False)) (expected  ((Error SamIsMortal BadType)))))
+((Error  (got  (False)) (expected  ((Error SamIsMortal BadType)))))]
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (HumansAreMortal (Human Socrates)) 
+    ( (Error 
+        (Human Socrates) BadType)))
+
+</span>[
+
+;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.04"
+>;; HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.04</h3>
+; 
+; EVAL TEST
+; took 0.000506 secs. (505.56 microseconds) 
+
+  !(assertEqualToResult 
+    (HumansAreMortal (Human Socrates)) 
+    ( (Error 
+        (Human Socrates) BadType)))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      ( (HumansAreMortal (Human Socrates))) 
+      ( (Error 
+          (Human Socrates) BadType))))
+</span>
+Deterministic: ((Error  (got  ((HumansAreMortal (Human Socrates)))) (expected  ((Error (Human Socrates) BadType)))))
+((Error  (got  ((HumansAreMortal (Human Socrates)))) (expected  ((Error (Human Socrates) BadType)))))]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; `collapse` evaluates its argument, so it shows a type error
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+<span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (collapse (+ 5 "S")) 
+    ( ( (Error "S" BadType))))
+
+</span>[
+
+;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.05"
+>;; HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.05</h3>
+; 
+; EVAL TEST
+; took 0.000294 secs. (293.93 microseconds) 
+
+  !(assertEqualToResult 
+    (collapse (+ 5 "S")) 
+    ( ( (Error "S" BadType))))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      ( (88)) 
+      ( ( (Error "S" BadType)))))
+</span>
+Deterministic: ((Error  (got  ((88))) (expected  (((Error "S" BadType))))))
+((Error  (got  ((88))) (expected  (((Error "S" BadType))))))]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; `match` does not perform type checking on its pattern,
+;;; so it accepts a badly typed expression, which is expected.
+;;; It can be useful to deal with "wrong" MeTTa programs on
+;;; a meta-level in MeTTa itself, so this behavior of `match`
+;;; allows us to write code that analyzes badly typed expressions
+;;; within MeTTa (e.g. for self-reflective genetic programming).
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+<span class="ansi38-255165000"
+>  (match &self 
+    (== SocratesIsHuman SamIsMortal) Really?)
+</span>;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; internal call doesn't pass type check even if wrapped
+;;; by a function with type parameter:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; let binds without type checking, but errors when used
+<span class="ansi38-255165000"
+>  (let $x 
+    (+ 5 "S") $x)
+</span><span class="ansi38-255165000"
+>  (: f 
+    (-> $t Number))
+</span><span class="ansi38-013099040"
+>  !(assertEqualToResult 
+    (f (+ 5 "S")) 
+    ( (Error "S" BadType)))
+
+</span>[
+
+;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.06"
+>;; HYPERON-EXPERIMENTAL-SCRIPTS.D5-AUTO-TYPES.06</h3>
+; 
+; EVAL TEST
+; took 0.000826 secs. (825.72 microseconds) 
+
+  !(assertEqualToResult 
+    (f (+ 5 "S")) 
+    ( (Error "S" BadType)))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      ( (f 88)) 
+      ( (Error "S" BadType))))
+</span>
+Deterministic: ((Error  (got  ((f 88))) (expected  ((Error "S" BadType)))))
+((Error  (got  ((f 88))) (expected  ((Error "S" BadType)))))]
+<span class="ansi32"
+>% 296,391 inferences, 0.073 CPU in 0.073 seconds (100% CPU, 4069512 Lips)
+</span>P;HTML|
+;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d5_auto_types.metta  0)
+<span class="ansi1"
+>LoonIt Report
+</span>------------
+<span class="ansi32"
+>Successes: 0
+</span><span class="ansi31"
+>Failures: 6
+</span><br/> <a href="#" onclick="window.history.back(); return false;"
+>Return to summaries</a><br/>
+P;HTML|
+;           (is_cmd_option  execute halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  execute stdin --stdin=tty tty)
+P;HTML|
+;            (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  execute stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  execute stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;           (set_option_value  prolog false)
+P;HTML|
+;           (set_option_value  compat auto)
+P;HTML|
+;           (set_option_value  compatio true)
+
+Script done on 2024-09-23 21:02:15+00:00 [COMMAND_EXIT_CODE="7"]
+
+</pre>
+</body>
+
+</html>
+\033[0;32mCompleted successfully (EXITCODE=7) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat-2024-09-23T20:57:06/' --timeout=40 --html --repl=false  --test "tests/baseline_compat/hyperon-experimental_scripts/d5_auto_types.metta" --halt=true\033[0m
