@@ -150,8 +150,108 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-25 18:07:17+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-09-25 22:42:13+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1626:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetResult',+'Converting','PreArgs'-'Converted')is nondet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1626: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +Converting, -(PreArgs, Converted)) is nondet.
+%
+%   This predicate attempts to convert a functor into another representation while 
+%   maintaining its arguments and structure, and verifying type compatibility. 
+%   The goal fails if there are non-simple arguments that cannot be handled.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg RetResult    The result of the conversion after processing.
+%   @arg Converting   The functor being processed and converted.
+%   @arg PreArgs      Pre-existing arguments from previous conversions.
+%   @arg Converted    The resulting functor after conversion with new arguments.
+%
+%   @example
+%     % Example usage of f2q predicate
+%     ?- f2q(1, head, int, RetResult, some_functor(a, b), ([], Converted)).
+%     Converted = some_functor(a, b).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1847: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +(A =~ B), -(A =~ B)) is det.
+%
+%   If `Convert` is a simple `=~` comparison, this is treated as a direct match
+%   and no further conversion or processing is necessary.
+%
+%   @arg Depth       The current depth of recursion or transformation.
+%   @arg HeadIs      Describes the head of the predicate for type conversion.
+%   @arg RetType     The expected return type of the functor.
+%   @arg RetResult   The result of the conversion after processing.
+%   @arg A =~ B      The comparison to be evaluated.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1924:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetResult',+is('Convert'),'Converted'-('RetResult'is'Result'))is nondet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1924: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +(is(Convert)), -(Converted, is(RetResult, Result))) is nondet.
+%
+%   Converts `is` expressions into the equivalent `is` predicate in Prolog.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg RetResult    The result of the conversion after processing.
+%   @arg Convert      The term to be evaluated by `is`.
+%   @arg Converted    The resulting code after conversion.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1988:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'ResultVar',+'cdr-atom'('Atom'),+'cdr-atom'('Atom','ResultVar'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1988: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +ResultVar, +'cdr-atom'(Atom), +'cdr-atom'(Atom, ResultVar)) is det.
+%
+%   Handles `cdr-atom` conversion, generating the appropriate Prolog structure with `cdr-atom` functor.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg ResultVar    The result variable to unify with the `cdr-atom` result.
+%   @arg Atom         The atom whose `cdr` is being accessed.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1999:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'ResultVar',+'car-atom'('Atom'),+'car-atom'('Atom','ResultVar'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1999: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +ResultVar, +'car-atom'(Atom), +'car-atom'(Atom, ResultVar)) is det.
+%
+%   Handles `car-atom` conversion, generating the appropriate Prolog structure with `car-atom` functor.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg ResultVar    The result variable to unify with the `car-atom` result.
+%   @arg Atom         The atom whose `car` is being accessed.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:2126:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetVar',+'Data',-eval_for(b_8,'RetType','Data','RetVar'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:2126: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +RetVar, +Data, -eval_for(b_8, RetType, Data, RetVar)) is det.
+%
+%   Converts `Data` directly into an `eval_for(b_8)` structure.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg RetVar       The result variable for the conversion.
+%   @arg Data         The functor data to be processed.
+%   @arg CodeOut      The resulting eval_for structure.
+
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -251,7 +351,7 @@ Script started on 2024-09-25 18:07:17+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000163 secs. (163.49 microseconds) 
+; took 0.000157 secs. (157.16 microseconds) 
 
   !(assertEqualToResult 
     (get-type &self) 
@@ -278,7 +378,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.69 milliseconds) 
+; took 0.002 secs. (1.70 milliseconds) 
 
   !(assertEqual 
     ( (let $x 
@@ -306,7 +406,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000256 secs. (255.74 microseconds) 
+; took 0.000244 secs. (243.51 microseconds) 
 
   !(assertEqual 
     (if 
@@ -383,7 +483,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000197 secs. (196.84 microseconds) 
+; took 0.000157 secs. (157.13 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -404,7 +504,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000145 secs. (144.77 microseconds) 
+; took 0.000140 secs. (140.43 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -468,7 +568,7 @@ Last Result(2): ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.81 milliseconds) 
+; took 0.002 secs. (1.76 milliseconds) 
 
   !(assertEqual 
     (match &m 
@@ -558,7 +658,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000195 secs. (194.93 microseconds) 
+; took 0.000160 secs. (159.62 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -579,7 +679,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000128 secs. (127.83 microseconds) 
+; took 0.000123 secs. (122.69 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -689,7 +789,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000201 secs. (201.18 microseconds) 
+; took 0.000148 secs. (147.70 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -710,7 +810,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000143 secs. (142.78 microseconds) 
+; took 0.000111 secs. (110.72 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -753,7 +853,7 @@ Last Result(2): ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000456 secs. (456.27 microseconds) 
+; took 0.000480 secs. (480.13 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -776,7 +876,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000745 secs. (744.59 microseconds) 
+; took 0.000757 secs. (757.25 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -843,7 +943,7 @@ Deterministic: ((Error  (got  (&m)) (expected  ((: __g (-> Number))))))
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.91 milliseconds) 
+; took 0.004 secs. (3.90 milliseconds) 
 
   !(assertEqual 
     (== 
@@ -872,7 +972,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000241 secs. (241.41 microseconds) 
+; took 0.000265 secs. (264.86 microseconds) 
 
   !(assertEqual 
     (if 
@@ -1006,7 +1106,7 @@ Last Result(2): ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000468 secs. (467.91 microseconds) 
+; took 0.000420 secs. (419.64 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1029,7 +1129,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000765 secs. (765.15 microseconds) 
+; took 0.000747 secs. (747.01 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1055,7 +1155,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000943 secs. (943.21 microseconds) 
+; took 0.001 secs. (1.07 milliseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1333,7 +1433,7 @@ Last Result(2): ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000474 secs. (473.76 microseconds) 
+; took 0.000452 secs. (451.83 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1356,7 +1456,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000775 secs. (775.38 microseconds) 
+; took 0.000868 secs. (868.20 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1380,7 +1480,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.21</h3>
 ; 
 ; EVAL TEST
-; took 0.000972 secs. (971.64 microseconds) 
+; took 0.001 secs. (1.05 milliseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1395,7 +1495,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,296,194 inferences, 0.278 CPU in 0.278 seconds (100% CPU, 4660296 Lips)
+>% 1,296,187 inferences, 0.274 CPU in 0.274 seconds (100% CPU, 4727038 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/f1_imports.metta  0)
 <span class="ansi1"
@@ -1430,7 +1530,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-25 18:07:22+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-25 22:42:18+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

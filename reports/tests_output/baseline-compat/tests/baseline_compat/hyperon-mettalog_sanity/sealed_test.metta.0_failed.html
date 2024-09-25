@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -36,8 +37,108 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-25 18:09:36+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-09-25 22:44:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1626:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetResult',+'Converting','PreArgs'-'Converted')is nondet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1626: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +Converting, -(PreArgs, Converted)) is nondet.
+%
+%   This predicate attempts to convert a functor into another representation while 
+%   maintaining its arguments and structure, and verifying type compatibility. 
+%   The goal fails if there are non-simple arguments that cannot be handled.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg RetResult    The result of the conversion after processing.
+%   @arg Converting   The functor being processed and converted.
+%   @arg PreArgs      Pre-existing arguments from previous conversions.
+%   @arg Converted    The resulting functor after conversion with new arguments.
+%
+%   @example
+%     % Example usage of f2q predicate
+%     ?- f2q(1, head, int, RetResult, some_functor(a, b), ([], Converted)).
+%     Converted = some_functor(a, b).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1847: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +(A =~ B), -(A =~ B)) is det.
+%
+%   If `Convert` is a simple `=~` comparison, this is treated as a direct match
+%   and no further conversion or processing is necessary.
+%
+%   @arg Depth       The current depth of recursion or transformation.
+%   @arg HeadIs      Describes the head of the predicate for type conversion.
+%   @arg RetType     The expected return type of the functor.
+%   @arg RetResult   The result of the conversion after processing.
+%   @arg A =~ B      The comparison to be evaluated.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1924:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetResult',+is('Convert'),'Converted'-('RetResult'is'Result'))is nondet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1924: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +(is(Convert)), -(Converted, is(RetResult, Result))) is nondet.
+%
+%   Converts `is` expressions into the equivalent `is` predicate in Prolog.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg RetResult    The result of the conversion after processing.
+%   @arg Convert      The term to be evaluated by `is`.
+%   @arg Converted    The resulting code after conversion.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1988:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'ResultVar',+'cdr-atom'('Atom'),+'cdr-atom'('Atom','ResultVar'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1988: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +ResultVar, +'cdr-atom'(Atom), +'cdr-atom'(Atom, ResultVar)) is det.
+%
+%   Handles `cdr-atom` conversion, generating the appropriate Prolog structure with `cdr-atom` functor.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg ResultVar    The result variable to unify with the `cdr-atom` result.
+%   @arg Atom         The atom whose `cdr` is being accessed.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1999:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'ResultVar',+'car-atom'('Atom'),+'car-atom'('Atom','ResultVar'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1999: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +ResultVar, +'car-atom'(Atom), +'car-atom'(Atom, ResultVar)) is det.
+%
+%   Handles `car-atom` conversion, generating the appropriate Prolog structure with `car-atom` functor.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg ResultVar    The result variable to unify with the `car-atom` result.
+%   @arg Atom         The atom whose `car` is being accessed.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:2126:
+Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetVar',+'Data',-eval_for(b_8,'RetType','Data','RetVar'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:2126: PlDoc: failed to process structured comment:
+%!  f2q(+Depth, +HeadIs, +RetType, +RetVar, +Data, -eval_for(b_8, RetType, Data, RetVar)) is det.
+%
+%   Converts `Data` directly into an `eval_for(b_8)` structure.
+%
+%   @arg Depth        The current depth of recursion or transformation.
+%   @arg HeadIs       Describes the head of the predicate for type conversion.
+%   @arg RetType      The expected return type of the functor.
+%   @arg RetVar       The result variable for the conversion.
+%   @arg Data         The functor data to be processed.
+%   @arg CodeOut      The resulting eval_for structure.
+
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -123,7 +224,7 @@ Script started on 2024-09-25 18:09:36+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000253 secs. (252.76 microseconds) 
+; took 0.000280 secs. (279.66 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -154,7 +255,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000148 secs. (148.14 microseconds) 
+; took 0.000161 secs. (160.99 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -183,7 +284,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000878 secs. (878.50 microseconds) 
+; took 0.000859 secs. (858.50 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -216,7 +317,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.24 milliseconds) 
+; took 0.001 secs. (1.28 milliseconds) 
 
   !(assertEqual 
     (let 
@@ -255,7 +356,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000369 secs. (369.16 microseconds) 
+; took 0.000342 secs. (342.20 microseconds) 
 
   !(assertEqualToResult 
     (callsealer $x $y) 
@@ -281,7 +382,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000461 secs. (461.41 microseconds) 
+; took 0.000418 secs. (418.45 microseconds) 
 
   !(assertEqualToResult 
     (callsealer 10 25) 
@@ -315,7 +416,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000406 secs. (405.97 microseconds) 
+; took 0.000343 secs. (342.66 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 5 $y) 
@@ -340,7 +441,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000439 secs. (438.98 microseconds) 
+; took 0.000360 secs. (360.43 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 $x $y) 
@@ -375,7 +476,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000510 secs. (509.70 microseconds) 
+; took 0.000375 secs. (374.78 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x 4) 
@@ -401,7 +502,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000501 secs. (500.91 microseconds) 
+; took 0.000379 secs. (379.43 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x $y) 
@@ -417,7 +518,7 @@ Deterministic: ()
 ()]
 ;;;both $x and $y sealed
 <span class="ansi32"
->% 625,949 inferences, 0.140 CPU in 0.140 seconds (100% CPU, 4477992 Lips)
+>% 625,946 inferences, 0.136 CPU in 0.136 seconds (100% CPU, 4612950 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/sealed_test.metta  0)
 <span class="ansi1"
@@ -452,7 +553,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-25 18:09:41+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-25 22:44:31+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
