@@ -128,108 +128,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-25 22:50:24+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1626:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetResult',+'Converting','PreArgs'-'Converted')is nondet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1626: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +Converting, -(PreArgs, Converted)) is nondet.
-%
-%   This predicate attempts to convert a functor into another representation while 
-%   maintaining its arguments and structure, and verifying type compatibility. 
-%   The goal fails if there are non-simple arguments that cannot be handled.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg RetResult    The result of the conversion after processing.
-%   @arg Converting   The functor being processed and converted.
-%   @arg PreArgs      Pre-existing arguments from previous conversions.
-%   @arg Converted    The resulting functor after conversion with new arguments.
-%
-%   @example
-%     % Example usage of f2q predicate
-%     ?- f2q(1, head, int, RetResult, some_functor(a, b), ([], Converted)).
-%     Converted = some_functor(a, b).
-%
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1847: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +(A =~ B), -(A =~ B)) is det.
-%
-%   If `Convert` is a simple `=~` comparison, this is treated as a direct match
-%   and no further conversion or processing is necessary.
-%
-%   @arg Depth       The current depth of recursion or transformation.
-%   @arg HeadIs      Describes the head of the predicate for type conversion.
-%   @arg RetType     The expected return type of the functor.
-%   @arg RetResult   The result of the conversion after processing.
-%   @arg A =~ B      The comparison to be evaluated.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1924:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetResult',+is('Convert'),'Converted'-('RetResult'is'Result'))is nondet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1924: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +(is(Convert)), -(Converted, is(RetResult, Result))) is nondet.
-%
-%   Converts `is` expressions into the equivalent `is` predicate in Prolog.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg RetResult    The result of the conversion after processing.
-%   @arg Convert      The term to be evaluated by `is`.
-%   @arg Converted    The resulting code after conversion.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1988:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'ResultVar',+'cdr-atom'('Atom'),+'cdr-atom'('Atom','ResultVar'))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1988: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +ResultVar, +'cdr-atom'(Atom), +'cdr-atom'(Atom, ResultVar)) is det.
-%
-%   Handles `cdr-atom` conversion, generating the appropriate Prolog structure with `cdr-atom` functor.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg ResultVar    The result variable to unify with the `cdr-atom` result.
-%   @arg Atom         The atom whose `cdr` is being accessed.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1999:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'ResultVar',+'car-atom'('Atom'),+'car-atom'('Atom','ResultVar'))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1999: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +ResultVar, +'car-atom'(Atom), +'car-atom'(Atom, ResultVar)) is det.
-%
-%   Handles `car-atom` conversion, generating the appropriate Prolog structure with `car-atom` functor.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg ResultVar    The result variable to unify with the `car-atom` result.
-%   @arg Atom         The atom whose `car` is being accessed.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:2126:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetVar',+'Data',-eval_for(b_8,'RetType','Data','RetVar'))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:2126: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +RetVar, +Data, -eval_for(b_8, RetType, Data, RetVar)) is det.
-%
-%   Converts `Data` directly into an `eval_for(b_8)` structure.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg RetVar       The result variable for the conversion.
-%   @arg Data         The functor data to be processed.
-%   @arg CodeOut      The resulting eval_for structure.
-
-</span>P;HTML|
+Script started on 2024-09-26 17:10:08+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -369,7 +269,7 @@ Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'
 >;; QUICK.D2-HIGHERFUNC.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000308 secs. (308.07 microseconds) 
+; took 0.000281 secs. (280.76 microseconds) 
 
   !(assertEqual 
     (get-type (curry +)) 
@@ -397,7 +297,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000265 secs. (264.67 microseconds) 
+; took 0.000278 secs. (277.78 microseconds) 
 
   !(assertEqual 
     (get-type ((curry +) 2)) 
@@ -423,7 +323,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000712 secs. (712.25 microseconds) 
+; took 0.000758 secs. (757.58 microseconds) 
 
   !(assertEqualToResult 
     ( (curry +) 2) 
@@ -448,7 +348,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000406 secs. (405.86 microseconds) 
+; took 0.000401 secs. (401.28 microseconds) 
 
   !(assertEqual 
     ( ( (curry +) 2) 3) 5)
@@ -487,7 +387,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000294 secs. (293.59 microseconds) 
+; took 0.000364 secs. (363.64 microseconds) 
 
   !(assertEqual 
     (get-type (curry-a + 2)) 
@@ -511,7 +411,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000303 secs. (303.40 microseconds) 
+; took 0.000351 secs. (350.66 microseconds) 
 
   !(assertEqual 
     (get-type ((curry-a + 2) 3)) Number)
@@ -535,7 +435,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000389 secs. (389.04 microseconds) 
+; took 0.000352 secs. (352.50 microseconds) 
 
   !(assertEqualToResult 
     (get-type ((curry-a + 2) "S")) ())
@@ -558,7 +458,7 @@ Deterministic: ((Error  (got  (Number)) (expected  ())))
 >;; QUICK.D2-HIGHERFUNC.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000412 secs. (411.89 microseconds) 
+; took 0.000444 secs. (444.35 microseconds) 
 
   !(assertEqual 
     ( (curry-a + 2) 3) 5)
@@ -603,7 +503,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000477 secs. (477.09 microseconds) 
+; took 0.000512 secs. (512.18 microseconds) 
 
   !(assertEqualToResult 
     (is-socrates) 
@@ -654,7 +554,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000821 secs. (821.41 microseconds) 
+; took 0.000883 secs. (883.25 microseconds) 
 
   !(assertEqual 
     ( (is-socrates) Human) True)
@@ -694,7 +594,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000456 secs. (455.72 microseconds) 
+; took 0.000429 secs. (429.35 microseconds) 
 
   !(assertEqual 
     ( (lambda $x 
@@ -720,7 +620,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000682 secs. (682.44 microseconds) 
+; took 0.000606 secs. (605.59 microseconds) 
 
   !(assertEqual 
     ( (lambda 
@@ -755,7 +655,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000912 secs. (911.94 microseconds) 
+; took 0.000836 secs. (835.88 microseconds) 
 
   !(assertEqual 
     ( (inc) 5) 6)
@@ -851,7 +751,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.15</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.09 milliseconds) 
+; took 0.002 secs. (2.04 milliseconds) 
 
   !(assertEqual 
     (fmap 
@@ -880,7 +780,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000858 secs. (857.66 microseconds) 
+; took 0.000779 secs. (778.77 microseconds) 
 
   !(assertEqual 
     (fmap 
@@ -908,7 +808,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000980 secs. (980.24 microseconds) 
+; took 0.000886 secs. (886.12 microseconds) 
 
   !(assertEqual 
     (get-type (fmap (curry-a + 1) (Left 5))) 
@@ -937,7 +837,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.18</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.03 milliseconds) 
+; took 0.002 secs. (1.95 milliseconds) 
 
   !(assertEqual 
     (fmap 
@@ -970,7 +870,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.19</h3>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (11.76 milliseconds) 
+; took 0.012 secs. (11.59 milliseconds) 
 
   !(assertEqual 
     (fmap 
@@ -1005,7 +905,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000516 secs. (515.93 microseconds) 
+; took 0.000404 secs. (403.89 microseconds) 
 
   !(assertEqualToResult 
     (get-type (fmap (curry-a + 2) (Left "5"))) ())
@@ -1027,7 +927,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.21</h3>
 ; 
 ; EVAL TEST
-; took 0.000439 secs. (438.51 microseconds) 
+; took 0.000372 secs. (371.57 microseconds) 
 
   !(assertEqualToResult 
     (get-type (fmap (curry-a + 2) (UntypedC "5"))) ())
@@ -1049,7 +949,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.22</h3>
 ; 
 ; EVAL TEST
-; took 0.000432 secs. (431.59 microseconds) 
+; took 0.000348 secs. (347.89 microseconds) 
 
   !(assertEqualToResult 
     (get-type (fmap (curry-a + 2) (UntypedC (Null) 5))) ())
@@ -1097,7 +997,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.23</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.04 milliseconds) 
+; took 0.002 secs. (1.99 milliseconds) 
 
   !(assertEqual 
     (fmap-i 
@@ -1177,7 +1077,7 @@ Deterministic: true
 >   41:5   |   |   |   |   |   |-<--(defn (retval  Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (7.42 milliseconds) 
+; took 0.007 secs. (7.13 milliseconds) 
 
   !(assertEqual 
     (fmap-i 
@@ -1223,7 +1123,7 @@ Deterministic: ()
 >    8:1   |   |-<--(defn (retval  fail)) </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.41 milliseconds) 
+; took 0.002 secs. (2.38 milliseconds) 
 
   !(assertEqualToResult 
     (fmap-i 
@@ -1314,7 +1214,7 @@ Deterministic: ()
 >   96:3   |   |   |   |-<--(defn (retval  (Cons 1 Nil))) </span>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (11.70 milliseconds) 
+; took 0.012 secs. (11.68 milliseconds) 
 
   !(assertEqual 
     (insert 3 
@@ -1385,7 +1285,7 @@ Deterministic: ()
 >  121:7   |   |   |   |   |   |   |   |-<--(defn (retval  Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (14.93 milliseconds) 
+; took 0.015 secs. (14.99 milliseconds) 
 
   !(assertEqual 
     (sort (Cons 3 (Cons 1 (Cons 2 Nil)))) 
@@ -1406,7 +1306,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,358,099 inferences, 0.304 CPU in 0.304 seconds (100% CPU, 4465752 Lips)
+>% 1,358,102 inferences, 0.298 CPU in 0.298 seconds (100% CPU, 4563497 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d2_higherfunc.metta  0)
 <span class="ansi1"
@@ -1441,7 +1341,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-25 22:50:29+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-26 17:10:13+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

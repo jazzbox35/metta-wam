@@ -98,108 +98,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-25 22:44:32+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1626:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetResult',+'Converting','PreArgs'-'Converted')is nondet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1626: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +Converting, -(PreArgs, Converted)) is nondet.
-%
-%   This predicate attempts to convert a functor into another representation while 
-%   maintaining its arguments and structure, and verifying type compatibility. 
-%   The goal fails if there are non-simple arguments that cannot be handled.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg RetResult    The result of the conversion after processing.
-%   @arg Converting   The functor being processed and converted.
-%   @arg PreArgs      Pre-existing arguments from previous conversions.
-%   @arg Converted    The resulting functor after conversion with new arguments.
-%
-%   @example
-%     % Example usage of f2q predicate
-%     ?- f2q(1, head, int, RetResult, some_functor(a, b), ([], Converted)).
-%     Converted = some_functor(a, b).
-%
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1847: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +(A =~ B), -(A =~ B)) is det.
-%
-%   If `Convert` is a simple `=~` comparison, this is treated as a direct match
-%   and no further conversion or processing is necessary.
-%
-%   @arg Depth       The current depth of recursion or transformation.
-%   @arg HeadIs      Describes the head of the predicate for type conversion.
-%   @arg RetType     The expected return type of the functor.
-%   @arg RetResult   The result of the conversion after processing.
-%   @arg A =~ B      The comparison to be evaluated.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1924:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetResult',+is('Convert'),'Converted'-('RetResult'is'Result'))is nondet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1924: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +RetResult, +(is(Convert)), -(Converted, is(RetResult, Result))) is nondet.
-%
-%   Converts `is` expressions into the equivalent `is` predicate in Prolog.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg RetResult    The result of the conversion after processing.
-%   @arg Convert      The term to be evaluated by `is`.
-%   @arg Converted    The resulting code after conversion.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1988:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'ResultVar',+'cdr-atom'('Atom'),+'cdr-atom'('Atom','ResultVar'))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1988: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +ResultVar, +'cdr-atom'(Atom), +'cdr-atom'(Atom, ResultVar)) is det.
-%
-%   Handles `cdr-atom` conversion, generating the appropriate Prolog structure with `cdr-atom` functor.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg ResultVar    The result variable to unify with the `cdr-atom` result.
-%   @arg Atom         The atom whose `cdr` is being accessed.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1999:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'ResultVar',+'car-atom'('Atom'),+'car-atom'('Atom','ResultVar'))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:1999: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +ResultVar, +'car-atom'(Atom), +'car-atom'(Atom, ResultVar)) is det.
-%
-%   Handles `car-atom` conversion, generating the appropriate Prolog structure with `car-atom` functor.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg ResultVar    The result variable to unify with the `car-atom` result.
-%   @arg Atom         The atom whose `car` is being accessed.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:2126:
-Warning:    Invalid mode declaration in PlDoc comment: f2q(+'Depth',+'HeadIs',+'RetType',+'RetVar',+'Data',-eval_for(b_8,'RetType','Data','RetVar'))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_compiler_inlining.pl:2126: PlDoc: failed to process structured comment:
-%!  f2q(+Depth, +HeadIs, +RetType, +RetVar, +Data, -eval_for(b_8, RetType, Data, RetVar)) is det.
-%
-%   Converts `Data` directly into an `eval_for(b_8)` structure.
-%
-%   @arg Depth        The current depth of recursion or transformation.
-%   @arg HeadIs       Describes the head of the predicate for type conversion.
-%   @arg RetType      The expected return type of the functor.
-%   @arg RetVar       The result variable for the conversion.
-%   @arg Data         The functor data to be processed.
-%   @arg CodeOut      The resulting eval_for structure.
-
-</span>P;HTML|
+Script started on 2024-09-26 17:04:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -338,7 +238,7 @@ Deterministic: ()
 >  (superpose ((= (foo $_95112 $_95134) (+ $_95112 $_95134)) (foo 1 2) (foo 3 4) (foo $_95112 10) (foo $_95112 $_95112) (foo (foo 1 2) 3)))
 </span>; 
 ; EVAL TEST
-; took 0.009 secs. (8.85 milliseconds) 
+; took 0.009 secs. (8.75 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &space1 
@@ -373,7 +273,7 @@ Deterministic: ()
 >  (superpose ((= (foo $_126756 $_126778) (+ $_126756 $_126778)) (foo 1 2) (foo 5 6) (foo 5 10) (foo 9 9) (foo (foo 1 2) 3)))
 </span>; 
 ; EVAL TEST
-; took 0.005 secs. (5.45 milliseconds) 
+; took 0.005 secs. (5.34 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &space2 
@@ -401,7 +301,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.080 secs. (79.52 milliseconds) 
+; took 0.084 secs. (83.79 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -459,7 +359,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (9.76 milliseconds) 
+; took 0.010 secs. (9.54 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -505,7 +405,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.019 secs. (18.76 milliseconds) 
+; took 0.019 secs. (18.57 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -553,7 +453,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (9.57 milliseconds) 
+; took 0.009 secs. (9.38 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -601,7 +501,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.016 secs. (15.63 milliseconds) 
+; took 0.015 secs. (14.94 milliseconds) 
 
   !(assertEqual 
     (pred-intersection unified 
@@ -662,7 +562,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.011 secs. (11.08 milliseconds) 
+; took 0.011 secs. (10.79 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -695,7 +595,7 @@ Deterministic: ((Error  (got  ((foo (foo 1 2) 3) (foo 7 7))) (expected  ((foo (f
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.011 secs. (11.40 milliseconds) 
+; took 0.011 secs. (11.39 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -763,7 +663,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.15 milliseconds) 
+; took 0.005 secs. (5.18 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -799,7 +699,7 @@ Deterministic: ((Error  (got  ((foo $_935706 $_935712) (foo 3 $_935688))) (expec
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.011 secs. (11.13 milliseconds) 
+; took 0.011 secs. (11.09 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -828,7 +728,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (6.17 milliseconds) 
+; took 0.006 secs. (6.27 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -879,7 +779,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.94 milliseconds) 
+; took 0.007 secs. (6.88 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -946,7 +846,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.43 milliseconds) 
+; took 0.002 secs. (1.52 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -995,7 +895,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (8.74 milliseconds) 
+; took 0.009 secs. (8.70 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -1044,7 +944,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (7.90 milliseconds) 
+; took 0.008 secs. (7.87 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -1092,7 +992,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (6.38 milliseconds) 
+; took 0.006 secs. (6.40 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -1195,7 +1095,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.19</h3>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (8.26 milliseconds) 
+; took 0.008 secs. (8.00 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -1244,7 +1144,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-INTERSECTION-TESTS.20</h3>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.55 milliseconds) 
+; took 0.007 secs. (6.50 milliseconds) 
 
   !(assertEqual 
     (intersection 
@@ -1263,7 +1163,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,922,740 inferences, 0.528 CPU in 0.528 seconds (100% CPU, 3641498 Lips)
+>% 1,922,743 inferences, 0.530 CPU in 0.530 seconds (100% CPU, 3625272 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/space_intersection_tests.metta  0)
 <span class="ansi1"
@@ -1298,7 +1198,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-25 22:44:38+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-26 17:04:21+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
