@@ -38,7 +38,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-27 16:24:40+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 17:02:41+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -152,13 +152,13 @@ Warning:    Singleton variables: [ID]
 P;HTML|
 ;                                           (= 1  "Expected: [1, 2]")
 P;HTML|
-;                                           (= 1  "Got: [(catch 2 Error Error), (catch 1 Error Error)]")
+;                                           (= 1  "Got: [(catch 1 Error Error), (catch 2 Error Error)]")
 P;HTML|
 ;                                           (= 2  "Missed result: 1)]")
 P;HTML|
-;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 24640maxresident)k")
+;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 24972maxresident)k")
 P;HTML|
-;                                           (= 2  "0inputs+0outputs (0major+2831minor)pagefaults 0swaps")
+;                                           (= 2  "0inputs+0outputs (0major+2836minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta)
 
@@ -181,7 +181,7 @@ Warning:    Singleton variables: [ID]
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000486 secs. (485.56 microseconds) 
+; took 0.000453 secs. (452.91 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -209,7 +209,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000539 secs. (538.89 microseconds) 
+; took 0.000446 secs. (446.04 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -238,7 +238,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000295 secs. (294.63 microseconds) 
+; took 0.000266 secs. (266.07 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -267,7 +267,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000473 secs. (472.53 microseconds) 
+; took 0.000416 secs. (415.87 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -298,7 +298,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000376 secs. (376.47 microseconds) 
+; took 0.000319 secs. (318.71 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -342,7 +342,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000696 secs. (696.32 microseconds) 
+; took 0.000692 secs. (691.61 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -371,7 +371,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000234 secs. (233.95 microseconds) 
+; took 0.000233 secs. (233.25 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -402,7 +402,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000488 secs. (488.30 microseconds) 
+; took 0.000465 secs. (464.70 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -434,7 +434,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000288 secs. (288.30 microseconds) 
+; took 0.000353 secs. (353.32 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -466,7 +466,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000469 secs. (468.55 microseconds) 
+; took 0.000528 secs. (527.63 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -484,7 +484,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 313,625 inferences, 0.085 CPU in 0.085 seconds (100% CPU, 3691269 Lips)
+>% 313,613 inferences, 0.083 CPU in 0.083 seconds (100% CPU, 3773964 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta  0)
 <span class="ansi1"
@@ -519,7 +519,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-27 16:24:46+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-27 17:02:46+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -38,7 +38,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-27 16:28:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 17:06:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -173,7 +173,7 @@ Warning:    Singleton variables: [ID]
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000504 secs. (503.89 microseconds) 
+; took 0.000334 secs. (333.92 microseconds) 
 
   !(assertEqual 
     (unique (superpose (a b b c c c d))) 
@@ -200,7 +200,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000389 secs. (389.39 microseconds) 
+; took 0.000278 secs. (278.35 microseconds) 
 
   !(assertEqual 
     (unique (superpose (a b c d))) 
@@ -227,7 +227,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000269 secs. (268.98 microseconds) 
+; took 0.000243 secs. (243.31 microseconds) 
 
   !(assertEqual 
     (unique (superpose (a))) 
@@ -254,7 +254,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000237 secs. (237.05 microseconds) 
+; took 0.000208 secs. (208.12 microseconds) 
 
   !(assertEqual 
     (unique (superpose ())) 
@@ -279,7 +279,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000285 secs. (285.25 microseconds) 
+; took 0.000235 secs. (234.83 microseconds) 
 
   !(assertEqual 
     (unique (superpose (a a a a))) 
@@ -306,7 +306,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.25 milliseconds) 
+; took 0.001 secs. (1.23 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((1 2) (1 2) (3 4)))) 
@@ -333,7 +333,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000364 secs. (363.98 microseconds) 
+; took 0.000289 secs. (288.87 microseconds) 
 
   !(assertEqual 
     (unique (superpose (1 "hello" 1 "world" "hello" 3.14 3.14))) 
@@ -360,7 +360,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.01 milliseconds) 
+; took 0.000993 secs. (992.84 microseconds) 
 
   !(assertEqual 
     (list-to-set (a b b c c c d)) 
@@ -414,7 +414,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000286 secs. (285.66 microseconds) 
+; took 0.000288 secs. (287.71 microseconds) 
 
   !(assertEqual 
     (unique (superpose ($x $y $x $z))) 
@@ -423,8 +423,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ($_799676 $_799670 $_799664) 
-      ($_799758 $_799752 $_799746)))
+      ($_799690 $_799684 $_799678) 
+      ($_799772 $_799766 $_799760)))
 </span>
 Deterministic: ()
 ()]
@@ -441,7 +441,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.11</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.87 milliseconds) 
+; took 0.002 secs. (1.76 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((:: $x $y) (:: $x $z) (:: $x $y) (:: $a $b)))) 
@@ -450,12 +450,12 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (:: $_834730 $_834736) 
-        (:: $_834706 $_834712) 
-        (:: $_834682 $_834688)) 
-      ( (:: $_847676 $_847682) 
-        (:: $_847652 $_847658) 
-        (:: $_847628 $_847634))))
+      ( (:: $_834744 $_834750) 
+        (:: $_834720 $_834726) 
+        (:: $_834696 $_834702)) 
+      ( (:: $_847690 $_847696) 
+        (:: $_847666 $_847672) 
+        (:: $_847642 $_847648))))
 </span>
 Deterministic: ()
 ()]
@@ -472,7 +472,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.12</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.51 milliseconds) 
+; took 0.002 secs. (1.52 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((:: $x $y) (:: $x $y) (:: $x $z) (:: $x $y)))) 
@@ -481,8 +481,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (:: $_879802 $_879808) (:: $_879778 $_879784)) 
-      ( (:: $_888908 $_888914) (:: $_888884 $_888890))))
+      ( (:: $_879816 $_879822) (:: $_879792 $_879798)) 
+      ( (:: $_888922 $_888928) (:: $_888898 $_888904))))
 </span>
 Deterministic: ()
 ()]
@@ -499,7 +499,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.13</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.12 milliseconds) 
+; took 0.003 secs. (2.86 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((:: 1 $x) (:: $x "hello") (:: 1 $x) (:: $y $z) (:: $x "hello")))) 
@@ -508,12 +508,12 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (:: 1 $_935610) 
-        (:: $_935574 "hello") 
-        (:: $_935550 $_935556)) 
-      ( (:: 1 $_955962) 
-        (:: $_955926 "hello") 
-        (:: $_955902 $_955908))))
+      ( (:: 1 $_935624) 
+        (:: $_935588 "hello") 
+        (:: $_935564 $_935570)) 
+      ( (:: 1 $_955976) 
+        (:: $_955940 "hello") 
+        (:: $_955916 $_955922))))
 </span>
 Deterministic: ()
 ()]
@@ -530,7 +530,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.UNIQUE-TEST.14</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (5.63 milliseconds) 
+; took 0.005 secs. (5.35 milliseconds) 
 
   !(assertEqual 
     (unique (superpose ((:: $x (:: a b)) (:: $x (:: a b)) (:: (:: 1 $x) (:: 2 $y)) (:: (:: 1 $x) (:: 2 $y))))) 
@@ -547,7 +547,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 807,112 inferences, 0.167 CPU in 0.167 seconds (100% CPU, 4841840 Lips)
+>% 807,114 inferences, 0.158 CPU in 0.158 seconds (100% CPU, 5098596 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/unique_test.metta  0)
 <span class="ansi1"
@@ -582,7 +582,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-27 16:28:33+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-27 17:06:33+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
