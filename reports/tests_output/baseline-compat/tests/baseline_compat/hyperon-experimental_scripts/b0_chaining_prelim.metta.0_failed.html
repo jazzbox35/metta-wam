@@ -13,7 +13,9 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -31,7 +33,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-26 21:56:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 16:21:37+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -40,7 +42,59 @@ Script started on 2024-09-26 21:56:23+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:107:
+Warning:    Clauses of </span><span class="ansi34"
+>from_python/5</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:73
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous from_python/5.</span><span class="ansi31"
+> to suppress this message
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:649:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:654:
+Warning:    Singleton variables: [Type,ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:669:
+Warning:    Singleton variables: [ID1]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:675:
+Warning:    Singleton variables: [Atom]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:689:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:706:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:719:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:731:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:736:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:752:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:764:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:769:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:802:
+Warning:    Singleton variables: [ID]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -142,7 +196,7 @@ Script started on 2024-09-26 21:56:23+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000580 secs. (580.33 microseconds) 
+; took 0.000710 secs. (709.87 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -177,7 +231,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000167 secs. (167.13 microseconds) 
+; took 0.000208 secs. (207.61 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -210,7 +264,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000238 secs. (237.99 microseconds) 
+; took 0.000292 secs. (291.71 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -258,7 +312,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000597 secs. (596.94 microseconds) 
+; took 0.000685 secs. (684.51 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -297,7 +351,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000504 secs. (503.77 microseconds) 
+; took 0.000501 secs. (501.34 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -318,7 +372,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 232,968 inferences, 0.070 CPU in 0.070 seconds (100% CPU, 3336021 Lips)
+>% 232,810 inferences, 0.073 CPU in 0.073 seconds (100% CPU, 3167721 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b0_chaining_prelim.metta  0)
 <span class="ansi1"
@@ -353,7 +407,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-26 21:56:28+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-27 16:21:43+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

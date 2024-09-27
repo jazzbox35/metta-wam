@@ -15,6 +15,7 @@
 .ansi1 { font-weight: bold; }
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
@@ -52,7 +53,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-26 22:06:18+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 16:32:07+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -61,7 +62,59 @@ Script started on 2024-09-26 22:06:18+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:107:
+Warning:    Clauses of </span><span class="ansi34"
+>from_python/5</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:73
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous from_python/5.</span><span class="ansi31"
+> to suppress this message
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:649:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:654:
+Warning:    Singleton variables: [Type,ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:669:
+Warning:    Singleton variables: [ID1]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:675:
+Warning:    Singleton variables: [Atom]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:689:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:706:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:719:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:731:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:736:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:752:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:764:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:769:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:802:
+Warning:    Singleton variables: [ID]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -170,7 +223,7 @@ Script started on 2024-09-26 22:06:18+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; QUICK.C1-GROUNDED-BASIC.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000223 secs. (223.21 microseconds) 
+; took 0.000229 secs. (229.13 microseconds) 
 
   !(assertEqualToResult 
     (+ 2 
@@ -197,7 +250,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000211 secs. (210.83 microseconds) 
+; took 0.000210 secs. (210.03 microseconds) 
 
   !(assertEqualToResult 
     (- 8 
@@ -223,7 +276,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000172 secs. (171.94 microseconds) 
+; took 0.000176 secs. (175.58 microseconds) 
 
   !(assertEqualToResult 
     (% 21 17) 
@@ -250,7 +303,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000726 secs. (726.23 microseconds) 
+; took 0.000759 secs. (758.80 microseconds) 
 
   !(assertEqualToResult 
     (< 4 
@@ -279,7 +332,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000404 secs. (403.53 microseconds) 
+; took 0.000358 secs. (358.49 microseconds) 
 
   !(assertEqualToResult 
     (and 
@@ -313,7 +366,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000857 secs. (857.08 microseconds) 
+; took 0.000777 secs. (776.53 microseconds) 
 
   !(assertEqualToResult 
     (ln (+ 2 2)) 
@@ -346,7 +399,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.07</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.61 milliseconds) 
+; took 0.002 secs. (1.69 milliseconds) 
 
   !(assertEqualToResult 
     (> 4 
@@ -382,7 +435,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.08</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.29 milliseconds) 
+; took 0.001 secs. (1.30 milliseconds) 
 
   !(assertEqualToResult 
     (> 4 
@@ -417,7 +470,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000640 secs. (640.04 microseconds) 
+; took 0.000590 secs. (589.96 microseconds) 
 
   !(assertEqualToResult 
     (== 4 
@@ -443,7 +496,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000164 secs. (163.51 microseconds) 
+; took 0.000166 secs. (165.53 microseconds) 
 
   !(assertEqualToResult 
     (== 2 3) 
@@ -470,7 +523,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.11</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.03 milliseconds) 
+; took 0.000952 secs. (951.81 microseconds) 
 
   !(assertEqualToResult 
     (== 
@@ -499,7 +552,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.12</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.26 milliseconds) 
+; took 0.001 secs. (1.19 milliseconds) 
 
   !(assertEqualToResult 
     (== 
@@ -532,7 +585,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.13</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.07 milliseconds) 
+; took 0.001 secs. (1.09 milliseconds) 
 
   !(assertEqualToResult 
     (== 4 
@@ -564,7 +617,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000488 secs. (488.22 microseconds) 
+; took 0.000523 secs. (522.98 microseconds) 
 
   !(assertEqualToResult 
     (+ 2 "String") 
@@ -594,7 +647,7 @@ Deterministic: ((Error  (got  ((+ 2 "String"))) (expected  ((Error "String" BadT
 >;; QUICK.C1-GROUNDED-BASIC.15</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.08 milliseconds) 
+; took 0.000994 secs. (994.16 microseconds) 
 
   !(assertEqualToResult 
     (== 4 
@@ -628,7 +681,7 @@ Deterministic: ((Error  (got  (False)) (expected  ((Error ln BadType)))))
 >;; QUICK.C1-GROUNDED-BASIC.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000414 secs. (414.18 microseconds) 
+; took 0.000392 secs. (392.24 microseconds) 
 
   !(assertEqualToResult 
     (sqr 4) 
@@ -659,7 +712,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000869 secs. (868.94 microseconds) 
+; took 0.000882 secs. (882.08 microseconds) 
 
   !(assertEqual 
     (+ 
@@ -691,7 +744,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000275 secs. (275.01 microseconds) 
+; took 0.000349 secs. (349.11 microseconds) 
 
   !(assertEqualToResult 
     (bin) 
@@ -717,7 +770,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000523 secs. (523.24 microseconds) 
+; took 0.000684 secs. (683.53 microseconds) 
 
   !(assertEqualToResult 
     (+ 1 
@@ -745,7 +798,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000329 secs. (328.92 microseconds) 
+; took 0.000332 secs. (331.62 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -782,7 +835,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.21</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.46 milliseconds) 
+; took 0.003 secs. (3.35 milliseconds) 
 
   !(assertEqual 
     (fact 5) 120)
@@ -807,7 +860,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.22</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.16 milliseconds) 
+; took 0.003 secs. (3.09 milliseconds) 
 
   !(assertEqualToResult 
     (fact 5) 
@@ -876,7 +929,7 @@ Deterministic: ()
 >;; QUICK.C1-GROUNDED-BASIC.23</h3>
 ; 
 ; EVAL TEST
-; took 0.174 secs. (173.68 milliseconds) 
+; took 0.175 secs. (175.48 milliseconds) 
 
   !(assertEqualToResult 
     (let $t 
@@ -905,7 +958,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,776,484 inferences, 0.356 CPU in 0.356 seconds (100% CPU, 4993552 Lips)
+>% 1,776,330 inferences, 0.366 CPU in 0.366 seconds (100% CPU, 4859803 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/c1_grounded_basic.metta  0)
 <span class="ansi1"
@@ -940,7 +993,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-26 22:06:23+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-27 16:32:13+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

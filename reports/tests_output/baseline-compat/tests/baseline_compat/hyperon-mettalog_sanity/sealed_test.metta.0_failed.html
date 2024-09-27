@@ -13,7 +13,9 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
@@ -36,7 +38,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-26 22:00:30+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 16:26:01+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -45,7 +47,59 @@ Script started on 2024-09-26 22:00:30+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:107:
+Warning:    Clauses of </span><span class="ansi34"
+>from_python/5</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:73
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous from_python/5.</span><span class="ansi31"
+> to suppress this message
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:649:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:654:
+Warning:    Singleton variables: [Type,ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:669:
+Warning:    Singleton variables: [ID1]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:675:
+Warning:    Singleton variables: [Atom]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:689:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:706:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:719:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:731:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:736:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:752:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:764:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:769:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:802:
+Warning:    Singleton variables: [ID]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -123,7 +177,7 @@ Script started on 2024-09-26 22:00:30+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000257 secs. (257.02 microseconds) 
+; took 0.000268 secs. (267.85 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -136,8 +190,8 @@ Script started on 2024-09-26 22:00:30+00:00 [TERM="xterm-256color" TTY="/dev/pts
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote (= ($_571594 $_571600 $_571606) ($_571618)))) 
-      ( (quote (= ($_562656 $_562610 $_562776) ($_562678))))))
+      ( (quote (= ($_571362 $_571368 $_571374) ($_571386)))) 
+      ( (quote (= ($_562424 $_562378 $_562544) ($_562446))))))
 </span>
 Deterministic: ()
 ()]
@@ -154,7 +208,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000170 secs. (170.09 microseconds) 
+; took 0.000166 secs. (165.73 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -165,8 +219,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote (= ($_592148 $_592154)))) 
-      ( (quote (= ($_585266 $_585346))))))
+      ( (quote (= ($_591916 $_591922)))) 
+      ( (quote (= ($_585034 $_585114))))))
 </span>
 Deterministic: ()
 ()]
@@ -183,7 +237,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000881 secs. (881.41 microseconds) 
+; took 0.000900 secs. (899.74 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -194,8 +248,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (output (input $_621756))) 
-      ( (output (input $_606092)))))
+      ( (output (input $_621524))) 
+      ( (output (input $_605860)))))
 </span>
 Deterministic: ()
 ()]
@@ -216,7 +270,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.26 milliseconds) 
+; took 0.001 secs. (1.27 milliseconds) 
 
   !(assertEqual 
     (let 
@@ -231,8 +285,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (output (input $_658802))) 
-      ( (output (input $_662386)))))
+      ( (output (input $_658570))) 
+      ( (output (input $_662154)))))
 </span>
 Deterministic: ()
 ()]
@@ -255,7 +309,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000364 secs. (363.61 microseconds) 
+; took 0.000370 secs. (370.10 microseconds) 
 
   !(assertEqualToResult 
     (callsealer $x $y) 
@@ -264,8 +318,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_698394) (/ 100 $_698418))))) 
-      ( (quote ((* (+ 40 $_687416) (/ 100 $_687438)))))))
+      ( (quote ((* (+ 40 $_698162) (/ 100 $_698186))))) 
+      ( (quote ((* (+ 40 $_687184) (/ 100 $_687206)))))))
 </span>
 Deterministic: ()
 ()]
@@ -281,7 +335,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000415 secs. (415.49 microseconds) 
+; took 0.000455 secs. (455.47 microseconds) 
 
   !(assertEqualToResult 
     (callsealer 10 25) 
@@ -315,7 +369,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000377 secs. (376.98 microseconds) 
+; took 0.000414 secs. (413.80 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 5 $y) 
@@ -324,8 +378,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 5) (/ 100 $_758398))))) 
-      ( (quote ((* (+ 40 5) (/ 100 $_747476)))))))
+      ( (quote ((* (+ 40 5) (/ 100 $_758166))))) 
+      ( (quote ((* (+ 40 5) (/ 100 $_747244)))))))
 </span>
 Deterministic: ()
 ()]
@@ -340,7 +394,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000392 secs. (392.25 microseconds) 
+; took 0.000662 secs. (662.48 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 $x $y) 
@@ -349,8 +403,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_783098) (/ 100 $_783122))))) 
-      ( (quote ((* (+ 40 $_772094) (/ 100 $_772000)))))))
+      ( (quote ((* (+ 40 $_782866) (/ 100 $_782890))))) 
+      ( (quote ((* (+ 40 $_771862) (/ 100 $_771768)))))))
 </span>
 Deterministic: ()
 ()]
@@ -375,7 +429,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000406 secs. (405.71 microseconds) 
+; took 0.000446 secs. (445.65 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x 4) 
@@ -384,8 +438,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_819238) (/ 100 4))))) 
-      ( (quote ((* (+ 40 $_808340) (/ 100 4)))))))
+      ( (quote ((* (+ 40 $_819006) (/ 100 4))))) 
+      ( (quote ((* (+ 40 $_808108) (/ 100 4)))))))
 </span>
 Deterministic: ()
 ()]
@@ -401,7 +455,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000391 secs. (390.58 microseconds) 
+; took 0.000434 secs. (434.34 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x $y) 
@@ -410,14 +464,14 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_844136) (/ 100 $_844160))))) 
-      ( (quote ((* (+ 40 $_832990) (/ 100 $_833036)))))))
+      ( (quote ((* (+ 40 $_843904) (/ 100 $_843928))))) 
+      ( (quote ((* (+ 40 $_832758) (/ 100 $_832804)))))))
 </span>
 Deterministic: ()
 ()]
 ;;;both $x and $y sealed
 <span class="ansi32"
->% 625,949 inferences, 0.136 CPU in 0.136 seconds (100% CPU, 4610500 Lips)
+>% 625,791 inferences, 0.145 CPU in 0.145 seconds (100% CPU, 4313470 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/sealed_test.metta  0)
 <span class="ansi1"
@@ -452,7 +506,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-26 22:00:35+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-27 16:26:06+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
