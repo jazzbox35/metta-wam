@@ -13,9 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
-.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
@@ -45,7 +43,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-30 02:32:37+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-30 02:40:05+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -54,59 +52,7 @@ Script started on 2024-09-30 02:32:37+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:107:
-Warning:    Clauses of </span><span class="ansi34"
->from_python/5</span><span class="ansi31"
-> are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:73
-Warning:    Current predicate: </span><span class="ansi34"
->'$pldoc'/4</span><span class="ansi31"
->
-Warning:    Use </span><span class="ansi34"
->:- discontiguous from_python/5.</span><span class="ansi31"
-> to suppress this message
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:649:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:654:
-Warning:    Singleton variables: [Type,ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:669:
-Warning:    Singleton variables: [ID1]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:675:
-Warning:    Singleton variables: [Atom]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:689:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:706:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:719:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:731:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:736:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:752:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:764:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:769:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:802:
-Warning:    Singleton variables: [ID]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -203,7 +149,7 @@ Warning:    Singleton variables: [ID]
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000778 secs. (778.22 microseconds) 
+; took 0.000712 secs. (712.26 microseconds) 
 
   !(assertEqual 
     (+ 1 
@@ -232,7 +178,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000601 secs. (601.03 microseconds) 
+; took 0.000536 secs. (535.91 microseconds) 
 
   !(assertEqual 
     (+ 1 
@@ -292,7 +238,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000232 secs. (231.94 microseconds) 
+; took 0.000195 secs. (194.70 microseconds) 
 
   !(assertEqual 
     (case 
@@ -322,7 +268,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000309 secs. (308.84 microseconds) 
+; took 0.000266 secs. (266.28 microseconds) 
 
   !(assertEqual 
     (case 
@@ -351,7 +297,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000245 secs. (245.28 microseconds) 
+; took 0.000266 secs. (266.29 microseconds) 
 
   !(assertEqual 
     (case 5 
@@ -379,7 +325,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000713 secs. (713.16 microseconds) 
+; took 0.000708 secs. (708.23 microseconds) 
 
   !(assertEqual 
     (case 
@@ -411,7 +357,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000787 secs. (786.53 microseconds) 
+; took 0.000709 secs. (708.59 microseconds) 
 
   !(assertEqual 
     (case 
@@ -438,7 +384,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000094 secs. (94.46 microseconds) 
+; took 0.000123 secs. (123.34 microseconds) 
 
   !(assertEqualToResult 
     (superpose ()) ())
@@ -460,7 +406,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000209 secs. (209.25 microseconds) 
+; took 0.000193 secs. (193.43 microseconds) 
 
   !(assertEqualToResult 
     (collapse (superpose ())) 
@@ -484,7 +430,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000186 secs. (186.22 microseconds) 
+; took 0.000181 secs. (181.14 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((nop 1))) ())
@@ -507,7 +453,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000297 secs. (296.62 microseconds) 
+; took 0.000390 secs. (389.81 microseconds) 
 
   !(assertEqualToResult 
     (collapse (superpose ((nop 1)))) 
@@ -597,7 +543,7 @@ NDet Result(5): (Rel-Q A C)
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000894 secs. (894.08 microseconds) 
+; took 0.000899 secs. (899.33 microseconds) 
 
   !(assertEqual 
     (match &self $1 $1) 
@@ -633,7 +579,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000409 secs. (409.33 microseconds) 
+; took 0.000505 secs. (504.68 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -660,7 +606,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000704 secs. (703.66 microseconds) 
+; took 0.000825 secs. (824.87 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((Rel-P B) (Rel-Q C))) 
@@ -688,7 +634,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000882 secs. (881.86 microseconds) 
+; took 0.001 secs. (1.00 milliseconds) 
 
   !(assertEqual 
     (match &self 
@@ -720,7 +666,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.17</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.49 milliseconds) 
+; took 0.002 secs. (1.58 milliseconds) 
 
   !(assertEqual 
     (superpose ((P B) (Q C))) 
@@ -755,7 +701,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000239 secs. (238.67 microseconds) 
+; took 0.000265 secs. (265.01 microseconds) 
 
   !(assertEqual 
     (case 
@@ -775,7 +721,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 633,555 inferences, 0.143 CPU in 0.143 seconds (100% CPU, 4444363 Lips)
+>% 637,051 inferences, 0.144 CPU in 0.144 seconds (100% CPU, 4423158 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/00_lang_case.metta  0)
 <span class="ansi1"
@@ -810,7 +756,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-30 02:32:42+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-30 02:40:11+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
