@@ -26,7 +26,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-30 16:09:18+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-01 22:07:31+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -122,7 +122,7 @@ Script started on 2024-09-30 16:09:18+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >  (man mortal)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (2.46 milliseconds) 
+; took 0.002 secs. (2.20 milliseconds) 
 
   !(assertEqualToResult 
     (sequential ((add-atom &self (man mortal)) (match &self ($A mortal) (mortal $A)))) 
@@ -137,7 +137,7 @@ Script started on 2024-09-30 16:09:18+00:00 [TERM="xterm-256color" TTY="/dev/pts
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 96,837 inferences, 0.047 CPU in 0.047 seconds (100% CPU, 2054389 Lips)
+>% 96,833 inferences, 0.044 CPU in 0.044 seconds (100% CPU, 2203631 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/add_atom_match.metta  0)
 <span class="ansi1"
@@ -172,7 +172,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-30 16:09:23+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-01 22:07:36+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
