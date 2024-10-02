@@ -35,13 +35,13 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:35:56+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-02 20:37:37+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
 Warning:    Clauses of </span><span class="ansi34"
 >show_cvts/1</span><span class="ansi31"
 > are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
 Warning:    Current predicate: </span><span class="ansi34"
 >'$pldoc'/4</span><span class="ansi31"
 >
@@ -49,7 +49,7 @@ Warning:    Use </span><span class="ansi34"
 >:- discontiguous show_cvts/1.</span><span class="ansi31"
 > to suppress this message
 </span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
 </span>P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -153,7 +153,7 @@ Deterministic: ()
 > 1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.10 milliseconds) 
+; took 0.001 secs. (1.14 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &attentional_focus 1) 
@@ -193,7 +193,7 @@ Deterministic: ()
 > 2
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.17 milliseconds) 
+; took 0.001 secs. (1.07 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &concepts 2) 
@@ -219,7 +219,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000188 secs. (187.82 microseconds) 
+; took 0.000199 secs. (198.73 microseconds) 
 
   !(assertEqualToResult 
     (match &attentional_focus $1 $1) 
@@ -244,7 +244,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000174 secs. (174.30 microseconds) 
+; took 0.000187 secs. (186.54 microseconds) 
 
   !(assertEqualToResult 
     (match &concepts $1 $1) 
@@ -271,7 +271,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000319 secs. (318.56 microseconds) 
+; took 0.000255 secs. (255.24 microseconds) 
 
   !(assertEqualToResult 
     (match 
@@ -287,7 +287,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 203,852 inferences, 0.067 CPU in 0.068 seconds (100% CPU, 3022069 Lips)
+>% 203,852 inferences, 0.066 CPU in 0.066 seconds (100% CPU, 3094426 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/match_superposed_spaces.metta  0)
 <span class="ansi1"
@@ -322,7 +322,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:36:01+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:37:42+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

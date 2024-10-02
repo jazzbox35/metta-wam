@@ -43,13 +43,13 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:28:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-02 20:30:13+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
 Warning:    Clauses of </span><span class="ansi34"
 >show_cvts/1</span><span class="ansi31"
 > are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
 Warning:    Current predicate: </span><span class="ansi34"
 >'$pldoc'/4</span><span class="ansi31"
 >
@@ -57,7 +57,7 @@ Warning:    Use </span><span class="ansi34"
 >:- discontiguous show_cvts/1.</span><span class="ansi31"
 > to suppress this message
 </span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
 </span>P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -247,7 +247,7 @@ Warning:    Use </span><span class="ansi34"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.01</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (9.25 milliseconds) 
+; took 0.009 secs. (9.05 milliseconds) 
 
   !(assertEqual 
     (TV (And (PA) (PB))) 
@@ -272,7 +272,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.02</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.16 milliseconds) 
+; took 0.005 secs. (4.90 milliseconds) 
 
   !(assertEqual 
     (TV (FA)) 
@@ -326,7 +326,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.03</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.44 milliseconds) 
+; took 0.001 secs. (1.40 milliseconds) 
 
   !(assertEqual 
     (TV (croaks Fritz)) 
@@ -351,7 +351,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.04</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (14.74 milliseconds) 
+; took 0.015 secs. (14.67 milliseconds) 
 
   !(assertEqual 
     (TV (frog Fritz)) 
@@ -376,7 +376,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.05</h3>
 ; 
 ; EVAL TEST
-; took 0.031 secs. (31.34 milliseconds) 
+; took 0.032 secs. (31.62 milliseconds) 
 
   !(assertEqual 
     (TV (green Fritz)) 
@@ -391,7 +391,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 619,142 inferences, 0.146 CPU in 0.146 seconds (100% CPU, 4226908 Lips)
+>% 619,142 inferences, 0.147 CPU in 0.147 seconds (100% CPU, 4213109 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/c3_pln_stv.metta  0)
 <span class="ansi1"
@@ -426,7 +426,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:28:11+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:30:18+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

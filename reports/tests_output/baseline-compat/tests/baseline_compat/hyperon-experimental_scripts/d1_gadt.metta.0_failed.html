@@ -50,13 +50,13 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:28:13+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-02 20:30:20+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
 Warning:    Clauses of </span><span class="ansi34"
 >show_cvts/1</span><span class="ansi31"
 > are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
 Warning:    Current predicate: </span><span class="ansi34"
 >'$pldoc'/4</span><span class="ansi31"
 >
@@ -64,7 +64,7 @@ Warning:    Use </span><span class="ansi34"
 >:- discontiguous show_cvts/1.</span><span class="ansi31"
 > to suppress this message
 </span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
 </span>P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -171,7 +171,7 @@ Warning:    Use </span><span class="ansi34"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000207 secs. (206.56 microseconds) 
+; took 0.000237 secs. (237.10 microseconds) 
 
   !(assertEqual 
     (get-type 5) Number)
@@ -194,7 +194,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000218 secs. (218.02 microseconds) 
+; took 0.000216 secs. (215.58 microseconds) 
 
   !(assertEqual 
     (get-type (+ 5 7)) Number)
@@ -219,7 +219,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000193 secs. (192.57 microseconds) 
+; took 0.000174 secs. (174.14 microseconds) 
 
   !(assertEqual 
     (get-type +) 
@@ -245,7 +245,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000259 secs. (259.31 microseconds) 
+; took 0.000327 secs. (326.51 microseconds) 
 
   !(assertEqualToResult 
     (get-type (+ 5 "4")) ())
@@ -267,7 +267,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000209 secs. (209.15 microseconds) 
+; took 0.000182 secs. (182.09 microseconds) 
 
   !(assertEqualToResult 
     (get-type (+ -)) ())
@@ -292,7 +292,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000146 secs. (146.13 microseconds) 
+; took 0.000124 secs. (124.09 microseconds) 
 
   !(assertEqual 
     (get-type Either) Type)
@@ -325,7 +325,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000225 secs. (225.23 microseconds) 
+; took 0.000214 secs. (214.31 microseconds) 
 
   !(assertEqual 
     (get-type (Left 5)) Either)
@@ -357,7 +357,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000325 secs. (324.59 microseconds) 
+; took 0.000353 secs. (352.53 microseconds) 
 
   !(assertEqual 
     (get-type (isLeft (Right 5))) Bool)
@@ -381,7 +381,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000225 secs. (225.22 microseconds) 
+; took 0.000232 secs. (231.70 microseconds) 
 
   !(assertEqualToResult 
     (get-type (isLeft 5)) ())
@@ -419,7 +419,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000609 secs. (608.95 microseconds) 
+; took 0.000592 secs. (592.06 microseconds) 
 
   !(assertEqual 
     (get-type (LeftP 5)) 
@@ -452,7 +452,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000949 secs. (948.86 microseconds) 
+; took 0.000895 secs. (894.88 microseconds) 
 
   !(assertEqual 
     (get-type (pair (LeftP 5) "String")) 
@@ -495,7 +495,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000756 secs. (756.11 microseconds) 
+; took 0.000785 secs. (784.95 microseconds) 
 
   !(assertEqual 
     (get-type (Cons 5 (Cons 6 Nil))) 
@@ -519,7 +519,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000337 secs. (337.04 microseconds) 
+; took 0.000385 secs. (385.32 microseconds) 
 
   !(assertEqualToResult 
     (get-type (Cons 5 (Cons "6" Nil))) ())
@@ -547,7 +547,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.D1-GADT.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000602 secs. (601.85 microseconds) 
+; took 0.000678 secs. (677.55 microseconds) 
 
   !(assertEqual 
     (let 
@@ -563,7 +563,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 491,152 inferences, 0.127 CPU in 0.127 seconds (100% CPU, 3875551 Lips)
+>% 491,152 inferences, 0.127 CPU in 0.127 seconds (100% CPU, 3864825 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/d1_gadt.metta  0)
 <span class="ansi1"
@@ -598,7 +598,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:28:18+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:30:25+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

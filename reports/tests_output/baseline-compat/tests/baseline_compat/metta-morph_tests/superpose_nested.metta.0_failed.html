@@ -34,13 +34,13 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:37:09+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-02 20:38:46+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
 Warning:    Clauses of </span><span class="ansi34"
 >show_cvts/1</span><span class="ansi31"
 > are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
 Warning:    Current predicate: </span><span class="ansi34"
 >'$pldoc'/4</span><span class="ansi31"
 >
@@ -48,7 +48,7 @@ Warning:    Use </span><span class="ansi34"
 >:- discontiguous show_cvts/1.</span><span class="ansi31"
 > to suppress this message
 </span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
 </span>P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -135,7 +135,7 @@ Warning:    Use </span><span class="ansi34"
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000171 secs. (171.26 microseconds) 
+; took 0.000177 secs. (177.30 microseconds) 
 
   !(assertEqualToResult 
     (superpose (a b c)) 
@@ -165,7 +165,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000268 secs. (268.05 microseconds) 
+; took 0.000260 secs. (260.25 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((superpose (a b c)))) 
@@ -195,7 +195,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000433 secs. (433.32 microseconds) 
+; took 0.000384 secs. (383.94 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((superpose (a b c)) (superpose (x y z)))) 
@@ -225,7 +225,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERPOSE-NESTED.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000306 secs. (305.91 microseconds) 
+; took 0.000290 secs. (290.44 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((superpose (a b c)) x y z)) 
@@ -240,7 +240,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 166,606 inferences, 0.055 CPU in 0.055 seconds (100% CPU, 3027523 Lips)
+>% 166,606 inferences, 0.056 CPU in 0.056 seconds (100% CPU, 2990533 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/superpose_nested.metta  0)
 <span class="ansi1"
@@ -275,7 +275,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:37:14+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:38:51+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

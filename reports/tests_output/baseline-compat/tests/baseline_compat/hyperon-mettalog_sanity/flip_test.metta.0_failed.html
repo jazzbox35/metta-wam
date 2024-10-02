@@ -28,13 +28,13 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:30:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-02 20:32:45+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
 Warning:    Clauses of </span><span class="ansi34"
 >show_cvts/1</span><span class="ansi31"
 > are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
 Warning:    Current predicate: </span><span class="ansi34"
 >'$pldoc'/4</span><span class="ansi31"
 >
@@ -42,7 +42,7 @@ Warning:    Use </span><span class="ansi34"
 >:- discontiguous show_cvts/1.</span><span class="ansi31"
 > to suppress this message
 </span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
 </span>P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -144,7 +144,7 @@ Warning:    Use </span><span class="ansi34"
 >;; HYPERON-METTALOG-SANITY.FLIP-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.12 milliseconds) 
+; took 0.001 secs. (1.22 milliseconds) 
 
   !(assertEqualToResult 
     (recur-until-flip-true 1) 
@@ -169,7 +169,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.FLIP-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.19 milliseconds) 
+; took 0.001 secs. (1.48 milliseconds) 
 
   !(assertEqualToResult 
     (recur-until-flip-false 1) 
@@ -184,7 +184,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 133,654 inferences, 0.051 CPU in 0.051 seconds (100% CPU, 2599637 Lips)
+>% 128,446 inferences, 0.052 CPU in 0.052 seconds (100% CPU, 2480008 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/flip_test.metta  0)
 <span class="ansi1"
@@ -219,7 +219,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:30:54+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:32:50+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
