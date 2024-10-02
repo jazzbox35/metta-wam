@@ -12,7 +12,10 @@
 .body_background { background-color: #000000; }
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
 </style>
@@ -20,8 +23,22 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-01 22:04:42+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-02 20:31:43+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+Warning:    Clauses of </span><span class="ansi34"
+>show_cvts/1</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous show_cvts/1.</span><span class="ansi31"
+> to suppress this message
+</span><span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -257,7 +274,7 @@ NDet Result(6): (assertEqualToResults f (a b c d e f)),
     (a b c d e f))
 ]
 <span class="ansi32"
->% 378,610 inferences, 0.123 CPU in 0.123 seconds (100% CPU, 3090664 Lips)
+>% 378,606 inferences, 0.124 CPU in 0.124 seconds (100% CPU, 3047319 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/represent_and_parse_tests.metta  0)
 <br/> <a href="#" onclick="window.history.back(); return false;"
@@ -285,7 +302,7 @@ NDet Result(6): (assertEqualToResults f (a b c d e f)),
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-01 22:04:47+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:31:48+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

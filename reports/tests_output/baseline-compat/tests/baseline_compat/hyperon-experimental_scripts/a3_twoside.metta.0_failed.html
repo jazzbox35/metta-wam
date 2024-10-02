@@ -13,7 +13,9 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -28,8 +30,22 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-01 22:00:01+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-02 20:27:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+Warning:    Clauses of </span><span class="ansi34"
+>show_cvts/1</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous show_cvts/1.</span><span class="ansi31"
+> to suppress this message
+</span><span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -129,7 +145,7 @@ Script started on 2024-10-01 22:00:01+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000584 secs. (583.57 microseconds) 
+; took 0.000613 secs. (612.95 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -160,7 +176,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000373 secs. (373.19 microseconds) 
+; took 0.000370 secs. (370.34 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -204,7 +220,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000443 secs. (442.91 microseconds) 
+; took 0.000437 secs. (436.75 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -245,7 +261,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000388 secs. (387.78 microseconds) 
+; took 0.000416 secs. (415.75 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -268,7 +284,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 200,702 inferences, 0.062 CPU in 0.062 seconds (100% CPU, 3235914 Lips)
+>% 200,698 inferences, 0.062 CPU in 0.062 seconds (100% CPU, 3249463 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/a3_twoside.metta  0)
 <span class="ansi1"
@@ -303,7 +319,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-01 22:00:06+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:27:07+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

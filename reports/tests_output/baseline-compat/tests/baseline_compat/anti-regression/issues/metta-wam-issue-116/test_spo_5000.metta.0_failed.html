@@ -13,7 +13,9 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
@@ -23,8 +25,22 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-01 21:58:08+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-02 20:25:08+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+Warning:    Clauses of </span><span class="ansi34"
+>show_cvts/1</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous show_cvts/1.</span><span class="ansi31"
+> to suppress this message
+</span><span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -110,10 +126,10 @@ Deterministic: ()
 >  !(import! &hald5000 hald_spo_5000)
 
 </span>
-; Done translating 5005 forms: asserted_metta_pred('_hald_spo_5000_1727819893_584319','/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_5000.metta').
+; Done translating 5005 forms: asserted_metta_pred(hald_spo_5000_1727900713_7365978,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_5000.metta').
 
 Deterministic: ()
-[(); Execution took 0.496 secs. (496.49 milliseconds) 
+[(); Execution took 0.496 secs. (496.45 milliseconds) 
 
 ]
 <span class="ansi38-013099040"
@@ -131,7 +147,7 @@ Deterministic: ()
 >;; METTA-WAM-ISSUE-116.TEST-SPO-5000.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.02 milliseconds) 
+; took 0.002 secs. (2.13 milliseconds) 
 
   !(assertEqualToResult 
     (match &hald5000 
@@ -152,11 +168,11 @@ Deterministic: ()
         (Doxorubicin stratify Liposarcoma))))
 </span>
 Deterministic: ()
-(); Execution took 0.005 secs. (4.56 milliseconds) 
+(); Execution took 0.005 secs. (4.78 milliseconds) 
 
 ]
 <span class="ansi32"
->% 5,419,868 inferences, 0.543 CPU in 0.543 seconds (100% CPU, 9977756 Lips)
+>% 5,419,864 inferences, 0.544 CPU in 0.544 seconds (100% CPU, 9967389 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/test_spo_5000.metta  0)
 <span class="ansi1"
@@ -191,7 +207,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-01 21:58:14+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:25:14+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -13,7 +13,9 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -49,8 +51,22 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-01 22:10:01+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-02 20:37:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+Warning:    Clauses of </span><span class="ansi34"
+>show_cvts/1</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous show_cvts/1.</span><span class="ansi31"
+> to suppress this message
+</span><span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -163,7 +179,7 @@ Script started on 2024-10-01 22:10:01+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.20 milliseconds) 
+; took 0.002 secs. (2.30 milliseconds) 
 
   !(assertEqualToResult 
     (TupleConcat 
@@ -197,7 +213,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.35 milliseconds) 
+; took 0.001 secs. (1.28 milliseconds) 
 
   !(assertEqualToResult 
     (TupleConcat () 
@@ -230,7 +246,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.47 milliseconds) 
+; took 0.001 secs. (1.38 milliseconds) 
 
   !(assertEqualToResult 
     (TupleConcat 
@@ -274,7 +290,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.78 milliseconds) 
+; took 0.002 secs. (1.74 milliseconds) 
 
   !(assertEqualToResult 
     (TupleConcat 
@@ -312,7 +328,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000401 secs. (400.80 microseconds) 
+; took 0.000436 secs. (435.50 microseconds) 
 
   !(assertEqualToResult 
     (range 1 1) 
@@ -372,7 +388,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.07</h3>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.57 milliseconds) 
+; took 0.007 secs. (6.54 milliseconds) 
 
   !(assertEqualToResult 
     (range 2 6) 
@@ -402,7 +418,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SUPERCOLLAPSE.08</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (14.97 milliseconds) 
+; took 0.015 secs. (15.17 milliseconds) 
 
   !(assertEqualToResult 
     (range 1 10) 
@@ -417,7 +433,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 486,342 inferences, 0.113 CPU in 0.113 seconds (100% CPU, 4287044 Lips)
+>% 486,338 inferences, 0.115 CPU in 0.115 seconds (100% CPU, 4241807 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/supercollapse.metta  0)
 <span class="ansi1"
@@ -452,7 +468,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-01 22:10:06+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:37:07+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

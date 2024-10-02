@@ -13,7 +13,9 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-255165000 { color: #FFA500; }
@@ -56,8 +58,22 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-01 21:56:43+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-02 20:23:43+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:267:
+Warning:    Clauses of </span><span class="ansi34"
+>show_cvts/1</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:248
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous show_cvts/1.</span><span class="ansi31"
+> to suppress this message
+</span><span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:878:24: Syntax error: Operator priority clash
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -221,7 +237,7 @@ Deterministic: ()
     (nums 2 3))
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.73 milliseconds) 
+; took 0.002 secs. (1.77 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -266,7 +282,7 @@ Deterministic: ()
       (rule1output $_170380 $_170402)))
 </span>; 
 ; EVAL TEST
-; took 0.005 secs. (5.19 milliseconds) 
+; took 0.005 secs. (5.21 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -319,7 +335,7 @@ Deterministic: ()
         (less $_201264 $_201286))))
 </span>; 
 ; EVAL TEST
-; took 0.007 secs. (7.17 milliseconds) 
+; took 0.007 secs. (7.26 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -408,7 +424,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.BCHAIN.04</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (6.00 milliseconds) 
+; took 0.006 secs. (5.96 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -446,7 +462,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.BCHAIN.05</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.04 milliseconds) 
+; took 0.005 secs. (4.89 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -485,7 +501,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.BCHAIN.06</h3>
 ; 
 ; EVAL TEST
-; took 0.018 secs. (18.03 milliseconds) 
+; took 0.018 secs. (17.75 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -509,7 +525,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 563,143 inferences, 0.136 CPU in 0.137 seconds (100% CPU, 4126044 Lips)
+>% 563,139 inferences, 0.136 CPU in 0.136 seconds (100% CPU, 4133802 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/bchain.metta  0)
 <span class="ansi1"
@@ -544,7 +560,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-01 21:56:48+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-02 20:23:48+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
