@@ -13,9 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
-.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -43,22 +41,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:39:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
-Warning:    Clauses of </span><span class="ansi34"
->show_cvts/1</span><span class="ansi31"
-> are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
-Warning:    Current predicate: </span><span class="ansi34"
->'$pldoc'/4</span><span class="ansi31"
->
-Warning:    Use </span><span class="ansi34"
->:- discontiguous show_cvts/1.</span><span class="ansi31"
-> to suppress this message
-</span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
-</span>P;HTML|
+Script started on 2024-10-03 17:33:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -160,7 +144,7 @@ Warning:    Use </span><span class="ansi34"
 >;; METTA-MORPH-TESTS.TYPES2.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000165 secs. (165.47 microseconds) 
+; took 0.000182 secs. (182.11 microseconds) 
 
   !(assertEqualToResult 
     (get-type lion1) 
@@ -190,7 +174,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000305 secs. (304.51 microseconds) 
+; took 0.000364 secs. (363.61 microseconds) 
 
   !(assertEqualToResult 
     (reproduce lion1 lion2) 
@@ -220,7 +204,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000151 secs. (151.24 microseconds) 
+; took 0.000156 secs. (155.84 microseconds) 
 
   !(assertEqualToResult 
     (get-type Lion) 
@@ -252,7 +236,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000171 secs. (171.06 microseconds) 
+; took 0.000203 secs. (202.97 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -285,7 +269,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000175 secs. (174.77 microseconds) 
+; took 0.000185 secs. (185.04 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -301,7 +285,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 203,380 inferences, 0.068 CPU in 0.068 seconds (100% CPU, 3003141 Lips)
+>% 203,384 inferences, 0.069 CPU in 0.069 seconds (100% CPU, 2935088 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/types2.metta  0)
 <span class="ansi1"
@@ -336,7 +320,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:39:11+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-03 17:33:54+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

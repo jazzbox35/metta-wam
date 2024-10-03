@@ -13,9 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
-.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-255165009 { color: #FFA509; }
@@ -37,22 +35,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:31:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
-Warning:    Clauses of </span><span class="ansi34"
->show_cvts/1</span><span class="ansi31"
-> are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
-Warning:    Current predicate: </span><span class="ansi34"
->'$pldoc'/4</span><span class="ansi31"
->
-Warning:    Use </span><span class="ansi34"
->:- discontiguous show_cvts/1.</span><span class="ansi31"
-> to suppress this message
-</span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
-</span>P;HTML|
+Script started on 2024-10-03 17:26:29+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -157,7 +141,7 @@ Deterministic: ()
 >  (SS-P_AS A_AS B_AS)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.71 milliseconds) 
+; took 0.002 secs. (1.90 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -192,7 +176,7 @@ Deterministic: ()
 >  (SS-Q_AS A_AS C_AS)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.68 milliseconds) 
+; took 0.002 secs. (1.75 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -224,7 +208,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.06-MATCH-IN-SPACE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000612 secs. (611.82 microseconds) 
+; took 0.000644 secs. (643.76 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -254,7 +238,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.06-MATCH-IN-SPACE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.03 milliseconds) 
+; took 0.001 secs. (1.04 milliseconds) 
 
   !(assertEqual 
     (match &kb 
@@ -286,7 +270,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.06-MATCH-IN-SPACE.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.55 milliseconds) 
+; took 0.002 secs. (1.64 milliseconds) 
 
   !(assertEqual 
     (superpose ((P_AS B_AS) (Q_AS C_AS))) 
@@ -321,7 +305,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.06-MATCH-IN-SPACE.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000262 secs. (262.22 microseconds) 
+; took 0.000290 secs. (289.89 microseconds) 
 
   !(assertEqual 
     (case 
@@ -341,7 +325,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 267,896 inferences, 0.079 CPU in 0.079 seconds (100% CPU, 3411364 Lips)
+>% 267,904 inferences, 0.083 CPU in 0.083 seconds (100% CPU, 3242093 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/06_match_in_space.metta  0)
 <span class="ansi1"
@@ -376,7 +360,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:32:04+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-03 17:26:34+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

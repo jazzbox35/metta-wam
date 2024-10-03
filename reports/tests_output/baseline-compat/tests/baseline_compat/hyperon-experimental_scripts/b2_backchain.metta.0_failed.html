@@ -13,9 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
-.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -42,22 +40,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:29:33+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
-Warning:    Clauses of </span><span class="ansi34"
->show_cvts/1</span><span class="ansi31"
-> are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
-Warning:    Current predicate: </span><span class="ansi34"
->'$pldoc'/4</span><span class="ansi31"
->
-Warning:    Use </span><span class="ansi34"
->:- discontiguous show_cvts/1.</span><span class="ansi31"
-> to suppress this message
-</span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
-</span>P;HTML|
+Script started on 2024-10-03 17:23:57+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -155,7 +139,7 @@ Warning:    Use </span><span class="ansi34"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000313 secs. (313.09 microseconds) 
+; took 0.000316 secs. (315.56 microseconds) 
 
   !(assertEqualToResult 
     (Frog Sam) 
@@ -180,7 +164,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000357 secs. (357.47 microseconds) 
+; took 0.000363 secs. (363.36 microseconds) 
 
   !(assertEqual 
     (frog Sam) T)
@@ -203,7 +187,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000351 secs. (351.31 microseconds) 
+; took 0.000374 secs. (374.09 microseconds) 
 
   !(assertEqualToResult 
     (frog Fritz) ())
@@ -277,7 +261,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.04</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.53 milliseconds) 
+; took 0.003 secs. (3.40 milliseconds) 
 
   !(assertEqual 
     (deduce (Evaluation (mortal Plato))) T)
@@ -342,7 +326,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.05</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (15.33 milliseconds) 
+; took 0.015 secs. (14.88 milliseconds) 
 
   !(assertEqual 
     (explain (Evaluation (mortal Plato))) 
@@ -369,7 +353,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 388,806 inferences, 0.106 CPU in 0.106 seconds (100% CPU, 3665790 Lips)
+>% 388,810 inferences, 0.105 CPU in 0.105 seconds (100% CPU, 3717028 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b2_backchain.metta  0)
 <span class="ansi1"
@@ -404,7 +388,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:29:38+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-03 17:24:03+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

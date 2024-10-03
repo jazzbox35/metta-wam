@@ -13,9 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
-.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-255165000 { color: #FFA500; }
@@ -73,22 +71,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:25:34+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-^@<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
-Warning:    Clauses of </span><span class="ansi34"
->show_cvts/1</span><span class="ansi31"
-> are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
-Warning:    Current predicate: </span><span class="ansi34"
->'$pldoc'/4</span><span class="ansi31"
->
-Warning:    Use </span><span class="ansi34"
->:- discontiguous show_cvts/1.</span><span class="ansi31"
-> to suppress this message
-</span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
-</span>P;HTML|
+Script started on 2024-10-03 17:19:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+^@P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -226,7 +210,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000557 secs. (556.76 microseconds) 
+; took 0.000521 secs. (520.68 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -257,7 +241,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000165 secs. (164.96 microseconds) 
+; took 0.000141 secs. (141.20 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -287,7 +271,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000324 secs. (324.00 microseconds) 
+; took 0.000297 secs. (296.98 microseconds) 
 
   !(assertEqual 
     (match &kb 
@@ -326,7 +310,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000580 secs. (579.97 microseconds) 
+; took 0.000626 secs. (626.14 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -430,7 +414,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000457 secs. (457.19 microseconds) 
+; took 0.000459 secs. (459.08 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -450,7 +434,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 430,214 inferences, 0.133 CPU in 0.792 seconds (17% CPU, 3234278 Lips)
+>% 430,222 inferences, 0.131 CPU in 0.407 seconds (32% CPU, 3280850 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/module-system/c2_spaces.metta  0)
 <span class="ansi1"
@@ -485,7 +469,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:25:40+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-03 17:20:01+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -13,9 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
-.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
@@ -38,22 +36,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-02 20:33:43+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:259:
-Warning:    Clauses of </span><span class="ansi34"
->show_cvts/1</span><span class="ansi31"
-> are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:240
-Warning:    Current predicate: </span><span class="ansi34"
->'$pldoc'/4</span><span class="ansi31"
->
-Warning:    Use </span><span class="ansi34"
->:- discontiguous show_cvts/1.</span><span class="ansi31"
-> to suppress this message
-</span><span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_convert.pl:870:24: Syntax error: Operator priority clash
-</span>P;HTML|
+Script started on 2024-10-03 17:28:18+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -139,7 +123,7 @@ Warning:    Use </span><span class="ansi34"
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000263 secs. (263.39 microseconds) 
+; took 0.000270 secs. (269.85 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -170,7 +154,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000177 secs. (176.68 microseconds) 
+; took 0.000152 secs. (151.78 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -199,7 +183,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000893 secs. (893.13 microseconds) 
+; took 0.000908 secs. (908.00 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -232,7 +216,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.28 milliseconds) 
+; took 0.001 secs. (1.39 milliseconds) 
 
   !(assertEqual 
     (let 
@@ -271,7 +255,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000360 secs. (359.90 microseconds) 
+; took 0.000375 secs. (375.28 microseconds) 
 
   !(assertEqualToResult 
     (callsealer $x $y) 
@@ -297,7 +281,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000359 secs. (358.72 microseconds) 
+; took 0.000380 secs. (380.27 microseconds) 
 
   !(assertEqualToResult 
     (callsealer 10 25) 
@@ -331,7 +315,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000359 secs. (358.99 microseconds) 
+; took 0.000366 secs. (365.93 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 5 $y) 
@@ -356,7 +340,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000372 secs. (372.46 microseconds) 
+; took 0.000468 secs. (467.76 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 $x $y) 
@@ -391,7 +375,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000366 secs. (366.19 microseconds) 
+; took 0.000375 secs. (374.74 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x 4) 
@@ -417,7 +401,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000450 secs. (449.57 microseconds) 
+; took 0.000452 secs. (451.95 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x $y) 
@@ -433,7 +417,7 @@ Deterministic: ()
 ()]
 ;;;both $x and $y sealed
 <span class="ansi32"
->% 627,503 inferences, 0.135 CPU in 0.135 seconds (100% CPU, 4633318 Lips)
+>% 627,507 inferences, 0.139 CPU in 0.139 seconds (100% CPU, 4523660 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/sealed_test.metta  0)
 <span class="ansi1"
@@ -468,7 +452,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-02 20:33:48+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-03 17:28:23+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
