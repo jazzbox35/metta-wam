@@ -67,7 +67,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-03 17:27:11+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-04 20:48:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -427,21 +427,21 @@ Script started on 2024-10-03 17:27:11+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >  !(limit 6 
     (unique (synthesize (: $term $type) kb rb (S (S Z)))))
 
-</span>
+</span>[
 
 NDet Result(1): (: a A)
 $term = a
 $type = A
-[(: a A)
-
+(: a A)
+, 
 
 NDet Result(2): (: a B)
 $term = a
 $type = B
-, (: a B)
+(: a B)
+, 
 
-
-NDet Result(3): (: abc (Implication (AndLink A B) C)), 
+NDet Result(3): (: abc (Implication (AndLink A B) C))
   (: abc 
     (Implication 
 
@@ -450,9 +450,9 @@ $type =
   (Implication 
     (AndLink A B) C)
       (AndLink A B) C))
+, 
 
-
-NDet Result(4): (: cde (Implication (OrLink C D) E)), 
+NDet Result(4): (: cde (Implication (OrLink C D) E))
   (: cde 
     (Implication 
 
@@ -461,18 +461,18 @@ $type =
   (Implication 
     (OrLink C D) E)
       (OrLink C D) E))
+, 
 
-
-NDet Result(5): (: (ConjunctionEliminationLeft (ConjunctionIntroduction a a)) A), 
+NDet Result(5): (: (ConjunctionEliminationLeft (ConjunctionIntroduction a a)) A)
   (: 
 
 $term = 
   (ConjunctionEliminationLeft (ConjunctionIntroduction a a))
 $type = A
     (ConjunctionEliminationLeft (ConjunctionIntroduction a a)) A)
+, 
 
-
-Last Result(6): (: (ConjunctionEliminationLeft (ConjunctionIntroduction a a)) A), 
+Last Result(6): (: (ConjunctionEliminationLeft (ConjunctionIntroduction a a)) A)
   (: 
 
 $term = 
@@ -481,7 +481,7 @@ $type = A
     (ConjunctionEliminationLeft (ConjunctionIntroduction a a)) A)]
 ;;; (: a A)
 <span class="ansi32"
->% 585,369 inferences, 0.151 CPU in 0.151 seconds (100% CPU, 3867246 Lips)
+>% 585,630 inferences, 0.151 CPU in 0.151 seconds (100% CPU, 3881488 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/first_answer_long.metta  0)
 <br/> <a href="#" onclick="window.history.back(); return false;"
@@ -509,7 +509,7 @@ $type = A
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-03 17:27:16+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-04 20:48:28+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
