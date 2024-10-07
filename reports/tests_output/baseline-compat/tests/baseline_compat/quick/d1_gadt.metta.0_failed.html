@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -49,7 +48,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-07 23:07:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 23:25:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -58,14 +57,7 @@ Script started on 2024-10-07 23:07:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
-ERROR:    Full stop in clause-body?  Cannot redefine ,/2
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
-Warning:    Singleton variables: [Py,I]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -163,7 +155,7 @@ Warning:    Singleton variables: [Py,I]
 >;; QUICK.D1-GADT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000224 secs. (224.24 microseconds) 
+; took 0.000226 secs. (226.42 microseconds) 
 
   !(assertEqual 
     (get-type 5) Number)
@@ -186,7 +178,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000233 secs. (232.95 microseconds) 
+; took 0.000215 secs. (214.79 microseconds) 
 
   !(assertEqual 
     (get-type (+ 5 7)) Number)
@@ -211,7 +203,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000177 secs. (176.99 microseconds) 
+; took 0.000167 secs. (167.22 microseconds) 
 
   !(assertEqual 
     (get-type +) 
@@ -237,7 +229,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000285 secs. (284.86 microseconds) 
+; took 0.000291 secs. (291.27 microseconds) 
 
   !(assertEqualToResult 
     (get-type (+ 5 "4")) ())
@@ -259,7 +251,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000186 secs. (186.43 microseconds) 
+; took 0.000185 secs. (184.94 microseconds) 
 
   !(assertEqualToResult 
     (get-type (+ -)) ())
@@ -284,7 +276,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000136 secs. (135.61 microseconds) 
+; took 0.000142 secs. (142.12 microseconds) 
 
   !(assertEqual 
     (get-type Either) Type)
@@ -317,7 +309,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000244 secs. (243.60 microseconds) 
+; took 0.000220 secs. (220.40 microseconds) 
 
   !(assertEqual 
     (get-type (Left 5)) Either)
@@ -349,7 +341,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000344 secs. (344.31 microseconds) 
+; took 0.000282 secs. (281.89 microseconds) 
 
   !(assertEqual 
     (get-type (isLeft (Right 5))) Bool)
@@ -373,7 +365,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000257 secs. (257.16 microseconds) 
+; took 0.000225 secs. (224.56 microseconds) 
 
   !(assertEqualToResult 
     (get-type (isLeft 5)) ())
@@ -411,7 +403,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000659 secs. (659.46 microseconds) 
+; took 0.000580 secs. (580.26 microseconds) 
 
   !(assertEqual 
     (get-type (LeftP 5)) 
@@ -444,7 +436,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000903 secs. (902.64 microseconds) 
+; took 0.000941 secs. (941.38 microseconds) 
 
   !(assertEqual 
     (get-type (pair (LeftP 5) "String")) 
@@ -487,7 +479,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000801 secs. (801.25 microseconds) 
+; took 0.000744 secs. (744.23 microseconds) 
 
   !(assertEqual 
     (get-type (Cons 5 (Cons 6 Nil))) 
@@ -511,7 +503,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000324 secs. (323.76 microseconds) 
+; took 0.000334 secs. (333.87 microseconds) 
 
   !(assertEqualToResult 
     (get-type (Cons 5 (Cons "6" Nil))) ())
@@ -539,7 +531,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000621 secs. (621.48 microseconds) 
+; took 0.000606 secs. (606.39 microseconds) 
 
   !(assertEqual 
     (let 
@@ -555,7 +547,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 494,288 inferences, 0.131 CPU in 0.131 seconds (100% CPU, 3766268 Lips)
+>% 494,287 inferences, 0.130 CPU in 0.130 seconds (100% CPU, 3809465 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d1_gadt.metta  0)
 <span class="ansi1"
@@ -590,7 +582,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-07 23:07:25+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 23:25:28+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

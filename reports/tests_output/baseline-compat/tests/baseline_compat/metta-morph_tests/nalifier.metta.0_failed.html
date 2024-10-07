@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -70,7 +69,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-07 23:05:41+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 23:23:48+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -79,14 +78,7 @@ Script started on 2024-10-07 23:05:41+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
-ERROR:    Full stop in clause-body?  Cannot redefine ,/2
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
-Warning:    Singleton variables: [Py,I]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -415,7 +407,7 @@ Warning:    Singleton variables: [Py,I]
 >;; METTA-MORPH-TESTS.NALIFIER.01</h3>
 ; 
 ; EVAL TEST
-; took 1.677 secs. (1677.20 milliseconds) 
+; took 1.686 secs. (1685.61 milliseconds) 
 
   !(assertEqualToResult 
     (let 
@@ -433,7 +425,7 @@ Deterministic: ()
 ()]
 ;;;  !(repl!)
 <span class="ansi32"
->% 9,768,637 inferences, 1.805 CPU in 1.807 seconds (100% CPU, 5412670 Lips)
+>% 9,768,640 inferences, 1.813 CPU in 1.813 seconds (100% CPU, 5386963 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/nalifier.metta  0)
 <span class="ansi1"
@@ -468,7 +460,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-07 23:05:48+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 23:23:54+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

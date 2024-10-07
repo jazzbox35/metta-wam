@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -26,7 +25,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-07 22:59:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 23:17:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -35,14 +34,7 @@ Script started on 2024-10-07 22:59:03+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
-ERROR:    Full stop in clause-body?  Cannot redefine ,/2
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
-Warning:    Singleton variables: [Py,I]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -127,7 +119,7 @@ Warning:    Singleton variables: [Py,I]
 >;; HYPERON-METTALOG-SANITY.02-CURRIED-PLUS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000602 secs. (601.71 microseconds) 
+; took 0.000689 secs. (689.10 microseconds) 
 
   !(assertEqualToResult 
     ( (inc) 2) 
@@ -142,7 +134,7 @@ Warning:    Singleton variables: [Py,I]
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 92,194 inferences, 0.044 CPU in 0.044 seconds (100% CPU, 2074986 Lips)
+>% 92,193 inferences, 0.045 CPU in 0.045 seconds (100% CPU, 2069018 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/02-curried-plus.metta  0)
 <span class="ansi1"
@@ -177,7 +169,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-07 22:59:08+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 23:17:27+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
