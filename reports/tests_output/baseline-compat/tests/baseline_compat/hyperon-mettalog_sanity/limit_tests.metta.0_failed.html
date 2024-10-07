@@ -49,7 +49,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-07 16:17:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 23:00:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -122,7 +122,7 @@ Warning:    Singleton variables: [Py,I]
 P;HTML|
 ;                                           (= 2  "Excessive result: (limit! 0 (sequential (1 2 3))))]")
 P;HTML|
-;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 25100maxresident)k")
+;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 25132maxresident)k")
 P;HTML|
 ;                                           (= 2  "0inputs+0outputs (0major+2845minor)pagefaults 0swaps")
 P;HTML|
@@ -140,7 +140,7 @@ Warning:    Singleton variables: [Py,I]
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000162 secs. (162.35 microseconds) 
+; took 0.000169 secs. (169.35 microseconds) 
 
   !(assertEqualToResult 
     (limit! 0 
@@ -164,7 +164,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000262 secs. (262.12 microseconds) 
+; took 0.000227 secs. (226.87 microseconds) 
 
   !(assertEqualToResult 
     (limit! 2 
@@ -204,7 +204,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.95 milliseconds) 
+; took 0.002 secs. (1.86 milliseconds) 
 
   !(assertEqualToResult 
     (limit! 2 
@@ -230,7 +230,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000317 secs. (317.43 microseconds) 
+; took 0.000282 secs. (281.95 microseconds) 
 
   !(assertEqualToResult 
     (get-state! &var) 
@@ -264,7 +264,7 @@ Deterministic: (State  0 $_3388)
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000320 secs. (320.23 microseconds) 
+; took 0.000303 secs. (303.07 microseconds) 
 
   !(assertEqualToResult 
     (get-state! &var) 
@@ -292,7 +292,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (4.72 milliseconds) 
+; took 0.005 secs. (4.80 milliseconds) 
 
   !(assertEqualToResult 
     (limit! 
@@ -319,7 +319,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000274 secs. (274.09 microseconds) 
+; took 0.000302 secs. (302.10 microseconds) 
 
   !(assertEqualToResult 
     (get-state! &var) 
@@ -354,7 +354,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.90 milliseconds) 
+; took 0.002 secs. (1.86 milliseconds) 
 
   !(assertEqualToResult 
     (limit! 4 
@@ -381,7 +381,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000155 secs. (155.22 microseconds) 
+; took 0.000156 secs. (156.29 microseconds) 
 
   !(assertEqualToResult 
     (number-of (+ 1 2)) 
@@ -407,7 +407,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000234 secs. (234.08 microseconds) 
+; took 0.000216 secs. (216.40 microseconds) 
 
   !(assertEqualToResult 
     (number-of (superpose (1 2 3))) 
@@ -441,7 +441,7 @@ Deterministic: (State  0 $_3382)
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.87 milliseconds) 
+; took 0.002 secs. (1.85 milliseconds) 
 
   !(assertEqualToResult 
     (number-of (limit! 2 (sequential ((increment) (increment) (increment))))) 
@@ -466,7 +466,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000359 secs. (358.81 microseconds) 
+; took 0.000285 secs. (285.49 microseconds) 
 
   !(assertEqualToResult 
     (get-state! &var) 
@@ -499,7 +499,7 @@ Deterministic: (State  0 $_3382)
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.87 milliseconds) 
+; took 0.002 secs. (1.98 milliseconds) 
 
   !(assertEqualToResult 
     (number-of (limit! 4 (infinite))) 
@@ -533,7 +533,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000637 secs. (637.48 microseconds) 
+; took 0.000611 secs. (611.50 microseconds) 
 
   !(assertEqualToResult 
     (number-of (test $x)) 
@@ -560,7 +560,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000268 secs. (267.73 microseconds) 
+; took 0.000235 secs. (234.51 microseconds) 
 
   !(assertEqualToResult 
     (offset! 2 
@@ -596,7 +596,7 @@ Deterministic: (State  0 $_3382)
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.24 milliseconds) 
+; took 0.003 secs. (3.19 milliseconds) 
 
   !(assertEqualToResult 
     (offset! 2 
@@ -625,7 +625,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.87 milliseconds) 
+; took 0.002 secs. (1.85 milliseconds) 
 
   !(assertEqualToResult 
     (offset! 2 
@@ -655,7 +655,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.18</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.13 milliseconds) 
+; took 0.003 secs. (3.11 milliseconds) 
 
   !(assertEqualToResult 
     (limit! 4 
@@ -672,7 +672,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 657,387 inferences, 0.142 CPU in 0.142 seconds (100% CPU, 4644677 Lips)
+>% 657,375 inferences, 0.141 CPU in 0.141 seconds (100% CPU, 4678309 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/limit_tests.metta  0)
 <span class="ansi1"
@@ -707,7 +707,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-07 16:18:00+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 23:00:49+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

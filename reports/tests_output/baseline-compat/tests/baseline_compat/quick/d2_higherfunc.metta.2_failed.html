@@ -128,7 +128,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-07 16:24:31+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 23:07:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -276,7 +276,7 @@ Warning:    Singleton variables: [Py,I]
 >;; QUICK.D2-HIGHERFUNC.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000301 secs. (301.23 microseconds) 
+; took 0.000274 secs. (274.08 microseconds) 
 
   !(assertEqual 
     (get-type (curry +)) 
@@ -304,7 +304,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000310 secs. (309.76 microseconds) 
+; took 0.000251 secs. (250.62 microseconds) 
 
   !(assertEqual 
     (get-type ((curry +) 2)) 
@@ -330,7 +330,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000708 secs. (707.81 microseconds) 
+; took 0.000700 secs. (699.63 microseconds) 
 
   !(assertEqualToResult 
     ( (curry +) 2) 
@@ -355,7 +355,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000474 secs. (474.26 microseconds) 
+; took 0.000396 secs. (396.03 microseconds) 
 
   !(assertEqual 
     ( ( (curry +) 2) 3) 5)
@@ -394,7 +394,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000334 secs. (334.11 microseconds) 
+; took 0.000290 secs. (289.87 microseconds) 
 
   !(assertEqual 
     (get-type (curry-a + 2)) 
@@ -418,7 +418,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000364 secs. (363.96 microseconds) 
+; took 0.000298 secs. (297.54 microseconds) 
 
   !(assertEqual 
     (get-type ((curry-a + 2) 3)) Number)
@@ -442,7 +442,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000369 secs. (369.09 microseconds) 
+; took 0.000316 secs. (315.68 microseconds) 
 
   !(assertEqualToResult 
     (get-type ((curry-a + 2) "S")) ())
@@ -465,7 +465,7 @@ Deterministic: ((Error  (got  (Number)) (expected  ())))
 >;; QUICK.D2-HIGHERFUNC.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000408 secs. (408.38 microseconds) 
+; took 0.000344 secs. (343.92 microseconds) 
 
   !(assertEqual 
     ( (curry-a + 2) 3) 5)
@@ -510,7 +510,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000500 secs. (500.21 microseconds) 
+; took 0.000419 secs. (418.50 microseconds) 
 
   !(assertEqualToResult 
     (is-socrates) 
@@ -536,7 +536,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000923 secs. (922.87 microseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
   !(assertEqual 
     ( (curry-a is Socrates) Human) 
@@ -561,7 +561,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000793 secs. (793.39 microseconds) 
+; took 0.000817 secs. (817.03 microseconds) 
 
   !(assertEqual 
     ( (is-socrates) Human) True)
@@ -601,7 +601,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000488 secs. (488.22 microseconds) 
+; took 0.000482 secs. (482.29 microseconds) 
 
   !(assertEqual 
     ( (lambda $x 
@@ -627,7 +627,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000648 secs. (648.08 microseconds) 
+; took 0.000611 secs. (610.85 microseconds) 
 
   !(assertEqual 
     ( (lambda 
@@ -662,7 +662,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000777 secs. (776.70 microseconds) 
+; took 0.000782 secs. (782.05 microseconds) 
 
   !(assertEqual 
     ( (inc) 5) 6)
@@ -758,7 +758,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.15</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.91 milliseconds) 
+; took 0.002 secs. (1.93 milliseconds) 
 
   !(assertEqual 
     (fmap 
@@ -787,7 +787,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000777 secs. (777.10 microseconds) 
+; took 0.000783 secs. (783.42 microseconds) 
 
   !(assertEqual 
     (fmap 
@@ -815,7 +815,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000883 secs. (882.98 microseconds) 
+; took 0.000848 secs. (848.32 microseconds) 
 
   !(assertEqual 
     (get-type (fmap (curry-a + 1) (Left 5))) 
@@ -844,7 +844,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.18</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.89 milliseconds) 
+; took 0.002 secs. (1.90 milliseconds) 
 
   !(assertEqual 
     (fmap 
@@ -877,7 +877,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.19</h3>
 ; 
 ; EVAL TEST
-; took 0.011 secs. (11.33 milliseconds) 
+; took 0.012 secs. (12.34 milliseconds) 
 
   !(assertEqual 
     (fmap 
@@ -912,7 +912,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000415 secs. (414.52 microseconds) 
+; took 0.000396 secs. (396.19 microseconds) 
 
   !(assertEqualToResult 
     (get-type (fmap (curry-a + 2) (Left "5"))) ())
@@ -934,7 +934,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.21</h3>
 ; 
 ; EVAL TEST
-; took 0.000358 secs. (357.87 microseconds) 
+; took 0.000352 secs. (352.14 microseconds) 
 
   !(assertEqualToResult 
     (get-type (fmap (curry-a + 2) (UntypedC "5"))) ())
@@ -956,7 +956,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.22</h3>
 ; 
 ; EVAL TEST
-; took 0.000376 secs. (375.52 microseconds) 
+; took 0.000344 secs. (344.34 microseconds) 
 
   !(assertEqualToResult 
     (get-type (fmap (curry-a + 2) (UntypedC (Null) 5))) ())
@@ -1004,7 +1004,7 @@ Deterministic: ()
 >;; QUICK.D2-HIGHERFUNC.23</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.94 milliseconds) 
+; took 0.002 secs. (1.86 milliseconds) 
 
   !(assertEqual 
     (fmap-i 
@@ -1084,7 +1084,7 @@ true]
 >   41:5   |   |   |   |   |   |-<--(defn (retval  Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (7.23 milliseconds) 
+; took 0.007 secs. (7.15 milliseconds) 
 
   !(assertEqual 
     (fmap-i 
@@ -1130,7 +1130,7 @@ Deterministic: ()
 >    8:1   |   |-<--(defn (retval  fail)) </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.36 milliseconds) 
+; took 0.002 secs. (2.33 milliseconds) 
 
   !(assertEqualToResult 
     (fmap-i 
@@ -1221,7 +1221,7 @@ Deterministic: ()
 >   96:3   |   |   |   |-<--(defn (retval  (Cons 1 Nil))) </span>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (11.65 milliseconds) 
+; took 0.011 secs. (11.36 milliseconds) 
 
   !(assertEqual 
     (insert 3 
@@ -1292,7 +1292,7 @@ Deterministic: ()
 >  121:7   |   |   |   |   |   |   |   |-<--(defn (retval  Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (15.01 milliseconds) 
+; took 0.015 secs. (14.73 milliseconds) 
 
   !(assertEqual 
     (sort (Cons 3 (Cons 1 (Cons 2 Nil)))) 
@@ -1313,7 +1313,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,374,699 inferences, 0.299 CPU in 0.299 seconds (100% CPU, 4597779 Lips)
+>% 1,374,697 inferences, 0.299 CPU in 0.303 seconds (99% CPU, 4591128 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d2_higherfunc.metta  0)
 <span class="ansi1"
@@ -1348,7 +1348,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-07 16:24:37+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 23:07:32+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
