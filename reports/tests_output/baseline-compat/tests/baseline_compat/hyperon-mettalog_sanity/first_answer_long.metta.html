@@ -12,6 +12,8 @@
 .body_background { background-color: #000000; }
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -67,7 +69,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:48:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:17:12+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -76,7 +78,14 @@ Script started on 2024-10-04 20:48:23+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -481,7 +490,7 @@ $type = A
     (ConjunctionEliminationLeft (ConjunctionIntroduction a a)) A)]
 ;;; (: a A)
 <span class="ansi32"
->% 585,630 inferences, 0.151 CPU in 0.151 seconds (100% CPU, 3881488 Lips)
+>% 588,032 inferences, 0.151 CPU in 0.151 seconds (100% CPU, 3885614 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/first_answer_long.metta  0)
 <br/> <a href="#" onclick="window.history.back(); return false;"
@@ -509,7 +518,7 @@ $type = A
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:48:28+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:17:17+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

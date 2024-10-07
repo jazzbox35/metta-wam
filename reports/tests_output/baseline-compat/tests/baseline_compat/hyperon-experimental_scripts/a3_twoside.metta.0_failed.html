@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -28,7 +29,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:44:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:13:41+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -37,7 +38,14 @@ Script started on 2024-10-04 20:44:39+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -129,7 +137,7 @@ Script started on 2024-10-04 20:44:39+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000714 secs. (714.25 microseconds) 
+; took 0.000584 secs. (583.73 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -160,7 +168,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000459 secs. (459.39 microseconds) 
+; took 0.000377 secs. (377.22 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -204,7 +212,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000528 secs. (527.99 microseconds) 
+; took 0.000452 secs. (451.73 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -245,7 +253,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000485 secs. (484.79 microseconds) 
+; took 0.000384 secs. (383.77 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -268,7 +276,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 200,740 inferences, 0.063 CPU in 0.063 seconds (100% CPU, 3192674 Lips)
+>% 202,146 inferences, 0.063 CPU in 0.063 seconds (100% CPU, 3225496 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/a3_twoside.metta  0)
 <span class="ansi1"
@@ -303,7 +311,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:44:44+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:13:46+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

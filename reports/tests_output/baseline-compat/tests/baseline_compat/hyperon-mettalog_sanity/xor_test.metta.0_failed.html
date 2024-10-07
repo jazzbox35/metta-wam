@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -33,7 +34,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:52:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:20:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -42,7 +43,14 @@ Script started on 2024-10-04 20:52:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -108,7 +116,7 @@ Script started on 2024-10-04 20:52:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000175 secs. (174.51 microseconds) 
+; took 0.000163 secs. (163.41 microseconds) 
 
   !(assertEqual 
     (xor True False) True)
@@ -131,7 +139,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000165 secs. (164.69 microseconds) 
+; took 0.000171 secs. (171.10 microseconds) 
 
   !(assertEqual 
     (xor False True) True)
@@ -154,7 +162,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000161 secs. (161.25 microseconds) 
+; took 0.000153 secs. (152.79 microseconds) 
 
   !(assertEqual 
     (xor True True) False)
@@ -177,7 +185,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000165 secs. (164.58 microseconds) 
+; took 0.000150 secs. (150.14 microseconds) 
 
   !(assertEqual 
     (xor False False) False)
@@ -203,7 +211,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000443 secs. (443.33 microseconds) 
+; took 0.000363 secs. (362.58 microseconds) 
 
   !(assertEqual 
     (xor 
@@ -230,7 +238,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000383 secs. (382.67 microseconds) 
+; took 0.000356 secs. (355.68 microseconds) 
 
   !(assertEqual 
     (xor 
@@ -257,7 +265,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000296 secs. (295.93 microseconds) 
+; took 0.000283 secs. (282.58 microseconds) 
 
   !(assertEqual 
     (xor 
@@ -331,7 +339,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.05 milliseconds) 
+; took 0.001 secs. (1.06 milliseconds) 
 
   !(assertEqual 
     (xor 
@@ -364,7 +372,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.08 milliseconds) 
+; took 0.001 secs. (1.07 milliseconds) 
 
   !(assertEqual 
     (xor 
@@ -397,7 +405,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.05 milliseconds) 
+; took 0.001 secs. (1.06 milliseconds) 
 
   !(assertEqual 
     (xor 
@@ -415,7 +423,7 @@ Second
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 303,630 inferences, 0.081 CPU in 0.081 seconds (100% CPU, 3771800 Lips)
+>% 306,636 inferences, 0.078 CPU in 0.078 seconds (100% CPU, 3929704 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/xor_test.metta  0)
 <span class="ansi1"
@@ -450,7 +458,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:52:12+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:20:58+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

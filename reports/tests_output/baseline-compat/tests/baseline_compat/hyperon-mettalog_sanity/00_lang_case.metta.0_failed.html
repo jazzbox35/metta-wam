@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -43,7 +44,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:47:11+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:16:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -52,7 +53,14 @@ Script started on 2024-10-04 20:47:11+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -149,7 +157,7 @@ Script started on 2024-10-04 20:47:11+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000676 secs. (676.19 microseconds) 
+; took 0.000681 secs. (680.97 microseconds) 
 
   !(assertEqual 
     (+ 1 
@@ -178,7 +186,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000544 secs. (544.02 microseconds) 
+; took 0.000536 secs. (536.22 microseconds) 
 
   !(assertEqual 
     (+ 1 
@@ -205,7 +213,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.41 milliseconds) 
+; took 0.001 secs. (1.39 milliseconds) 
 
   !(assertEqual 
     ( (superpose (1 2 3))) 
@@ -238,7 +246,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000220 secs. (220.01 microseconds) 
+; took 0.000221 secs. (220.57 microseconds) 
 
   !(assertEqual 
     (case 
@@ -268,7 +276,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000318 secs. (317.94 microseconds) 
+; took 0.000302 secs. (301.82 microseconds) 
 
   !(assertEqual 
     (case 
@@ -297,7 +305,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000246 secs. (245.99 microseconds) 
+; took 0.000238 secs. (237.81 microseconds) 
 
   !(assertEqual 
     (case 5 
@@ -325,7 +333,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000663 secs. (663.24 microseconds) 
+; took 0.000720 secs. (720.48 microseconds) 
 
   !(assertEqual 
     (case 
@@ -357,7 +365,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000802 secs. (801.99 microseconds) 
+; took 0.000800 secs. (799.73 microseconds) 
 
   !(assertEqual 
     (case 
@@ -384,7 +392,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000115 secs. (115.12 microseconds) 
+; took 0.000113 secs. (112.86 microseconds) 
 
   !(assertEqualToResult 
     (superpose ()) ())
@@ -406,7 +414,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000213 secs. (212.94 microseconds) 
+; took 0.000234 secs. (234.36 microseconds) 
 
   !(assertEqualToResult 
     (collapse (superpose ())) 
@@ -430,7 +438,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000204 secs. (204.35 microseconds) 
+; took 0.000214 secs. (213.85 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((nop 1))) ())
@@ -453,7 +461,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000371 secs. (370.63 microseconds) 
+; took 0.000404 secs. (404.18 microseconds) 
 
   !(assertEqualToResult 
     (collapse (superpose ((nop 1)))) 
@@ -543,7 +551,7 @@ NDet Result(5): (Rel-Q A C)
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000804 secs. (804.09 microseconds) 
+; took 0.000953 secs. (952.58 microseconds) 
 
   !(assertEqual 
     (match &self $1 $1) 
@@ -579,7 +587,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000462 secs. (462.45 microseconds) 
+; took 0.000417 secs. (416.53 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -606,7 +614,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000721 secs. (721.15 microseconds) 
+; took 0.000721 secs. (720.83 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((Rel-P B) (Rel-Q C))) 
@@ -634,7 +642,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000899 secs. (899.00 microseconds) 
+; took 0.000922 secs. (922.04 microseconds) 
 
   !(assertEqual 
     (match &self 
@@ -666,7 +674,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.17</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.50 milliseconds) 
+; took 0.002 secs. (1.51 milliseconds) 
 
   !(assertEqual 
     (superpose ((P B) (Q C))) 
@@ -701,7 +709,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000320 secs. (320.04 microseconds) 
+; took 0.000276 secs. (276.15 microseconds) 
 
   !(assertEqual 
     (case 
@@ -721,7 +729,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 637,301 inferences, 0.144 CPU in 0.144 seconds (100% CPU, 4435608 Lips)
+>% 643,447 inferences, 0.144 CPU in 0.144 seconds (100% CPU, 4463277 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/00_lang_case.metta  0)
 <span class="ansi1"
@@ -756,7 +764,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:47:16+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:16:08+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

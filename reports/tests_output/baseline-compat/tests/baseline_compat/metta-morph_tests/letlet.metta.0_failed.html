@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165009 { color: #FFA509; }
@@ -23,7 +24,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:53:27+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:21:47+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -32,7 +33,14 @@ Script started on 2024-10-04 20:53:27+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -112,7 +120,7 @@ Script started on 2024-10-04 20:53:27+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.LETLET.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000902 secs. (901.92 microseconds) 
+; took 0.000772 secs. (771.92 microseconds) 
 
   !(assertEqualToResult 
     (let $T 
@@ -131,7 +139,7 @@ Script started on 2024-10-04 20:53:27+00:00 [TERM="xterm-256color" TTY="/dev/pts
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 80,041 inferences, 0.042 CPU in 0.042 seconds (100% CPU, 1908041 Lips)
+>% 80,487 inferences, 0.039 CPU in 0.039 seconds (100% CPU, 2042235 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/letlet.metta  0)
 <span class="ansi1"
@@ -166,7 +174,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:53:32+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:21:52+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

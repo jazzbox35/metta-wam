@@ -84,7 +84,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:43:41+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:12:46+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -93,7 +93,14 @@ Script started on 2024-10-04 20:43:41+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -2620,7 +2627,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.SYSTEM-PROOFTESTCURRIED.01</h3>
 ; 
 ; EVAL TEST
-; took 12.59 seconds.
+; took 12.71 seconds.
 
   !(let $expected 
     (expected) 
@@ -3655,7 +3662,7 @@ Deterministic: ()
 
 ]
 <span class="ansi32"
->% 95,054,217 inferences, 21.647 CPU in 21.656 seconds (100% CPU, 4391036 Lips)
+>% 95,078,133 inferences, 21.874 CPU in 21.874 seconds (100% CPU, 4346699 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/system_proofTestCurried.metta  0)
 <span class="ansi1"
@@ -3690,7 +3697,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:44:08+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:13:13+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

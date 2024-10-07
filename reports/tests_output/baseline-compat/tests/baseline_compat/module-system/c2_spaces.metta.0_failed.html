@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -71,7 +72,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:40:50+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:09:54+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 ^@P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -80,7 +81,14 @@ Script started on 2024-10-04 20:40:50+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -210,7 +218,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000560 secs. (559.57 microseconds) 
+; took 0.000530 secs. (530.19 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -241,7 +249,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000146 secs. (146.19 microseconds) 
+; took 0.000152 secs. (151.93 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -271,7 +279,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000308 secs. (307.66 microseconds) 
+; took 0.000398 secs. (397.97 microseconds) 
 
   !(assertEqual 
     (match &kb 
@@ -310,7 +318,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000624 secs. (624.35 microseconds) 
+; took 0.000676 secs. (676.48 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -414,7 +422,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000526 secs. (526.29 microseconds) 
+; took 0.000553 secs. (553.19 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -434,7 +442,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 430,279 inferences, 0.130 CPU in 0.334 seconds (39% CPU, 3298947 Lips)
+>% 433,625 inferences, 0.132 CPU in 0.509 seconds (26% CPU, 3275340 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/module-system/c2_spaces.metta  0)
 <span class="ansi1"
@@ -469,7 +477,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:40:55+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:10:00+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

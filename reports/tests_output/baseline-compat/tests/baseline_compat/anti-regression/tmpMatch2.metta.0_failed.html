@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -95,7 +96,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:44:25+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:13:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -104,7 +105,14 @@ Script started on 2024-10-04 20:44:25+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -509,7 +517,7 @@ Deterministic: ()
 >  (Inheritance B A)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.99 milliseconds) 
+; took 0.002 secs. (1.88 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &db 
@@ -544,7 +552,7 @@ Deterministic: ()
 >  (Inheritance C A)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.94 milliseconds) 
+; took 0.002 secs. (1.89 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &db 
@@ -579,7 +587,7 @@ Deterministic: ()
 >  (Inheritance D E)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.84 milliseconds) 
+; took 0.002 secs. (1.91 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &db 
@@ -614,7 +622,7 @@ Deterministic: ()
 >  (Inheritance C E)
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.32 milliseconds) 
+; took 0.001 secs. (1.37 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &db 
@@ -709,7 +717,7 @@ Deterministic: ()
       (tuple-count $_734958)))
 </span>; 
 ; EVAL TEST
-; took 0.101 secs. (101.24 milliseconds) 
+; took 0.103 secs. (102.87 milliseconds) 
 
   !(assertEqualToResult 
     (miner &db 
@@ -771,7 +779,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,192,375 inferences, 0.281 CPU in 0.281 seconds (100% CPU, 4248346 Lips)
+>% 1,196,441 inferences, 0.283 CPU in 0.283 seconds (100% CPU, 4234918 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/tmpMatch2.metta  0)
 <span class="ansi1"
@@ -806,7 +814,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:44:30+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:13:33+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

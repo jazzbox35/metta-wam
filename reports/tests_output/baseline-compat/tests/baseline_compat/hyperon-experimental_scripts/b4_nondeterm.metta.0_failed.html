@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -53,7 +54,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:45:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:14:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -62,7 +63,14 @@ Script started on 2024-10-04 20:45:14+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -171,7 +179,7 @@ Script started on 2024-10-04 20:45:14+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000352 secs. (352.17 microseconds) 
+; took 0.000312 secs. (312.39 microseconds) 
 
   !(assertEqual 
     (match &self 
@@ -205,7 +213,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000260 secs. (259.85 microseconds) 
+; took 0.000208 secs. (207.57 microseconds) 
 
   !(assertEqual 
     (collapse (match &self (= (shape) $x) $x)) ())
@@ -234,7 +242,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000431 secs. (431.18 microseconds) 
+; took 0.000431 secs. (431.42 microseconds) 
 
   !(assertEqual 
     (color) 
@@ -266,7 +274,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000857 secs. (857.33 microseconds) 
+; took 0.000853 secs. (853.03 microseconds) 
 
   !(assertEqual 
     (color) 
@@ -298,7 +306,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.05</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.31 milliseconds) 
+; took 0.001 secs. (1.34 milliseconds) 
 
   !(assertEqual 
     (collapse (shape)) 
@@ -323,7 +331,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000201 secs. (200.96 microseconds) 
+; took 0.000229 secs. (229.31 microseconds) 
 
   !(assertEqualToResult 
     (shape) 
@@ -368,7 +376,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.07</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.57 milliseconds) 
+; took 0.002 secs. (1.53 milliseconds) 
 
   !(assertEqualToResult 
     (pair 
@@ -429,7 +437,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.08</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.71 milliseconds) 
+; took 0.002 secs. (1.76 milliseconds) 
 
   !(assertEqual 
     (find-equal 
@@ -467,7 +475,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000951 secs. (951.22 microseconds) 
+; took 0.000986 secs. (986.36 microseconds) 
 
   !(assertEqualToResult 
     (rev A 
@@ -558,7 +566,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.10</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.77 milliseconds) 
+; took 0.004 secs. (3.79 milliseconds) 
 
   !(assertEqual 
     (is (air dry)) 
@@ -587,7 +595,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.11</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.70 milliseconds) 
+; took 0.004 secs. (3.80 milliseconds) 
 
   !(assertEqual 
     (is (air wet)) 
@@ -606,7 +614,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 570,324 inferences, 0.146 CPU in 0.146 seconds (100% CPU, 3908511 Lips)
+>% 574,326 inferences, 0.144 CPU in 0.144 seconds (100% CPU, 3987161 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b4_nondeterm.metta  0)
 <span class="ansi1"
@@ -641,7 +649,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:45:19+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:14:20+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

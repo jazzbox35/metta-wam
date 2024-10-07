@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -34,7 +35,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:47:32+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:16:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -43,7 +44,14 @@ Script started on 2024-10-04 20:47:32+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -150,7 +158,7 @@ Script started on 2024-10-04 20:47:32+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000177 secs. (177.11 microseconds) 
+; took 0.000175 secs. (174.85 microseconds) 
 
   !(assertEqualToResult 
     (get-type insert) 
@@ -161,12 +169,12 @@ Script started on 2024-10-04 20:47:32+00:00 [TERM="xterm-256color" TTY="/dev/pts
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (-> $_613402 
-          (List $_613402) 
-          (List $_613402))) 
-      ( (-> $_606732 
-          (List $_606732) 
-          (List $_606732)))))
+      ( (-> $_613420 
+          (List $_613420) 
+          (List $_613420))) 
+      ( (-> $_606750 
+          (List $_606750) 
+          (List $_606750)))))
 </span>
 Deterministic: ()
 ()]
@@ -197,7 +205,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.46 milliseconds) 
+; took 0.002 secs. (2.32 milliseconds) 
 
   !(assertEqual 
     (insert 2 
@@ -226,7 +234,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000358 secs. (358.32 microseconds) 
+; took 0.000332 secs. (332.22 microseconds) 
 
   !(assertEqual 
     (Cons 1 Nil) 
@@ -251,7 +259,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000677 secs. (676.66 microseconds) 
+; took 0.000604 secs. (603.79 microseconds) 
 
   !(assertEqual 
     (insert 1 Nil) 
@@ -278,7 +286,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.88 milliseconds) 
+; took 0.002 secs. (1.78 milliseconds) 
 
   !(assertEqual 
     (insert 1 
@@ -311,7 +319,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.03-SORING-VIA-INSERT.06</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (5.89 milliseconds) 
+; took 0.006 secs. (5.79 milliseconds) 
 
   !(assertEqual 
     (insert 3 
@@ -334,7 +342,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 354,777 inferences, 0.092 CPU in 0.092 seconds (100% CPU, 3860462 Lips)
+>% 356,855 inferences, 0.105 CPU in 0.105 seconds (100% CPU, 3401510 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/03-soring-via-insert.metta  0)
 <span class="ansi1"
@@ -369,7 +377,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:47:37+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:16:28+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

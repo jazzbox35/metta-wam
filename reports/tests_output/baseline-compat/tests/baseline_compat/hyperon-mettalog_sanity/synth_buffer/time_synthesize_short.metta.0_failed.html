@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -47,7 +48,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:51:51+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:20:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -56,7 +57,14 @@ Script started on 2024-10-04 20:51:51+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -274,7 +282,7 @@ Script started on 2024-10-04 20:51:51+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; SYNTH-BUFFER.TIME-SYNTHESIZE-SHORT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.52 milliseconds) 
+; took 0.002 secs. (1.63 milliseconds) 
 
   !(assertEqualToResult 
     (kb) 
@@ -544,7 +552,7 @@ Deterministic: ()
 >;; SYNTH-BUFFER.TIME-SYNTHESIZE-SHORT.02</h3>
 ; 
 ; EVAL TEST
-; took 0.145 secs. (145.32 milliseconds) 
+; took 0.145 secs. (145.46 milliseconds) 
 
   !(assertEqualToResult 
     (synthesize 
@@ -1080,7 +1088,7 @@ Deterministic: ()
 >;; SYNTH-BUFFER.TIME-SYNTHESIZE-SHORT.03</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.58 milliseconds) 
+; took 0.004 secs. (3.69 milliseconds) 
 
   !(assertEqualToResult 
     (synthesize 
@@ -1117,7 +1125,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,770,608 inferences, 0.323 CPU in 0.323 seconds (100% CPU, 5487949 Lips)
+>% 1,772,366 inferences, 0.321 CPU in 0.321 seconds (100% CPU, 5526877 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/synth_buffer/time_synthesize_short.metta  0)
 <span class="ansi1"
@@ -1152,7 +1160,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:51:57+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:20:44+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

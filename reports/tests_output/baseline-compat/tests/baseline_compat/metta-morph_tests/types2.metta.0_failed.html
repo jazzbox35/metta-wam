@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -41,7 +42,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-04 20:55:21+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 16:23:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -50,7 +51,14 @@ Script started on 2024-10-04 20:55:21+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:612:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_python.pl:1509:
+Warning:    Singleton variables: [Py,I]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -144,7 +152,7 @@ Script started on 2024-10-04 20:55:21+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.TYPES2.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000182 secs. (181.93 microseconds) 
+; took 0.000166 secs. (166.11 microseconds) 
 
   !(assertEqualToResult 
     (get-type lion1) 
@@ -174,7 +182,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000355 secs. (354.71 microseconds) 
+; took 0.000364 secs. (363.57 microseconds) 
 
   !(assertEqualToResult 
     (reproduce lion1 lion2) 
@@ -204,7 +212,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000190 secs. (190.00 microseconds) 
+; took 0.000144 secs. (143.82 microseconds) 
 
   !(assertEqualToResult 
     (get-type Lion) 
@@ -236,7 +244,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000222 secs. (222.43 microseconds) 
+; took 0.000196 secs. (195.75 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -269,7 +277,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000249 secs. (249.40 microseconds) 
+; took 0.000180 secs. (179.96 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -285,7 +293,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 203,425 inferences, 0.073 CPU in 0.073 seconds (100% CPU, 2804700 Lips)
+>% 205,343 inferences, 0.070 CPU in 0.070 seconds (100% CPU, 2946602 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/types2.metta  0)
 <span class="ansi1"
@@ -320,7 +328,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-04 20:55:26+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 16:23:49+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
