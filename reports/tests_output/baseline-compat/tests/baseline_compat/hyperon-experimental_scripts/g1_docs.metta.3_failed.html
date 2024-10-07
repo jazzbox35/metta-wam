@@ -39,7 +39,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-07 23:17:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-07 23:18:34+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -111,9 +111,9 @@ Script started on 2024-10-07 23:17:02+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 5  "Missed result: (@doc-formal (@item NoSuchAtom) (@kind atom) (@type %Undefined%) (@desc \"No documentation\")))]")
 P;HTML|
-;                                           (= 5  "0.33user 0.01system 0:00.34elapsed 99%CPU (0avgtext+0avgdata 27880maxresident)k")
+;                                           (= 5  "0.33user 0.00system 0:00.34elapsed 99%CPU (0avgtext+0avgdata 28072maxresident)k")
 P;HTML|
-;                                           (= 5  "0inputs+0outputs (0major+3594minor)pagefaults 0swaps")
+;                                           (= 5  "0inputs+0outputs (0major+3592minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/g1_docs.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/g1_docs.metta)
 
@@ -159,7 +159,7 @@ Script started on 2024-10-07 23:17:02+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.G1-DOCS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.142 secs. (141.91 milliseconds) 
+; took 0.141 secs. (140.64 milliseconds) 
 
   !(assertEqual 
     (get-doc some-func) 
@@ -218,7 +218,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.G1-DOCS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (8.67 milliseconds) 
+; took 0.009 secs. (8.82 milliseconds) 
 
   !(assertEqual 
     (get-doc SomeSymbol) 
@@ -318,7 +318,7 @@ Deterministic: ((Error  (got  ()) (expected  ((@doc-formal (@item some-gnd-atom)
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.G1-DOCS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.96 milliseconds) 
+; took 0.003 secs. (3.04 milliseconds) 
 
   !(assertEqual 
     (get-doc NoSuchAtom) 
@@ -356,7 +356,7 @@ Deterministic: ((Error  (got  ()) (expected  ((@doc-formal (@item NoSuchAtom) (@
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.G1-DOCS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.29 milliseconds) 
+; took 0.002 secs. (2.31 milliseconds) 
 
   !(assertEqual 
     (get-doc (some-func arg1 arg2)) 
@@ -448,7 +448,7 @@ NDet Result(1): ()
 []
 ;;; Output:
 <span class="ansi32"
->% 2,005,836 inferences, 0.429 CPU in 0.429 seconds (100% CPU, 4676143 Lips)
+>% 2,005,836 inferences, 0.429 CPU in 0.429 seconds (100% CPU, 4677375 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/g1_docs.metta  0)
 <span class="ansi1"
@@ -483,7 +483,7 @@ NDet Result(1): ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-07 23:17:07+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-07 23:18:40+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
