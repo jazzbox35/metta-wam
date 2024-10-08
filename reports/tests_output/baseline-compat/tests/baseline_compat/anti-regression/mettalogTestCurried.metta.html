@@ -85,7 +85,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-08 19:03:29+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-08 22:19:24+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -2601,7 +2601,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.01</h3>
 ; 
 ; EVAL TEST
-; took 13.59 seconds.
+; took 12.62 seconds.
 
   !(let $expected 
     (expected) 
@@ -3627,8 +3627,26 @@ Deterministic: ()
 
 ;<h3 id="ANTI-REGRESSION.METTALOGTESTCURRIED.02"
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.02</h3>
+; 
+; EVAL TEST
+; took 9.72 seconds.
 
-Script done on 2024-10-08 19:04:09+00:00 [COMMAND_EXIT_CODE="143"]
+  !(let $expected 
+    (expected) 
+    (assertEqualToResult 
+      (let $aptrn 
+        (Inheritance 
+          (VarIdx Z) 
+          (VarIdx (S Z))) 
+        (fc 
+          (: 
+            (supportwitness $aptrn) 
+            (supportOf $aptrn 
+              (countNat $aptrn))) 
+          (fromNumber 8))) $expected))
+
+
+Script done on 2024-10-08 22:20:04+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>
