@@ -85,8 +85,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 03:15:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 16:44:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -94,7 +96,11 @@ Script started on 2024-10-09 03:15:53+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -2612,7 +2618,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.DEBUG-METTALOGTESTCURRIED.01</h3>
 ; 
 ; EVAL TEST
-; took 12.70 seconds.
+; took 12.90 seconds.
 
   !(let $expected 
     (expected) 
@@ -3627,7 +3633,7 @@ Deterministic: ()
 Deterministic: a
 a]
 <span class="ansi32"
->% 94,875,605 inferences, 21.689 CPU in 21.690 seconds (100% CPU, 4374269 Lips)
+>% 99,682,211 inferences, 21.979 CPU in 21.979 seconds (100% CPU, 4535391 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/debug_mettalogTestCurried.metta  0)
 <span class="ansi1"
@@ -3662,7 +3668,7 @@ a]
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 03:16:20+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 16:44:55+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

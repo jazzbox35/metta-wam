@@ -675,8 +675,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 03:15:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-^@P;HTML|
+Script started on 2024-10-09 16:43:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+^@<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -684,7 +686,11 @@ Script started on 2024-10-09 03:15:23+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -939,7 +945,7 @@ Deterministic: ()
     (nums 2 3))
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.79 milliseconds) 
+; took 0.002 secs. (1.87 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -1023,7 +1029,7 @@ Deterministic: ()
       (rule1output $_4566 $_4584)))
 </span>; 
 ; EVAL TEST
-; took 0.005 secs. (5.20 milliseconds) 
+; took 0.005 secs. (5.08 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -1124,7 +1130,7 @@ Deterministic: ()
         (less $_4734 $_4752))))
 </span>; 
 ; EVAL TEST
-; took 0.007 secs. (7.42 milliseconds) 
+; took 0.007 secs. (7.02 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -1561,7 +1567,7 @@ Deterministic: ()
 >   96:0   |-<--(if (and (and (is-closed 2) (is-closed 3)) (< 2 3)) (: CPU (⍃ 2 3)) (empty)) </span>
 ; 
 ; EVAL TEST
-; took 0.141 secs. (140.58 milliseconds) 
+; took 0.140 secs. (139.78 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -1820,7 +1826,7 @@ Deterministic: ()
 >   84:0   |-<--(if (and (and (is-closed 4) (is-closed 3)) (< 4 3)) (: CPU (⍃ 4 3)) (empty)) </span>
 ; 
 ; EVAL TEST
-; took 0.138 secs. (137.55 milliseconds) 
+; took 0.135 secs. (135.14 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -2760,7 +2766,7 @@ Deterministic: ()
 >  308:1   |   |-<--(: ((rule (rule1 axiom)) CPU) (less 2 3)) </span>
 ; 
 ; EVAL TEST
-; took 1.093 secs. (1092.75 milliseconds) 
+; took 1.067 secs. (1066.95 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -2784,7 +2790,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 10,265,916 inferences, 1.709 CPU in 1.709 seconds (100% CPU, 6005477 Lips)
+>% 10,302,921 inferences, 1.656 CPU in 1.656 seconds (100% CPU, 6221060 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/bc_comp.metta  0)
 <span class="ansi1"
@@ -2819,7 +2825,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 03:15:30+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 16:44:06+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

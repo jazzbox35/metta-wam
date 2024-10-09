@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -25,8 +26,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 03:23:17+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 16:51:54+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -34,7 +37,11 @@ Script started on 2024-10-09 03:23:17+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -119,7 +126,7 @@ Script started on 2024-10-09 03:23:17+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.IS-SPACE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.09 milliseconds) 
+; took 0.001 secs. (1.11 milliseconds) 
 
   !(assertEqual 
     (is-space &self) True)
@@ -142,7 +149,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.IS-SPACE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000923 secs. (923.24 microseconds) 
+; took 0.000935 secs. (934.57 microseconds) 
 
   !(assertEqual 
     (is-space &corelib) True)
@@ -165,7 +172,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.IS-SPACE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000956 secs. (955.69 microseconds) 
+; took 0.000969 secs. (969.13 microseconds) 
 
   !(assertEqual 
     (is-space 666) False)
@@ -179,7 +186,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 147,215 inferences, 0.052 CPU in 0.052 seconds (100% CPU, 2833346 Lips)
+>% 130,382 inferences, 0.027 CPU in 0.027 seconds (100% CPU, 4824157 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/is_space.metta  0)
 <span class="ansi1"
@@ -214,7 +221,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 03:23:23+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 16:51:59+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

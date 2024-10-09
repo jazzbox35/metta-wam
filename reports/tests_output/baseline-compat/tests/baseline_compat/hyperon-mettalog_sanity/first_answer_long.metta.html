@@ -12,6 +12,8 @@
 .body_background { background-color: #000000; }
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -67,8 +69,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 03:22:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 16:51:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -76,7 +80,11 @@ Script started on 2024-10-09 03:22:39+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -481,7 +489,7 @@ $type = A
     (ConjunctionEliminationLeft (ConjunctionIntroduction a a)) A)]
 ;;; (: a A)
 <span class="ansi32"
->% 588,024 inferences, 0.146 CPU in 0.146 seconds (100% CPU, 4023832 Lips)
+>% 582,241 inferences, 0.123 CPU in 0.123 seconds (100% CPU, 4725089 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/first_answer_long.metta  0)
 <br/> <a href="#" onclick="window.history.back(); return false;"
@@ -509,7 +517,7 @@ $type = A
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 03:22:45+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 16:51:22+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

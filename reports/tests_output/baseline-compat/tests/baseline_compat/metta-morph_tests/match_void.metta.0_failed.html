@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -47,8 +48,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 03:28:05+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 16:56:41+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -56,7 +59,11 @@ Script started on 2024-10-09 03:28:05+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -168,7 +175,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000165 secs. (164.81 microseconds) 
+; took 0.000145 secs. (145.22 microseconds) 
 
   !(assertEqualToResult 
     (match &belief_events $1 $1) ())
@@ -197,7 +204,7 @@ Deterministic: ()
 > belief1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.24 milliseconds) 
+; took 0.001 secs. (1.10 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &belief_events belief1) 
@@ -227,7 +234,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000162 secs. (161.74 microseconds) 
+; took 0.000159 secs. (159.23 microseconds) 
 
   !(assertEqualToResult 
     (match &belief_events $1 $1) 
@@ -258,7 +265,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000106 secs. (106.18 microseconds) 
+; took 0.000155 secs. (154.57 microseconds) 
 
   !(assertEqualToResult 
     (case belief1 
@@ -290,7 +297,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000258 secs. (257.74 microseconds) 
+; took 0.000260 secs. (260.37 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -317,7 +324,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000311 secs. (311.06 microseconds) 
+; took 0.000310 secs. (309.61 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -346,7 +353,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000356 secs. (355.92 microseconds) 
+; took 0.000314 secs. (313.53 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -375,7 +382,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000283 secs. (282.98 microseconds) 
+; took 0.000250 secs. (249.93 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -409,7 +416,7 @@ Deterministic: ()
 > goal1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.21 milliseconds) 
+; took 0.001 secs. (1.05 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &goal_events goal1) 
@@ -436,7 +443,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000292 secs. (291.56 microseconds) 
+; took 0.000260 secs. (260.17 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -464,7 +471,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000251 secs. (251.19 microseconds) 
+; took 0.000234 secs. (233.54 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -479,7 +486,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 372,852 inferences, 0.098 CPU in 0.098 seconds (100% CPU, 3819488 Lips)
+>% 359,817 inferences, 0.072 CPU in 0.072 seconds (100% CPU, 4984923 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/match_void.metta  0)
 <span class="ansi1"
@@ -514,7 +521,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 03:28:11+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 16:56:46+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

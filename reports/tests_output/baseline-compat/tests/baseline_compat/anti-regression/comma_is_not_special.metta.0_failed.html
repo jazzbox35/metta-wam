@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -22,8 +23,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 03:15:46+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 16:44:21+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -31,7 +34,11 @@ Script started on 2024-10-09 03:15:46+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -105,7 +112,7 @@ Script started on 2024-10-09 03:15:46+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; ANTI-REGRESSION.COMMA-IS-NOT-SPECIAL.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000809 secs. (808.82 microseconds) 
+; took 0.000859 secs. (858.55 microseconds) 
 
   !(assertEqualToResult 
     (test-func2 world) 
@@ -120,7 +127,7 @@ Script started on 2024-10-09 03:15:46+00:00 [TERM="xterm-256color" TTY="/dev/pts
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 80,722 inferences, 0.037 CPU in 0.037 seconds (100% CPU, 2189389 Lips)
+>% 62,862 inferences, 0.014 CPU in 0.014 seconds (100% CPU, 4396084 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/comma_is_not_special.metta  0)
 <span class="ansi1"
@@ -155,7 +162,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 03:15:51+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 16:44:26+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

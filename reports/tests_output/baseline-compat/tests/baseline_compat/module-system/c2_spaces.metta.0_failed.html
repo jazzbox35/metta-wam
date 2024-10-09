@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -71,8 +72,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 03:15:04+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-^@P;HTML|
+Script started on 2024-10-09 16:58:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -80,7 +83,11 @@ Script started on 2024-10-09 03:15:04+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -210,7 +217,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000513 secs. (513.44 microseconds) 
+; took 0.000557 secs. (557.04 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -241,7 +248,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000143 secs. (142.95 microseconds) 
+; took 0.000151 secs. (150.79 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -271,7 +278,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000290 secs. (289.96 microseconds) 
+; took 0.000329 secs. (328.70 microseconds) 
 
   !(assertEqual 
     (match &kb 
@@ -310,7 +317,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000573 secs. (573.27 microseconds) 
+; took 0.000633 secs. (633.46 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -414,7 +421,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.C2-SPACES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000452 secs. (452.32 microseconds) 
+; took 0.000458 secs. (457.75 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -434,7 +441,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 433,621 inferences, 0.129 CPU in 0.361 seconds (36% CPU, 3358218 Lips)
+>% 420,164 inferences, 0.101 CPU in 0.101 seconds (100% CPU, 4141145 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/module-system/c2_spaces.metta  0)
 <span class="ansi1"
@@ -469,7 +476,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 03:15:10+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 16:58:33+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -30,8 +31,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 03:26:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 16:55:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -39,7 +42,11 @@ Script started on 2024-10-09 03:26:55+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -134,7 +141,7 @@ Script started on 2024-10-09 03:26:55+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.FACTORIAL.01</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.06 milliseconds) 
+; took 0.005 secs. (5.09 milliseconds) 
 
   !(assertEqualToResult 
     (facF 10) 
@@ -164,7 +171,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.FACTORIAL.02</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (4.70 milliseconds) 
+; took 0.005 secs. (4.75 milliseconds) 
 
   !(assertEqualToResult 
     (facf 10) 
@@ -179,7 +186,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 166,122 inferences, 0.058 CPU in 0.058 seconds (100% CPU, 2888440 Lips)
+>% 150,315 inferences, 0.032 CPU in 0.032 seconds (100% CPU, 4730762 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/factorial.metta  0)
 <span class="ansi1"
@@ -214,7 +221,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 03:27:01+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 16:55:44+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

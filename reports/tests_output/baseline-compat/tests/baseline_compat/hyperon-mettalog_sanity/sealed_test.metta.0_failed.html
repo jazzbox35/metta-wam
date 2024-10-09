@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -36,8 +37,10 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 03:23:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-09 16:52:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi1 ansi31"
+>ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
+</span>P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -45,7 +48,11 @@ Script started on 2024-10-09 03:23:53+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-P;HTML|
+<span class="ansi31"
+>
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
+Warning:    Singleton variables: [Path]
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -123,7 +130,7 @@ Script started on 2024-10-09 03:23:53+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000287 secs. (287.32 microseconds) 
+; took 0.000249 secs. (249.09 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -136,8 +143,8 @@ Script started on 2024-10-09 03:23:53+00:00 [TERM="xterm-256color" TTY="/dev/pts
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote (= ($_571366 $_571372 $_571378) ($_571390)))) 
-      ( (quote (= ($_562428 $_562382 $_562548) ($_562450))))))
+      ( (quote (= ($_571184 $_571190 $_571196) ($_571208)))) 
+      ( (quote (= ($_562246 $_562200 $_562366) ($_562268))))))
 </span>
 Deterministic: ()
 ()]
@@ -154,7 +161,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000156 secs. (155.60 microseconds) 
+; took 0.000159 secs. (158.71 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -165,8 +172,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote (= ($_591920 $_591926)))) 
-      ( (quote (= ($_585038 $_585118))))))
+      ( (quote (= ($_591738 $_591744)))) 
+      ( (quote (= ($_584856 $_584936))))))
 </span>
 Deterministic: ()
 ()]
@@ -183,7 +190,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000914 secs. (914.16 microseconds) 
+; took 0.000878 secs. (878.21 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -194,8 +201,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (output (input $_621528))) 
-      ( (output (input $_605864)))))
+      ( (output (input $_621346))) 
+      ( (output (input $_605682)))))
 </span>
 Deterministic: ()
 ()]
@@ -216,7 +223,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.31 milliseconds) 
+; took 0.001 secs. (1.22 milliseconds) 
 
   !(assertEqual 
     (let 
@@ -231,8 +238,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (output (input $_658574))) 
-      ( (output (input $_662158)))))
+      ( (output (input $_658392))) 
+      ( (output (input $_661976)))))
 </span>
 Deterministic: ()
 ()]
@@ -255,7 +262,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000390 secs. (389.57 microseconds) 
+; took 0.000348 secs. (348.03 microseconds) 
 
   !(assertEqualToResult 
     (callsealer $x $y) 
@@ -264,8 +271,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_698166) (/ 100 $_698190))))) 
-      ( (quote ((* (+ 40 $_687188) (/ 100 $_687210)))))))
+      ( (quote ((* (+ 40 $_697984) (/ 100 $_698008))))) 
+      ( (quote ((* (+ 40 $_687006) (/ 100 $_687028)))))))
 </span>
 Deterministic: ()
 ()]
@@ -281,7 +288,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000428 secs. (427.96 microseconds) 
+; took 0.000390 secs. (389.61 microseconds) 
 
   !(assertEqualToResult 
     (callsealer 10 25) 
@@ -315,7 +322,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000384 secs. (384.42 microseconds) 
+; took 0.000364 secs. (364.33 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 5 $y) 
@@ -324,8 +331,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 5) (/ 100 $_758170))))) 
-      ( (quote ((* (+ 40 5) (/ 100 $_747248)))))))
+      ( (quote ((* (+ 40 5) (/ 100 $_757988))))) 
+      ( (quote ((* (+ 40 5) (/ 100 $_747066)))))))
 </span>
 Deterministic: ()
 ()]
@@ -340,7 +347,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000316 secs. (316.06 microseconds) 
+; took 0.000352 secs. (351.78 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 $x $y) 
@@ -349,8 +356,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_782870) (/ 100 $_782894))))) 
-      ( (quote ((* (+ 40 $_771866) (/ 100 $_771772)))))))
+      ( (quote ((* (+ 40 $_782688) (/ 100 $_782712))))) 
+      ( (quote ((* (+ 40 $_771684) (/ 100 $_771590)))))))
 </span>
 Deterministic: ()
 ()]
@@ -375,7 +382,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000329 secs. (329.33 microseconds) 
+; took 0.000349 secs. (348.64 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x 4) 
@@ -384,8 +391,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_819010) (/ 100 4))))) 
-      ( (quote ((* (+ 40 $_808112) (/ 100 4)))))))
+      ( (quote ((* (+ 40 $_818828) (/ 100 4))))) 
+      ( (quote ((* (+ 40 $_807930) (/ 100 4)))))))
 </span>
 Deterministic: ()
 ()]
@@ -401,7 +408,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000333 secs. (333.21 microseconds) 
+; took 0.000407 secs. (407.15 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x $y) 
@@ -410,14 +417,14 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_843908) (/ 100 $_843932))))) 
-      ( (quote ((* (+ 40 $_832762) (/ 100 $_832808)))))))
+      ( (quote ((* (+ 40 $_843726) (/ 100 $_843750))))) 
+      ( (quote ((* (+ 40 $_832580) (/ 100 $_832626)))))))
 </span>
 Deterministic: ()
 ()]
 ;;;both $x and $y sealed
 <span class="ansi32"
->% 630,609 inferences, 0.134 CPU in 0.134 seconds (100% CPU, 4688696 Lips)
+>% 621,153 inferences, 0.110 CPU in 0.110 seconds (100% CPU, 5662297 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/sealed_test.metta  0)
 <span class="ansi1"
@@ -452,7 +459,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 03:23:58+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 16:52:45+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
