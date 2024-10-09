@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -26,10 +25,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 16:57:18+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 20:50:40+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -37,11 +34,7 @@ Script started on 2024-10-09 16:57:18+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -126,7 +119,7 @@ Warning:    Singleton variables: [Path]
 >;; METTA-MORPH-TESTS.PEANO.01</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.49 milliseconds) 
+; took 0.004 secs. (3.51 milliseconds) 
 
   !(assertEqualToResult 
     (Add 
@@ -143,7 +136,7 @@ Warning:    Singleton variables: [Path]
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 92,699 inferences, 0.018 CPU in 0.018 seconds (100% CPU, 5093846 Lips)
+>% 92,702 inferences, 0.019 CPU in 0.019 seconds (100% CPU, 4988814 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/peano.metta  0)
 <span class="ansi1"
@@ -178,7 +171,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 16:57:23+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 20:50:45+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

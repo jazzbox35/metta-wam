@@ -85,10 +85,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 16:45:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 20:38:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -96,11 +94,7 @@ Script started on 2024-10-09 16:45:53+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -2607,7 +2601,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.01</h3>
 ; 
 ; EVAL TEST
-; took 12.89 seconds.
+; took 12.76 seconds.
 
   !(let $expected 
     (expected) 
@@ -3633,8 +3627,26 @@ Deterministic: ()
 
 ;<h3 id="ANTI-REGRESSION.METTALOGTESTCURRIED.02"
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.02</h3>
+; 
+; EVAL TEST
+; took 9.86 seconds.
 
-Script done on 2024-10-09 16:46:33+00:00 [COMMAND_EXIT_CODE="143"]
+  !(let $expected 
+    (expected) 
+    (assertEqualToResult 
+      (let $aptrn 
+        (Inheritance 
+          (VarIdx Z) 
+          (VarIdx (S Z))) 
+        (fc 
+          (: 
+            (supportwitness $aptrn) 
+            (supportOf $aptrn 
+              (countNat $aptrn))) 
+          (fromNumber 8))) $expected))
+
+
+Script done on 2024-10-09 20:39:09+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>

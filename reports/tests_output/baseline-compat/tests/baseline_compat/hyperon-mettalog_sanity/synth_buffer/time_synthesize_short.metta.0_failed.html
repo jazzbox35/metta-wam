@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -48,10 +47,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 16:54:57+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 20:48:09+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -59,11 +56,7 @@ Script started on 2024-10-09 16:54:57+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -281,7 +274,7 @@ Warning:    Singleton variables: [Path]
 >;; SYNTH-BUFFER.TIME-SYNTHESIZE-SHORT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.58 milliseconds) 
+; took 0.002 secs. (1.52 milliseconds) 
 
   !(assertEqualToResult 
     (kb) 
@@ -551,7 +544,7 @@ Deterministic: ()
 >;; SYNTH-BUFFER.TIME-SYNTHESIZE-SHORT.02</h3>
 ; 
 ; EVAL TEST
-; took 0.147 secs. (147.16 milliseconds) 
+; took 0.147 secs. (147.02 milliseconds) 
 
   !(assertEqualToResult 
     (synthesize 
@@ -1087,7 +1080,7 @@ Deterministic: ()
 >;; SYNTH-BUFFER.TIME-SYNTHESIZE-SHORT.03</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.48 milliseconds) 
+; took 0.004 secs. (3.54 milliseconds) 
 
   !(assertEqualToResult 
     (synthesize 
@@ -1124,7 +1117,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,823,580 inferences, 0.295 CPU in 0.295 seconds (100% CPU, 6180444 Lips)
+>% 1,823,583 inferences, 0.298 CPU in 0.298 seconds (100% CPU, 6115997 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/synth_buffer/time_synthesize_short.metta  0)
 <span class="ansi1"
@@ -1159,7 +1152,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 16:55:03+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 20:48:14+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

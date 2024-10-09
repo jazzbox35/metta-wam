@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -34,10 +33,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 16:49:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 20:42:10+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -45,11 +42,7 @@ Script started on 2024-10-09 16:49:23+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -174,7 +167,7 @@ Deterministic: ()
 >  (Green Sam)
 </span>; 
 ; EVAL TEST
-; took 0.005 secs. (4.57 milliseconds) 
+; took 0.005 secs. (4.64 milliseconds) 
 
   !(assertEqualToResult 
     (ift 
@@ -204,7 +197,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E1-KB-WRITE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000183 secs. (183.24 microseconds) 
+; took 0.000204 secs. (204.12 microseconds) 
 
   !(assertEqualToResult 
     (match &kb 
@@ -220,7 +213,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 150,671 inferences, 0.038 CPU in 0.038 seconds (100% CPU, 4008340 Lips)
+>% 150,674 inferences, 0.038 CPU in 0.038 seconds (100% CPU, 3955578 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/e1_kb_write.metta  0)
 <span class="ansi1"
@@ -255,7 +248,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 16:49:29+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 20:42:15+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

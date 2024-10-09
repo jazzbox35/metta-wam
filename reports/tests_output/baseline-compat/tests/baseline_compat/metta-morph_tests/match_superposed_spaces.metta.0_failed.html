@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -34,10 +33,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 16:56:34+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 20:49:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -45,11 +42,7 @@ Script started on 2024-10-09 16:56:34+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -144,7 +137,7 @@ Deterministic: ()
 > 1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.20 milliseconds) 
+; took 0.001 secs. (1.12 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &attentional_focus 1) 
@@ -184,7 +177,7 @@ Deterministic: ()
 > 2
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.20 milliseconds) 
+; took 0.001 secs. (1.07 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &concepts 2) 
@@ -210,7 +203,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000197 secs. (196.84 microseconds) 
+; took 0.000205 secs. (204.99 microseconds) 
 
   !(assertEqualToResult 
     (match &attentional_focus $1 $1) 
@@ -235,7 +228,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000186 secs. (186.17 microseconds) 
+; took 0.000177 secs. (177.38 microseconds) 
 
   !(assertEqualToResult 
     (match &concepts $1 $1) 
@@ -262,7 +255,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000328 secs. (328.13 microseconds) 
+; took 0.000294 secs. (293.68 microseconds) 
 
   !(assertEqualToResult 
     (match 
@@ -278,7 +271,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 189,533 inferences, 0.040 CPU in 0.040 seconds (100% CPU, 4716384 Lips)
+>% 189,536 inferences, 0.040 CPU in 0.040 seconds (100% CPU, 4744085 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/match_superposed_spaces.metta  0)
 <span class="ansi1"
@@ -313,7 +306,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 16:56:39+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 20:49:58+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

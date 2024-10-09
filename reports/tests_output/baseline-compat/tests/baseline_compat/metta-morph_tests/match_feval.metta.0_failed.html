@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -25,10 +24,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 16:56:27+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 20:49:45+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -36,11 +33,7 @@ Script started on 2024-10-09 16:56:27+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -120,7 +113,7 @@ Warning:    Singleton variables: [Path]
 >;; METTA-MORPH-TESTS.MATCH-FEVAL.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000825 secs. (824.64 microseconds) 
+; took 0.000871 secs. (870.92 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -137,7 +130,7 @@ Warning:    Singleton variables: [Path]
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 78,616 inferences, 0.017 CPU in 0.017 seconds (100% CPU, 4669931 Lips)
+>% 78,619 inferences, 0.017 CPU in 0.017 seconds (100% CPU, 4629239 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/match_feval.metta  0)
 <span class="ansi1"
@@ -172,7 +165,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 16:56:32+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 20:49:51+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

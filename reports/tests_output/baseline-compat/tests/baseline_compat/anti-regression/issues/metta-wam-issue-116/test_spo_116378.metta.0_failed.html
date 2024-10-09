@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -24,10 +23,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 16:45:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 20:37:46+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -35,11 +32,7 @@ Script started on 2024-10-09 16:45:14+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -110,17 +103,17 @@ Warning:    Singleton variables: [Path]
 
 
 Deterministic: ()
-(); Execution took 0.002 secs. (1.63 milliseconds) 
+(); Execution took 0.002 secs. (1.71 milliseconds) 
 
 ]
 <span class="ansi38-013099040"
 >  !(import! &hald116378 hald_spo_116378)
 
-</span>; (Multiple_Organ_Failure show Death) ; line: 51260 ; (Acromegaly caused GH1) ; line: 101313 
-; Done translating 116495 forms: asserted_metta_pred(ld_spo_116378_1728492319_3122077,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_116378.metta').[
+</span>; (Death include Leukemia) ; line: 50982 ; (Pericardial_Effusion associated Neoplasms) ; line: 99955 
+; Done translating 116495 forms: asserted_metta_pred(ld_spo_116378_1728506272_1975524,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_116378.metta').[
 
 Deterministic: ()
-(); Execution took 11.43 seconds.
+(); Execution took 11.44 seconds.
 
 ]
 ;;;!(match &hald116378 (Doxorubicin $p $o) (Doxorubicin $p $o))
@@ -234,7 +227,7 @@ Deterministic: ()
 >;; METTA-WAM-ISSUE-116.TEST-SPO-116378.01</h3>
 ; 
 ; EVAL TEST
-; took 0.031 secs. (31.15 milliseconds) 
+; took 0.031 secs. (30.85 milliseconds) 
 
   !(assertEqualToResult 
     (match &hald116378 
@@ -534,11 +527,11 @@ Deterministic: ()
         (Doxorubicin replaced Etoposide))))
 </span>
 Deterministic: ()
-(); Execution took 0.141 secs. (141.33 milliseconds) 
+(); Execution took 0.142 secs. (141.83 milliseconds) 
 
 ]
 <span class="ansi32"
->% 126,845,077 inferences, 11.593 CPU in 11.594 seconds (100% CPU, 10941456 Lips)
+>% 126,845,095 inferences, 11.603 CPU in 11.604 seconds (100% CPU, 10931700 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/test_spo_116378.metta  0)
 <span class="ansi1"
@@ -573,7 +566,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 16:45:30+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 20:38:03+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

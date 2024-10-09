@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -37,10 +36,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 16:52:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi1 ansi31"
->ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_eval.pl:1127:7: Syntax error: Operator expected
-</span>P;HTML|
+Script started on 2024-10-09 20:45:40+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  prolog false)
 
 P;HTML|
@@ -48,11 +45,7 @@ Script started on 2024-10-09 16:52:39+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_help.pl:16:
-Warning:    Singleton variables: [Path]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -130,7 +123,7 @@ Warning:    Singleton variables: [Path]
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000249 secs. (249.09 microseconds) 
+; took 0.000251 secs. (251.10 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -161,7 +154,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000159 secs. (158.71 microseconds) 
+; took 0.000165 secs. (165.08 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -190,7 +183,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000878 secs. (878.21 microseconds) 
+; took 0.000852 secs. (851.63 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -223,7 +216,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.22 milliseconds) 
+; took 0.001 secs. (1.24 milliseconds) 
 
   !(assertEqual 
     (let 
@@ -262,7 +255,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000348 secs. (348.03 microseconds) 
+; took 0.000332 secs. (331.94 microseconds) 
 
   !(assertEqualToResult 
     (callsealer $x $y) 
@@ -288,7 +281,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000390 secs. (389.61 microseconds) 
+; took 0.000346 secs. (345.78 microseconds) 
 
   !(assertEqualToResult 
     (callsealer 10 25) 
@@ -322,7 +315,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000364 secs. (364.33 microseconds) 
+; took 0.000346 secs. (345.55 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 5 $y) 
@@ -347,7 +340,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000352 secs. (351.78 microseconds) 
+; took 0.000360 secs. (359.55 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 $x $y) 
@@ -382,7 +375,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000349 secs. (348.64 microseconds) 
+; took 0.000351 secs. (351.00 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x 4) 
@@ -408,7 +401,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000407 secs. (407.15 microseconds) 
+; took 0.000363 secs. (362.51 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x $y) 
@@ -424,7 +417,7 @@ Deterministic: ()
 ()]
 ;;;both $x and $y sealed
 <span class="ansi32"
->% 621,153 inferences, 0.110 CPU in 0.110 seconds (100% CPU, 5662297 Lips)
+>% 621,156 inferences, 0.110 CPU in 0.110 seconds (100% CPU, 5627405 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/sealed_test.metta  0)
 <span class="ansi1"
@@ -459,7 +452,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-10-09 16:52:45+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-09 20:45:45+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
