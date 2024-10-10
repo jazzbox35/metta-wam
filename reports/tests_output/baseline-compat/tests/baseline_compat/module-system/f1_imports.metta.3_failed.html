@@ -153,41 +153,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 19:53:58+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-^@<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
-Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
-%!  nodebug(metta(eval)) is det.
-%
-%   Ensures that debugging for `metta(eval)` is disabled.
-%
-%   This directive disables debugging for goals related to `metta(eval)`. It prevents
-%   any tracing or debug output when executing `eval` within the `metta` context.
-%
-%   @example
-%   % Disable debugging for metta(eval):
-%   ?- nodebug(metta(eval)).
-%
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
-%!  Operator declarations
-%
-%   This section defines custom operators to be used in the program.
-%
-%   - `~` (fx, precedence 500): Unary negation operator.
-%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
-%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
-%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
-%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
-%
-%   These operator declarations define how terms with these symbols are parsed and processed 
-%   by the Prolog interpreter.
-% Operator declarations
-
-</span>P;HTML|
+Script started on 2024-10-10 19:59:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+^@P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -556,7 +523,7 @@ Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is de
 >;; MODULE-SYSTEM.F1-IMPORTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.40 milliseconds) 
+; took 0.002 secs. (2.43 milliseconds) 
 
   !(assertEqual 
     ( (let $x 
@@ -584,7 +551,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000307 secs. (307.48 microseconds) 
+; took 0.000274 secs. (274.41 microseconds) 
 
   !(assertEqual 
     (if 
@@ -663,7 +630,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-MODULEA.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000184 secs. (183.76 microseconds) 
+; took 0.000183 secs. (183.37 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -736,7 +703,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.014 secs. (13.66 milliseconds) 
+; took 0.014 secs. (13.97 milliseconds) 
 
   !(assertEqual 
     (let $x 
@@ -775,7 +742,7 @@ Deterministic: ((Error  (got  ()) (expected  (True))))
 >;; MODULE-SYSTEM.F1-IMPORTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.73 milliseconds) 
+; took 0.002 secs. (1.74 milliseconds) 
 
   !(assertEqual 
     (match &m 
@@ -865,7 +832,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-MODULEA.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000169 secs. (168.52 microseconds) 
+; took 0.000191 secs. (191.44 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -976,7 +943,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-MODULEA.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000189 secs. (189.08 microseconds) 
+; took 0.000192 secs. (192.16 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -1020,7 +987,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000491 secs. (490.92 microseconds) 
+; took 0.000440 secs. (439.61 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1043,7 +1010,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000815 secs. (815.38 microseconds) 
+; took 0.000756 secs. (756.04 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1107,7 +1074,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (8.46 milliseconds) 
+; took 0.009 secs. (8.62 milliseconds) 
 
   !(assertEqual 
     (let $a 
@@ -1134,7 +1101,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000266 secs. (266.11 microseconds) 
+; took 0.000248 secs. (247.61 microseconds) 
 
   !(assertEqual 
     (if 
@@ -1268,7 +1235,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000496 secs. (496.35 microseconds) 
+; took 0.000454 secs. (454.24 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1291,7 +1258,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000816 secs. (816.43 microseconds) 
+; took 0.000768 secs. (768.35 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1317,7 +1284,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.00 milliseconds) 
+; took 0.001 secs. (1.05 milliseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1594,7 +1561,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000506 secs. (506.14 microseconds) 
+; took 0.000504 secs. (504.23 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1617,7 +1584,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000799 secs. (799.38 microseconds) 
+; took 0.000824 secs. (823.93 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1641,7 +1608,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.05 milliseconds) 
+; took 0.001 secs. (1.04 milliseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1656,7 +1623,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,441,200 inferences, 0.291 CPU in 0.291 seconds (100% CPU, 4947530 Lips)
+>% 1,441,203 inferences, 0.298 CPU in 0.298 seconds (100% CPU, 4831644 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/module-system/f1_imports.metta  0)
 <span class="ansi1"
@@ -1791,7 +1758,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 19:54:03+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 19:59:08+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

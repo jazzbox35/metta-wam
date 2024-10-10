@@ -108,41 +108,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 20:10:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
-Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
-%!  nodebug(metta(eval)) is det.
-%
-%   Ensures that debugging for `metta(eval)` is disabled.
-%
-%   This directive disables debugging for goals related to `metta(eval)`. It prevents
-%   any tracing or debug output when executing `eval` within the `metta` context.
-%
-%   @example
-%   % Disable debugging for metta(eval):
-%   ?- nodebug(metta(eval)).
-%
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
-%!  Operator declarations
-%
-%   This section defines custom operators to be used in the program.
-%
-%   - `~` (fx, precedence 500): Unary negation operator.
-%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
-%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
-%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
-%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
-%
-%   These operator declarations define how terms with these symbols are parsed and processed 
-%   by the Prolog interpreter.
-% Operator declarations
-
-</span>P;HTML|
+Script started on 2024-10-10 20:14:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -487,7 +454,7 @@ Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is de
 >;; QUICK.F1-IMPORTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000164 secs. (163.98 microseconds) 
+; took 0.000158 secs. (158.50 microseconds) 
 
   !(assertEqualToResult 
     (get-type &self) 
@@ -514,7 +481,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.73 milliseconds) 
+; took 0.002 secs. (1.65 milliseconds) 
 
   !(assertEqual 
     ( (let $x 
@@ -542,7 +509,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000289 secs. (288.55 microseconds) 
+; took 0.000233 secs. (233.50 microseconds) 
 
   !(assertEqual 
     (if 
@@ -619,7 +586,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000182 secs. (182.47 microseconds) 
+; took 0.000162 secs. (162.31 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -640,7 +607,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000133 secs. (132.57 microseconds) 
+; took 0.000125 secs. (124.51 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -704,7 +671,7 @@ Last Result(2): ()
 >;; QUICK.F1-IMPORTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.78 milliseconds) 
+; took 0.002 secs. (1.71 milliseconds) 
 
   !(assertEqual 
     (match &m 
@@ -794,7 +761,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000204 secs. (203.86 microseconds) 
+; took 0.000177 secs. (176.74 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -815,7 +782,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000136 secs. (136.33 microseconds) 
+; took 0.000116 secs. (116.02 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -925,7 +892,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000180 secs. (179.90 microseconds) 
+; took 0.000203 secs. (203.17 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -946,7 +913,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000139 secs. (139.37 microseconds) 
+; took 0.000156 secs. (155.64 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -989,7 +956,7 @@ Last Result(2): ()
 >;; QUICK.F1-IMPORTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000455 secs. (455.45 microseconds) 
+; took 0.000456 secs. (456.46 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1012,7 +979,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000742 secs. (741.88 microseconds) 
+; took 0.000768 secs. (767.55 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1044,7 +1011,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (4.96 milliseconds) 
+; took 0.005 secs. (4.82 milliseconds) 
 
   !(assertEqual &m 
     (let* 
@@ -1079,7 +1046,7 @@ Deterministic: ((Error  (got  (&m)) (expected  ((: __g (-> Number))))))
 >;; QUICK.F1-IMPORTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.41 milliseconds) 
+; took 0.004 secs. (3.84 milliseconds) 
 
   !(assertEqual 
     (== 
@@ -1108,7 +1075,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000299 secs. (298.87 microseconds) 
+; took 0.000230 secs. (230.10 microseconds) 
 
   !(assertEqual 
     (if 
@@ -1242,7 +1209,7 @@ Last Result(2): ()
 >;; QUICK.F1-IMPORTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000523 secs. (523.36 microseconds) 
+; took 0.000401 secs. (401.11 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1265,7 +1232,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000807 secs. (807.31 microseconds) 
+; took 0.000716 secs. (716.48 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1291,7 +1258,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.18</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.06 milliseconds) 
+; took 0.000917 secs. (916.75 microseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1368,7 +1335,7 @@ Last Result(2): ()
 >;; QUICK.F1-IMPORTS.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000501 secs. (501.18 microseconds) 
+; took 0.000399 secs. (398.63 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1391,7 +1358,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000804 secs. (804.03 microseconds) 
+; took 0.000731 secs. (731.12 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1415,7 +1382,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.21</h3>
 ; 
 ; EVAL TEST
-; took 0.000953 secs. (953.41 microseconds) 
+; took 0.000938 secs. (938.01 microseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1430,7 +1397,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,112,665 inferences, 0.219 CPU in 0.219 seconds (100% CPU, 5071746 Lips)
+>% 1,112,670 inferences, 0.214 CPU in 0.214 seconds (100% CPU, 5196593 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/f1_imports.metta  0)
 <span class="ansi1"
@@ -1565,7 +1532,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 20:10:31+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 20:14:40+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

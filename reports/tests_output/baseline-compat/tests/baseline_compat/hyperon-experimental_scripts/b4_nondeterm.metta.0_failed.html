@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -54,41 +53,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 19:58:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
-Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
-%!  nodebug(metta(eval)) is det.
-%
-%   Ensures that debugging for `metta(eval)` is disabled.
-%
-%   This directive disables debugging for goals related to `metta(eval)`. It prevents
-%   any tracing or debug output when executing `eval` within the `metta` context.
-%
-%   @example
-%   % Disable debugging for metta(eval):
-%   ?- nodebug(metta(eval)).
-%
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
-%!  Operator declarations
-%
-%   This section defines custom operators to be used in the program.
-%
-%   - `~` (fx, precedence 500): Unary negation operator.
-%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
-%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
-%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
-%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
-%
-%   These operator declarations define how terms with these symbols are parsed and processed 
-%   by the Prolog interpreter.
-% Operator declarations
-
-</span>P;HTML|
+Script started on 2024-10-10 20:03:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -450,7 +416,7 @@ Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is de
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000365 secs. (365.42 microseconds) 
+; took 0.000344 secs. (343.54 microseconds) 
 
   !(assertEqual 
     (match &self 
@@ -484,7 +450,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000232 secs. (231.57 microseconds) 
+; took 0.000237 secs. (237.24 microseconds) 
 
   !(assertEqual 
     (collapse (match &self (= (shape) $x) $x)) ())
@@ -513,7 +479,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000498 secs. (497.97 microseconds) 
+; took 0.000416 secs. (415.51 microseconds) 
 
   !(assertEqual 
     (color) 
@@ -545,7 +511,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000871 secs. (871.24 microseconds) 
+; took 0.000858 secs. (857.72 microseconds) 
 
   !(assertEqual 
     (color) 
@@ -577,7 +543,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.05</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.34 milliseconds) 
+; took 0.001 secs. (1.31 milliseconds) 
 
   !(assertEqual 
     (collapse (shape)) 
@@ -602,7 +568,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000205 secs. (204.80 microseconds) 
+; took 0.000199 secs. (199.37 microseconds) 
 
   !(assertEqualToResult 
     (shape) 
@@ -708,7 +674,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.08</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.72 milliseconds) 
+; took 0.002 secs. (1.85 milliseconds) 
 
   !(assertEqual 
     (find-equal 
@@ -746,7 +712,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000969 secs. (968.70 microseconds) 
+; took 0.000946 secs. (945.55 microseconds) 
 
   !(assertEqualToResult 
     (rev A 
@@ -837,7 +803,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B4-NONDETERM.10</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.86 milliseconds) 
+; took 0.004 secs. (3.80 milliseconds) 
 
   !(assertEqual 
     (is (air dry)) 
@@ -885,7 +851,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 566,819 inferences, 0.119 CPU in 0.119 seconds (100% CPU, 4767093 Lips)
+>% 566,822 inferences, 0.119 CPU in 0.119 seconds (100% CPU, 4775376 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b4_nondeterm.metta  0)
 <span class="ansi1"
@@ -1020,7 +986,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 19:58:49+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 20:03:40+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

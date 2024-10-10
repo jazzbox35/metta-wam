@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -36,41 +35,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 20:01:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
-Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
-%!  nodebug(metta(eval)) is det.
-%
-%   Ensures that debugging for `metta(eval)` is disabled.
-%
-%   This directive disables debugging for goals related to `metta(eval)`. It prevents
-%   any tracing or debug output when executing `eval` within the `metta` context.
-%
-%   @example
-%   % Disable debugging for metta(eval):
-%   ?- nodebug(metta(eval)).
-%
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
-%!  Operator declarations
-%
-%   This section defines custom operators to be used in the program.
-%
-%   - `~` (fx, precedence 500): Unary negation operator.
-%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
-%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
-%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
-%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
-%
-%   These operator declarations define how terms with these symbols are parsed and processed 
-%   by the Prolog interpreter.
-% Operator declarations
-
-</span>P;HTML|
+Script started on 2024-10-10 20:06:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -376,13 +342,13 @@ Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is de
 P;HTML|
 ;                                           (= 1  "Expected: [(1 2 7 212)]")
 P;HTML|
-;                                           (= 1  "Got: [(findall! $X 1), (findall! $X 212), (findall! $X 2), (findall! $X 7)]")
+;                                           (= 1  "Got: [(findall! $X 212), (findall! $X 2), (findall! $X 1), (findall! $X 7)]")
 P;HTML|
 ;                                           (= 2  "Missed result: (1 2 7 212))]")
 P;HTML|
-;                                           (= 2  "0.04user 0.00system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 24940maxresident)k")
+;                                           (= 2  "0.03user 0.00system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 25172maxresident)k")
 P;HTML|
-;                                           (= 2  "0inputs+0outputs (0major+2854minor)pagefaults 0swaps")
+;                                           (= 2  "0inputs+0outputs (0major+2856minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/find_all_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/find_all_tests.metta)
 
@@ -427,7 +393,7 @@ Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is de
 >;; HYPERON-METTALOG-SANITY.FIND-ALL-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000547 secs. (547.33 microseconds) 
+; took 0.000457 secs. (456.97 microseconds) 
 
   !(assertEqualToResult 
     (findall! $X 
@@ -458,7 +424,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.FIND-ALL-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.95 milliseconds) 
+; took 0.002 secs. (1.90 milliseconds) 
 
   !(assertEqualToResult 
     (findall! $X 
@@ -490,7 +456,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.FIND-ALL-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.24 milliseconds) 
+; took 0.002 secs. (2.22 milliseconds) 
 
   !(assertEqualToResult 
     (findall! 
@@ -523,7 +489,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.FIND-ALL-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.85 milliseconds) 
+; took 0.002 secs. (1.82 milliseconds) 
 
   !(assertEqualToResult 
     (findall! 
@@ -556,7 +522,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.FIND-ALL-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.80 milliseconds) 
+; took 0.002 secs. (1.79 milliseconds) 
 
   !(assertEqualToResult 
     (findall! 
@@ -590,7 +556,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.FIND-ALL-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.59 milliseconds) 
+; took 0.002 secs. (1.64 milliseconds) 
 
   !(assertEqualToResult 
     (findall! 
@@ -623,7 +589,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.FIND-ALL-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.52 milliseconds) 
+; took 0.002 secs. (1.53 milliseconds) 
 
   !(assertEqualToResult 
     (findall! 
@@ -642,7 +608,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 318,176 inferences, 0.063 CPU in 0.063 seconds (100% CPU, 5049167 Lips)
+>% 318,167 inferences, 0.063 CPU in 0.063 seconds (100% CPU, 5072508 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/find_all_tests.metta  0)
 <span class="ansi1"
@@ -777,7 +743,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 20:02:00+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 20:06:41+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

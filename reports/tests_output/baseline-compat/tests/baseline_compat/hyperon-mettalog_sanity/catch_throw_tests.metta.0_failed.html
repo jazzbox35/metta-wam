@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -37,41 +36,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 20:01:47+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
-Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
-%!  nodebug(metta(eval)) is det.
-%
-%   Ensures that debugging for `metta(eval)` is disabled.
-%
-%   This directive disables debugging for goals related to `metta(eval)`. It prevents
-%   any tracing or debug output when executing `eval` within the `metta` context.
-%
-%   @example
-%   % Disable debugging for metta(eval):
-%   ?- nodebug(metta(eval)).
-%
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
-%!  Operator declarations
-%
-%   This section defines custom operators to be used in the program.
-%
-%   - `~` (fx, precedence 500): Unary negation operator.
-%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
-%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
-%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
-%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
-%
-%   These operator declarations define how terms with these symbols are parsed and processed 
-%   by the Prolog interpreter.
-% Operator declarations
-
-</span>P;HTML|
+Script started on 2024-10-10 20:06:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -381,9 +347,9 @@ Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is de
 P;HTML|
 ;                                           (= 2  "Missed result: 1)]")
 P;HTML|
-;                                           (= 2  "0.02user 0.02system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 24980maxresident)k")
+;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 25104maxresident)k")
 P;HTML|
-;                                           (= 2  "0inputs+0outputs (0major+2839minor)pagefaults 0swaps")
+;                                           (= 2  "0inputs+0outputs (0major+2842minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta)
 
@@ -406,7 +372,7 @@ Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is de
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000433 secs. (432.78 microseconds) 
+; took 0.000446 secs. (445.70 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -434,7 +400,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000407 secs. (407.07 microseconds) 
+; took 0.000518 secs. (518.21 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -463,7 +429,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000315 secs. (314.74 microseconds) 
+; took 0.000329 secs. (329.31 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -492,7 +458,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000377 secs. (376.83 microseconds) 
+; took 0.000478 secs. (477.62 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -523,7 +489,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000306 secs. (306.13 microseconds) 
+; took 0.000404 secs. (404.12 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -567,7 +533,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000649 secs. (649.33 microseconds) 
+; took 0.000650 secs. (650.12 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -596,7 +562,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000228 secs. (228.47 microseconds) 
+; took 0.000242 secs. (241.57 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -627,7 +593,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000474 secs. (474.20 microseconds) 
+; took 0.000374 secs. (374.00 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -659,7 +625,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000361 secs. (360.67 microseconds) 
+; took 0.000341 secs. (340.73 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -691,7 +657,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000538 secs. (537.94 microseconds) 
+; took 0.000537 secs. (536.76 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -709,7 +675,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 305,833 inferences, 0.057 CPU in 0.057 seconds (100% CPU, 5347825 Lips)
+>% 305,836 inferences, 0.058 CPU in 0.058 seconds (100% CPU, 5260035 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta  0)
 <span class="ansi1"
@@ -844,7 +810,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 20:01:53+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 20:06:34+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

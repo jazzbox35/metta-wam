@@ -13,7 +13,6 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -24,41 +23,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 19:55:54+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
-Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
-%!  nodebug(metta(eval)) is det.
-%
-%   Ensures that debugging for `metta(eval)` is disabled.
-%
-%   This directive disables debugging for goals related to `metta(eval)`. It prevents
-%   any tracing or debug output when executing `eval` within the `metta` context.
-%
-%   @example
-%   % Disable debugging for metta(eval):
-%   ?- nodebug(metta(eval)).
-%
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
-%!  Operator declarations
-%
-%   This section defines custom operators to be used in the program.
-%
-%   - `~` (fx, precedence 500): Unary negation operator.
-%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
-%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
-%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
-%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
-%
-%   These operator declarations define how terms with these symbols are parsed and processed 
-%   by the Prolog interpreter.
-% Operator declarations
-
-</span>P;HTML|
+Script started on 2024-10-10 20:00:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -382,17 +348,17 @@ Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is de
 
 
 Deterministic: ()
-(); Execution took 0.002 secs. (1.67 milliseconds) 
+(); Execution took 0.002 secs. (1.68 milliseconds) 
 
 ]
 <span class="ansi38-013099040"
 >  !(import! &hald5000 hald_spo_5000)
 
 </span>
-; Done translating 5005 forms: asserted_metta_pred(hald_spo_5000_1728590159_9773123,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_5000.metta').[
+; Done translating 5005 forms: asserted_metta_pred(hald_spo_5000_1728590459_2250967,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_5000.metta').[
 
 Deterministic: ()
-(); Execution took 0.492 secs. (492.41 milliseconds) 
+(); Execution took 0.500 secs. (500.27 milliseconds) 
 
 ]
 <span class="ansi38-013099040"
@@ -410,7 +376,7 @@ Deterministic: ()
 >;; METTA-WAM-ISSUE-116.TEST-SPO-5000.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.23 milliseconds) 
+; took 0.002 secs. (2.08 milliseconds) 
 
   !(assertEqualToResult 
     (match &hald5000 
@@ -431,11 +397,11 @@ Deterministic: ()
         (Doxorubicin stratify Liposarcoma))))
 </span>
 Deterministic: ()
-(); Execution took 0.005 secs. (4.88 milliseconds) 
+(); Execution took 0.005 secs. (4.76 milliseconds) 
 
 ]
 <span class="ansi32"
->% 5,403,392 inferences, 0.516 CPU in 0.516 seconds (100% CPU, 10477990 Lips)
+>% 5,403,395 inferences, 0.523 CPU in 0.523 seconds (100% CPU, 10327259 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/test_spo_5000.metta  0)
 <span class="ansi1"
@@ -570,7 +536,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 19:56:00+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 20:00:59+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

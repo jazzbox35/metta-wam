@@ -120,17 +120,7 @@ cached_call(ForSeconds, Call) :-
 %
 debugging_metta(G) :- notrace((is_debugging((eval)) -> ignore(G); true)).
 
-%!  nodebug(metta(eval)) is det.
-%
 %   Ensures that debugging for `metta(eval)` is disabled.
-%
-%   This directive disables debugging for goals related to `metta(eval)`. It prevents
-%   any tracing or debug output when executing `eval` within the `metta` context.
-%
-%   @example
-%   % Disable debugging for metta(eval):
-%   ?- nodebug(metta(eval)).
-%
 :- nodebug(metta(eval)). % Ensure no debugging for metta(eval).
 
 %!  depth_to_use(+InDepth, -UseThis) is det.
@@ -1009,7 +999,7 @@ pfc_listing_module :- nop(module(pfc_listing,
 
 :- endif.
 
-%!  Operator declarations
+%   Operator declarations
 %
 %   This section defines custom operators to be used in the program.
 %
