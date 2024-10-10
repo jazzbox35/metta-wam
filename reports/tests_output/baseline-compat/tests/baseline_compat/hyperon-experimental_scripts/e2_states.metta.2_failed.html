@@ -37,8 +37,41 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 17:19:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-10 20:00:07+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
+Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
+%!  nodebug(metta(eval)) is det.
+%
+%   Ensures that debugging for `metta(eval)` is disabled.
+%
+%   This directive disables debugging for goals related to `metta(eval)`. It prevents
+%   any tracing or debug output when executing `eval` within the `metta` context.
+%
+%   @example
+%   % Disable debugging for metta(eval):
+%   ?- nodebug(metta(eval)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
+%!  Operator declarations
+%
+%   This section defines custom operators to be used in the program.
+%
+%   - `~` (fx, precedence 500): Unary negation operator.
+%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
+%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
+%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
+%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
+%
+%   These operator declarations define how terms with these symbols are parsed and processed 
+%   by the Prolog interpreter.
+% Operator declarations
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -406,7 +439,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000617 secs. (616.54 microseconds) 
+; took 0.000713 secs. (712.67 microseconds) 
 
   !(assertEqual 
     (get-state (get-token)) 
@@ -435,7 +468,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000498 secs. (498.11 microseconds) 
+; took 0.000586 secs. (586.46 microseconds) 
 
   !(assertEqual 
     (get-token) 
@@ -467,7 +500,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000580 secs. (580.12 microseconds) 
+; took 0.000587 secs. (586.96 microseconds) 
 
   !(assertEqual 
     (get-type (new-state 2)) 
@@ -492,7 +525,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000684 secs. (684.04 microseconds) 
+; took 0.000749 secs. (748.89 microseconds) 
 
   !(assertEqual 
     (get-type (change-state! (new-state "S") "V")) 
@@ -520,7 +553,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000620 secs. (619.82 microseconds) 
+; took 0.000706 secs. (706.19 microseconds) 
 
   !(assertEqual 
     (let $v 
@@ -548,7 +581,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000545 secs. (545.34 microseconds) 
+; took 0.000609 secs. (609.45 microseconds) 
 
   !(assertEqual 
     (get-type &state-token) 
@@ -580,7 +613,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000234 secs. (233.75 microseconds) 
+; took 0.000243 secs. (242.72 microseconds) 
 
   !(assertEqual 
     (change-state! &state-token 1) 
@@ -613,7 +646,7 @@ Deterministic: ((Error  (got  ((State  1 $_248156))) (expected  ((Error 1 BadTyp
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000247 secs. (247.09 microseconds) 
+; took 0.000209 secs. (209.40 microseconds) 
 
   !(assertEqual 
     (change-state! 
@@ -655,7 +688,7 @@ Deterministic: ((Error  (got  ((State  "S" $_277742))) (expected  ((Error "S" Ba
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000452 secs. (451.65 microseconds) 
+; took 0.000417 secs. (416.77 microseconds) 
 
   !(assertEqualToResult 
     (nop (change-state! &state-token (C D))) 
@@ -681,7 +714,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000602 secs. (601.86 microseconds) 
+; took 0.000584 secs. (583.82 microseconds) 
 
   !(assertEqual 
     (get-state (get-token)) 
@@ -715,7 +748,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000647 secs. (647.14 microseconds) 
+; took 0.000630 secs. (629.50 microseconds) 
 
   !(assertEqual 
     (let $x 
@@ -747,7 +780,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000296 secs. (295.68 microseconds) 
+; took 0.000270 secs. (269.75 microseconds) 
 
   !(assertEqual 
     (let $tnso 
@@ -764,7 +797,7 @@ Deterministic: ()
 ()]
 ;;; FIXME: doesn't work as for 25 May 2023
 <span class="ansi32"
->% 508,345 inferences, 0.096 CPU in 0.096 seconds (100% CPU, 5315461 Lips)
+>% 508,342 inferences, 0.097 CPU in 0.097 seconds (100% CPU, 5229756 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/e2_states.metta  0)
 <span class="ansi1"
@@ -899,7 +932,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 17:19:32+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 20:00:13+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

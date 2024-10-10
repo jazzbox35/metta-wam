@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -47,8 +48,41 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 17:26:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-10 20:07:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
+Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
+%!  nodebug(metta(eval)) is det.
+%
+%   Ensures that debugging for `metta(eval)` is disabled.
+%
+%   This directive disables debugging for goals related to `metta(eval)`. It prevents
+%   any tracing or debug output when executing `eval` within the `metta` context.
+%
+%   @example
+%   % Disable debugging for metta(eval):
+%   ?- nodebug(metta(eval)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
+%!  Operator declarations
+%
+%   This section defines custom operators to be used in the program.
+%
+%   - `~` (fx, precedence 500): Unary negation operator.
+%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
+%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
+%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
+%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
+%
+%   These operator declarations define how terms with these symbols are parsed and processed 
+%   by the Prolog interpreter.
+% Operator declarations
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -413,7 +447,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000166 secs. (166.19 microseconds) 
+; took 0.000185 secs. (184.98 microseconds) 
 
   !(assertEqualToResult 
     (match &belief_events $1 $1) ())
@@ -442,7 +476,7 @@ Deterministic: ()
 > belief1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.11 milliseconds) 
+; took 0.001 secs. (1.22 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &belief_events belief1) 
@@ -472,7 +506,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000178 secs. (178.36 microseconds) 
+; took 0.000177 secs. (176.72 microseconds) 
 
   !(assertEqualToResult 
     (match &belief_events $1 $1) 
@@ -503,7 +537,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000138 secs. (137.56 microseconds) 
+; took 0.000129 secs. (129.38 microseconds) 
 
   !(assertEqualToResult 
     (case belief1 
@@ -535,7 +569,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000266 secs. (266.39 microseconds) 
+; took 0.000216 secs. (215.79 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -562,7 +596,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000324 secs. (324.03 microseconds) 
+; took 0.000316 secs. (315.51 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -591,7 +625,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000378 secs. (377.72 microseconds) 
+; took 0.000307 secs. (306.66 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -620,7 +654,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000276 secs. (275.81 microseconds) 
+; took 0.000237 secs. (237.46 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -654,7 +688,7 @@ Deterministic: ()
 > goal1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.20 milliseconds) 
+; took 0.001 secs. (1.08 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &goal_events goal1) 
@@ -681,7 +715,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000327 secs. (326.58 microseconds) 
+; took 0.000261 secs. (260.96 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -709,7 +743,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000277 secs. (277.50 microseconds) 
+; took 0.000250 secs. (250.25 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -724,7 +758,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 360,531 inferences, 0.074 CPU in 0.074 seconds (100% CPU, 4893255 Lips)
+>% 360,528 inferences, 0.073 CPU in 0.073 seconds (100% CPU, 4908492 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/match_void.metta  0)
 <span class="ansi1"
@@ -859,7 +893,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 17:26:44+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 20:07:54+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

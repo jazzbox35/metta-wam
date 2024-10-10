@@ -85,8 +85,41 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 17:15:50+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-10 19:56:17+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
+Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
+%!  nodebug(metta(eval)) is det.
+%
+%   Ensures that debugging for `metta(eval)` is disabled.
+%
+%   This directive disables debugging for goals related to `metta(eval)`. It prevents
+%   any tracing or debug output when executing `eval` within the `metta` context.
+%
+%   @example
+%   % Disable debugging for metta(eval):
+%   ?- nodebug(metta(eval)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
+%!  Operator declarations
+%
+%   This section defines custom operators to be used in the program.
+%
+%   - `~` (fx, precedence 500): Unary negation operator.
+%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
+%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
+%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
+%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
+%
+%   These operator declarations define how terms with these symbols are parsed and processed 
+%   by the Prolog interpreter.
+% Operator declarations
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -2846,7 +2879,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.01</h3>
 ; 
 ; EVAL TEST
-; took 13.63 seconds.
+; took 12.78 seconds.
 
   !(let $expected 
     (expected) 
@@ -3873,7 +3906,7 @@ Deterministic: ()
 ;<h3 id="ANTI-REGRESSION.METTALOGTESTCURRIED.02"
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.02</h3>
 
-Script done on 2024-10-10 17:16:30+00:00 [COMMAND_EXIT_CODE="143"]
+Script done on 2024-10-10 19:56:57+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>

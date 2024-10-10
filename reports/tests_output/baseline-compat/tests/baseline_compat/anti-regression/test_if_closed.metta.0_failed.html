@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -62,8 +63,41 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 17:17:00+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-10 19:57:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
+Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
+%!  nodebug(metta(eval)) is det.
+%
+%   Ensures that debugging for `metta(eval)` is disabled.
+%
+%   This directive disables debugging for goals related to `metta(eval)`. It prevents
+%   any tracing or debug output when executing `eval` within the `metta` context.
+%
+%   @example
+%   % Disable debugging for metta(eval):
+%   ?- nodebug(metta(eval)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
+%!  Operator declarations
+%
+%   This section defines custom operators to be used in the program.
+%
+%   - `~` (fx, precedence 500): Unary negation operator.
+%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
+%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
+%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
+%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
+%
+%   These operator declarations define how terms with these symbols are parsed and processed 
+%   by the Prolog interpreter.
+% Operator declarations
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -453,7 +487,7 @@ Script started on 2024-10-10 17:17:00+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.19 milliseconds) 
+; took 0.001 secs. (1.25 milliseconds) 
 
   !(assertEqualToResult 
     (is-variable $x) 
@@ -484,7 +518,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000874 secs. (873.53 microseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
   !(assertEqualToResult 
     (is-variable 1) 
@@ -515,7 +549,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000886 secs. (886.05 microseconds) 
+; took 0.000909 secs. (909.27 microseconds) 
 
   !(assertEqualToResult 
     (is-expression $x) 
@@ -546,7 +580,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.25 milliseconds) 
+; took 0.001 secs. (1.24 milliseconds) 
 
   !(assertEqualToResult 
     (is-expression (⍃ 4 3)) 
@@ -577,7 +611,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.05</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.18 milliseconds) 
+; took 0.002 secs. (1.57 milliseconds) 
 
   !(assertEqualToResult 
     (is-expression (⍃ 4 $x)) 
@@ -608,7 +642,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000869 secs. (869.42 microseconds) 
+; took 0.001 secs. (1.15 milliseconds) 
 
   !(assertEqualToResult 
     (is-expression 4) 
@@ -639,7 +673,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.07</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.15 milliseconds) 
+; took 0.001 secs. (1.23 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed $x) 
@@ -670,7 +704,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.08</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.06 milliseconds) 
+; took 0.002 secs. (2.09 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed 4) 
@@ -701,7 +735,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.09</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (8.75 milliseconds) 
+; took 0.009 secs. (8.65 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed (⍃ $y 3)) 
@@ -732,7 +766,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.10</h3>
 ; 
 ; EVAL TEST
-; took 0.014 secs. (13.97 milliseconds) 
+; took 0.014 secs. (13.52 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed (⍃ 4 $x)) 
@@ -763,7 +797,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.11</h3>
 ; 
 ; EVAL TEST
-; took 0.016 secs. (15.74 milliseconds) 
+; took 0.015 secs. (15.40 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed (⍃ 4 3)) 
@@ -779,7 +813,7 @@ Deterministic: ()
 ()]
 ;;; rust gets stuck / mettalog true
 <span class="ansi32"
->% 628,278 inferences, 0.128 CPU in 0.128 seconds (100% CPU, 4900569 Lips)
+>% 628,271 inferences, 0.136 CPU in 0.136 seconds (100% CPU, 4623112 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/test_if_closed.metta  0)
 <span class="ansi1"
@@ -914,7 +948,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 17:17:06+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 19:57:34+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

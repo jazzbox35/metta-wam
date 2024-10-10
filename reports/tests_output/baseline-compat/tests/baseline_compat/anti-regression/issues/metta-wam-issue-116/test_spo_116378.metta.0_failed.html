@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -23,8 +24,41 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-10 17:15:10+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-10 19:55:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123:
+Warning:    Invalid mode declaration in PlDoc comment: nodebug(metta(eval))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:123: PlDoc: failed to process structured comment:
+%!  nodebug(metta(eval)) is det.
+%
+%   Ensures that debugging for `metta(eval)` is disabled.
+%
+%   This directive disables debugging for goals related to `metta(eval)`. It prevents
+%   any tracing or debug output when executing `eval` within the `metta` context.
+%
+%   @example
+%   % Disable debugging for metta(eval):
+%   ?- nodebug(metta(eval)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_debug.pl:1012: PlDoc: failed to process structured comment:
+%!  Operator declarations
+%
+%   This section defines custom operators to be used in the program.
+%
+%   - `~` (fx, precedence 500): Unary negation operator.
+%   - `==>` (xfx, precedence 1050): Defines an implication or rule operator used in logic programming.
+%   - `<==>` (xfx, precedence 1050): Represents bi-conditional equivalence.
+%   - `<-` (xfx, precedence 1050): Represents a backward implication or reverse rule.
+%   - `::::` (xfx, precedence 1150): A specialized operator often used in Prolog for custom logic.
+%
+%   These operator declarations define how terms with these symbols are parsed and processed 
+%   by the Prolog interpreter.
+% Operator declarations
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -348,17 +382,17 @@ Script started on 2024-10-10 17:15:10+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 
 Deterministic: ()
-(); Execution took 0.002 secs. (1.62 milliseconds) 
+(); Execution took 0.002 secs. (1.67 milliseconds) 
 
 ]
 <span class="ansi38-013099040"
 >  !(import! &hald116378 hald_spo_116378)
 
-</span>; (Chronic_Disease become Infections) ; line: 51562 ; (Shy-Drager_Syndrome caused ATM) ; line: 102064 
-; Done translating 116495 forms: asserted_metta_pred(ald_spo_116378_1728580516_182527,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_116378.metta').[
+</span>; ('Fractures,_Open' experience Pain) ; line: 50607 ; (Diabetes_Mellitus represented Coronary_Artery_Disease) ; line: 99550 
+; Done translating 116495 forms: asserted_metta_pred(ld_spo_116378_1728590141_0512629,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_116378.metta').[
 
 Deterministic: ()
-(); Execution took 11.28 seconds.
+(); Execution took 11.48 seconds.
 
 ]
 ;;;!(match &hald116378 (Doxorubicin $p $o) (Doxorubicin $p $o))
@@ -472,7 +506,7 @@ Deterministic: ()
 >;; METTA-WAM-ISSUE-116.TEST-SPO-116378.01</h3>
 ; 
 ; EVAL TEST
-; took 0.031 secs. (31.13 milliseconds) 
+; took 0.031 secs. (30.78 milliseconds) 
 
   !(assertEqualToResult 
     (match &hald116378 
@@ -772,11 +806,11 @@ Deterministic: ()
         (Doxorubicin replaced Etoposide))))
 </span>
 Deterministic: ()
-(); Execution took 0.142 secs. (142.39 milliseconds) 
+(); Execution took 0.144 secs. (144.12 milliseconds) 
 
 ]
 <span class="ansi32"
->% 126,845,255 inferences, 11.452 CPU in 11.453 seconds (100% CPU, 11076335 Lips)
+>% 126,845,330 inferences, 11.650 CPU in 11.650 seconds (100% CPU, 10888171 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/test_spo_116378.metta  0)
 <span class="ansi1"
@@ -911,7 +945,7 @@ Deterministic: ()
 P;HTML|
 ;           (maybe_halt  7)
 
-Script done on 2024-10-10 17:15:27+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-10 19:55:52+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
