@@ -49,7 +49,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-12 05:46:13+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-14 21:48:30+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -205,7 +205,14 @@ Script started on 2024-10-12 05:46:13+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  test false)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
+ERROR:    source_sink `metta_help' does not exist
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
+Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -418,7 +425,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.20 milliseconds) 
+; took 0.001 secs. (1.28 milliseconds) 
 
   !(assertEqualToResult 
     (or True 
@@ -443,7 +450,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000226 secs. (226.09 microseconds) 
+; took 0.000240 secs. (240.24 microseconds) 
 
   !(assertEqual 
     (get-state &evaluated) False)
@@ -477,7 +484,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.10 milliseconds) 
+; took 0.001 secs. (1.15 milliseconds) 
 
   !(assertEqualToResult 
     (or False 
@@ -502,7 +509,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000247 secs. (246.58 microseconds) 
+; took 0.000242 secs. (242.27 microseconds) 
 
   !(assertEqual 
     (get-state &evaluated) True)
@@ -526,7 +533,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000166 secs. (166.39 microseconds) 
+; took 0.000159 secs. (159.28 microseconds) 
 
   !(assertEqual 
     (or True False) True)
@@ -549,7 +556,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000144 secs. (144.12 microseconds) 
+; took 0.000164 secs. (164.00 microseconds) 
 
   !(assertEqual 
     (or False True) True)
@@ -572,7 +579,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000155 secs. (154.98 microseconds) 
+; took 0.000167 secs. (166.74 microseconds) 
 
   !(assertEqual 
     (or True True) True)
@@ -595,7 +602,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000156 secs. (155.59 microseconds) 
+; took 0.000186 secs. (185.80 microseconds) 
 
   !(assertEqual 
     (or False False) False)
@@ -620,7 +627,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000146 secs. (146.10 microseconds) 
+; took 0.000160 secs. (159.77 microseconds) 
 
   !(assertEqualToResult 
     (or True False) 
@@ -645,7 +652,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000154 secs. (153.80 microseconds) 
+; took 0.000166 secs. (165.81 microseconds) 
 
   !(assertEqualToResult 
     (or False True) 
@@ -670,7 +677,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000173 secs. (172.52 microseconds) 
+; took 0.000160 secs. (160.10 microseconds) 
 
   !(assertEqualToResult 
     (or True True) 
@@ -695,7 +702,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000130 secs. (129.79 microseconds) 
+; took 0.000150 secs. (149.89 microseconds) 
 
   !(assertEqualToResult 
     (or False False) 
@@ -722,7 +729,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000356 secs. (355.82 microseconds) 
+; took 0.000337 secs. (337.04 microseconds) 
 
   !(assertEqual 
     (or 
@@ -749,7 +756,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000349 secs. (349.00 microseconds) 
+; took 0.000354 secs. (353.92 microseconds) 
 
   !(assertEqual 
     (or 
@@ -776,7 +783,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000314 secs. (314.34 microseconds) 
+; took 0.000299 secs. (298.77 microseconds) 
 
   !(assertEqual 
     (or 
@@ -818,7 +825,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.14 milliseconds) 
+; took 0.001 secs. (1.17 milliseconds) 
 
   !(assertEqualToResult 
     (or 
@@ -853,7 +860,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.13 milliseconds) 
+; took 0.001 secs. (1.15 milliseconds) 
 
   !(assertEqualToResult 
     (or 
@@ -888,7 +895,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.11 milliseconds) 
+; took 0.001 secs. (1.14 milliseconds) 
 
   !(assertEqualToResult 
     (or 
@@ -923,7 +930,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.13 milliseconds) 
+; took 0.001 secs. (1.14 milliseconds) 
 
   !(assertEqualToResult 
     (or 
@@ -956,7 +963,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OR-TEST.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000294 secs. (293.97 microseconds) 
+; took 0.000329 secs. (328.99 microseconds) 
 
   !(assertEqualToResult 
     (or 
@@ -973,7 +980,7 @@ Deterministic: ()
 Deterministic: ((Error  (got  (True True)) (expected  (False True True True))))
 ((Error  (got  (True True)) (expected  (False True True True))))]
 <span class="ansi32"
->% 610,117 inferences, 0.105 CPU in 0.105 seconds (100% CPU, 5829989 Lips)
+>% 489,116 inferences, 0.100 CPU in 0.100 seconds (100% CPU, 4888198 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/or_test.metta  0)
 <span class="ansi1"
@@ -1107,8 +1114,13 @@ Deterministic: ((Error  (got  (True True)) (expected  (False True True True))))
 ;           (set_option_value  test true)
 P;HTML|
 ;           (maybe_halt  7)
-
-Script done on 2024-10-12 05:46:19+00:00 [COMMAND_EXIT_CODE="7"]
+<span class="ansi31"
+>  (in  
+    (maybe_halt  7) 
+    (unwind  
+      (halt  7)))
+</span>
+Script done on 2024-10-14 21:48:36+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

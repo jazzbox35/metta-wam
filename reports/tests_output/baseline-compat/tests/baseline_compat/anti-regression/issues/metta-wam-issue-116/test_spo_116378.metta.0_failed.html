@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -23,7 +24,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-12 05:38:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-14 21:40:51+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -179,7 +180,14 @@ Script started on 2024-10-12 05:38:59+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  test false)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
+ERROR:    source_sink `metta_help' does not exist
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
+Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -348,17 +356,17 @@ Script started on 2024-10-12 05:38:59+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 
 Deterministic: ()
-(); Execution took 0.002 secs. (1.69 milliseconds) 
+(); Execution took 0.002 secs. (1.57 milliseconds) 
 
 ]
 <span class="ansi38-013099040"
 >  !(import! &hald116378 hald_spo_116378)
 
-</span>; (Death remain 'Renal_Insufficiency,_Chronic') ; line: 50707 ; (DKK3 decline 'Renal_Insufficiency,_Chronic') ; line: 100213 
-; Done translating 116495 forms: asserted_metta_pred(ald_spo_116378_1728711545_407371,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_116378.metta').[
+</span>; (Death predicted Hypotension) ; line: 51183 ; (Nephrotic_Syndrome associated OSGEP) ; line: 101194 
+; Done translating 116495 forms: asserted_metta_pred(ld_spo_116378_1728942056_5929115,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_116378.metta').[
 
 Deterministic: ()
-(); Execution took 11.41 seconds.
+(); Execution took 11.45 seconds.
 
 ]
 ;;;!(match &hald116378 (Doxorubicin $p $o) (Doxorubicin $p $o))
@@ -472,7 +480,7 @@ Deterministic: ()
 >;; METTA-WAM-ISSUE-116.TEST-SPO-116378.01</h3>
 ; 
 ; EVAL TEST
-; took 0.032 secs. (31.53 milliseconds) 
+; took 0.032 secs. (32.07 milliseconds) 
 
   !(assertEqualToResult 
     (match &hald116378 
@@ -772,11 +780,11 @@ Deterministic: ()
         (Doxorubicin replaced Etoposide))))
 </span>
 Deterministic: ()
-(); Execution took 0.142 secs. (141.54 milliseconds) 
+(); Execution took 0.145 secs. (145.32 milliseconds) 
 
 ]
 <span class="ansi32"
->% 126,866,797 inferences, 11.583 CPU in 11.584 seconds (100% CPU, 10952681 Lips)
+>% 126,850,584 inferences, 11.618 CPU in 11.618 seconds (100% CPU, 10918578 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/test_spo_116378.metta  0)
 <span class="ansi1"
@@ -910,8 +918,13 @@ Deterministic: ()
 ;           (set_option_value  test true)
 P;HTML|
 ;           (maybe_halt  7)
-
-Script done on 2024-10-12 05:39:17+00:00 [COMMAND_EXIT_CODE="7"]
+<span class="ansi31"
+>  (in  
+    (maybe_halt  7) 
+    (unwind  
+      (halt  7)))
+</span>
+Script done on 2024-10-14 21:41:08+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

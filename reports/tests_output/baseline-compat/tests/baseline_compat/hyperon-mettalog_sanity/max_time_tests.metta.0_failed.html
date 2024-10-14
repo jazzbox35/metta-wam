@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -29,7 +30,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-12 05:46:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-14 21:48:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -185,7 +186,14 @@ Script started on 2024-10-12 05:46:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  test false)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
+ERROR:    source_sink `metta_help' does not exist
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
+Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -340,9 +348,9 @@ Script started on 2024-10-12 05:46:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 2  "Missed result: 4)]")
 P;HTML|
-;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 25028maxresident)k")
+;                                           (= 2  "0.02user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 25276maxresident)k")
 P;HTML|
-;                                           (= 2  "0inputs+0outputs (0major+2852minor)pagefaults 0swaps")
+;                                           (= 2  "0inputs+0outputs (0major+2854minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/max_time_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/max_time_tests.metta)
 
@@ -360,7 +368,7 @@ Script started on 2024-10-12 05:46:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.MAX-TIME-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000538 secs. (537.93 microseconds) 
+; took 0.000644 secs. (643.86 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -395,7 +403,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.58 milliseconds) 
+; took 0.002 secs. (1.71 milliseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -426,7 +434,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.MAX-TIME-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000412 secs. (412.45 microseconds) 
+; took 0.000415 secs. (414.75 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -456,7 +464,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.MAX-TIME-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000306 secs. (305.53 microseconds) 
+; took 0.000328 secs. (328.33 microseconds) 
 
   !(assertEqualToResult 
     (max-time! 1 
@@ -504,7 +512,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.MAX-TIME-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.14 milliseconds) 
+; took 0.002 secs. (2.27 milliseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -522,7 +530,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 215,809 inferences, 0.041 CPU in 0.090 seconds (46% CPU, 5254820 Lips)
+>% 179,529 inferences, 0.040 CPU in 0.089 seconds (45% CPU, 4522533 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/max_time_tests.metta  0)
 <span class="ansi1"
@@ -656,8 +664,13 @@ Deterministic: ()
 ;           (set_option_value  test true)
 P;HTML|
 ;           (maybe_halt  7)
-
-Script done on 2024-10-12 05:46:11+00:00 [COMMAND_EXIT_CODE="7"]
+<span class="ansi31"
+>  (in  
+    (maybe_halt  7) 
+    (unwind  
+      (halt  7)))
+</span>
+Script done on 2024-10-14 21:48:28+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

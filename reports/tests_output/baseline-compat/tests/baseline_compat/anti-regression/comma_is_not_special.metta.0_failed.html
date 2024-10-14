@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -22,7 +23,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-12 05:38:05+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-14 21:39:54+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -178,7 +179,14 @@ Script started on 2024-10-12 05:38:05+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  test false)
-P;HTML|
+<span class="ansi1 ansi31"
+>
+ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
+ERROR:    source_sink `metta_help' does not exist
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
+Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
+</span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -350,7 +358,7 @@ Script started on 2024-10-12 05:38:05+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; ANTI-REGRESSION.COMMA-IS-NOT-SPECIAL.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000959 secs. (958.68 microseconds) 
+; took 0.000880 secs. (880.24 microseconds) 
 
   !(assertEqualToResult 
     (test-func2 world) 
@@ -365,7 +373,7 @@ Script started on 2024-10-12 05:38:05+00:00 [TERM="xterm-256color" TTY="/dev/pts
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 64,450 inferences, 0.014 CPU in 0.014 seconds (100% CPU, 4510233 Lips)
+>% 55,480 inferences, 0.014 CPU in 0.014 seconds (100% CPU, 4008749 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/comma_is_not_special.metta  0)
 <span class="ansi1"
@@ -499,8 +507,13 @@ Deterministic: ()
 ;           (set_option_value  test true)
 P;HTML|
 ;           (maybe_halt  7)
-
-Script done on 2024-10-12 05:38:10+00:00 [COMMAND_EXIT_CODE="7"]
+<span class="ansi31"
+>  (in  
+    (maybe_halt  7) 
+    (unwind  
+      (halt  7)))
+</span>
+Script done on 2024-10-14 21:40:00+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
