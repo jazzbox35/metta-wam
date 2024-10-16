@@ -49,8 +49,47 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-14 21:56:07+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-16 02:16:58+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
+%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
+%
+%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
+%   for syntactic sugar around setting object values.
+%
+%   @arg Goal  The input goal to be checked for setter syntax.
+%   @arg Func  The function or key in the dot notation.
+%   @arg Self  The object in the dot notation.
+%   @arg Value The value being set or retrieved.
+%
+%   Example:
+%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
+%
+% Handle expansion when the goal follows dot notation syntax for setter operations.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
+%!  term_expansion_setter((+Head :- +Body), -Out) is det.
+%
+%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
+%   member is updated in the object.
+%
+%   @arg Head  The head of the clause to be expanded.
+%   @arg Body  The body of the clause to be expanded.
+%   @arg Out   The expanded output clause.
+%
+%   Example:
+%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
+%
+% Handle term expansion for setter-like syntax, updating the member in the object.
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -408,7 +447,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; QUICK.D1-GADT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000230 secs. (230.04 microseconds) 
+; took 0.000229 secs. (229.45 microseconds) 
 
   !(assertEqual 
     (get-type 5) Number)
@@ -431,7 +470,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000202 secs. (202.27 microseconds) 
+; took 0.000236 secs. (236.18 microseconds) 
 
   !(assertEqual 
     (get-type (+ 5 7)) Number)
@@ -456,7 +495,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000184 secs. (184.26 microseconds) 
+; took 0.000210 secs. (209.77 microseconds) 
 
   !(assertEqual 
     (get-type +) 
@@ -482,7 +521,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000282 secs. (282.40 microseconds) 
+; took 0.000313 secs. (313.31 microseconds) 
 
   !(assertEqualToResult 
     (get-type (+ 5 "4")) ())
@@ -504,7 +543,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000198 secs. (198.23 microseconds) 
+; took 0.000213 secs. (213.27 microseconds) 
 
   !(assertEqualToResult 
     (get-type (+ -)) ())
@@ -529,7 +568,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000152 secs. (151.75 microseconds) 
+; took 0.000163 secs. (163.38 microseconds) 
 
   !(assertEqual 
     (get-type Either) Type)
@@ -562,7 +601,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000231 secs. (230.71 microseconds) 
+; took 0.000242 secs. (242.48 microseconds) 
 
   !(assertEqual 
     (get-type (Left 5)) Either)
@@ -594,7 +633,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000309 secs. (308.80 microseconds) 
+; took 0.000298 secs. (298.28 microseconds) 
 
   !(assertEqual 
     (get-type (isLeft (Right 5))) Bool)
@@ -618,7 +657,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000217 secs. (217.15 microseconds) 
+; took 0.000223 secs. (222.61 microseconds) 
 
   !(assertEqualToResult 
     (get-type (isLeft 5)) ())
@@ -656,7 +695,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000671 secs. (671.31 microseconds) 
+; took 0.000626 secs. (625.82 microseconds) 
 
   !(assertEqual 
     (get-type (LeftP 5)) 
@@ -689,7 +728,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.11</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.03 milliseconds) 
+; took 0.001 secs. (1.08 milliseconds) 
 
   !(assertEqual 
     (get-type (pair (LeftP 5) "String")) 
@@ -732,7 +771,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000779 secs. (778.92 microseconds) 
+; took 0.000829 secs. (828.75 microseconds) 
 
   !(assertEqual 
     (get-type (Cons 5 (Cons 6 Nil))) 
@@ -756,7 +795,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000332 secs. (332.50 microseconds) 
+; took 0.000381 secs. (380.92 microseconds) 
 
   !(assertEqualToResult 
     (get-type (Cons 5 (Cons "6" Nil))) ())
@@ -784,7 +823,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000649 secs. (649.00 microseconds) 
+; took 0.000694 secs. (694.32 microseconds) 
 
   !(assertEqual 
     (let 
@@ -800,7 +839,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 394,368 inferences, 0.099 CPU in 0.099 seconds (100% CPU, 4000400 Lips)
+>% 394,368 inferences, 0.100 CPU in 0.100 seconds (100% CPU, 3952731 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d1_gadt.metta  0)
 <span class="ansi1"
@@ -940,7 +979,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-14 21:56:12+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:17:04+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

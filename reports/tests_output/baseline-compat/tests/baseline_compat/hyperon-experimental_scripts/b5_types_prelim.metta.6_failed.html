@@ -453,8 +453,47 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-14 21:44:11+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-16 02:05:08+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
+%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
+%
+%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
+%   for syntactic sugar around setting object values.
+%
+%   @arg Goal  The input goal to be checked for setter syntax.
+%   @arg Func  The function or key in the dot notation.
+%   @arg Self  The object in the dot notation.
+%   @arg Value The value being set or retrieved.
+%
+%   Example:
+%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
+%
+% Handle expansion when the goal follows dot notation syntax for setter operations.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
+%!  term_expansion_setter((+Head :- +Body), -Out) is det.
+%
+%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
+%   member is updated in the object.
+%
+%   @arg Head  The head of the clause to be expanded.
+%   @arg Body  The body of the clause to be expanded.
+%   @arg Out   The expanded output clause.
+%
+%   Example:
+%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
+%
+% Handle term expansion for setter-like syntax, updating the member in the object.
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -823,7 +862,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000433 secs. (432.96 microseconds) 
+; took 0.000359 secs. (358.63 microseconds) 
 
   !(assertEqual 
     (Add S Z) S)
@@ -889,7 +928,7 @@ true]
 >          |     <--S </span>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.95 milliseconds) 
+; took 0.007 secs. (6.74 milliseconds) 
 
   !(assertEqualToResult 
     (Add S Z) 
@@ -960,7 +999,7 @@ Deterministic: ((Error  (got  (S)) (expected  ((Error S BadType)))))
 >    9:1   |   |-<--(S Z) </span>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (9.84 milliseconds) 
+; took 0.010 secs. (9.57 milliseconds) 
 
   !(assertEqual 
     (Add 
@@ -1049,7 +1088,7 @@ Deterministic: ()
 >   13:1   |   |-<--(S Z) </span>
 ; 
 ; EVAL TEST
-; took 0.017 secs. (17.33 milliseconds) 
+; took 0.017 secs. (17.25 milliseconds) 
 
   !(assertEqual 
     (Add Z 
@@ -1098,7 +1137,7 @@ Deterministic: ()
 >          |     <--Something </span>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.89 milliseconds) 
+; took 0.007 secs. (6.69 milliseconds) 
 
   !(assertEqual 
     (Add Something Z) Something)
@@ -1150,7 +1189,7 @@ Deterministic: ()
 >          |     <--(Add Z Ten) </span>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.98 milliseconds) 
+; took 0.007 secs. (6.65 milliseconds) 
 
   !(assertEqualToResult 
     (Add Z Ten) 
@@ -1223,7 +1262,7 @@ Deterministic: ()
 >    5:1   |   |-<--(Cons (S Z) (Cons Z Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.61 milliseconds) 
+; took 0.003 secs. (2.54 milliseconds) 
 
   !(assertEqualToResult 
     (Cons 
@@ -1273,7 +1312,7 @@ Deterministic: ()
 >    3:1   |   |-<--(Cons S (Cons Z Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.73 milliseconds) 
+; took 0.002 secs. (1.53 milliseconds) 
 
   !(assertEqualToResult 
     (Cons S 
@@ -1357,7 +1396,7 @@ Deterministic: ((Error  (got  ((Cons S (Cons Z Nil)))) (expected  ((Error (Cons 
 >    5:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (10.35 milliseconds) 
+; took 0.010 secs. (10.03 milliseconds) 
 
   !(assertEqual 
     (eq 
@@ -1408,7 +1447,7 @@ Deterministic: ()
 >          |     <--(eq Z (S Z)) </span>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.29 milliseconds) 
+; took 0.004 secs. (4.18 milliseconds) 
 
   !(assertEqualToResult 
     (eq Z 
@@ -1453,7 +1492,7 @@ Deterministic: ()
 >          |     <--(eq Z S) </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.27 milliseconds) 
+; took 0.003 secs. (3.10 milliseconds) 
 
   !(assertEqualToResult 
     (eq Z S) 
@@ -1523,7 +1562,7 @@ Deterministic: ((Error  (got  ((eq Z S))) (expected  ((Error S BadType)))))
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.18 milliseconds) 
+; took 0.003 secs. (3.08 milliseconds) 
 
   !(assertEqual 
     (of-same-type Color Shape) T)
@@ -1561,7 +1600,7 @@ Deterministic: ()
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.28 milliseconds) 
+; took 0.003 secs. (3.11 milliseconds) 
 
   !(assertEqual 
     (of-same-type Green Red) T)
@@ -1601,7 +1640,7 @@ Deterministic: ()
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.19 milliseconds) 
+; took 0.003 secs. (3.05 milliseconds) 
 
   !(assertEqualToResult 
     (of-same-type Green Color) 
@@ -1645,7 +1684,7 @@ Deterministic: ((Error  (got  (T)) (expected  ((Error Color BadType)))))
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.26 milliseconds) 
+; took 0.003 secs. (3.10 milliseconds) 
 
   !(assertEqualToResult 
     (of-same-type Green Circle) 
@@ -1707,7 +1746,7 @@ Deterministic: ((Error  (got  (T)) (expected  ((Error Circle BadType)))))
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.47 milliseconds) 
+; took 0.002 secs. (2.32 milliseconds) 
 
   !(assertEqual 
     (Green $who) T)
@@ -1739,7 +1778,7 @@ Deterministic: ()
 >    1:1   |   |-<--Sam </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.32 milliseconds) 
+; took 0.002 secs. (2.19 milliseconds) 
 
   !(assertEqual 
     (match &self 
@@ -1790,7 +1829,7 @@ Deterministic: ()
 >          |   |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.43 milliseconds) 
+; took 0.004 secs. (4.22 milliseconds) 
 
   !(assertEqual 
     (match &self 
@@ -1867,7 +1906,7 @@ Deterministic: ()
 >   10:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.016 secs. (15.70 milliseconds) 
+; took 0.015 secs. (15.32 milliseconds) 
 
   !(assertEqual 
     (let $r 
@@ -1910,7 +1949,7 @@ Deterministic: ()
 >    1:1   |   |-<--fail </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.46 milliseconds) 
+; took 0.002 secs. (2.27 milliseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -2033,7 +2072,7 @@ Deterministic: ()
 >   19:1   |   |-<--Z </span>
 ; 
 ; EVAL TEST
-; took 0.022 secs. (22.47 milliseconds) 
+; took 0.022 secs. (21.74 milliseconds) 
 
   !(assertEqual 
     (let 
@@ -2230,7 +2269,7 @@ Deterministic: ()
 >   40:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.067 secs. (67.44 milliseconds) 
+; took 0.068 secs. (67.78 milliseconds) 
 
   !(assertEqual 
     (let* 
@@ -2322,7 +2361,7 @@ Deterministic: ()
 >    8:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.017 secs. (17.33 milliseconds) 
+; took 0.017 secs. (17.16 milliseconds) 
 
   !(assertEqual 
     (eqa 
@@ -2386,7 +2425,7 @@ Deterministic: ()
 >    5:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (10.34 milliseconds) 
+; took 0.010 secs. (10.07 milliseconds) 
 
   !(assertEqualToResult 
     (eqa Z 
@@ -2453,7 +2492,7 @@ Deterministic: ((Error  (got  (T)) (expected  ((eqa Z (Add Z Z))))))
 >    5:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (10.28 milliseconds) 
+; took 0.010 secs. (10.04 milliseconds) 
 
   !(assertEqual 
     (eq Z 
@@ -2514,7 +2553,7 @@ Deterministic: ()
 >    7:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (12.26 milliseconds) 
+; took 0.012 secs. (12.17 milliseconds) 
 
   !(assertEqual 
     (let $z 
@@ -2532,7 +2571,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 2,356,276 inferences, 0.458 CPU in 0.458 seconds (100% CPU, 5147788 Lips)
+>% 2,356,276 inferences, 0.452 CPU in 0.452 seconds (100% CPU, 5207694 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b5_types_prelim.metta  0)
 <span class="ansi1"
@@ -2672,7 +2711,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-14 21:44:17+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:05:14+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

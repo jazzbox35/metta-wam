@@ -32,8 +32,47 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-14 21:43:33+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-16 02:04:30+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
+%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
+%
+%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
+%   for syntactic sugar around setting object values.
+%
+%   @arg Goal  The input goal to be checked for setter syntax.
+%   @arg Func  The function or key in the dot notation.
+%   @arg Self  The object in the dot notation.
+%   @arg Value The value being set or retrieved.
+%
+%   Example:
+%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
+%
+% Handle expansion when the goal follows dot notation syntax for setter operations.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
+%!  term_expansion_setter((+Head :- +Body), -Out) is det.
+%
+%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
+%   member is updated in the object.
+%
+%   @arg Head  The head of the clause to be expanded.
+%   @arg Body  The body of the clause to be expanded.
+%   @arg Out   The expanded output clause.
+%
+%   Example:
+%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
+%
+% Handle term expansion for setter-like syntax, updating the member in the object.
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -395,7 +434,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000737 secs. (736.53 microseconds) 
+; took 0.000615 secs. (614.95 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -430,7 +469,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000185 secs. (184.63 microseconds) 
+; took 0.000164 secs. (164.10 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -463,7 +502,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000331 secs. (331.37 microseconds) 
+; took 0.000256 secs. (256.41 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -511,7 +550,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000829 secs. (829.18 microseconds) 
+; took 0.000712 secs. (711.60 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -550,7 +589,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000529 secs. (529.06 microseconds) 
+; took 0.000511 secs. (511.14 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -571,7 +610,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 186,735 inferences, 0.044 CPU in 0.044 seconds (100% CPU, 4198514 Lips)
+>% 186,735 inferences, 0.043 CPU in 0.043 seconds (100% CPU, 4363876 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b0_chaining_prelim.metta  0)
 <span class="ansi1"
@@ -711,7 +750,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-14 21:43:38+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:04:36+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -153,8 +153,47 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-14 21:39:09+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-^@P;HTML|
+Script started on 2024-10-16 02:00:09+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+^@<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
+%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
+%
+%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
+%   for syntactic sugar around setting object values.
+%
+%   @arg Goal  The input goal to be checked for setter syntax.
+%   @arg Func  The function or key in the dot notation.
+%   @arg Self  The object in the dot notation.
+%   @arg Value The value being set or retrieved.
+%
+%   Example:
+%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
+%
+% Handle expansion when the goal follows dot notation syntax for setter operations.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
+%!  term_expansion_setter((+Head :- +Body), -Out) is det.
+%
+%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
+%   member is updated in the object.
+%
+%   @arg Head  The head of the clause to be expanded.
+%   @arg Body  The body of the clause to be expanded.
+%   @arg Out   The expanded output clause.
+%
+%   Example:
+%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
+%
+% Handle term expansion for setter-like syntax, updating the member in the object.
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -530,7 +569,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; MODULE-SYSTEM.F1-IMPORTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.49 milliseconds) 
+; took 0.003 secs. (2.60 milliseconds) 
 
   !(assertEqual 
     ( (let $x 
@@ -558,7 +597,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000330 secs. (329.60 microseconds) 
+; took 0.000260 secs. (260.16 microseconds) 
 
   !(assertEqual 
     (if 
@@ -637,7 +676,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-MODULEA.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000196 secs. (195.98 microseconds) 
+; took 0.000184 secs. (184.42 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -710,7 +749,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (14.80 milliseconds) 
+; took 0.015 secs. (15.07 milliseconds) 
 
   !(assertEqual 
     (let $x 
@@ -749,7 +788,7 @@ Deterministic: ((Error  (got  ()) (expected  (True))))
 >;; MODULE-SYSTEM.F1-IMPORTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.88 milliseconds) 
+; took 0.002 secs. (1.85 milliseconds) 
 
   !(assertEqual 
     (match &m 
@@ -839,7 +878,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-MODULEA.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000189 secs. (188.64 microseconds) 
+; took 0.000185 secs. (184.93 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -950,7 +989,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-MODULEA.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000181 secs. (181.03 microseconds) 
+; took 0.000181 secs. (180.64 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -994,7 +1033,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000544 secs. (543.79 microseconds) 
+; took 0.000455 secs. (455.27 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1017,7 +1056,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000883 secs. (883.50 microseconds) 
+; took 0.000799 secs. (799.24 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1081,7 +1120,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (9.24 milliseconds) 
+; took 0.009 secs. (9.20 milliseconds) 
 
   !(assertEqual 
     (let $a 
@@ -1108,7 +1147,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000296 secs. (295.93 microseconds) 
+; took 0.000251 secs. (251.23 microseconds) 
 
   !(assertEqual 
     (if 
@@ -1242,7 +1281,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000536 secs. (535.99 microseconds) 
+; took 0.000470 secs. (470.14 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1265,7 +1304,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000872 secs. (871.86 microseconds) 
+; took 0.000867 secs. (867.04 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1568,7 +1607,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000558 secs. (558.21 microseconds) 
+; took 0.000459 secs. (459.15 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1591,7 +1630,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000926 secs. (925.99 microseconds) 
+; took 0.000813 secs. (812.72 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1615,7 +1654,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.06 milliseconds) 
+; took 0.001 secs. (1.04 milliseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1630,7 +1669,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,466,243 inferences, 0.298 CPU in 0.298 seconds (100% CPU, 4916793 Lips)
+>% 1,466,243 inferences, 0.292 CPU in 0.292 seconds (100% CPU, 5026200 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/module-system/f1_imports.metta  0)
 <span class="ansi1"
@@ -1770,7 +1809,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-14 21:39:15+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:00:15+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

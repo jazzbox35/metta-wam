@@ -48,8 +48,47 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-14 21:53:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-16 02:14:45+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
+%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
+%
+%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
+%   for syntactic sugar around setting object values.
+%
+%   @arg Goal  The input goal to be checked for setter syntax.
+%   @arg Func  The function or key in the dot notation.
+%   @arg Self  The object in the dot notation.
+%   @arg Value The value being set or retrieved.
+%
+%   Example:
+%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
+%
+% Handle expansion when the goal follows dot notation syntax for setter operations.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
+%!  term_expansion_setter((+Head :- +Body), -Out) is det.
+%
+%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
+%   member is updated in the object.
+%
+%   @arg Head  The head of the clause to be expanded.
+%   @arg Body  The body of the clause to be expanded.
+%   @arg Out   The expanded output clause.
+%
+%   Example:
+%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
+%
+% Handle term expansion for setter-like syntax, updating the member in the object.
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -421,7 +460,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000175 secs. (174.64 microseconds) 
+; took 0.000184 secs. (184.38 microseconds) 
 
   !(assertEqualToResult 
     (match &belief_events $1 $1) ())
@@ -450,7 +489,7 @@ Deterministic: ()
 > belief1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.11 milliseconds) 
+; took 0.001 secs. (1.10 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &belief_events belief1) 
@@ -480,7 +519,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000197 secs. (196.64 microseconds) 
+; took 0.000169 secs. (169.43 microseconds) 
 
   !(assertEqualToResult 
     (match &belief_events $1 $1) 
@@ -511,7 +550,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000143 secs. (142.81 microseconds) 
+; took 0.000139 secs. (139.06 microseconds) 
 
   !(assertEqualToResult 
     (case belief1 
@@ -543,7 +582,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000268 secs. (267.79 microseconds) 
+; took 0.000249 secs. (248.92 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -570,7 +609,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000291 secs. (290.84 microseconds) 
+; took 0.000292 secs. (292.07 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -599,7 +638,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000371 secs. (370.64 microseconds) 
+; took 0.000334 secs. (334.31 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -628,7 +667,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000312 secs. (311.93 microseconds) 
+; took 0.000288 secs. (288.28 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -662,7 +701,7 @@ Deterministic: ()
 > goal1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.18 milliseconds) 
+; took 0.001 secs. (1.10 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &goal_events goal1) 
@@ -689,7 +728,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000280 secs. (279.90 microseconds) 
+; took 0.000331 secs. (330.61 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -717,7 +756,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000245 secs. (245.44 microseconds) 
+; took 0.000300 secs. (300.34 microseconds) 
 
   !(assertEqualToResult 
     (case 
@@ -732,7 +771,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 291,000 inferences, 0.069 CPU in 0.069 seconds (100% CPU, 4210284 Lips)
+>% 291,000 inferences, 0.069 CPU in 0.069 seconds (100% CPU, 4211389 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/match_void.metta  0)
 <span class="ansi1"
@@ -872,7 +911,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-14 21:53:58+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:14:51+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

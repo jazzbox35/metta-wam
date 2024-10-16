@@ -675,8 +675,47 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-14 21:39:29+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-^@P;HTML|
+Script started on 2024-10-16 02:00:29+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+^@<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
+%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
+%
+%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
+%   for syntactic sugar around setting object values.
+%
+%   @arg Goal  The input goal to be checked for setter syntax.
+%   @arg Func  The function or key in the dot notation.
+%   @arg Self  The object in the dot notation.
+%   @arg Value The value being set or retrieved.
+%
+%   Example:
+%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
+%
+% Handle expansion when the goal follows dot notation syntax for setter operations.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
+%!  term_expansion_setter((+Head :- +Body), -Out) is det.
+%
+%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
+%   member is updated in the object.
+%
+%   @arg Head  The head of the clause to be expanded.
+%   @arg Body  The body of the clause to be expanded.
+%   @arg Out   The expanded output clause.
+%
+%   Example:
+%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
+%
+% Handle term expansion for setter-like syntax, updating the member in the object.
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -1186,7 +1225,7 @@ Deterministic: ()
     (nums 2 3))
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.82 milliseconds) 
+; took 0.002 secs. (1.79 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -1270,7 +1309,7 @@ Deterministic: ()
       (rule1output $_4566 $_4584)))
 </span>; 
 ; EVAL TEST
-; took 0.005 secs. (5.25 milliseconds) 
+; took 0.005 secs. (5.20 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -1371,7 +1410,7 @@ Deterministic: ()
         (less $_4734 $_4752))))
 </span>; 
 ; EVAL TEST
-; took 0.007 secs. (7.20 milliseconds) 
+; took 0.007 secs. (7.13 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &kb 
@@ -1805,7 +1844,7 @@ Deterministic: ()
 >   96:0   |-<--(if (and (and (is-closed 2) (is-closed 3)) (< 2 3)) (: CPU (⍃ 2 3)) (empty)) </span>
 ; 
 ; EVAL TEST
-; took 0.142 secs. (141.80 milliseconds) 
+; took 0.139 secs. (139.30 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -2064,7 +2103,7 @@ Deterministic: ()
 >   84:0   |-<--(if (and (and (is-closed 4) (is-closed 3)) (< 4 3)) (: CPU (⍃ 4 3)) (empty)) </span>
 ; 
 ; EVAL TEST
-; took 0.140 secs. (139.59 milliseconds) 
+; took 0.136 secs. (136.18 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -3004,7 +3043,7 @@ Deterministic: ()
 >  308:1   |   |-<--(: ((rule (rule1 axiom)) CPU) (less 2 3)) </span>
 ; 
 ; EVAL TEST
-; took 1.102 secs. (1101.64 milliseconds) 
+; took 1.095 secs. (1095.46 milliseconds) 
 
   !(assertEqualToResult 
     (bc 
@@ -3028,7 +3067,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 9,996,131 inferences, 1.704 CPU in 1.705 seconds (100% CPU, 5864715 Lips)
+>% 9,996,129 inferences, 1.686 CPU in 1.686 seconds (100% CPU, 5927520 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/bc_comp.metta  0)
 <span class="ansi1"
@@ -3168,7 +3207,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-14 21:39:37+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:00:37+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

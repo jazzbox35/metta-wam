@@ -30,8 +30,47 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-14 21:47:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-16 02:07:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
+%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
+%
+%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
+%   for syntactic sugar around setting object values.
+%
+%   @arg Goal  The input goal to be checked for setter syntax.
+%   @arg Func  The function or key in the dot notation.
+%   @arg Self  The object in the dot notation.
+%   @arg Value The value being set or retrieved.
+%
+%   Example:
+%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
+%
+% Handle expansion when the goal follows dot notation syntax for setter operations.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
+%!  term_expansion_setter((+Head :- +Body), -Out) is det.
+%
+%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
+%   member is updated in the object.
+%
+%   @arg Head  The head of the clause to be expanded.
+%   @arg Body  The body of the clause to be expanded.
+%   @arg Out   The expanded output clause.
+%
+%   Example:
+%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
+%
+% Handle term expansion for setter-like syntax, updating the member in the object.
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -348,9 +387,9 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 P;HTML|
 ;                                           (= 2  "Missed result: ())]")
 P;HTML|
-;                                           (= 2  "0.03user 0.00system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 24844maxresident)k")
+;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 24720maxresident)k")
 P;HTML|
-;                                           (= 2  "0inputs+0outputs (0major+2835minor)pagefaults 0swaps")
+;                                           (= 2  "0inputs+0outputs (0major+2837minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/call_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/call_tests.metta)
 
@@ -366,7 +405,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; HYPERON-METTALOG-SANITY.CALL-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000203 secs. (203.30 microseconds) 
+; took 0.000178 secs. (178.08 microseconds) 
 
   !(assertEqualToResult 
     (call-string! "member(1,[1,2,3])") 
@@ -390,7 +429,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000186 secs. (185.73 microseconds) 
+; took 0.000170 secs. (170.49 microseconds) 
 
   !(assertEqualToResult 
     (call-string! "member(1,[1,2,3])") ())
@@ -415,7 +454,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000488 secs. (488.12 microseconds) 
+; took 0.000366 secs. (365.57 microseconds) 
 
   !(assertEqualToResult 
     (call-string! "member(X,[1,2,3])") 
@@ -446,7 +485,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.44 milliseconds) 
+; took 0.001 secs. (1.38 milliseconds) 
 
   !(assertEqualToResult 
     (call-string! "member(X,[[1,2],[3,4]])") 
@@ -471,7 +510,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000530 secs. (530.21 microseconds) 
+; took 0.000477 secs. (477.29 microseconds) 
 
   !(assertEqualToResult 
     (call-string! "member([X,Y],[[1,2],[3,4]])") 
@@ -501,7 +540,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.07 milliseconds) 
+; took 0.001 secs. (1.03 milliseconds) 
 
   !(assertEqualToResult 
     (call! parse_time "2006-12-08T15:29:44Z" iso_8601 1165591784.0) 
@@ -530,7 +569,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.71 milliseconds) 
+; took 0.002 secs. (1.66 milliseconds) 
 
   !(assertEqualToResult 
     (call! parse_time "2006-12-08T15:29:44Z" iso_8601 $x) 
@@ -560,7 +599,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.01 milliseconds) 
+; took 0.000978 secs. (978.24 microseconds) 
 
   !(assertEqualToResult 
     (call! parse_time "2006-12-08T15:29:44Z" iso_8601 X) 
@@ -590,7 +629,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.000991 secs. (991.46 microseconds) 
+; took 0.000947 secs. (947.33 microseconds) 
 
   !(assertEqualToResult 
     (call! parse_time "2006-12-08T15:29:44Z" iso_8601 1165591700.0) 
@@ -605,7 +644,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 221,715 inferences, 0.045 CPU in 0.045 seconds (100% CPU, 4898807 Lips)
+>% 221,717 inferences, 0.045 CPU in 0.045 seconds (100% CPU, 4979607 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/call_tests.metta  0)
 <span class="ansi1"
@@ -745,7 +784,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-14 21:47:09+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:08:05+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

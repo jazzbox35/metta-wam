@@ -52,8 +52,47 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-14 21:44:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-16 02:05:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
+%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
+%
+%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
+%   for syntactic sugar around setting object values.
+%
+%   @arg Goal  The input goal to be checked for setter syntax.
+%   @arg Func  The function or key in the dot notation.
+%   @arg Self  The object in the dot notation.
+%   @arg Value The value being set or retrieved.
+%
+%   Example:
+%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
+%
+% Handle expansion when the goal follows dot notation syntax for setter operations.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
+%!  term_expansion_setter((+Head :- +Body), -Out) is det.
+%
+%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
+%   member is updated in the object.
+%
+%   @arg Head  The head of the clause to be expanded.
+%   @arg Body  The body of the clause to be expanded.
+%   @arg Out   The expanded output clause.
+%
+%   Example:
+%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
+%
+% Handle term expansion for setter-like syntax, updating the member in the object.
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -432,7 +471,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000262 secs. (261.60 microseconds) 
+; took 0.000217 secs. (216.96 microseconds) 
 
   !(assertEqualToResult 
     (+ 2 
@@ -459,7 +498,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000191 secs. (191.15 microseconds) 
+; took 0.000196 secs. (195.94 microseconds) 
 
   !(assertEqualToResult 
     (- 8 
@@ -485,7 +524,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000193 secs. (193.19 microseconds) 
+; took 0.000179 secs. (178.54 microseconds) 
 
   !(assertEqualToResult 
     (% 21 17) 
@@ -512,7 +551,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000904 secs. (903.82 microseconds) 
+; took 0.000722 secs. (722.00 microseconds) 
 
   !(assertEqualToResult 
     (< 4 
@@ -541,7 +580,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000469 secs. (468.76 microseconds) 
+; took 0.000342 secs. (342.37 microseconds) 
 
   !(assertEqualToResult 
     (and 
@@ -575,7 +614,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000837 secs. (836.84 microseconds) 
+; took 0.000830 secs. (829.66 microseconds) 
 
   !(assertEqualToResult 
     (ln (+ 2 2)) 
@@ -608,7 +647,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.07</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.74 milliseconds) 
+; took 0.002 secs. (1.66 milliseconds) 
 
   !(assertEqualToResult 
     (> 4 
@@ -644,7 +683,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.08</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.40 milliseconds) 
+; took 0.001 secs. (1.31 milliseconds) 
 
   !(assertEqualToResult 
     (> 4 
@@ -679,7 +718,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000588 secs. (587.78 microseconds) 
+; took 0.000670 secs. (669.98 microseconds) 
 
   !(assertEqualToResult 
     (== 4 
@@ -705,7 +744,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000179 secs. (179.26 microseconds) 
+; took 0.000218 secs. (218.42 microseconds) 
 
   !(assertEqualToResult 
     (== 2 3) 
@@ -732,7 +771,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.11</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.13 milliseconds) 
+; took 0.001 secs. (1.14 milliseconds) 
 
   !(assertEqualToResult 
     (== 
@@ -761,7 +800,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.12</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.37 milliseconds) 
+; took 0.001 secs. (1.41 milliseconds) 
 
   !(assertEqualToResult 
     (== 
@@ -794,7 +833,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.13</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.13 milliseconds) 
+; took 0.001 secs. (1.10 milliseconds) 
 
   !(assertEqualToResult 
     (== 4 
@@ -826,7 +865,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000542 secs. (541.63 microseconds) 
+; took 0.000528 secs. (528.37 microseconds) 
 
   !(assertEqualToResult 
     (+ 2 "String") 
@@ -856,7 +895,7 @@ Deterministic: ((Error  (got  ((+ 2 "String"))) (expected  ((Error "String" BadT
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.15</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.11 milliseconds) 
+; took 0.001 secs. (1.12 milliseconds) 
 
   !(assertEqualToResult 
     (== 4 
@@ -890,7 +929,7 @@ Deterministic: ((Error  (got  (False)) (expected  ((Error ln BadType)))))
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000478 secs. (478.43 microseconds) 
+; took 0.000470 secs. (470.07 microseconds) 
 
   !(assertEqualToResult 
     (sqr 4) 
@@ -921,7 +960,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000931 secs. (931.38 microseconds) 
+; took 0.000907 secs. (907.32 microseconds) 
 
   !(assertEqual 
     (+ 
@@ -953,7 +992,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000331 secs. (330.54 microseconds) 
+; took 0.000350 secs. (349.77 microseconds) 
 
   !(assertEqualToResult 
     (bin) 
@@ -979,7 +1018,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000534 secs. (533.77 microseconds) 
+; took 0.000535 secs. (534.79 microseconds) 
 
   !(assertEqualToResult 
     (+ 1 
@@ -1007,7 +1046,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000327 secs. (327.30 microseconds) 
+; took 0.000334 secs. (334.23 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -1044,7 +1083,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.21</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.61 milliseconds) 
+; took 0.004 secs. (3.60 milliseconds) 
 
   !(assertEqual 
     (fact 5) 120)
@@ -1069,7 +1108,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.22</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.50 milliseconds) 
+; took 0.003 secs. (3.48 milliseconds) 
 
   !(assertEqualToResult 
     (fact 5) 
@@ -1138,7 +1177,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C1-GROUNDED-BASIC.23</h3>
 ; 
 ; EVAL TEST
-; took 0.189 secs. (189.49 milliseconds) 
+; took 0.191 secs. (191.02 milliseconds) 
 
   !(assertEqualToResult 
     (let $t 
@@ -1167,7 +1206,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,992,219 inferences, 0.352 CPU in 0.352 seconds (100% CPU, 5655883 Lips)
+>% 1,992,219 inferences, 0.351 CPU in 0.351 seconds (100% CPU, 5679979 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/c1_grounded_basic.metta  0)
 <span class="ansi1"
@@ -1307,7 +1346,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-14 21:44:25+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:05:22+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -37,8 +37,47 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-14 21:45:29+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-16 02:06:25+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
+%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
+%
+%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
+%   for syntactic sugar around setting object values.
+%
+%   @arg Goal  The input goal to be checked for setter syntax.
+%   @arg Func  The function or key in the dot notation.
+%   @arg Self  The object in the dot notation.
+%   @arg Value The value being set or retrieved.
+%
+%   Example:
+%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
+%
+% Handle expansion when the goal follows dot notation syntax for setter operations.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
+Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
+%!  term_expansion_setter((+Head :- +Body), -Out) is det.
+%
+%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
+%   member is updated in the object.
+%
+%   @arg Head  The head of the clause to be expanded.
+%   @arg Body  The body of the clause to be expanded.
+%   @arg Out   The expanded output clause.
+%
+%   Example:
+%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
+%
+% Handle term expansion for setter-like syntax, updating the member in the object.
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -413,7 +452,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000656 secs. (655.68 microseconds) 
+; took 0.000768 secs. (767.50 microseconds) 
 
   !(assertEqual 
     (get-state (get-token)) 
@@ -442,7 +481,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000540 secs. (539.76 microseconds) 
+; took 0.000523 secs. (523.50 microseconds) 
 
   !(assertEqual 
     (get-token) 
@@ -474,7 +513,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000617 secs. (617.39 microseconds) 
+; took 0.000586 secs. (585.87 microseconds) 
 
   !(assertEqual 
     (get-type (new-state 2)) 
@@ -499,7 +538,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000766 secs. (765.93 microseconds) 
+; took 0.000652 secs. (651.55 microseconds) 
 
   !(assertEqual 
     (get-type (change-state! (new-state "S") "V")) 
@@ -527,7 +566,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000670 secs. (669.76 microseconds) 
+; took 0.000665 secs. (664.56 microseconds) 
 
   !(assertEqual 
     (let $v 
@@ -555,7 +594,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000556 secs. (555.60 microseconds) 
+; took 0.000573 secs. (573.11 microseconds) 
 
   !(assertEqual 
     (get-type &state-token) 
@@ -587,7 +626,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000206 secs. (206.17 microseconds) 
+; took 0.000222 secs. (221.89 microseconds) 
 
   !(assertEqual 
     (change-state! &state-token 1) 
@@ -620,7 +659,7 @@ Deterministic: ((Error  (got  ((State  1 $_248120))) (expected  ((Error 1 BadTyp
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000221 secs. (221.01 microseconds) 
+; took 0.000214 secs. (214.49 microseconds) 
 
   !(assertEqual 
     (change-state! 
@@ -662,7 +701,7 @@ Deterministic: ((Error  (got  ((State  "S" $_277706))) (expected  ((Error "S" Ba
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000477 secs. (477.18 microseconds) 
+; took 0.000470 secs. (469.53 microseconds) 
 
   !(assertEqualToResult 
     (nop (change-state! &state-token (C D))) 
@@ -688,7 +727,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000755 secs. (754.93 microseconds) 
+; took 0.000655 secs. (655.23 microseconds) 
 
   !(assertEqual 
     (get-state (get-token)) 
@@ -722,7 +761,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000684 secs. (683.85 microseconds) 
+; took 0.000708 secs. (707.51 microseconds) 
 
   !(assertEqual 
     (let $x 
@@ -754,7 +793,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E2-STATES.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000326 secs. (326.07 microseconds) 
+; took 0.000376 secs. (375.83 microseconds) 
 
   !(assertEqual 
     (let $tnso 
@@ -772,7 +811,7 @@ Deterministic: ()
 ;;; FIXME: doesn't work as for 25 May 2023
 ;;; !(get-state (let $x (new-state 1) $x))
 <span class="ansi32"
->% 438,069 inferences, 0.092 CPU in 0.092 seconds (100% CPU, 4737083 Lips)
+>% 438,069 inferences, 0.091 CPU in 0.091 seconds (100% CPU, 4788652 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/e2_states.metta  0)
 <span class="ansi1"
@@ -912,7 +951,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-14 21:45:34+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:06:31+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
