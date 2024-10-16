@@ -153,7 +153,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:00:09+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-16 02:03:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 ^@<span class="ansi31"
 >Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
 Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
@@ -348,14 +348,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 
 P;HTML|
 ;           (set_option_value  test false)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-ERROR:    source_sink `metta_help' does not exist
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -569,7 +562,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; MODULE-SYSTEM.F1-IMPORTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.60 milliseconds) 
+; took 0.003 secs. (2.56 milliseconds) 
 
   !(assertEqual 
     ( (let $x 
@@ -597,7 +590,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000260 secs. (260.16 microseconds) 
+; took 0.000279 secs. (279.24 microseconds) 
 
   !(assertEqual 
     (if 
@@ -676,7 +669,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-MODULEA.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000184 secs. (184.42 microseconds) 
+; took 0.000193 secs. (192.53 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -749,7 +742,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (15.07 milliseconds) 
+; took 0.015 secs. (15.00 milliseconds) 
 
   !(assertEqual 
     (let $x 
@@ -788,7 +781,7 @@ Deterministic: ((Error  (got  ()) (expected  (True))))
 >;; MODULE-SYSTEM.F1-IMPORTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.85 milliseconds) 
+; took 0.002 secs. (1.82 milliseconds) 
 
   !(assertEqual 
     (match &m 
@@ -878,7 +871,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-MODULEA.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000185 secs. (184.93 microseconds) 
+; took 0.000218 secs. (218.28 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -989,7 +982,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-MODULEA.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000181 secs. (180.64 microseconds) 
+; took 0.000191 secs. (190.85 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -1033,7 +1026,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000455 secs. (455.27 microseconds) 
+; took 0.000491 secs. (490.54 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1056,7 +1049,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000799 secs. (799.24 microseconds) 
+; took 0.000830 secs. (830.12 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1120,7 +1113,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (9.20 milliseconds) 
+; took 0.009 secs. (9.42 milliseconds) 
 
   !(assertEqual 
     (let $a 
@@ -1147,7 +1140,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000251 secs. (251.23 microseconds) 
+; took 0.000301 secs. (300.93 microseconds) 
 
   !(assertEqual 
     (if 
@@ -1281,7 +1274,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000470 secs. (470.14 microseconds) 
+; took 0.000554 secs. (554.37 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1304,7 +1297,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000867 secs. (867.04 microseconds) 
+; took 0.000892 secs. (892.46 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1330,7 +1323,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.10 milliseconds) 
+; took 0.001 secs. (1.15 milliseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1607,7 +1600,7 @@ Last Result(2): ()
 >;; MODULE-SYSTEM.F1-IMPORTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000459 secs. (459.15 microseconds) 
+; took 0.000507 secs. (507.17 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1630,7 +1623,7 @@ Deterministic: ()
 >;; MODULE-SYSTEM.F1-IMPORTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000813 secs. (812.72 microseconds) 
+; took 0.000833 secs. (833.47 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1669,7 +1662,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,466,243 inferences, 0.292 CPU in 0.292 seconds (100% CPU, 5026200 Lips)
+>% 1,466,243 inferences, 0.297 CPU in 0.297 seconds (100% CPU, 4934543 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/module-system/f1_imports.metta  0)
 <span class="ansi1"
@@ -1809,7 +1802,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:00:15+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:03:59+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

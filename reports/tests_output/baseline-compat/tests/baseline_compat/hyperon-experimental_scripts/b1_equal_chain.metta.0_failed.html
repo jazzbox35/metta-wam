@@ -34,7 +34,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:04:38+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-16 02:08:08+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
 >Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
 Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
@@ -229,14 +229,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 
 P;HTML|
 ;           (set_option_value  test false)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-ERROR:    source_sink `metta_help' does not exist
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -442,7 +435,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B1-EQUAL-CHAIN.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000771 secs. (770.83 microseconds) 
+; took 0.000742 secs. (741.69 microseconds) 
 
   !(assertEqual 
     (S K K x) x)
@@ -471,7 +464,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B1-EQUAL-CHAIN.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000305 secs. (305.17 microseconds) 
+; took 0.000317 secs. (317.04 microseconds) 
 
   !(assertEqualToResult 
     (expression without known equalities) 
@@ -511,7 +504,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B1-EQUAL-CHAIN.03</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.57 milliseconds) 
+; took 0.002 secs. (1.52 milliseconds) 
 
   !(assertEqual 
     (Add 
@@ -543,7 +536,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B1-EQUAL-CHAIN.04</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.13 milliseconds) 
+; took 0.002 secs. (2.07 milliseconds) 
 
   !(assertEqual 
     (Something? (Add (S Z) (S Z))) 
@@ -577,7 +570,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B1-EQUAL-CHAIN.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000827 secs. (827.05 microseconds) 
+; took 0.000833 secs. (832.92 microseconds) 
 
   !(assertEqual 
     (eq 
@@ -602,7 +595,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B1-EQUAL-CHAIN.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000308 secs. (308.35 microseconds) 
+; took 0.000312 secs. (312.11 microseconds) 
 
   !(assertEqualToResult 
     (eq Green Blue) 
@@ -617,7 +610,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 229,104 inferences, 0.054 CPU in 0.054 seconds (100% CPU, 4226673 Lips)
+>% 229,104 inferences, 0.055 CPU in 0.055 seconds (100% CPU, 4151047 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b1_equal_chain.metta  0)
 <span class="ansi1"
@@ -757,7 +750,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:04:43+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:08:13+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

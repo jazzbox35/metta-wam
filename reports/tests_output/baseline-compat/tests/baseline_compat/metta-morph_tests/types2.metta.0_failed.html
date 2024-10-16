@@ -42,7 +42,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:16:13+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-16 02:18:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
 >Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
 Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
@@ -237,14 +237,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 
 P;HTML|
 ;           (set_option_value  test false)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-ERROR:    source_sink `metta_help' does not exist
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -436,7 +429,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; METTA-MORPH-TESTS.TYPES2.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000177 secs. (176.98 microseconds) 
+; took 0.000184 secs. (184.37 microseconds) 
 
   !(assertEqualToResult 
     (get-type lion1) 
@@ -466,7 +459,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000392 secs. (391.95 microseconds) 
+; took 0.000339 secs. (339.31 microseconds) 
 
   !(assertEqualToResult 
     (reproduce lion1 lion2) 
@@ -496,7 +489,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000154 secs. (154.32 microseconds) 
+; took 0.000142 secs. (141.94 microseconds) 
 
   !(assertEqualToResult 
     (get-type Lion) 
@@ -528,7 +521,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000182 secs. (182.32 microseconds) 
+; took 0.000204 secs. (204.48 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -561,7 +554,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.TYPES2.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000203 secs. (203.12 microseconds) 
+; took 0.000216 secs. (215.87 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -577,7 +570,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 153,684 inferences, 0.041 CPU in 0.041 seconds (100% CPU, 3728901 Lips)
+>% 153,684 inferences, 0.041 CPU in 0.041 seconds (100% CPU, 3736162 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/types2.metta  0)
 <span class="ansi1"
@@ -717,7 +710,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:16:18+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:19:01+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -41,7 +41,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:04:46+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-16 02:08:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
 >Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
 Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
@@ -236,14 +236,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 
 P;HTML|
 ;           (set_option_value  test false)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-ERROR:    source_sink `metta_help' does not exist
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -431,7 +424,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000392 secs. (391.98 microseconds) 
+; took 0.000384 secs. (383.98 microseconds) 
 
   !(assertEqualToResult 
     (Frog Sam) 
@@ -456,7 +449,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000376 secs. (376.41 microseconds) 
+; took 0.000486 secs. (485.85 microseconds) 
 
   !(assertEqual 
     (frog Sam) T)
@@ -479,7 +472,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000337 secs. (337.07 microseconds) 
+; took 0.000415 secs. (415.45 microseconds) 
 
   !(assertEqualToResult 
     (frog Fritz) ())
@@ -553,7 +546,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.04</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.63 milliseconds) 
+; took 0.004 secs. (3.76 milliseconds) 
 
   !(assertEqual 
     (deduce (Evaluation (mortal Plato))) T)
@@ -618,7 +611,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.05</h3>
 ; 
 ; EVAL TEST
-; took 0.016 secs. (16.13 milliseconds) 
+; took 0.017 secs. (16.59 milliseconds) 
 
   !(assertEqual 
     (explain (Evaluation (mortal Plato))) 
@@ -645,7 +638,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 365,538 inferences, 0.079 CPU in 0.079 seconds (100% CPU, 4644920 Lips)
+>% 365,538 inferences, 0.080 CPU in 0.080 seconds (100% CPU, 4556800 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b2_backchain.metta  0)
 <span class="ansi1"
@@ -785,7 +778,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:04:51+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:08:20+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

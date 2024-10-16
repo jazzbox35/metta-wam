@@ -42,7 +42,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:10:51+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-16 02:13:54+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
 >Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
 Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
@@ -237,14 +237,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 
 P;HTML|
 ;           (set_option_value  test false)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-ERROR:    source_sink `metta_help' does not exist
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -447,7 +440,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.95 milliseconds) 
+; took 0.003 secs. (3.05 milliseconds) 
 
   !(assertEqual 
     (stringToChars "xyzzy") 
@@ -471,7 +464,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.32 milliseconds) 
+; took 0.001 secs. (1.35 milliseconds) 
 
   !(assertEqual 
     (charsToString ('x' 'y' 'z' 'z' 'y')) "xyzzy")
@@ -494,7 +487,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000141 secs. (140.86 microseconds) 
+; took 0.000142 secs. (142.05 microseconds) 
 
   !(assertEqual 
     (stringToChars "") ())
@@ -517,7 +510,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000147 secs. (146.52 microseconds) 
+; took 0.000144 secs. (143.91 microseconds) 
 
   !(assertEqual 
     (charsToString ()) "")
@@ -541,7 +534,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.72 milliseconds) 
+; took 0.002 secs. (1.73 milliseconds) 
 
   !(assertEqual 
     (charsToString (stringToChars "xyzzy")) "xyzzy")
@@ -565,7 +558,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.94 milliseconds) 
+; took 0.004 secs. (4.09 milliseconds) 
 
   !(assertEqual 
     (stringToChars (charsToString ('x' 'y' 'z' 'z' 'y'))) 
@@ -590,7 +583,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.32 milliseconds) 
+; took 0.001 secs. (1.34 milliseconds) 
 
   !(assertEqual 
     (charsToString ('x' 'y' ' ' 'z' 'y')) "xy zy")
@@ -614,7 +607,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.79 milliseconds) 
+; took 0.003 secs. (2.85 milliseconds) 
 
   !(assertEqual 
     (stringToChars "xy zy") 
@@ -638,7 +631,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000383 secs. (382.92 microseconds) 
+; took 0.000397 secs. (396.56 microseconds) 
 
   !(assertEqual 
     (charsToString (' ')) " ")
@@ -662,7 +655,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000652 secs. (651.50 microseconds) 
+; took 0.000701 secs. (701.24 microseconds) 
 
   !(assertEqual 
     (stringToChars " ") 
@@ -687,7 +680,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (6.48 milliseconds) 
+; took 0.007 secs. (6.62 milliseconds) 
 
   !(assertEqual 
     (stringToChars (superpose ("ab" "cd" "ef"))) 
@@ -717,7 +710,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000179 secs. (179.39 microseconds) 
+; took 0.000179 secs. (178.80 microseconds) 
 
   !(assertEqual 
     (format-args "" 
@@ -742,7 +735,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000188 secs. (188.38 microseconds) 
+; took 0.000206 secs. (206.19 microseconds) 
 
   !(assertEqual 
     (format-args " " 
@@ -767,7 +760,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000350 secs. (349.68 microseconds) 
+; took 0.000349 secs. (348.56 microseconds) 
 
   !(assertEqual 
     (format-args "{}" 
@@ -792,7 +785,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000194 secs. (194.17 microseconds) 
+; took 0.000198 secs. (197.70 microseconds) 
 
   !(assertEqual 
     (format-args "{}}" 
@@ -817,7 +810,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000179 secs. (179.17 microseconds) 
+; took 0.000184 secs. (184.46 microseconds) 
 
   !(assertEqual 
     (format-args "xyz zy" 
@@ -842,7 +835,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000747 secs. (747.21 microseconds) 
+; took 0.000748 secs. (748.09 microseconds) 
 
   !(assertEqual 
     (format-args "Indexed {1} {} {0} {}" 
@@ -868,7 +861,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000800 secs. (800.24 microseconds) 
+; took 0.000871 secs. (871.26 microseconds) 
 
   !(assertEqual 
     (format-args "Different types {} {} {} {} {} {}" 
@@ -894,7 +887,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000215 secs. (215.35 microseconds) 
+; took 0.000198 secs. (197.56 microseconds) 
 
   !(assertEqual 
     (format-args "Two digit index={11}" 
@@ -920,7 +913,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000297 secs. (296.57 microseconds) 
+; took 0.000307 secs. (306.96 microseconds) 
 
   !(assertEqual 
     (format-args "Bad args list {1} {} {0} {}" x) 
@@ -945,7 +938,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.STRING-TESTS.21</h3>
 ; 
 ; EVAL TEST
-; took 0.000222 secs. (221.87 microseconds) 
+; took 0.000206 secs. (206.17 microseconds) 
 
   !(assertEqual 
     (format-args "Malformed format}{{}{{{}{} {4} { } {-1} {x} {{{{{{}}}}}}{{{{{}}}}}" 
@@ -960,7 +953,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 605,521 inferences, 0.121 CPU in 0.121 seconds (100% CPU, 4999127 Lips)
+>% 605,521 inferences, 0.123 CPU in 0.123 seconds (100% CPU, 4927648 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/string-tests.metta  0)
 <span class="ansi1"
@@ -1100,7 +1093,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:10:56+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:13:59+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

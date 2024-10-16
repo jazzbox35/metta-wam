@@ -34,7 +34,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:07:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-16 02:11:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
 >Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
 Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
@@ -229,14 +229,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 
 P;HTML|
 ;           (set_option_value  test false)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-ERROR:    source_sink `metta_help' does not exist
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -393,9 +386,9 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 P;HTML|
 ;                                           (= 3  "Missed result: 1)]")
 P;HTML|
-;                                           (= 3  "0.03user 0.01system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 25036maxresident)k")
+;                                           (= 3  "0.04user 0.00system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 25440maxresident)k")
 P;HTML|
-;                                           (= 3  "0inputs+0outputs (0major+2888minor)pagefaults 0swaps")
+;                                           (= 3  "0inputs+0outputs (0major+2896minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/call_cleanup_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/call_cleanup_tests.metta)
 
@@ -424,7 +417,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-CLEANUP-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.86 milliseconds) 
+; took 0.003 secs. (2.83 milliseconds) 
 
   !(assertEqualToResult 
     (sequential ((call-cleanup! (increment) (increment)) (increment))) 
@@ -463,7 +456,7 @@ Deterministic: (State  0 $_3382)
 >;; HYPERON-METTALOG-SANITY.CALL-CLEANUP-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.13 milliseconds) 
+; took 0.002 secs. (2.10 milliseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -493,7 +486,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-CLEANUP-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.75 milliseconds) 
+; took 0.003 secs. (2.89 milliseconds) 
 
   !(assertEqualToResult 
     (sequential ((setup-call-cleanup! (change-state! &var 0) (increment) (increment)) (increment))) 
@@ -530,7 +523,7 @@ Deterministic: ()
 
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.10 milliseconds) 
+; took 0.004 secs. (3.68 milliseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -561,7 +554,7 @@ Deterministic: ((Error  (got  ((time_limit_exceeded 3))) (expected  ((time_limit
 >;; HYPERON-METTALOG-SANITY.CALL-CLEANUP-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000797 secs. (797.48 microseconds) 
+; took 0.000786 secs. (785.93 microseconds) 
 
   !(assertEqualToResult 
     (not (== (get-state! &var) 0)) 
@@ -592,7 +585,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CALL-CLEANUP-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.55 milliseconds) 
+; took 0.003 secs. (2.74 milliseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -634,7 +627,7 @@ Deterministic: (State  0 $_3382)
 >;; HYPERON-METTALOG-SANITY.CALL-CLEANUP-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.50 milliseconds) 
+; took 0.004 secs. (3.56 milliseconds) 
 
   !(assertEqualToResult 
     (setup-call-cleanup! 
@@ -673,7 +666,7 @@ Deterministic: (State  0 $_3382)
 >;; HYPERON-METTALOG-SANITY.CALL-CLEANUP-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.55 milliseconds) 
+; took 0.007 secs. (6.58 milliseconds) 
 
   !(assertEqualToResult 
     (setup-call-cleanup! 
@@ -691,7 +684,7 @@ Deterministic: (State  0 $_3382)
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 442,865 inferences, 0.079 CPU in 2.078 seconds (4% CPU, 5600002 Lips)
+>% 442,865 inferences, 0.082 CPU in 2.080 seconds (4% CPU, 5419757 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/call_cleanup_tests.metta  0)
 <span class="ansi1"
@@ -831,7 +824,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:07:57+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:11:11+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

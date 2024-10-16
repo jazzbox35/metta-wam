@@ -39,7 +39,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:06:56+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-16 02:10:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
 >Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
 Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
@@ -234,14 +234,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 
 P;HTML|
 ;           (set_option_value  test false)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-ERROR:    source_sink `metta_help' does not exist
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -402,9 +395,9 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 P;HTML|
 ;                                           (= 5  "Missed result: (@doc-formal (@item NoSuchAtom) (@kind atom) (@type %Undefined%) (@desc \"No documentation\")))]")
 P;HTML|
-;                                           (= 5  "0.33user 0.00system 0:00.34elapsed 99%CPU (0avgtext+0avgdata 28380maxresident)k")
+;                                           (= 5  "0.33user 0.00system 0:00.34elapsed 99%CPU (0avgtext+0avgdata 28068maxresident)k")
 P;HTML|
-;                                           (= 5  "0inputs+0outputs (0major+3627minor)pagefaults 0swaps")
+;                                           (= 5  "0inputs+0outputs (0major+3611minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/g1_docs.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/g1_docs.metta)
 
@@ -450,7 +443,7 @@ Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.G1-DOCS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.149 secs. (149.21 milliseconds) 
+; took 0.150 secs. (150.47 milliseconds) 
 
   !(assertEqual 
     (get-doc some-func) 
@@ -509,7 +502,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.G1-DOCS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (9.35 milliseconds) 
+; took 0.010 secs. (9.63 milliseconds) 
 
   !(assertEqual 
     (get-doc SomeSymbol) 
@@ -563,7 +556,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.G1-DOCS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (6.23 milliseconds) 
+; took 0.006 secs. (6.26 milliseconds) 
 
   !(assertEqual 
     (get-doc some-gnd-atom) 
@@ -609,7 +602,7 @@ Deterministic: ((Error  (got  ()) (expected  ((@doc-formal (@item some-gnd-atom)
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.G1-DOCS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.22 milliseconds) 
+; took 0.003 secs. (3.36 milliseconds) 
 
   !(assertEqual 
     (get-doc NoSuchAtom) 
@@ -647,7 +640,7 @@ Deterministic: ((Error  (got  ()) (expected  ((@doc-formal (@item NoSuchAtom) (@
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.G1-DOCS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.47 milliseconds) 
+; took 0.003 secs. (2.67 milliseconds) 
 
   !(assertEqual 
     (get-doc (some-func arg1 arg2)) 
@@ -742,7 +735,7 @@ NDet Result(1): ()
 ;;; Atom (some-func arg1 arg2): ReturnType No documentation
 ;;;
 <span class="ansi32"
->% 2,460,673 inferences, 0.420 CPU in 0.420 seconds (100% CPU, 5865527 Lips)
+>% 2,460,673 inferences, 0.424 CPU in 0.424 seconds (100% CPU, 5809396 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/g1_docs.metta  0)
 <span class="ansi1"
@@ -882,7 +875,7 @@ NDet Result(1): ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:07:02+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:10:20+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

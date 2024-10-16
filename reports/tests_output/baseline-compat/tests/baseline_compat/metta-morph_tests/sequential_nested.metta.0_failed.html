@@ -63,7 +63,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:15:34+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-16 02:18:20+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 <span class="ansi31"
 >Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
 Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
@@ -258,14 +258,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 
 P;HTML|
 ;           (set_option_value  test false)
-<span class="ansi1 ansi31"
->
-ERROR: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-ERROR:    source_sink `metta_help' does not exist
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_interp.pl:2016:
-Warning:    Goal (directive) failed: user:ensure_loaded(metta_help)
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -485,7 +478,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.94 milliseconds) 
+; took 0.002 secs. (1.96 milliseconds) 
 
   !(assertEqualToResult 
     (sequential ((increment) (increment))) 
@@ -515,7 +508,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.02</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.63 milliseconds) 
+; took 0.003 secs. (2.65 milliseconds) 
 
   !(assertEqualToResult 
     (sequential ((increment) (increment) (increment))) 
@@ -545,7 +538,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.03</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.72 milliseconds) 
+; took 0.003 secs. (2.73 milliseconds) 
 
   !(assertEqualToResult 
     (sequential ((sequential ((increment) (increment) (increment))))) 
@@ -575,7 +568,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.04</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.19 milliseconds) 
+; took 0.005 secs. (5.12 milliseconds) 
 
   !(assertEqualToResult 
     (sequential ((sequential ((increment) (increment) (increment))) (sequential ((increment) (increment) (increment))))) 
@@ -605,7 +598,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.05</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.10 milliseconds) 
+; took 0.005 secs. (5.00 milliseconds) 
 
   !(assertEqualToResult 
     (sequential ((sequential ((increment) (increment) (increment))) (increment) (increment) (increment))) 
@@ -634,7 +627,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.06</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.11 milliseconds) 
+; took 0.005 secs. (5.15 milliseconds) 
 
   !(assertEqualToResult 
     (do (sequential ((sequential ((increment) (increment) (increment))) (increment) (increment) (increment)))) ())
@@ -661,7 +654,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000224 secs. (224.27 microseconds) 
+; took 0.000228 secs. (228.16 microseconds) 
 
   !(assertEqualToResult 
     (get-state &var) 
@@ -691,7 +684,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.08</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.16 milliseconds) 
+; took 0.001 secs. (1.18 milliseconds) 
 
   !(assertEqualToResult 
     (sequential ((increment))) 
@@ -721,7 +714,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.09</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.08 milliseconds) 
+; took 0.001 secs. (1.09 milliseconds) 
 
   !(assertEqualToResult 
     (increment) 
@@ -751,7 +744,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000242 secs. (242.00 microseconds) 
+; took 0.000236 secs. (235.79 microseconds) 
 
   !(assertEqualToResult 
     (get-state &var) 
@@ -781,7 +774,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000653 secs. (652.63 microseconds) 
+; took 0.000763 secs. (763.35 microseconds) 
 
   !(assertEqualToResult 
     (sequential ((change-state! &var (+ 1 (get-state &var))))) 
@@ -811,7 +804,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.SEQUENTIAL-NESTED.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000196 secs. (196.12 microseconds) 
+; took 0.000241 secs. (241.25 microseconds) 
 
   !(assertEqualToResult 
     (get-state &var) 
@@ -826,7 +819,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 518,743 inferences, 0.106 CPU in 0.106 seconds (100% CPU, 4883088 Lips)
+>% 518,743 inferences, 0.107 CPU in 0.108 seconds (99% CPU, 4849010 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/sequential_nested.metta  0)
 <span class="ansi1"
@@ -966,7 +959,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:15:40+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 02:18:25+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
