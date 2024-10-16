@@ -44,47 +44,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:10:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
-%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
-%
-%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
-%   for syntactic sugar around setting object values.
-%
-%   @arg Goal  The input goal to be checked for setter syntax.
-%   @arg Func  The function or key in the dot notation.
-%   @arg Self  The object in the dot notation.
-%   @arg Value The value being set or retrieved.
-%
-%   Example:
-%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
-%
-% Handle expansion when the goal follows dot notation syntax for setter operations.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
-%!  term_expansion_setter((+Head :- +Body), -Out) is det.
-%
-%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
-%   member is updated in the object.
-%
-%   @arg Head  The head of the clause to be expanded.
-%   @arg Body  The body of the clause to be expanded.
-%   @arg Out   The expanded output clause.
-%
-%   Example:
-%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
-%
-% Handle term expansion for setter-like syntax, updating the member in the object.
-
-</span>P;HTML|
+Script started on 2024-10-16 19:21:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -434,7 +395,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000816 secs. (816.09 microseconds) 
+; took 0.000715 secs. (714.81 microseconds) 
 
   !(assertEqual 
     (+ 1 
@@ -463,7 +424,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000635 secs. (635.47 microseconds) 
+; took 0.000557 secs. (557.06 microseconds) 
 
   !(assertEqual 
     (+ 1 
@@ -490,7 +451,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.60 milliseconds) 
+; took 0.002 secs. (1.56 milliseconds) 
 
   !(assertEqual 
     ( (superpose (1 2 3))) 
@@ -523,7 +484,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000255 secs. (254.86 microseconds) 
+; took 0.000238 secs. (237.87 microseconds) 
 
   !(assertEqual 
     (case 
@@ -553,7 +514,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000338 secs. (338.21 microseconds) 
+; took 0.000315 secs. (315.44 microseconds) 
 
   !(assertEqual 
     (case 
@@ -582,7 +543,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000266 secs. (266.16 microseconds) 
+; took 0.000242 secs. (242.20 microseconds) 
 
   !(assertEqual 
     (case 5 
@@ -610,7 +571,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000754 secs. (754.29 microseconds) 
+; took 0.000697 secs. (696.61 microseconds) 
 
   !(assertEqual 
     (case 
@@ -642,7 +603,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000852 secs. (851.59 microseconds) 
+; took 0.000755 secs. (755.16 microseconds) 
 
   !(assertEqual 
     (case 
@@ -669,7 +630,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000142 secs. (142.28 microseconds) 
+; took 0.000104 secs. (103.88 microseconds) 
 
   !(assertEqualToResult 
     (superpose ()) ())
@@ -691,7 +652,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000237 secs. (237.48 microseconds) 
+; took 0.000210 secs. (210.15 microseconds) 
 
   !(assertEqualToResult 
     (collapse (superpose ())) 
@@ -715,7 +676,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000229 secs. (229.28 microseconds) 
+; took 0.000224 secs. (224.04 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((nop 1))) ())
@@ -738,7 +699,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000415 secs. (414.67 microseconds) 
+; took 0.000431 secs. (430.57 microseconds) 
 
   !(assertEqualToResult 
     (collapse (superpose ((nop 1)))) 
@@ -828,7 +789,7 @@ NDet Result(5): (Rel-Q A C)
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000944 secs. (943.80 microseconds) 
+; took 0.000886 secs. (885.77 microseconds) 
 
   !(assertEqual 
     (match &self $1 $1) 
@@ -864,7 +825,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000551 secs. (550.83 microseconds) 
+; took 0.000477 secs. (477.04 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -891,7 +852,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000733 secs. (732.63 microseconds) 
+; took 0.000774 secs. (774.47 microseconds) 
 
   !(assertEqualToResult 
     (superpose ((Rel-P B) (Rel-Q C))) 
@@ -919,7 +880,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000952 secs. (951.66 microseconds) 
+; took 0.001 secs. (1.05 milliseconds) 
 
   !(assertEqual 
     (match &self 
@@ -951,7 +912,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.17</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.63 milliseconds) 
+; took 0.002 secs. (1.72 milliseconds) 
 
   !(assertEqual 
     (superpose ((P B) (Q C))) 
@@ -986,7 +947,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.00-LANG-CASE.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000259 secs. (258.68 microseconds) 
+; took 0.000295 secs. (294.91 microseconds) 
 
   !(assertEqual 
     (case 
@@ -1006,7 +967,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 535,180 inferences, 0.114 CPU in 0.114 seconds (100% CPU, 4712250 Lips)
+>% 535,181 inferences, 0.115 CPU in 0.115 seconds (100% CPU, 4640309 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/00_lang_case.metta  0)
 <span class="ansi1"
@@ -1146,7 +1107,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:10:27+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 19:21:32+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -37,47 +37,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:11:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
-%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
-%
-%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
-%   for syntactic sugar around setting object values.
-%
-%   @arg Goal  The input goal to be checked for setter syntax.
-%   @arg Func  The function or key in the dot notation.
-%   @arg Self  The object in the dot notation.
-%   @arg Value The value being set or retrieved.
-%
-%   Example:
-%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
-%
-% Handle expansion when the goal follows dot notation syntax for setter operations.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
-%!  term_expansion_setter((+Head :- +Body), -Out) is det.
-%
-%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
-%   member is updated in the object.
-%
-%   @arg Head  The head of the clause to be expanded.
-%   @arg Body  The body of the clause to be expanded.
-%   @arg Out   The expanded output clause.
-%
-%   Example:
-%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
-%
-% Handle term expansion for setter-like syntax, updating the member in the object.
-
-</span>P;HTML|
+Script started on 2024-10-16 19:22:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -383,11 +344,11 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 P;HTML|
 ;                                           (= 1  "Expected: [1, 2]")
 P;HTML|
-;                                           (= 1  "Got: [(catch 1 Error Error), (catch 2 Error Error)]")
+;                                           (= 1  "Got: [(catch 2 Error Error), (catch 1 Error Error)]")
 P;HTML|
 ;                                           (= 2  "Missed result: 1)]")
 P;HTML|
-;                                           (= 2  "0.03user 0.00system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 24972maxresident)k")
+;                                           (= 2  "0.02user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 24976maxresident)k")
 P;HTML|
 ;                                           (= 2  "0inputs+0outputs (0major+2837minor)pagefaults 0swaps")
 P;HTML|
@@ -412,7 +373,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000431 secs. (431.23 microseconds) 
+; took 0.000423 secs. (423.39 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -440,7 +401,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000445 secs. (445.05 microseconds) 
+; took 0.000431 secs. (431.44 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -469,7 +430,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000291 secs. (290.89 microseconds) 
+; took 0.000296 secs. (296.19 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -498,7 +459,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000426 secs. (426.19 microseconds) 
+; took 0.000431 secs. (431.47 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -529,7 +490,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000336 secs. (335.95 microseconds) 
+; took 0.000439 secs. (439.28 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -573,7 +534,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000604 secs. (603.70 microseconds) 
+; took 0.000604 secs. (603.51 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -602,7 +563,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000226 secs. (226.13 microseconds) 
+; took 0.000217 secs. (216.99 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -633,7 +594,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000408 secs. (408.16 microseconds) 
+; took 0.000389 secs. (388.55 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -665,7 +626,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000289 secs. (289.03 microseconds) 
+; took 0.000288 secs. (287.95 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -697,7 +658,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000455 secs. (454.82 microseconds) 
+; took 0.000455 secs. (454.79 microseconds) 
 
   !(assertEqualToResult 
     (catch 
@@ -715,7 +676,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 249,459 inferences, 0.054 CPU in 0.054 seconds (100% CPU, 4617864 Lips)
+>% 249,450 inferences, 0.054 CPU in 0.054 seconds (100% CPU, 4626253 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta  0)
 <span class="ansi1"
@@ -855,7 +816,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:11:25+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 19:22:32+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

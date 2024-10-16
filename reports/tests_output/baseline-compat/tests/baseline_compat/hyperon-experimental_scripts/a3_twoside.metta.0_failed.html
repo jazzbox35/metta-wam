@@ -29,47 +29,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:07:54+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
-%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
-%
-%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
-%   for syntactic sugar around setting object values.
-%
-%   @arg Goal  The input goal to be checked for setter syntax.
-%   @arg Func  The function or key in the dot notation.
-%   @arg Self  The object in the dot notation.
-%   @arg Value The value being set or retrieved.
-%
-%   Example:
-%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
-%
-% Handle expansion when the goal follows dot notation syntax for setter operations.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
-%!  term_expansion_setter((+Head :- +Body), -Out) is det.
-%
-%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
-%   member is updated in the object.
-%
-%   @arg Head  The head of the clause to be expanded.
-%   @arg Body  The body of the clause to be expanded.
-%   @arg Out   The expanded output clause.
-%
-%   Example:
-%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
-%
-% Handle term expansion for setter-like syntax, updating the member in the object.
-
-</span>P;HTML|
+Script started on 2024-10-16 19:18:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -414,7 +375,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000715 secs. (714.50 microseconds) 
+; took 0.000620 secs. (620.46 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -445,7 +406,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000384 secs. (384.09 microseconds) 
+; took 0.000419 secs. (419.34 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -489,7 +450,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000451 secs. (451.00 microseconds) 
+; took 0.000472 secs. (471.82 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -530,7 +491,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000417 secs. (416.65 microseconds) 
+; took 0.000419 secs. (419.47 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -553,7 +514,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 158,915 inferences, 0.036 CPU in 0.036 seconds (100% CPU, 4384867 Lips)
+>% 158,918 inferences, 0.037 CPU in 0.037 seconds (100% CPU, 4333686 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/a3_twoside.metta  0)
 <span class="ansi1"
@@ -693,7 +654,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:07:59+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 19:18:59+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

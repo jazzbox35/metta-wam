@@ -40,47 +40,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:05:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
-%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
-%
-%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
-%   for syntactic sugar around setting object values.
-%
-%   @arg Goal  The input goal to be checked for setter syntax.
-%   @arg Func  The function or key in the dot notation.
-%   @arg Self  The object in the dot notation.
-%   @arg Value The value being set or retrieved.
-%
-%   Example:
-%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
-%
-% Handle expansion when the goal follows dot notation syntax for setter operations.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
-%!  term_expansion_setter((+Head :- +Body), -Out) is det.
-%
-%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
-%   member is updated in the object.
-%
-%   @arg Head  The head of the clause to be expanded.
-%   @arg Body  The body of the clause to be expanded.
-%   @arg Out   The expanded output clause.
-%
-%   Example:
-%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
-%
-% Handle term expansion for setter-like syntax, updating the member in the object.
-
-</span>P;HTML|
+Script started on 2024-10-16 19:16:50+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -398,9 +359,9 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 P;HTML|
 ;                                           (= 5  "[(), (), ()]")
 P;HTML|
-;                                           (= 6  "0.08user 0.01system 0:00.09elapsed 98%CPU (0avgtext+0avgdata 25936maxresident)k")
+;                                           (= 6  "0.08user 0.00system 0:00.09elapsed 100%CPU (0avgtext+0avgdata 25460maxresident)k")
 P;HTML|
-;                                           (= 6  "0inputs+16outputs (0major+3019minor)pagefaults 0swaps")
+;                                           (= 6  "0inputs+16outputs (0major+3007minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-145/print_graph.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-145/print_graph.metta)
 
@@ -435,7 +396,7 @@ Deterministic: ()
     (ɑ 0))
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.74 milliseconds) 
+; took 0.002 secs. (1.87 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &ex1 
@@ -510,7 +471,7 @@ Deterministic: ()
 >  ( (ɑ 0) 1 A)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.72 milliseconds) 
+; took 0.002 secs. (1.78 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &ex1 
@@ -562,7 +523,7 @@ nx -> ɑ0 [label="nz"]
 ɑ0 -> nA [label="n1"]
 ; 
 ; EVAL TEST
-; took 0.010 secs. (10.39 milliseconds) 
+; took 0.010 secs. (10.25 milliseconds) 
 
   !(assertEqualToResult 
     (graphviz &ex1) 
@@ -577,7 +538,7 @@ nx -> ɑ0 [label="nz"]
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 229,796 inferences, 0.053 CPU in 0.053 seconds (100% CPU, 4341950 Lips)
+>% 229,811 inferences, 0.053 CPU in 0.053 seconds (100% CPU, 4344617 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-145/print_graph.metta  0)
 <span class="ansi1"
@@ -717,7 +678,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:05:58+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 19:16:56+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

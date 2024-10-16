@@ -108,47 +108,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:19:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
-%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
-%
-%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
-%   for syntactic sugar around setting object values.
-%
-%   @arg Goal  The input goal to be checked for setter syntax.
-%   @arg Func  The function or key in the dot notation.
-%   @arg Self  The object in the dot notation.
-%   @arg Value The value being set or retrieved.
-%
-%   Example:
-%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
-%
-% Handle expansion when the goal follows dot notation syntax for setter operations.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
-%!  term_expansion_setter((+Head :- +Body), -Out) is det.
-%
-%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
-%   member is updated in the object.
-%
-%   @arg Head  The head of the clause to be expanded.
-%   @arg Body  The body of the clause to be expanded.
-%   @arg Out   The expanded output clause.
-%
-%   Example:
-%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
-%
-% Handle term expansion for setter-like syntax, updating the member in the object.
-
-</span>P;HTML|
+Script started on 2024-10-16 19:31:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -493,7 +454,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 >;; QUICK.F1-IMPORTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000168 secs. (167.99 microseconds) 
+; took 0.000173 secs. (173.43 microseconds) 
 
   !(assertEqualToResult 
     (get-type &self) 
@@ -520,7 +481,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.81 milliseconds) 
+; took 0.002 secs. (1.80 milliseconds) 
 
   !(assertEqual 
     ( (let $x 
@@ -548,7 +509,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000250 secs. (249.95 microseconds) 
+; took 0.000272 secs. (271.63 microseconds) 
 
   !(assertEqual 
     (if 
@@ -625,7 +586,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000179 secs. (178.67 microseconds) 
+; took 0.000174 secs. (174.06 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -646,7 +607,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000166 secs. (165.62 microseconds) 
+; took 0.000131 secs. (130.81 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -710,7 +671,7 @@ Last Result(2): ()
 >;; QUICK.F1-IMPORTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.89 milliseconds) 
+; took 0.002 secs. (1.88 milliseconds) 
 
   !(assertEqual 
     (match &m 
@@ -800,7 +761,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000174 secs. (174.02 microseconds) 
+; took 0.000184 secs. (183.75 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -821,7 +782,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000140 secs. (139.98 microseconds) 
+; took 0.000143 secs. (143.24 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -931,7 +892,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000178 secs. (177.56 microseconds) 
+; took 0.000171 secs. (171.39 microseconds) 
 
   !(assertEqual 
     (+ 1 2) 3)
@@ -952,7 +913,7 @@ Deterministic: ()
 >;; QUICK.F1-MODULEA.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000141 secs. (140.87 microseconds) 
+; took 0.000141 secs. (141.44 microseconds) 
 
   !(assertEqual 
     (if True "S" "F") "S")
@@ -995,7 +956,7 @@ Last Result(2): ()
 >;; QUICK.F1-IMPORTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000487 secs. (486.64 microseconds) 
+; took 0.000467 secs. (466.70 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1018,7 +979,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000880 secs. (879.51 microseconds) 
+; took 0.000784 secs. (784.32 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1050,7 +1011,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.29 milliseconds) 
+; took 0.005 secs. (5.10 milliseconds) 
 
   !(assertEqual &m 
     (let* 
@@ -1085,7 +1046,7 @@ Deterministic: ((Error  (got  (&m)) (expected  ((: __g (-> Number))))))
 >;; QUICK.F1-IMPORTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.17 milliseconds) 
+; took 0.004 secs. (4.01 milliseconds) 
 
   !(assertEqual 
     (== 
@@ -1114,7 +1075,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000240 secs. (240.48 microseconds) 
+; took 0.000243 secs. (242.70 microseconds) 
 
   !(assertEqual 
     (if 
@@ -1248,7 +1209,7 @@ Last Result(2): ()
 >;; QUICK.F1-IMPORTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000508 secs. (508.49 microseconds) 
+; took 0.000437 secs. (437.31 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1271,7 +1232,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000827 secs. (826.58 microseconds) 
+; took 0.000805 secs. (804.64 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1297,7 +1258,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.18</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.04 milliseconds) 
+; took 0.001 secs. (1.02 milliseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1374,7 +1335,7 @@ Last Result(2): ()
 >;; QUICK.F1-IMPORTS.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000444 secs. (444.50 microseconds) 
+; took 0.000432 secs. (431.98 microseconds) 
 
   !(assertEqual 
     (g 2) 102)
@@ -1397,7 +1358,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.20</h3>
 ; 
 ; EVAL TEST
-; took 0.000863 secs. (863.45 microseconds) 
+; took 0.000805 secs. (804.87 microseconds) 
 
   !(assertEqual 
     (f 2) 103)
@@ -1421,7 +1382,7 @@ Deterministic: ()
 >;; QUICK.F1-IMPORTS.21</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.10 milliseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
   !(assertEqualToResult 
     (dup 2) 
@@ -1436,7 +1397,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 957,051 inferences, 0.206 CPU in 0.206 seconds (100% CPU, 4637445 Lips)
+>% 957,054 inferences, 0.204 CPU in 0.204 seconds (100% CPU, 4683014 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/f1_imports.metta  0)
 <span class="ansi1"
@@ -1576,7 +1537,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:20:05+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 19:31:24+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

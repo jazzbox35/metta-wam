@@ -24,47 +24,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:05:27+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
-%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
-%
-%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
-%   for syntactic sugar around setting object values.
-%
-%   @arg Goal  The input goal to be checked for setter syntax.
-%   @arg Func  The function or key in the dot notation.
-%   @arg Self  The object in the dot notation.
-%   @arg Value The value being set or retrieved.
-%
-%   Example:
-%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
-%
-% Handle expansion when the goal follows dot notation syntax for setter operations.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
-%!  term_expansion_setter((+Head :- +Body), -Out) is det.
-%
-%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
-%   member is updated in the object.
-%
-%   @arg Head  The head of the clause to be expanded.
-%   @arg Body  The body of the clause to be expanded.
-%   @arg Out   The expanded output clause.
-%
-%   Example:
-%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
-%
-% Handle term expansion for setter-like syntax, updating the member in the object.
-
-</span>P;HTML|
+Script started on 2024-10-16 19:16:24+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -388,17 +349,17 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 
 
 Deterministic: ()
-(); Execution took 0.002 secs. (1.57 milliseconds) 
+(); Execution took 0.002 secs. (1.64 milliseconds) 
 
 ]
 <span class="ansi38-013099040"
 >  !(import! &hald116378 hald_spo_116378)
 
-</span>; (Pneumonia related 'Tuberculosis,_Meningeal') ; line: 50247 ; (Colorectal_Neoplasms identify 'Colorectal_Neoplasms,_Hereditary_Nonpolyposis') ; line: 99555 
-; Done translating 116495 forms: asserted_metta_pred(ld_spo_116378_1729044332_6564953,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_116378.metta').[
+</span>; (Diabetic_Cardiomyopathies characterized Heart_Failure) ; line: 51387 ; (Lung_Neoplasms represent Neoplasms) ; line: 101258 
+; Done translating 116495 forms: asserted_metta_pred(ld_spo_116378_1729106189_8136044,'/home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/hald_spo_116378.metta').[
 
 Deterministic: ()
-(); Execution took 11.54 seconds.
+(); Execution took 11.37 seconds.
 
 ]
 ;;;!(match &hald116378 (Doxorubicin $p $o) (Doxorubicin $p $o))
@@ -512,7 +473,7 @@ Deterministic: ()
 >;; METTA-WAM-ISSUE-116.TEST-SPO-116378.01</h3>
 ; 
 ; EVAL TEST
-; took 0.032 secs. (32.04 milliseconds) 
+; took 0.033 secs. (32.75 milliseconds) 
 
   !(assertEqualToResult 
     (match &hald116378 
@@ -812,11 +773,11 @@ Deterministic: ()
         (Doxorubicin replaced Etoposide))))
 </span>
 Deterministic: ()
-(); Execution took 0.145 secs. (145.46 milliseconds) 
+(); Execution took 0.149 secs. (148.66 milliseconds) 
 
 ]
 <span class="ansi32"
->% 126,850,766 inferences, 11.708 CPU in 11.709 seconds (100% CPU, 10834442 Lips)
+>% 126,850,687 inferences, 11.544 CPU in 11.545 seconds (100% CPU, 10988461 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116/test_spo_116378.metta  0)
 <span class="ansi1"
@@ -956,7 +917,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:05:44+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 19:16:41+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

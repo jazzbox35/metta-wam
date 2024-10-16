@@ -69,47 +69,8 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-16 02:19:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-<span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter(+'Goal',get_kov(+'Func',+'Self',-'Value'))is semidet
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1854: PlDoc: failed to process structured comment:
-%!  term_expansion_setter(+Goal, get_kov(+Func, +Self, -Value)) is semidet.
-%
-%   Expands the term if it follows the setter syntax with a compound goal and dot notation. This allows
-%   for syntactic sugar around setting object values.
-%
-%   @arg Goal  The input goal to be checked for setter syntax.
-%   @arg Func  The function or key in the dot notation.
-%   @arg Self  The object in the dot notation.
-%   @arg Value The value being set or retrieved.
-%
-%   Example:
-%   ?- term_expansion_setter(my_goal, get_kov(func, object, value)).
-%
-% Handle expansion when the goal follows dot notation syntax for setter operations.
-
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871:
-Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'Head':- +'Body'),-'Out')is det
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_utils.pl:1871: PlDoc: failed to process structured comment:
-%!  term_expansion_setter((+Head :- +Body), -Out) is det.
-%
-%   Expands the term in cases where the `Head` follows setter syntax, ensuring that the corresponding
-%   member is updated in the object.
-%
-%   @arg Head  The head of the clause to be expanded.
-%   @arg Body  The body of the clause to be expanded.
-%   @arg Out   The expanded output clause.
-%
-%   Example:
-%   ?- term_expansion_setter((my_head :- my_body), ExpandedClause).
-%
-% Handle term expansion for setter-like syntax, updating the member in the object.
-
-</span>P;HTML|
+Script started on 2024-10-16 19:31:11+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -464,7 +425,7 @@ Warning:    Invalid mode declaration in PlDoc comment: term_expansion_setter((+'
 >;; QUICK.D4-TYPE-PROP.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000279 secs. (279.26 microseconds) 
+; took 0.000270 secs. (269.83 microseconds) 
 
   !(assertEqual 
     (get-type (Mortal Plato)) Type)
@@ -512,7 +473,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.17 milliseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
   !(assertEqual 
     (get-type (HumansAreMortal SocratesIsHuman)) 
@@ -537,7 +498,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000321 secs. (321.06 microseconds) 
+; took 0.000278 secs. (277.98 microseconds) 
 
   !(assertEqualToResult 
     (get-type (HumansAreMortal (Human Socrates))) ())
@@ -591,7 +552,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.04</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.49 milliseconds) 
+; took 0.002 secs. (2.43 milliseconds) 
 
   !(assertEqualToResult 
     ("sameTypes" 
@@ -623,7 +584,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000322 secs. (321.54 microseconds) 
+; took 0.000324 secs. (323.64 microseconds) 
 
   !(assertEqual 
     (get-type (= SocratesIsMortal (HumansAreMortal SocratesIsHuman))) Type)
@@ -658,7 +619,7 @@ Deterministic: ("sameTypes" Type Type)
 >;; QUICK.D4-TYPE-PROP.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000371 secs. (371.26 microseconds) 
+; took 0.000380 secs. (380.18 microseconds) 
 
   !(assertEqual 
     (get-type (= (Mortal Socrates) (Mortal Plato))) Type)
@@ -694,7 +655,7 @@ Deterministic: ("!sameTypes" (Mortal Socrates) (Mortal Plato))
 >;; QUICK.D4-TYPE-PROP.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000308 secs. (307.98 microseconds) 
+; took 0.000303 secs. (303.11 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsMortal (HumansAreMortal PlatoIsHuman))) ())
@@ -728,7 +689,7 @@ Deterministic: ("!sameTypes" (Human Socrates) !(get-type PlatoIsHuman))
 >;; QUICK.D4-TYPE-PROP.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000237 secs. (236.81 microseconds) 
+; took 0.000220 secs. (220.21 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsHuman PlatoIsHuman)) ())
@@ -761,7 +722,7 @@ Deterministic: ("!sameTypes" (Human Socrates) (Mortal Socrates))
 >;; QUICK.D4-TYPE-PROP.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000236 secs. (235.94 microseconds) 
+; took 0.000236 secs. (235.90 microseconds) 
 
   !(assertEqualToResult 
     (get-type (= SocratesIsHuman SocratesIsMortal)) ())
@@ -804,7 +765,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000486 secs. (486.27 microseconds) 
+; took 0.000585 secs. (585.41 microseconds) 
 
   !(assertEqual 
     (= SocratesIsMortal 
@@ -830,7 +791,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000461 secs. (461.15 microseconds) 
+; took 0.000522 secs. (521.92 microseconds) 
 
   !(assertEqual 
     (= 
@@ -862,7 +823,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000756 secs. (755.85 microseconds) 
+; took 0.000821 secs. (820.88 microseconds) 
 
   !(assertEqual 
     (= 
@@ -888,7 +849,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000709 secs. (708.50 microseconds) 
+; took 0.000782 secs. (781.72 microseconds) 
 
   !(assertEqualToResult 
     (= 
@@ -919,7 +880,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.14</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.35 milliseconds) 
+; took 0.001 secs. (1.38 milliseconds) 
 
   !(assertEqual 
     (= 
@@ -946,7 +907,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000600 secs. (599.53 microseconds) 
+; took 0.000599 secs. (598.91 microseconds) 
 
   !(assertEqualToResult 
     (= 
@@ -973,7 +934,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000434 secs. (433.87 microseconds) 
+; took 0.000419 secs. (418.70 microseconds) 
 
   !(assertEqualToResult 
     (Mortal Plato) 
@@ -999,7 +960,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000841 secs. (840.56 microseconds) 
+; took 0.000838 secs. (837.83 microseconds) 
 
   !(assertEqual 
     (= 
@@ -1036,7 +997,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000420 secs. (420.36 microseconds) 
+; took 0.000390 secs. (389.98 microseconds) 
 
   !(assertEqual 
     (Mortal Plato) T)
@@ -1068,7 +1029,7 @@ Deterministic: ()
 >;; QUICK.D4-TYPE-PROP.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000763 secs. (763.46 microseconds) 
+; took 0.000711 secs. (710.59 microseconds) 
 
   !(assertEqualToResult 
     (ift 
@@ -1084,7 +1045,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 632,361 inferences, 0.144 CPU in 0.144 seconds (100% CPU, 4396511 Lips)
+>% 632,364 inferences, 0.143 CPU in 0.144 seconds (100% CPU, 4407005 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d4_type_prop.metta  0)
 <span class="ansi1"
@@ -1224,7 +1185,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-10-16 02:19:58+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-16 19:31:17+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
