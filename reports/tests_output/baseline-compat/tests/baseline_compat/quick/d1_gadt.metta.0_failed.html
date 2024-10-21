@@ -49,7 +49,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-19 00:31:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-21 20:36:37+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -399,13 +399,12 @@ Script started on 2024-10-19 00:31:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 <span class="ansi38-013099040"
 >!(assertEqual (get-type 5) Number)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.01"
 >;; QUICK.D1-GADT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000216 secs. (215.99 microseconds) 
+; took 0.000307 secs. (307.06 microseconds) 
 
 !(assertEqual (get-type 5) Number)
 
@@ -413,17 +412,15 @@ Script started on 2024-10-19 00:31:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >(loonit_success  (equal_enough_for_test  (Number) (Number)))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqual (get-type (+ 5 7)) Number)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.02"
 >;; QUICK.D1-GADT.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000219 secs. (218.86 microseconds) 
+; took 0.000225 secs. (224.62 microseconds) 
 
 !(assertEqual (get-type (+ 5 7)) Number)
 
@@ -431,18 +428,16 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (Number) (Number)))
 </span>
 Deterministic: ()
-()]
 ;;; It works for built-in symbols too
 <span class="ansi38-013099040"
 >!(assertEqual (get-type +) (-> Number Number Number))
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.03"
 >;; QUICK.D1-GADT.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000193 secs. (192.67 microseconds) 
+; took 0.000172 secs. (171.96 microseconds) 
 
 !(assertEqual (get-type +) (-> Number Number Number))
 
@@ -450,19 +445,17 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  ((-> Number Number Number)) ((-> Number Number Number))))
 </span>
 Deterministic: ()
-()]
 ;;; If its argument is a badly typed expression,
 ;;; `get-type` returns the empty set
 <span class="ansi38-013099040"
 >!(assertEqualToResult (get-type (+ 5 "4")) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.04"
 >;; QUICK.D1-GADT.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000275 secs. (275.21 microseconds) 
+; took 0.000271 secs. (271.05 microseconds) 
 
 !(assertEqualToResult (get-type (+ 5 "4")) ())
 
@@ -470,17 +463,15 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (()) ()))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqualToResult (get-type (+ -)) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.05"
 >;; QUICK.D1-GADT.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000202 secs. (201.79 microseconds) 
+; took 0.000196 secs. (195.64 microseconds) 
 
 !(assertEqualToResult (get-type (+ -)) ())
 
@@ -488,20 +479,18 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (()) ()))
 </span>
 Deterministic: ()
-()]
 ;;; Also works for custom types
 <span class="ansi38-255165000"
 > (: Either Type)
 </span><span class="ansi38-013099040"
 >!(assertEqual (get-type Either) Type)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.06"
 >;; QUICK.D1-GADT.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000164 secs. (163.99 microseconds) 
+; took 0.000181 secs. (180.72 microseconds) 
 
 !(assertEqual (get-type Either) Type)
 
@@ -509,7 +498,6 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (Type) (Type)))
 </span>
 Deterministic: ()
-()]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Arrow types of functions and constructors
@@ -521,22 +509,19 @@ Deterministic: ()
 </span><span class="ansi38-013099040"
 >!(assertEqual (get-type (Left 5)) Either)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.07"
 >;; QUICK.D1-GADT.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000258 secs. (257.50 microseconds) 
+; took 0.000219 secs. (218.60 microseconds) 
 
 !(assertEqual (get-type (Left 5)) Either)
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (Either) (Either)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165000"
+Deterministic: ()<span class="ansi38-255165000"
 > (: isLeft (-> Either Bool))
 </span><span class="ansi38-255165000"
 > (= (isLeft (Left $x)) True)
@@ -545,13 +530,12 @@ Deterministic: ()
 </span><span class="ansi38-013099040"
 >!(assertEqual (get-type (isLeft (Right 5))) Bool)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.08"
 >;; QUICK.D1-GADT.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000346 secs. (345.59 microseconds) 
+; took 0.000302 secs. (302.39 microseconds) 
 
 !(assertEqual (get-type (isLeft (Right 5))) Bool)
 
@@ -559,18 +543,16 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (Bool) (Bool)))
 </span>
 Deterministic: ()
-()]
 ;;; Badly typed expression
 <span class="ansi38-013099040"
 >!(assertEqualToResult (get-type (isLeft 5)) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.09"
 >;; QUICK.D1-GADT.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000270 secs. (270.06 microseconds) 
+; took 0.000258 secs. (257.70 microseconds) 
 
 !(assertEqualToResult (get-type (isLeft 5)) ())
 
@@ -578,7 +560,6 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (()) ()))
 </span>
 Deterministic: ()
-()]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Parameterized types
@@ -592,35 +573,31 @@ Deterministic: ()
 </span><span class="ansi38-013099040"
 >!(assertEqual (get-type (LeftP 5)) (EitherP Number))
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.10"
 >;; QUICK.D1-GADT.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000668 secs. (667.87 microseconds) 
+; took 0.000763 secs. (763.48 microseconds) 
 
 !(assertEqual (get-type (LeftP 5)) (EitherP Number))
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  ((EitherP Number)) ((EitherP Number))))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165000"
+Deterministic: ()<span class="ansi38-255165000"
 > (: Pair (-> $a $b Type))
 </span><span class="ansi38-255165000"
 > (: pair (-> $a $b (Pair $a $b)))
 </span><span class="ansi38-013099040"
 >!(assertEqual (get-type (pair (LeftP 5) "String")) (Pair (EitherP Number) String))
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.11"
 >;; QUICK.D1-GADT.11</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.12 milliseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
 !(assertEqual (get-type (pair (LeftP 5) "String")) (Pair (EitherP Number) String))
 
@@ -628,7 +605,6 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  ((Pair (EitherP Number) String)) ((Pair (EitherP Number) String))))
 </span>
 Deterministic: ()
-()]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Recursively parameterized types
@@ -642,13 +618,12 @@ Deterministic: ()
 </span><span class="ansi38-013099040"
 >!(assertEqual (get-type (Cons 5 (Cons 6 Nil))) (List Number))
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.12"
 >;; QUICK.D1-GADT.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000839 secs. (839.46 microseconds) 
+; took 0.000805 secs. (805.22 microseconds) 
 
 !(assertEqual (get-type (Cons 5 (Cons 6 Nil))) (List Number))
 
@@ -656,17 +631,15 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  ((List Number)) ((List Number))))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqualToResult (get-type (Cons 5 (Cons "6" Nil))) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.13"
 >;; QUICK.D1-GADT.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000335 secs. (335.00 microseconds) 
+; took 0.000331 secs. (331.41 microseconds) 
 
 !(assertEqualToResult (get-type (Cons 5 (Cons "6" Nil))) ())
 
@@ -674,7 +647,6 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (()) ()))
 </span>
 Deterministic: ()
-()]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; `let` can be convenient to extract information from `get-type` results
@@ -682,23 +654,21 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqual (let (List $t) (get-type (Cons 5 (Cons 6 Nil))) $t) Number)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D1-GADT.14"
 >;; QUICK.D1-GADT.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000689 secs. (688.80 microseconds) 
+; took 0.000686 secs. (686.07 microseconds) 
 
 !(assertEqual (let (List $t) (get-type (Cons 5 (Cons 6 Nil))) $t) Number)
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (Number) (Number)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi32"
->% 391,231 inferences, 0.097 CPU in 0.097 seconds (100% CPU, 4019296 Lips)
+Deterministic: ()<span class="ansi32"
+>
+% 454,238 inferences, 0.123 CPU in 0.123 seconds (100% CPU, 3699387 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d1_gadt.metta  0)
 <span class="ansi1"
@@ -832,12 +802,26 @@ Deterministic: ()
 ;         (set_option_value  load show)
 P;HTML|
 ;         (set_option_value  test true)
-P;HTML|
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+P;HTML|
 ;         (maybe_halt  7)
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-19 00:31:31+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-21 20:36:43+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

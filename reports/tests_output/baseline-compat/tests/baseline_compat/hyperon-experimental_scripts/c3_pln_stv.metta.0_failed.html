@@ -42,7 +42,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-19 00:19:50+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-21 20:24:31+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -420,13 +420,12 @@ Script started on 2024-10-19 00:19:50+00:00 [TERM="xterm-256color" TTY="/dev/pts
 <span class="ansi38-013099040"
 >!(assertEqual (TV (And (PA) (PB))) (stv 0.3 0.8))
 
-</span>[
-
+</span>
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.01"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.01</h3>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (12.12 milliseconds) 
+; took 0.011 secs. (11.43 milliseconds) 
 
 !(assertEqual (TV (And (PA) (PB))) (stv 0.3 0.8))
 
@@ -434,17 +433,15 @@ Script started on 2024-10-19 00:19:50+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >(loonit_success  (equal_enough_for_test  ((stv 0.3 0.8)) ((stv 0.3 0.8))))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqual (TV (FA)) (stv 0.4 0.8))
 
-</span>[
-
+</span>
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.02"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.02</h3>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.51 milliseconds) 
+; took 0.006 secs. (6.07 milliseconds) 
 
 !(assertEqual (TV (FA)) (stv 0.4 0.8))
 
@@ -452,7 +449,6 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  ((stv 0.4 0.8)) ((stv 0.4 0.8))))
 </span>
 Deterministic: ()
-()]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Second example
@@ -471,13 +467,12 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqual (TV (croaks Fritz)) (stv 0.95 0.85))
 
-</span>[
-
+</span>
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.03"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.03</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.73 milliseconds) 
+; took 0.002 secs. (1.60 milliseconds) 
 
 !(assertEqual (TV (croaks Fritz)) (stv 0.95 0.85))
 
@@ -485,17 +480,15 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  ((stv 0.95 0.85)) ((stv 0.95 0.85))))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqual (TV (frog Fritz)) (stv 0.783 0.68))
 
-</span>[
-
+</span>
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.04"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.04</h3>
 ; 
 ; EVAL TEST
-; took 0.018 secs. (18.39 milliseconds) 
+; took 0.017 secs. (17.40 milliseconds) 
 
 !(assertEqual (TV (frog Fritz)) (stv 0.783 0.68))
 
@@ -503,27 +496,24 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  ((stv 0.783 0.68)) ((stv 0.783 0.68))))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqual (TV (green Fritz)) (stv 0.7047 0.68))
 
-</span>[
-
+</span>
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.05"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C3-PLN-STV.05</h3>
 ; 
 ; EVAL TEST
-; took 0.038 secs. (38.40 milliseconds) 
+; took 0.040 secs. (39.76 milliseconds) 
 
 !(assertEqual (TV (green Fritz)) (stv 0.7047 0.68))
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  ((stv 0.7047 0.68)) ((stv 0.7047 0.68))))
 </span>
-Deterministic: ()
-()]
-<span class="ansi32"
->% 714,401 inferences, 0.136 CPU in 0.136 seconds (100% CPU, 5267758 Lips)
+Deterministic: ()<span class="ansi32"
+>
+% 774,612 inferences, 0.156 CPU in 0.156 seconds (100% CPU, 4970458 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/c3_pln_stv.metta  0)
 <span class="ansi1"
@@ -657,12 +647,17 @@ Deterministic: ()
 ;         (set_option_value  load show)
 P;HTML|
 ;         (set_option_value  test true)
-P;HTML|
+[()]
+[()]
+[()]
+[()]
+[()]
+P;HTML|
 ;         (maybe_halt  7)
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-19 00:19:56+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-21 20:24:37+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

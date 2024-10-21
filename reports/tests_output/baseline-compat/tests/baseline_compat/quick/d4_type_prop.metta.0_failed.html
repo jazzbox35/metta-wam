@@ -69,7 +69,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-19 00:31:40+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-21 20:36:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -421,13 +421,12 @@ Script started on 2024-10-19 00:31:40+00:00 [TERM="xterm-256color" TTY="/dev/pts
 <span class="ansi38-013099040"
 >!(assertEqual (get-type (Mortal Plato)) Type)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.01"
 >;; QUICK.D4-TYPE-PROP.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000249 secs. (249.22 microseconds) 
+; took 0.000296 secs. (295.99 microseconds) 
 
 !(assertEqual (get-type (Mortal Plato)) Type)
 
@@ -435,7 +434,6 @@ Script started on 2024-10-19 00:31:40+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >(loonit_success  (equal_enough_for_test  (Type) (Type)))
 </span>
 Deterministic: ()
-()]
 ;;; A function type as an implication
 ;;; `HumansAreMortal` represents the implication:
 ;;; "For all x, if Human(x) then Mortal(x)"
@@ -458,13 +456,12 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqual (get-type (HumansAreMortal SocratesIsHuman)) (Mortal Socrates))
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.02"
 >;; QUICK.D4-TYPE-PROP.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.18 milliseconds) 
+; took 0.001 secs. (1.24 milliseconds) 
 
 !(assertEqual (get-type (HumansAreMortal SocratesIsHuman)) (Mortal Socrates))
 
@@ -472,18 +469,16 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  ((Mortal Socrates)) ((Mortal Socrates))))
 </span>
 Deterministic: ()
-()]
 ;;; Bad typing
 <span class="ansi38-013099040"
 >!(assertEqualToResult (get-type (HumansAreMortal (Human Socrates))) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.03"
 >;; QUICK.D4-TYPE-PROP.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000265 secs. (265.49 microseconds) 
+; took 0.000307 secs. (307.26 microseconds) 
 
 !(assertEqualToResult (get-type (HumansAreMortal (Human Socrates))) ())
 
@@ -491,7 +486,6 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (()) ()))
 </span>
 Deterministic: ()
-()]
 ;;; We can write this code, but it will make not too much
 ;;; difference for the assertion that "all humans are mortal"
 <span class="ansi38-255165000"
@@ -517,13 +511,12 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqualToResult ("sameTypes" (get-type SocratesIsMortal) (get-type (HumansAreMortal SocratesIsHuman))) (("sameTypes" (Mortal Socrates) (Mortal Socrates))))
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.04"
 >;; QUICK.D4-TYPE-PROP.04</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.62 milliseconds) 
+; took 0.003 secs. (2.64 milliseconds) 
 
 !(assertEqualToResult ("sameTypes" (get-type SocratesIsMortal) (get-type (HumansAreMortal SocratesIsHuman))) (("sameTypes" (Mortal Socrates) (Mortal Socrates))))
 
@@ -531,17 +524,15 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (("sameTypes" (Mortal Socrates) (Mortal Socrates))) (("sameTypes" (Mortal Socrates) (Mortal Socrates)))))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqual (get-type (= SocratesIsMortal (HumansAreMortal SocratesIsHuman))) Type)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.05"
 >;; QUICK.D4-TYPE-PROP.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000317 secs. (317.17 microseconds) 
+; took 0.000373 secs. (373.34 microseconds) 
 
 !(assertEqual (get-type (= SocratesIsMortal (HumansAreMortal SocratesIsHuman))) Type)
 
@@ -549,27 +540,23 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (Type) (Type)))
 </span>
 Deterministic: ()
-()]
 ;;; This equality is well-typed, because both its arguments are of `Type`.
 ;;; It doesn't mean they are both inhabited (true propositions), and
 ;;; it doesn't mean that the equality itself is true (an inhabited type).
 <span class="ansi38-013099040"
 >!("sameTypes" (get-type (Mortal Socrates)) (get-type (Mortal Plato)))
 
-</span>[
-
+</span>
 Deterministic: ("sameTypes" Type Type)
-("sameTypes" Type Type)]
 <span class="ansi38-013099040"
 >!(assertEqual (get-type (= (Mortal Socrates) (Mortal Plato))) Type)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.06"
 >;; QUICK.D4-TYPE-PROP.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000360 secs. (360.04 microseconds) 
+; took 0.000444 secs. (444.14 microseconds) 
 
 !(assertEqual (get-type (= (Mortal Socrates) (Mortal Plato))) Type)
 
@@ -577,25 +564,21 @@ Deterministic: ("sameTypes" Type Type)
 >(loonit_success  (equal_enough_for_test  (Type) (Type)))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!("!sameTypes" (get-type SocratesIsMortal) (get-type (HumansAreMortal PlatoIsHuman)))
 
-</span>[
-
+</span>
 Deterministic: ("!sameTypes" (Mortal Socrates) (Mortal Plato))
-("!sameTypes" (Mortal Socrates) (Mortal Plato))]
 ;;; Wrong proof
 <span class="ansi38-013099040"
 >!(assertEqualToResult (get-type (= SocratesIsMortal (HumansAreMortal PlatoIsHuman))) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.07"
 >;; QUICK.D4-TYPE-PROP.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000302 secs. (302.47 microseconds) 
+; took 0.000366 secs. (366.05 microseconds) 
 
 !(assertEqualToResult (get-type (= SocratesIsMortal (HumansAreMortal PlatoIsHuman))) ())
 
@@ -603,25 +586,21 @@ Deterministic: ("!sameTypes" (Mortal Socrates) (Mortal Plato))
 >(loonit_success  (equal_enough_for_test  () ()))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!("!sameTypes" (get-type SocratesIsHuman) !(get-type PlatoIsHuman))
 
-</span>[
-
+</span>
 Deterministic: ("!sameTypes" (Human Socrates) !(get-type PlatoIsHuman))
-("!sameTypes" (Human Socrates) !(get-type PlatoIsHuman))]
 ;;; Wrong equalities
 <span class="ansi38-013099040"
 >!(assertEqualToResult (get-type (= SocratesIsHuman PlatoIsHuman)) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.08"
 >;; QUICK.D4-TYPE-PROP.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000267 secs. (266.58 microseconds) 
+; took 0.000258 secs. (257.99 microseconds) 
 
 !(assertEqualToResult (get-type (= SocratesIsHuman PlatoIsHuman)) ())
 
@@ -629,24 +608,20 @@ Deterministic: ("!sameTypes" (Human Socrates) !(get-type PlatoIsHuman))
 >(loonit_success  (equal_enough_for_test  () ()))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!("!sameTypes" (get-type SocratesIsHuman) (get-type SocratesIsMortal))
 
-</span>[
-
+</span>
 Deterministic: ("!sameTypes" (Human Socrates) (Mortal Socrates))
-("!sameTypes" (Human Socrates) (Mortal Socrates))]
 <span class="ansi38-013099040"
 >!(assertEqualToResult (get-type (= SocratesIsHuman SocratesIsMortal)) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.09"
 >;; QUICK.D4-TYPE-PROP.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000228 secs. (227.53 microseconds) 
+; took 0.000261 secs. (260.69 microseconds) 
 
 !(assertEqualToResult (get-type (= SocratesIsHuman SocratesIsMortal)) ())
 
@@ -654,7 +629,6 @@ Deterministic: ("!sameTypes" (Human Socrates) (Mortal Socrates))
 >(loonit_success  (equal_enough_for_test  () ()))
 </span>
 Deterministic: ()
-()]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; A standard type-theoretic way of saying that some equality is true
@@ -678,13 +652,12 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqual (= SocratesIsMortal (HumansAreMortal SocratesIsHuman)) T)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.10"
 >;; QUICK.D4-TYPE-PROP.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000472 secs. (472.09 microseconds) 
+; took 0.000475 secs. (475.39 microseconds) 
 
 !(assertEqual (= SocratesIsMortal (HumansAreMortal SocratesIsHuman)) T)
 
@@ -692,17 +665,15 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (T) (T)))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqual (= (+ 1 1) (- 3 1)) T)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.11"
 >;; QUICK.D4-TYPE-PROP.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000441 secs. (440.57 microseconds) 
+; took 0.000435 secs. (435.04 microseconds) 
 
 !(assertEqual (= (+ 1 1) (- 3 1)) T)
 
@@ -710,20 +681,18 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (T) (T)))
 </span>
 Deterministic: ()
-()]
 ;;; One can also define an equality for directly inhabited types
 <span class="ansi38-255165000"
 > (= (= $type T) (match &self (: $x $type) T))
 </span><span class="ansi38-013099040"
 >!(assertEqual (= (Mortal Socrates) T) T)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.12"
 >;; QUICK.D4-TYPE-PROP.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000807 secs. (807.18 microseconds) 
+; took 0.000843 secs. (843.03 microseconds) 
 
 !(assertEqual (= (Mortal Socrates) T) T)
 
@@ -731,18 +700,16 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (T) (T)))
 </span>
 Deterministic: ()
-()]
 ;;; It will not immediately work for implications
 <span class="ansi38-013099040"
 >!(assertEqualToResult (= (Mortal Plato) T) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.13"
 >;; QUICK.D4-TYPE-PROP.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000782 secs. (782.44 microseconds) 
+; took 0.000801 secs. (801.40 microseconds) 
 
 !(assertEqualToResult (= (Mortal Plato) T) ())
 
@@ -750,40 +717,35 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  () ()))
 </span>
 Deterministic: ()
-()]
 ;;; But we can add 'reasoning'
 <span class="ansi38-255165000"
 > (= (= $type T) (match &self (: $impl (-> $cause $type)) (= $cause T)))
 </span><span class="ansi38-013099040"
 >!(assertEqual (= (Mortal Plato) T) T)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.14"
 >;; QUICK.D4-TYPE-PROP.14</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.41 milliseconds) 
+; took 0.001 secs. (1.40 milliseconds) 
 
 !(assertEqual (= (Mortal Plato) T) T)
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (T) (T)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165000"
+Deterministic: ()<span class="ansi38-255165000"
 > (: Sam Entity)
 </span><span class="ansi38-013099040"
 >!(assertEqualToResult (= (Human Sam) T) ())
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.15"
 >;; QUICK.D4-TYPE-PROP.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000658 secs. (658.22 microseconds) 
+; took 0.000653 secs. (652.89 microseconds) 
 
 !(assertEqualToResult (= (Human Sam) T) ())
 
@@ -791,7 +753,6 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  () ()))
 </span>
 Deterministic: ()
-()]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Types by themselves will not be reduced
@@ -799,13 +760,12 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqualToResult (Mortal Plato) ((Mortal Plato)))
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.16"
 >;; QUICK.D4-TYPE-PROP.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000516 secs. (515.71 microseconds) 
+; took 0.000468 secs. (468.21 microseconds) 
 
 !(assertEqualToResult (Mortal Plato) ((Mortal Plato)))
 
@@ -813,18 +773,16 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  ((Mortal Plato)) ((Mortal Plato))))
 </span>
 Deterministic: ()
-()]
 ;;; Refl rule itself equals to True
 <span class="ansi38-013099040"
 >!(assertEqual (= (= $x $x) T) T)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.17"
 >;; QUICK.D4-TYPE-PROP.17</h3>
 ; 
 ; EVAL TEST
-; took 0.000872 secs. (872.32 microseconds) 
+; took 0.000847 secs. (846.73 microseconds) 
 
 !(assertEqual (= (= $x $x) T) T)
 
@@ -832,7 +790,6 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (T) (T)))
 </span>
 Deterministic: ()
-()]
 ;;; We can also add direct equalities
 ;;; (= (Human Socrates) T)
 <span class="ansi38-255165000"
@@ -845,13 +802,12 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqual (Mortal Plato) T)
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.18"
 >;; QUICK.D4-TYPE-PROP.18</h3>
 ; 
 ; EVAL TEST
-; took 0.000493 secs. (492.58 microseconds) 
+; took 0.000478 secs. (478.05 microseconds) 
 
 !(assertEqual (Mortal Plato) T)
 
@@ -859,7 +815,6 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (T) (T)))
 </span>
 Deterministic: ()
-()]
 ;;; We can even try backward chaining
 <span class="ansi38-255165000"
 > (: ift (-> Type $t $t))
@@ -868,23 +823,21 @@ Deterministic: ()
 </span><span class="ansi38-013099040"
 >!(assertEqualToResult (ift (Mortal $x) $x) (Socrates Plato))
 
-</span>[
-
+</span>
 ;<h3 id="QUICK.D4-TYPE-PROP.19"
 >;; QUICK.D4-TYPE-PROP.19</h3>
 ; 
 ; EVAL TEST
-; took 0.000815 secs. (814.92 microseconds) 
+; took 0.000779 secs. (779.11 microseconds) 
 
 !(assertEqualToResult (ift (Mortal $x) $x) (Socrates Plato))
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (Socrates Plato) (Socrates Plato)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi32"
->% 633,041 inferences, 0.140 CPU in 0.140 seconds (100% CPU, 4512542 Lips)
+Deterministic: ()<span class="ansi32"
+>
+% 696,980 inferences, 0.164 CPU in 0.164 seconds (100% CPU, 4238462 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d4_type_prop.metta  0)
 <span class="ansi1"
@@ -1018,12 +971,35 @@ Deterministic: ()
 ;         (set_option_value  load show)
 P;HTML|
 ;         (set_option_value  test true)
-P;HTML|
+[()]
+[()]
+[()]
+[()]
+[()]
+[("sameTypes" Type Type)]
+[()]
+[("!sameTypes" (Mortal Socrates) (Mortal Plato))]
+[()]
+[("!sameTypes" (Human Socrates) !(get-type PlatoIsHuman))]
+[()]
+[("!sameTypes" (Human Socrates) (Mortal Socrates))]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+P;HTML|
 ;         (maybe_halt  7)
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-19 00:31:46+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-21 20:36:59+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

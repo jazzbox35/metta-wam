@@ -34,7 +34,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-19 00:20:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-21 20:25:18+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -363,10 +363,8 @@ Script started on 2024-10-19 00:20:35+00:00 [TERM="xterm-256color" TTY="/dev/pts
 <span class="ansi38-013099040"
 >!(bind! &kb (new-space))
 
-</span>[
-
+</span>
 Deterministic: ()
-()]
 ;;; Some knowledge
 <span class="ansi38-255165000"
 > (= (frog $x) (and (croaks $x) (eat_flies $x)))
@@ -390,8 +388,7 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqualToResult (ift (green $x) (add-atom &kb (Green $x))) (() ()))
 
-</span>[
-
+</span>
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.E1-KB-WRITE.01"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E1-KB-WRITE.01</h3>
 <span class="ansi38-255165000"
@@ -400,7 +397,7 @@ Deterministic: ()
 > (Green Sam)
 </span>; 
 ; EVAL TEST
-; took 0.005 secs. (4.77 milliseconds) 
+; took 0.005 secs. (4.93 milliseconds) 
 
 !(assertEqualToResult (ift (green $x) (add-atom &kb (Green $x))) (() ()))
 
@@ -408,28 +405,25 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (() ()) (() ())))
 </span>
 Deterministic: ()
-()]
 ;;; Retrieve the inferred Green things: Fritz and Sam.
 <span class="ansi38-013099040"
 >!(assertEqualToResult (match &kb (Green $x) $x) (Fritz Sam))
 
-</span>[
-
+</span>
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.E1-KB-WRITE.02"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.E1-KB-WRITE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000214 secs. (214.43 microseconds) 
+; took 0.000204 secs. (203.81 microseconds) 
 
 !(assertEqualToResult (match &kb (Green $x) $x) (Fritz Sam))
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (Fritz Sam) (Fritz Sam)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi32"
->% 127,271 inferences, 0.037 CPU in 0.037 seconds (100% CPU, 3456679 Lips)
+Deterministic: ()<span class="ansi32"
+>
+% 186,444 inferences, 0.061 CPU in 0.061 seconds (100% CPU, 3040540 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/e1_kb_write.metta  0)
 <span class="ansi1"
@@ -563,12 +557,15 @@ Deterministic: ()
 ;         (set_option_value  load show)
 P;HTML|
 ;         (set_option_value  test true)
-P;HTML|
+[()]
+[()]
+[()]
+P;HTML|
 ;         (maybe_halt  7)
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-19 00:20:41+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-21 20:25:24+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

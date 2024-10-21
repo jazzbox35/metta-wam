@@ -48,7 +48,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-19 00:29:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-21 20:34:20+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -391,18 +391,13 @@ Script started on 2024-10-19 00:29:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 <span class="ansi38-013099040"
 >!(bind! &belief_events (new-space))
 
-</span>[
-
+</span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(bind! &goal_events (new-space))
 
-</span>[
-
-Deterministic: ()
-()]
-<span class="ansi38-255165009"
+</span>
+Deterministic: ()<span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
 >!(match &belief_events $1 $1)
@@ -410,22 +405,19 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqualToResult (match &belief_events $1 $1) ())
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.01"
 >;; METTA-MORPH-TESTS.MATCH-VOID.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000176 secs. (176.12 microseconds) 
+; took 0.000184 secs. (183.87 microseconds) 
 
 !(assertEqualToResult (match &belief_events $1 $1) ())
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  () ()))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165009"
+Deterministic: ()<span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
 >!(add-atom &belief_events belief1)
@@ -433,24 +425,21 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqualToResult (add-atom &belief_events belief1) (()))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.02"
 >;; METTA-MORPH-TESTS.MATCH-VOID.02</h3>
 <span class="ansi38-255165000"
 > belief1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.17 milliseconds) 
+; took 0.001 secs. (1.09 milliseconds) 
 
 !(assertEqualToResult (add-atom &belief_events belief1) (()))
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (()) (())))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165009"
+Deterministic: ()<span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
 >!(match &belief_events $1 $1)
@@ -458,22 +447,19 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqualToResult (match &belief_events $1 $1) (belief1))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.03"
 >;; METTA-MORPH-TESTS.MATCH-VOID.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000195 secs. (195.01 microseconds) 
+; took 0.000189 secs. (188.67 microseconds) 
 
 !(assertEqualToResult (match &belief_events $1 $1) (belief1))
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (belief1) (belief1)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165009"
+Deterministic: ()<span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
 >!(case belief1 ((%void% 42)))
@@ -481,22 +467,19 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqualToResult (case belief1 ((%void% 42))) ())
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.04"
 >;; METTA-MORPH-TESTS.MATCH-VOID.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000144 secs. (144.40 microseconds) 
+; took 0.000129 secs. (129.05 microseconds) 
 
 !(assertEqualToResult (case belief1 ((%void% 42))) ())
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (()) ()))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165009"
+Deterministic: ()<span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
 >!(case (match &belief_events $1 $1) ((%void% 42)))
@@ -504,13 +487,12 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqualToResult (case (match &belief_events $1 $1) ((%void% 42))) ())
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.05"
 >;; METTA-MORPH-TESTS.MATCH-VOID.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000291 secs. (290.51 microseconds) 
+; took 0.000292 secs. (291.92 microseconds) 
 
 !(assertEqualToResult (case (match &belief_events $1 $1) ((%void% 42))) ())
 
@@ -518,17 +500,15 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (()) ()))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqualToResult (case (match &belief_events $1 $1) ((belief1 yes) (%void% 42))) (yes))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.06"
 >;; METTA-MORPH-TESTS.MATCH-VOID.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000378 secs. (377.56 microseconds) 
+; took 0.000383 secs. (383.45 microseconds) 
 
 !(assertEqualToResult (case (match &belief_events $1 $1) ((belief1 yes) (%void% 42))) (yes))
 
@@ -536,17 +516,15 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (yes) (yes)))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqualToResult (case (match &goal_events $1 $1) ((%void% 42))) (42))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.07"
 >;; METTA-MORPH-TESTS.MATCH-VOID.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000401 secs. (401.37 microseconds) 
+; took 0.000329 secs. (328.99 microseconds) 
 
 !(assertEqualToResult (case (match &goal_events $1 $1) ((%void% 42))) (42))
 
@@ -554,26 +532,22 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (42) (42)))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqualToResult (case (match &goal_events $1 $1) ((goal1 yes) (%void% 42))) (42))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.08"
 >;; METTA-MORPH-TESTS.MATCH-VOID.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000322 secs. (321.92 microseconds) 
+; took 0.000240 secs. (239.67 microseconds) 
 
 !(assertEqualToResult (case (match &goal_events $1 $1) ((goal1 yes) (%void% 42))) (42))
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (42) (42)))
 </span>
-Deterministic: ()
-()]
-<span class="ansi38-255165009"
+Deterministic: ()<span class="ansi38-255165009"
 >;; In file as:  
 </span><span class="ansi1 ansi38-255238088"
 >!(add-atom &goal_events goal1)
@@ -581,15 +555,14 @@ Deterministic: ()
 <span class="ansi38-013099040"
 >!(assertEqualToResult (add-atom &goal_events goal1) (()))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.09"
 >;; METTA-MORPH-TESTS.MATCH-VOID.09</h3>
 <span class="ansi38-255165000"
 > goal1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.16 milliseconds) 
+; took 0.001 secs. (1.07 milliseconds) 
 
 !(assertEqualToResult (add-atom &goal_events goal1) (()))
 
@@ -597,17 +570,15 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (()) (())))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqualToResult (case (match &goal_events $1 $1) ((goal1 yes) (%void% 42))) (yes))
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.10"
 >;; METTA-MORPH-TESTS.MATCH-VOID.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000345 secs. (345.06 microseconds) 
+; took 0.000330 secs. (329.88 microseconds) 
 
 !(assertEqualToResult (case (match &goal_events $1 $1) ((goal1 yes) (%void% 42))) (yes))
 
@@ -615,27 +586,24 @@ Deterministic: ()
 >(loonit_success  (equal_enough_for_test  (yes) (yes)))
 </span>
 Deterministic: ()
-()]
 <span class="ansi38-013099040"
 >!(assertEqualToResult (case (match &goal_events $1 $1) ((%void% 42))) ())
 
-</span>[
-
+</span>
 ;<h3 id="METTA-MORPH-TESTS.MATCH-VOID.11"
 >;; METTA-MORPH-TESTS.MATCH-VOID.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000276 secs. (275.99 microseconds) 
+; took 0.000262 secs. (262.33 microseconds) 
 
 !(assertEqualToResult (case (match &goal_events $1 $1) ((%void% 42))) ())
 
 <span class="ansi36"
 >(loonit_success  (equal_enough_for_test  (()) ()))
 </span>
-Deterministic: ()
-()]
-<span class="ansi32"
->% 285,873 inferences, 0.068 CPU in 0.068 seconds (100% CPU, 4189973 Lips)
+Deterministic: ()<span class="ansi32"
+>
+% 347,019 inferences, 0.091 CPU in 0.091 seconds (100% CPU, 3806430 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/match_void.metta  0)
 <span class="ansi1"
@@ -769,12 +737,25 @@ Deterministic: ()
 ;         (set_option_value  load show)
 P;HTML|
 ;         (set_option_value  test true)
-P;HTML|
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+P;HTML|
 ;         (maybe_halt  7)
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-19 00:29:11+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-21 20:34:25+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
