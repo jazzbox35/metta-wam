@@ -48,7 +48,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-21 20:34:20+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-22 18:22:12+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -410,7 +410,7 @@ Deterministic: ()<span class="ansi38-255165009"
 >;; METTA-MORPH-TESTS.MATCH-VOID.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000184 secs. (183.87 microseconds) 
+; took 0.000178 secs. (178.33 microseconds) 
 
 !(assertEqualToResult (match &belief_events $1 $1) ())
 
@@ -432,7 +432,7 @@ Deterministic: ()<span class="ansi38-255165009"
 > belief1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.09 milliseconds) 
+; took 0.001 secs. (1.21 milliseconds) 
 
 !(assertEqualToResult (add-atom &belief_events belief1) (()))
 
@@ -452,7 +452,7 @@ Deterministic: ()<span class="ansi38-255165009"
 >;; METTA-MORPH-TESTS.MATCH-VOID.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000189 secs. (188.67 microseconds) 
+; took 0.000205 secs. (205.28 microseconds) 
 
 !(assertEqualToResult (match &belief_events $1 $1) (belief1))
 
@@ -472,7 +472,7 @@ Deterministic: ()<span class="ansi38-255165009"
 >;; METTA-MORPH-TESTS.MATCH-VOID.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000129 secs. (129.05 microseconds) 
+; took 0.000133 secs. (133.47 microseconds) 
 
 !(assertEqualToResult (case belief1 ((%void% 42))) ())
 
@@ -492,7 +492,7 @@ Deterministic: ()<span class="ansi38-255165009"
 >;; METTA-MORPH-TESTS.MATCH-VOID.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000292 secs. (291.92 microseconds) 
+; took 0.000295 secs. (295.05 microseconds) 
 
 !(assertEqualToResult (case (match &belief_events $1 $1) ((%void% 42))) ())
 
@@ -508,7 +508,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000383 secs. (383.45 microseconds) 
+; took 0.000334 secs. (333.89 microseconds) 
 
 !(assertEqualToResult (case (match &belief_events $1 $1) ((belief1 yes) (%void% 42))) (yes))
 
@@ -524,7 +524,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000329 secs. (328.99 microseconds) 
+; took 0.000409 secs. (409.29 microseconds) 
 
 !(assertEqualToResult (case (match &goal_events $1 $1) ((%void% 42))) (42))
 
@@ -540,7 +540,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000240 secs. (239.67 microseconds) 
+; took 0.000325 secs. (325.09 microseconds) 
 
 !(assertEqualToResult (case (match &goal_events $1 $1) ((goal1 yes) (%void% 42))) (42))
 
@@ -562,7 +562,7 @@ Deterministic: ()<span class="ansi38-255165009"
 > goal1
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.07 milliseconds) 
+; took 0.001 secs. (1.18 milliseconds) 
 
 !(assertEqualToResult (add-atom &goal_events goal1) (()))
 
@@ -578,7 +578,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000330 secs. (329.88 microseconds) 
+; took 0.000338 secs. (338.04 microseconds) 
 
 !(assertEqualToResult (case (match &goal_events $1 $1) ((goal1 yes) (%void% 42))) (yes))
 
@@ -594,7 +594,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.MATCH-VOID.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000262 secs. (262.33 microseconds) 
+; took 0.000289 secs. (289.42 microseconds) 
 
 !(assertEqualToResult (case (match &goal_events $1 $1) ((%void% 42))) ())
 
@@ -603,7 +603,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 347,019 inferences, 0.091 CPU in 0.091 seconds (100% CPU, 3806430 Lips)
+% 348,096 inferences, 0.091 CPU in 0.091 seconds (100% CPU, 3806069 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/match_void.metta  0)
 <span class="ansi1"
@@ -755,7 +755,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-21 20:34:25+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-22 18:22:18+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
