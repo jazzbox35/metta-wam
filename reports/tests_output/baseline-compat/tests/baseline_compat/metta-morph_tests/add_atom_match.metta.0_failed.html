@@ -27,7 +27,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-23 01:02:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-23 20:24:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -367,7 +367,7 @@ Script started on 2024-10-23 01:02:02+00:00 [TERM="xterm-256color" TTY="/dev/pts
 > (man mortal)
 </span>; 
 ; EVAL TEST
-; took 0.003 secs. (2.54 milliseconds) 
+; took 0.003 secs. (2.60 milliseconds) 
 
 !(assertEqualToResult (sequential ((add-atom &self (man mortal)) (match &self ($A mortal) (mortal $A)))) (() (mortal man)))
 
@@ -376,7 +376,7 @@ Script started on 2024-10-23 01:02:02+00:00 [TERM="xterm-256color" TTY="/dev/pts
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 127,475 inferences, 0.042 CPU in 0.042 seconds (99% CPU, 3036476 Lips)
+% 127,446 inferences, 0.041 CPU in 0.041 seconds (100% CPU, 3129181 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/add_atom_match.metta  0)
 <span class="ansi1"
@@ -516,7 +516,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-23 01:02:08+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-23 20:24:49+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

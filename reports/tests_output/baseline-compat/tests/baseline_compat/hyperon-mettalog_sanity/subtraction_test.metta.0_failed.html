@@ -31,7 +31,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-23 00:59:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-23 20:22:38+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -355,7 +355,7 @@ Script started on 2024-10-23 00:59:52+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.051 secs. (50.67 milliseconds) 
+; took 0.048 secs. (48.26 milliseconds) 
 
 !(assertEqual (subtraction (superpose (a b c d)) (superpose (b c))) (superpose (a d)))
 
@@ -373,7 +373,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.36 milliseconds) 
+; took 0.001 secs. (1.40 milliseconds) 
 
 !(assertEqual (subtraction (subtraction (superpose (a b c d)) (superpose (b c))) (superpose (d))) (superpose (a)))
 
@@ -391,7 +391,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.23 milliseconds) 
+; took 0.003 secs. (3.24 milliseconds) 
 
 !(assertEqual (subtraction (superpose ((foo bar) (bar baz) qux)) (superpose ((bar baz) qux))) (superpose ((foo bar))))
 
@@ -409,7 +409,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.15 milliseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
 !(assertEqual (subtraction (superpose (1 2 3 foo bar)) (superpose (2 foo))) (superpose (1 3 bar)))
 
@@ -427,7 +427,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.13 milliseconds) 
+; took 0.001 secs. (1.04 milliseconds) 
 
 !(assertEqual (subtraction (superpose (a b b c d)) (superpose (b c))) (superpose (a d)))
 
@@ -445,7 +445,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000927 secs. (927.39 microseconds) 
+; took 0.000906 secs. (906.22 microseconds) 
 
 !(assertEqual (unique (subtraction (superpose (a b b c)) (superpose (b c c d)))) (superpose (a)))
 
@@ -463,7 +463,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000867 secs. (866.93 microseconds) 
+; took 0.000869 secs. (868.74 microseconds) 
 
 !(assertEqual (subtraction (unique (superpose (a b b c))) (unique (superpose (b c c d)))) (superpose (a)))
 
@@ -481,7 +481,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000682 secs. (682.36 microseconds) 
+; took 0.000667 secs. (666.54 microseconds) 
 
 !(assertEqual (subtraction (superpose ($x $y)) (superpose (b))) (superpose ($x $y)))
 
@@ -499,7 +499,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000814 secs. (814.49 microseconds) 
+; took 0.000818 secs. (817.61 microseconds) 
 
 !(assertEqual (subtraction (superpose (a b c)) (superpose ())) (superpose (a b c)))
 
@@ -517,7 +517,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.00 milliseconds) 
+; took 0.003 secs. (3.07 milliseconds) 
 
 !(assertEqual (subtraction (superpose ((foo $x) (bar $y))) (superpose ((bar $y) (foo qux)))) (superpose ((foo $x))))
 
@@ -526,7 +526,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 451,603 inferences, 0.139 CPU in 0.139 seconds (100% CPU, 3252446 Lips)
+% 451,883 inferences, 0.134 CPU in 0.134 seconds (100% CPU, 3377762 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/subtraction_test.metta  0)
 <span class="ansi1"
@@ -675,7 +675,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-23 00:59:58+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-23 20:22:44+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

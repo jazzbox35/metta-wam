@@ -72,7 +72,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-23 00:53:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-23 20:16:47+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -452,7 +452,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000592 secs. (591.76 microseconds) 
+; took 0.000555 secs. (554.67 microseconds) 
 
 !(assertEqualToResult (match &kb (, ($obj is $prop) ($prop is-a Color) ($obj is-a Planet)) (Color of Planet $obj is $prop)) ((Color of Planet Mars is Red)))
 
@@ -469,7 +469,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000154 secs. (154.12 microseconds) 
+; took 0.000175 secs. (175.42 microseconds) 
 
 !(assertEqualToResult (match &self ($p is-a Color) $p) ())
 
@@ -489,7 +489,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000373 secs. (372.95 microseconds) 
+; took 0.000344 secs. (344.17 microseconds) 
 
 !(assertEqual (match &kb (, (Venus orbit $x au) (Mars orbit $y au)) (- $y $x)) 0.8)
 
@@ -513,7 +513,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000670 secs. (669.90 microseconds) 
+; took 0.000617 secs. (617.07 microseconds) 
 
 !(assertEqualToResult (match &kb ($prop is-a Color) (match &self ($obj is $prop) $obj)) (Ball))
 
@@ -599,7 +599,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000562 secs. (562.42 microseconds) 
+; took 0.000549 secs. (548.94 microseconds) 
 
 !(assertEqualToResult (match &self (, ($obj is $prop) ($prop is-a Color) ($obj is-a Planet)) (Color of Planet $obj is $prop)) ((Color of Planet Mars is Red)))
 
@@ -608,7 +608,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 414,290 inferences, 0.124 CPU in 0.124 seconds (100% CPU, 3348453 Lips)
+% 413,602 inferences, 0.121 CPU in 0.121 seconds (100% CPU, 3411215 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/c2_spaces.metta  0)
 <span class="ansi1"
@@ -754,7 +754,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-23 00:53:41+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-23 20:16:52+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
