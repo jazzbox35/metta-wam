@@ -16,6 +16,7 @@
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
+.ansi90 { color: #7f7f7f; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-013099040 { color: #0D6328; }
@@ -37,8 +38,153 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-23 20:19:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-24 23:40:17+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490:
+Warning:    Invalid mode declaration in PlDoc comment: fcTmsMode/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490: PlDoc: failed to process structured comment:
+%!  fcTmsMode/1 is det.
+%
+%   Controls the Truth Maintenance System (TMS) algorithm by setting its mode. 
+%   The mode can be one of the following:
+%     - `none`: Disables the TMS algorithm.
+%     - `local`: Uses a local version of the TMS.
+%     - `cycles`: Uses a cycle-based TMS algorithm.
+%
+%   @example
+%     % Set the default TMS mode to 'cycles' if it isn't defined.
+%     ?- fcTmsMode(cycles).
+%
+% Ensure the default TMS mode is 'cycles' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505:
+Warning:    Invalid mode declaration in PlDoc comment: pfcSearch/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505: PlDoc: failed to process structured comment:
+%!  pfcSearch/1 is det.
+%
+%   Specifies the search strategy used by the PFC (Prolog Forward Chaining) 
+%   system. The strategy can be one of:
+%     - `direct`: Executes search directly without expanding paths.
+%     - `depth`: Uses depth-first search.
+%     - `breadth`: Uses breadth-first search.
+%
+%   @example
+%     % Set the default search strategy to 'direct' if not defined.
+%     ?- pfcSearch(direct).
+%
+% Ensure the default search strategy is 'direct' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRemActionTrace(+pfcAction('A'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294: PlDoc: failed to process structured comment:
+%!  pfcRemActionTrace(+pfcAction(A)) is det.
+%
+%   Removes an action trace by executing the corresponding undo method. If an 
+%   undo method is defined for the action, it is called using the system's 
+%   trigger mechanism.
+%
+%   @arg pfcAction(A)  The action trace to be removed.
+%
+%   @example
+%     % Remove a previously added action trace.
+%     ?- pfcRemActionTrace(pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(fact(_112622),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336: PlDoc: failed to process structured comment:
+%!  pfcRetractType(fact(_), +X) is det.
+%
+%   Retracts a fact from the database. If the fact has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original fact.
+%
+%   @arg X  The fact to be retracted.
+%
+%   @example
+%     % Retract a fact with or without database context.
+%     ?- pfcRetractType(fact(_), my_fact).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(rule(_120566),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352: PlDoc: failed to process structured comment:
+%!  pfcRetractType(rule(_), +X) is det.
+%
+%   Retracts a rule from the database. If the rule has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original rule.
+%
+%   @arg X  The rule to be retracted.
+%
+%   @example
+%     % Retract a rule with or without database context.
+%     ?- pfcRetractType(rule(_), my_rule).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(trigger('Pos'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368: PlDoc: failed to process structured comment:
+%!  pfcRetractType(trigger(Pos), +X) is det.
+%
+%   Retracts a trigger from the database. If the trigger is found, it is 
+%   retracted, and `unFc/1` is called to handle any necessary cleanup. 
+%   If the trigger is not found, a warning is issued.
+%
+%   @arg Pos  The position or type of the trigger (positive, negative).
+%   @arg X    The trigger to be retracted.
+%
+%   @example
+%     % Retract a positive trigger.
+%     ?- pfcRetractType(trigger(positive), my_trigger).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(action,+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386: PlDoc: failed to process structured comment:
+%!  pfcRetractType(action, +X) is det.
+%
+%   Retracts an action trace by invoking `pfcRemActionTrace/1`.
+%
+%   @arg X  The action trace to be removed.
+%
+%   @example
+%     % Retract an action trace.
+%     ?- pfcRetractType(action, pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422:
+Warning:    Invalid mode declaration in PlDoc comment: pfcAddType(fact('Type'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422: PlDoc: failed to process structured comment:
+%!  pfcAddType(fact(Type), +X) is det.
+%
+%   Adds a fact to the database. If the fact is unique, it is asserted; 
+%   otherwise, it is skipped.
+%
+%   @arg Type  The specific type of the fact.
+%   @arg X     The fact to be added.
+%
+%   @example
+%     % Add a unique fact to the database.
+%     ?- pfcAddType(fact(my_type), my_fact).
+%
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -353,10 +499,13 @@ Script started on 2024-10-23 20:19:22+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         (= 2  "Missed result: 1)]")
 P;HTML|
-;                                         (= 2  "0.03user 0.01system 0:00.05elapsed 94%CPU (0avgtext+0avgdata 26412maxresident)k")
+;                                         (= 2  "0.03user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 26164maxresident)k")
 P;HTML|
-;                                         (= 2  "0inputs+0outputs (0major+3108minor)pagefaults 0swaps")
-P;HTML|
+;                                         (= 2  "0inputs+0outputs (0major+3102minor)pagefaults 0swaps")
+<span class="ansi1 ansi90"
+>
+Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta is 1.67K bytes (45 lines)
+</span>P;HTML|
 ;                                        (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta)
 
 ;;;; when no exception is thrown, catch returns result of Form
@@ -372,7 +521,7 @@ Script started on 2024-10-23 20:19:22+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000499 secs. (499.04 microseconds) 
+; took 0.000593 secs. (592.96 microseconds) 
 
 !(assertEqualToResult (catch (foo) Error Error) (1 2))
 
@@ -389,7 +538,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000345 secs. (344.73 microseconds) 
+; took 0.000438 secs. (438.35 microseconds) 
 
 !(assertEqualToResult (catch (throw Error) Error "An exception was caught") ("An exception was caught"))
 
@@ -406,7 +555,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000310 secs. (310.02 microseconds) 
+; took 0.000361 secs. (360.99 microseconds) 
 
 !(assertEqualToResult (catch (catch (throw Error) Error "Error level 2") Error "Error level 1") ("Error level 2"))
 
@@ -422,7 +571,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000412 secs. (412.26 microseconds) 
+; took 0.000505 secs. (504.58 microseconds) 
 
 !(assertEqualToResult (catch (catch (throw Error1) Error2 "Error level 2") Error1 "Error level 1") ("Error level 1"))
 
@@ -439,7 +588,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000367 secs. (366.94 microseconds) 
+; took 0.000434 secs. (434.20 microseconds) 
 
 !(assertEqualToResult (catch (catch (throw Error2) Error2 (throw Error1)) Error1 "Error level 1") ("Error level 1"))
 
@@ -465,7 +614,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000626 secs. (625.89 microseconds) 
+; took 0.000682 secs. (682.29 microseconds) 
 
 !(assertEqualToResult (catch (bar) Error "An exception was caught") (1 2 "An exception was caught"))
 
@@ -482,7 +631,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000213 secs. (213.36 microseconds) 
+; took 0.000255 secs. (254.61 microseconds) 
 
 !(assertEqualToResult (catch (throw (Error "This is an error message")) (Error $message) $message) ("This is an error message"))
 
@@ -499,7 +648,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000408 secs. (407.57 microseconds) 
+; took 0.000515 secs. (515.33 microseconds) 
 
 !(assertEqualToResult (catch (catch (throw 3) (+ 1 2) "Error level 2") 3 "Error level 1") ("Error level 1"))
 
@@ -516,7 +665,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000303 secs. (302.52 microseconds) 
+; took 0.000381 secs. (380.59 microseconds) 
 
 !(assertEqualToResult (catch (catch (throw (+ 1 2)) (+ 1 2) "Error level 2") 3 "Error level 1") ("Error level 1"))
 
@@ -533,7 +682,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.CATCH-THROW-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000474 secs. (473.79 microseconds) 
+; took 0.000542 secs. (542.29 microseconds) 
 
 !(assertEqualToResult (catch (throw (Error 2)) (Error $x) (+ $x 1)) (3))
 
@@ -542,7 +691,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 305,069 inferences, 0.077 CPU in 0.077 seconds (100% CPU, 3965046 Lips)
+% 394,303 inferences, 0.097 CPU in 0.099 seconds (98% CPU, 4075907 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/catch_throw_tests.metta  0)
 <span class="ansi1"
@@ -691,7 +840,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-23 20:19:28+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-24 23:40:23+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

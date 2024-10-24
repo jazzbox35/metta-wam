@@ -16,6 +16,7 @@
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
+.ansi90 { color: #7f7f7f; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -32,8 +33,153 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-23 20:15:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-24 23:36:37+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490:
+Warning:    Invalid mode declaration in PlDoc comment: fcTmsMode/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490: PlDoc: failed to process structured comment:
+%!  fcTmsMode/1 is det.
+%
+%   Controls the Truth Maintenance System (TMS) algorithm by setting its mode. 
+%   The mode can be one of the following:
+%     - `none`: Disables the TMS algorithm.
+%     - `local`: Uses a local version of the TMS.
+%     - `cycles`: Uses a cycle-based TMS algorithm.
+%
+%   @example
+%     % Set the default TMS mode to 'cycles' if it isn't defined.
+%     ?- fcTmsMode(cycles).
+%
+% Ensure the default TMS mode is 'cycles' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505:
+Warning:    Invalid mode declaration in PlDoc comment: pfcSearch/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505: PlDoc: failed to process structured comment:
+%!  pfcSearch/1 is det.
+%
+%   Specifies the search strategy used by the PFC (Prolog Forward Chaining) 
+%   system. The strategy can be one of:
+%     - `direct`: Executes search directly without expanding paths.
+%     - `depth`: Uses depth-first search.
+%     - `breadth`: Uses breadth-first search.
+%
+%   @example
+%     % Set the default search strategy to 'direct' if not defined.
+%     ?- pfcSearch(direct).
+%
+% Ensure the default search strategy is 'direct' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRemActionTrace(+pfcAction('A'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294: PlDoc: failed to process structured comment:
+%!  pfcRemActionTrace(+pfcAction(A)) is det.
+%
+%   Removes an action trace by executing the corresponding undo method. If an 
+%   undo method is defined for the action, it is called using the system's 
+%   trigger mechanism.
+%
+%   @arg pfcAction(A)  The action trace to be removed.
+%
+%   @example
+%     % Remove a previously added action trace.
+%     ?- pfcRemActionTrace(pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(fact(_112622),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336: PlDoc: failed to process structured comment:
+%!  pfcRetractType(fact(_), +X) is det.
+%
+%   Retracts a fact from the database. If the fact has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original fact.
+%
+%   @arg X  The fact to be retracted.
+%
+%   @example
+%     % Retract a fact with or without database context.
+%     ?- pfcRetractType(fact(_), my_fact).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(rule(_120566),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352: PlDoc: failed to process structured comment:
+%!  pfcRetractType(rule(_), +X) is det.
+%
+%   Retracts a rule from the database. If the rule has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original rule.
+%
+%   @arg X  The rule to be retracted.
+%
+%   @example
+%     % Retract a rule with or without database context.
+%     ?- pfcRetractType(rule(_), my_rule).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(trigger('Pos'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368: PlDoc: failed to process structured comment:
+%!  pfcRetractType(trigger(Pos), +X) is det.
+%
+%   Retracts a trigger from the database. If the trigger is found, it is 
+%   retracted, and `unFc/1` is called to handle any necessary cleanup. 
+%   If the trigger is not found, a warning is issued.
+%
+%   @arg Pos  The position or type of the trigger (positive, negative).
+%   @arg X    The trigger to be retracted.
+%
+%   @example
+%     % Retract a positive trigger.
+%     ?- pfcRetractType(trigger(positive), my_trigger).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(action,+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386: PlDoc: failed to process structured comment:
+%!  pfcRetractType(action, +X) is det.
+%
+%   Retracts an action trace by invoking `pfcRemActionTrace/1`.
+%
+%   @arg X  The action trace to be removed.
+%
+%   @example
+%     % Retract an action trace.
+%     ?- pfcRetractType(action, pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422:
+Warning:    Invalid mode declaration in PlDoc comment: pfcAddType(fact('Type'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422: PlDoc: failed to process structured comment:
+%!  pfcAddType(fact(Type), +X) is det.
+%
+%   Adds a fact to the database. If the fact is unique, it is asserted; 
+%   otherwise, it is skipped.
+%
+%   @arg Type  The specific type of the fact.
+%   @arg X     The fact to be added.
+%
+%   @example
+%     % Add a unique fact to the database.
+%     ?- pfcAddType(fact(my_type), my_fact).
+%
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -353,7 +499,10 @@ Script started on 2024-10-23 20:15:55+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;                                         (= 6  "0.05user 0.00system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 31000maxresident)k")
 P;HTML|
 ;                                         (= 6  "0inputs+0outputs (0major+3660minor)pagefaults 0swaps")
-P;HTML|
+<span class="ansi1 ansi90"
+>
+Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b0_chaining_prelim.metta is 1.43K bytes (57 lines)
+</span>P;HTML|
 ;                                        (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b0_chaining_prelim.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b0_chaining_prelim.metta)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -381,7 +530,7 @@ Script started on 2024-10-23 20:15:55+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000729 secs. (728.66 microseconds) 
+; took 0.000743 secs. (743.43 microseconds) 
 
 !(assertEqualToResult (match &self (:= (S K K x) $r) $r) ((K x (K x))))
 
@@ -399,7 +548,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000185 secs. (185.50 microseconds) 
+; took 0.000188 secs. (187.65 microseconds) 
 
 !(assertEqualToResult (match &self (:= (K x (K x)) $r) $r) (x))
 
@@ -416,7 +565,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000278 secs. (278.44 microseconds) 
+; took 0.000270 secs. (269.66 microseconds) 
 
 !(assertEqualToResult (match &self (:= (S K K x) $r) (match &self (:= $r $r2) $r2)) (x))
 
@@ -441,7 +590,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000804 secs. (803.88 microseconds) 
+; took 0.000746 secs. (745.50 microseconds) 
 
 !(assertEqualToResult (match &self (:= (Add (S Z) (S Z)) $r) $r) ((Add (S (S Z)) Z)))
 
@@ -458,7 +607,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B0-CHAINING-PRELIM.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000627 secs. (627.10 microseconds) 
+; took 0.000640 secs. (639.92 microseconds) 
 
 !(assertEqualToResult (match &self (:= (Add (S Z) (S Z)) $r) (match &self (:= $r $r2) $r2)) ((S (S Z))))
 
@@ -467,7 +616,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 242,866 inferences, 0.069 CPU in 0.069 seconds (100% CPU, 3540005 Lips)
+% 309,633 inferences, 0.085 CPU in 0.087 seconds (98% CPU, 3634566 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b0_chaining_prelim.metta  0)
 <span class="ansi1"
@@ -611,7 +760,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-23 20:16:01+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-24 23:36:43+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

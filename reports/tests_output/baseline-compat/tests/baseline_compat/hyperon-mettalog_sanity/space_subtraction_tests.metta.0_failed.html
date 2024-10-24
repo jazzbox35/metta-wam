@@ -16,6 +16,7 @@
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
+.ansi90 { color: #7f7f7f; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
@@ -45,8 +46,153 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-23 20:22:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-24 23:43:18+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490:
+Warning:    Invalid mode declaration in PlDoc comment: fcTmsMode/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490: PlDoc: failed to process structured comment:
+%!  fcTmsMode/1 is det.
+%
+%   Controls the Truth Maintenance System (TMS) algorithm by setting its mode. 
+%   The mode can be one of the following:
+%     - `none`: Disables the TMS algorithm.
+%     - `local`: Uses a local version of the TMS.
+%     - `cycles`: Uses a cycle-based TMS algorithm.
+%
+%   @example
+%     % Set the default TMS mode to 'cycles' if it isn't defined.
+%     ?- fcTmsMode(cycles).
+%
+% Ensure the default TMS mode is 'cycles' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505:
+Warning:    Invalid mode declaration in PlDoc comment: pfcSearch/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505: PlDoc: failed to process structured comment:
+%!  pfcSearch/1 is det.
+%
+%   Specifies the search strategy used by the PFC (Prolog Forward Chaining) 
+%   system. The strategy can be one of:
+%     - `direct`: Executes search directly without expanding paths.
+%     - `depth`: Uses depth-first search.
+%     - `breadth`: Uses breadth-first search.
+%
+%   @example
+%     % Set the default search strategy to 'direct' if not defined.
+%     ?- pfcSearch(direct).
+%
+% Ensure the default search strategy is 'direct' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRemActionTrace(+pfcAction('A'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294: PlDoc: failed to process structured comment:
+%!  pfcRemActionTrace(+pfcAction(A)) is det.
+%
+%   Removes an action trace by executing the corresponding undo method. If an 
+%   undo method is defined for the action, it is called using the system's 
+%   trigger mechanism.
+%
+%   @arg pfcAction(A)  The action trace to be removed.
+%
+%   @example
+%     % Remove a previously added action trace.
+%     ?- pfcRemActionTrace(pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(fact(_112622),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336: PlDoc: failed to process structured comment:
+%!  pfcRetractType(fact(_), +X) is det.
+%
+%   Retracts a fact from the database. If the fact has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original fact.
+%
+%   @arg X  The fact to be retracted.
+%
+%   @example
+%     % Retract a fact with or without database context.
+%     ?- pfcRetractType(fact(_), my_fact).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(rule(_120566),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352: PlDoc: failed to process structured comment:
+%!  pfcRetractType(rule(_), +X) is det.
+%
+%   Retracts a rule from the database. If the rule has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original rule.
+%
+%   @arg X  The rule to be retracted.
+%
+%   @example
+%     % Retract a rule with or without database context.
+%     ?- pfcRetractType(rule(_), my_rule).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(trigger('Pos'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368: PlDoc: failed to process structured comment:
+%!  pfcRetractType(trigger(Pos), +X) is det.
+%
+%   Retracts a trigger from the database. If the trigger is found, it is 
+%   retracted, and `unFc/1` is called to handle any necessary cleanup. 
+%   If the trigger is not found, a warning is issued.
+%
+%   @arg Pos  The position or type of the trigger (positive, negative).
+%   @arg X    The trigger to be retracted.
+%
+%   @example
+%     % Retract a positive trigger.
+%     ?- pfcRetractType(trigger(positive), my_trigger).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(action,+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386: PlDoc: failed to process structured comment:
+%!  pfcRetractType(action, +X) is det.
+%
+%   Retracts an action trace by invoking `pfcRemActionTrace/1`.
+%
+%   @arg X  The action trace to be removed.
+%
+%   @example
+%     % Retract an action trace.
+%     ?- pfcRetractType(action, pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422:
+Warning:    Invalid mode declaration in PlDoc comment: pfcAddType(fact('Type'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422: PlDoc: failed to process structured comment:
+%!  pfcAddType(fact(Type), +X) is det.
+%
+%   Adds a fact to the database. If the fact is unique, it is asserted; 
+%   otherwise, it is skipped.
+%
+%   @arg Type  The specific type of the fact.
+%   @arg X     The fact to be added.
+%
+%   @example
+%     % Add a unique fact to the database.
+%     ?- pfcAddType(fact(my_type), my_fact).
+%
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -378,7 +524,10 @@ Script started on 2024-10-23 20:22:16+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;                                         (= 9  "0.02user 0.00system 0:00.05elapsed 52%CPU (0avgtext+0avgdata 24984maxresident)k")
 P;HTML|
 ;                                         (= 9  "23984inputs+0outputs (145major+2970minor)pagefaults 0swaps")
-P;HTML|
+<span class="ansi1 ansi90"
+>
+Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/space_subtraction_tests.metta is 2.60K bytes (75 lines)
+</span>P;HTML|
 ;                                        (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/space_subtraction_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/space_subtraction_tests.metta)
 
 ;;;; Create new spaces for subtraction and union tests
@@ -415,10 +564,10 @@ Deterministic: ()
 ;<h3 id="HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.01"
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.01</h3>
 <span class="ansi38-255165000"
-> (superpose ((foo $_55226 $_55248) (foo 1 2) (foo 3 4) (foo $_55226 10) (foo $_55226 $_55226)))
+> (superpose ((foo $_55432 $_55454) (foo 1 2) (foo 3 4) (foo $_55432 10) (foo $_55432 $_55432)))
 </span>; 
 ; EVAL TEST
-; took 0.006 secs. (6.39 milliseconds) 
+; took 0.006 secs. (6.48 milliseconds) 
 
 !(assertEqualToResult (add-atom &space31 (superpose ((foo $x $y) (foo 1 2) (foo 3 4) (foo $x 10) (foo $x $x)))) (()))
 
@@ -439,10 +588,10 @@ Deterministic: ()
 ;<h3 id="HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.02"
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.02</h3>
 <span class="ansi38-255165000"
-> (superpose ((foo 1 2) (foo 5 6) (foo $_87150 $_87172)))
+> (superpose ((foo 1 2) (foo 5 6) (foo $_87520 $_87542)))
 </span>; 
 ; EVAL TEST
-; took 0.003 secs. (3.04 milliseconds) 
+; took 0.003 secs. (3.12 milliseconds) 
 
 !(assertEqualToResult (add-atom &space32 (superpose ((foo 1 2) (foo 5 6) (foo $x $y)))) (()))
 
@@ -466,7 +615,7 @@ Deterministic: ()
 > (superpose ((foo 3 4) (foo 5 6)))
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.42 milliseconds) 
+; took 0.001 secs. (1.40 milliseconds) 
 
 !(assertEqualToResult (add-atom &space33 (superpose ((foo 3 4) (foo 5 6)))) (()))
 
@@ -485,12 +634,12 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.068 secs. (67.54 milliseconds) 
+; took 0.066 secs. (65.99 milliseconds) 
 
 !(assertEqual (subtraction (get-atoms &space31) (get-atoms &space32)) (superpose ((foo 3 4) (foo $x 10) (foo $x $x))))
 
 <span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((foo 3 4) (foo $_54198 10) (foo $_54174 $_54174)) ((foo 3 4) (foo $_74490 10) (foo $_74466 $_74466))))
+>(loonit_success  (equal_enough_for_test  ((foo 3 4) (foo $_54212 10) (foo $_54188 $_54188)) ((foo 3 4) (foo $_74504 10) (foo $_74480 $_74480))))
 </span>
 Deterministic: ()
 ;;;; Test subtraction with variables and self-referential structures
@@ -503,12 +652,12 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.017 secs. (16.67 milliseconds) 
+; took 0.017 secs. (16.72 milliseconds) 
 
 !(assertEqual (subtraction (get-atoms &space31) (get-atoms &space33)) (superpose ((foo $x $y) (foo 1 2) (foo $x 10) (foo $x $x))))
 
 <span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((foo $_150620 $_150626) (foo 1 2) (foo $_150572 10) (foo $_150548 $_150548)) ((foo $_174752 $_174758) (foo 1 2) (foo $_174704 10) (foo $_174680 $_174680))))
+>(loonit_success  (equal_enough_for_test  ((foo $_150864 $_150870) (foo 1 2) (foo $_150816 10) (foo $_150792 $_150792)) ((foo $_174996 $_175002) (foo 1 2) (foo $_174948 10) (foo $_174924 $_174924))))
 </span>
 Deterministic: ()
 ;;;; Test subtraction with empty space3
@@ -521,7 +670,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000393 secs. (393.48 microseconds) 
+; took 0.000356 secs. (356.42 microseconds) 
 
 !(assertEqual (subtraction (get-atoms &space34) (get-atoms &space31)) (superpose ()))
 
@@ -540,12 +689,12 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (12.10 milliseconds) 
+; took 0.012 secs. (12.38 milliseconds) 
 
 !(assertEqual (union (get-atoms &space31) (get-atoms &space32)) (superpose ((foo $x $y) (foo 1 2) (foo 3 4) (foo 5 6) (foo $x 10) (foo $x $x))))
 
 <span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((foo $_241614 $_241620) (foo 1 2) (foo 3 4) (foo $_241542 10) (foo $_241518 $_241518) (foo 5 6)) ((foo $_241614 $_241620) (foo 1 2) (foo 3 4) (foo 5 6) (foo $_241542 10) (foo $_241518 $_241518))))
+>(loonit_success  (equal_enough_for_test  ((foo $_242128 $_242134) (foo 1 2) (foo 3 4) (foo $_242056 10) (foo $_242032 $_242032) (foo 5 6)) ((foo $_242128 $_242134) (foo 1 2) (foo 3 4) (foo 5 6) (foo $_242056 10) (foo $_242032 $_242032))))
 </span>
 Deterministic: ()
 ;;;; Test union with overlapping spaces
@@ -558,12 +707,12 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.010 secs. (9.98 milliseconds) 
+; took 0.010 secs. (10.12 milliseconds) 
 
 !(assertEqual (union (get-atoms &space32) (get-atoms &space33)) (superpose ((foo 1 2) (foo 5 6) (foo 3 4) (foo $x $y))))
 
 <span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((foo 1 2) (foo 5 6) (foo $_332880 $_332886) (foo 3 4)) ((foo 1 2) (foo 5 6) (foo 3 4) (foo $_332880 $_332886))))
+>(loonit_success  (equal_enough_for_test  ((foo 1 2) (foo 5 6) (foo $_333624 $_333630) (foo 3 4)) ((foo 1 2) (foo 5 6) (foo 3 4) (foo $_333624 $_333630))))
 </span>
 Deterministic: ()
 ;;;; Test union with a space containing a unique atom
@@ -576,12 +725,12 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (11.72 milliseconds) 
+; took 0.012 secs. (12.15 milliseconds) 
 
 !(assertEqual (union (get-atoms &space31) (get-atoms &space33)) (superpose ((foo $x $y) (foo 1 2) (foo 3 4) (foo $x 10) (foo $x $x) (foo 5 6))))
 
 <span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((foo $_420388 $_420394) (foo 1 2) (foo 3 4) (foo $_420316 10) (foo $_420292 $_420292) (foo 5 6)) ((foo $_466922 $_466928) (foo 1 2) (foo 3 4) (foo $_466850 10) (foo $_466826 $_466826) (foo 5 6))))
+>(loonit_success  (equal_enough_for_test  ((foo $_421410 $_421416) (foo 1 2) (foo 3 4) (foo $_421338 10) (foo $_421314 $_421314) (foo 5 6)) ((foo $_467944 $_467950) (foo 1 2) (foo 3 4) (foo $_467872 10) (foo $_467848 $_467848) (foo 5 6))))
 </span>
 Deterministic: ()
 ;;;; Test union with a non-space set
@@ -599,7 +748,7 @@ Deterministic: ()
 !(assertEqual (union (get-atoms &space31) (superpose ((foo 7 8)))) (superpose ((foo $x $y) (foo 1 2) (foo 3 4) (foo $x 10) (foo $x $x) (foo 7 8))))
 
 <span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((foo $_513662 $_513668) (foo 1 2) (foo 3 4) (foo $_513590 10) (foo $_513566 $_513566) (foo 7 8)) ((foo $_560196 $_560202) (foo 1 2) (foo 3 4) (foo $_560124 10) (foo $_560100 $_560100) (foo 7 8))))
+>(loonit_success  (equal_enough_for_test  ((foo $_514986 $_514992) (foo 1 2) (foo 3 4) (foo $_514914 10) (foo $_514890 $_514890) (foo 7 8)) ((foo $_561520 $_561526) (foo 1 2) (foo 3 4) (foo $_561448 10) (foo $_561424 $_561424) (foo 7 8))))
 </span>
 Deterministic: ()
 ;;;; Test union with an empty space3
@@ -612,16 +761,16 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (8.35 milliseconds) 
+; took 0.008 secs. (8.42 milliseconds) 
 
 !(assertEqual (union (get-atoms &space31) (get-atoms &space34)) (superpose ((foo $x $y) (foo 1 2) (foo 3 4) (foo $x 10) (foo $x $x))))
 
 <span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((foo $_600396 $_600402) (foo 1 2) (foo 3 4) (foo $_600324 10) (foo $_600300 $_600300)) ((foo $_635732 $_635738) (foo 1 2) (foo 3 4) (foo $_635660 10) (foo $_635636 $_635636))))
+>(loonit_success  (equal_enough_for_test  ((foo $_601974 $_601980) (foo 1 2) (foo 3 4) (foo $_601902 10) (foo $_601878 $_601878)) ((foo $_637310 $_637316) (foo 1 2) (foo 3 4) (foo $_637238 10) (foo $_637214 $_637214))))
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 1,264,499 inferences, 0.324 CPU in 0.324 seconds (100% CPU, 3902522 Lips)
+% 1,390,019 inferences, 0.347 CPU in 0.349 seconds (99% CPU, 4005168 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/space_subtraction_tests.metta  0)
 <span class="ansi1"
@@ -775,7 +924,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-23 20:22:22+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-24 23:43:25+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

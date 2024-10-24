@@ -16,6 +16,7 @@
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
+.ansi90 { color: #7f7f7f; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
@@ -49,8 +50,153 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-23 20:20:30+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-24 23:41:29+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490:
+Warning:    Invalid mode declaration in PlDoc comment: fcTmsMode/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490: PlDoc: failed to process structured comment:
+%!  fcTmsMode/1 is det.
+%
+%   Controls the Truth Maintenance System (TMS) algorithm by setting its mode. 
+%   The mode can be one of the following:
+%     - `none`: Disables the TMS algorithm.
+%     - `local`: Uses a local version of the TMS.
+%     - `cycles`: Uses a cycle-based TMS algorithm.
+%
+%   @example
+%     % Set the default TMS mode to 'cycles' if it isn't defined.
+%     ?- fcTmsMode(cycles).
+%
+% Ensure the default TMS mode is 'cycles' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505:
+Warning:    Invalid mode declaration in PlDoc comment: pfcSearch/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505: PlDoc: failed to process structured comment:
+%!  pfcSearch/1 is det.
+%
+%   Specifies the search strategy used by the PFC (Prolog Forward Chaining) 
+%   system. The strategy can be one of:
+%     - `direct`: Executes search directly without expanding paths.
+%     - `depth`: Uses depth-first search.
+%     - `breadth`: Uses breadth-first search.
+%
+%   @example
+%     % Set the default search strategy to 'direct' if not defined.
+%     ?- pfcSearch(direct).
+%
+% Ensure the default search strategy is 'direct' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRemActionTrace(+pfcAction('A'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294: PlDoc: failed to process structured comment:
+%!  pfcRemActionTrace(+pfcAction(A)) is det.
+%
+%   Removes an action trace by executing the corresponding undo method. If an 
+%   undo method is defined for the action, it is called using the system's 
+%   trigger mechanism.
+%
+%   @arg pfcAction(A)  The action trace to be removed.
+%
+%   @example
+%     % Remove a previously added action trace.
+%     ?- pfcRemActionTrace(pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(fact(_112622),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336: PlDoc: failed to process structured comment:
+%!  pfcRetractType(fact(_), +X) is det.
+%
+%   Retracts a fact from the database. If the fact has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original fact.
+%
+%   @arg X  The fact to be retracted.
+%
+%   @example
+%     % Retract a fact with or without database context.
+%     ?- pfcRetractType(fact(_), my_fact).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(rule(_120566),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352: PlDoc: failed to process structured comment:
+%!  pfcRetractType(rule(_), +X) is det.
+%
+%   Retracts a rule from the database. If the rule has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original rule.
+%
+%   @arg X  The rule to be retracted.
+%
+%   @example
+%     % Retract a rule with or without database context.
+%     ?- pfcRetractType(rule(_), my_rule).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(trigger('Pos'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368: PlDoc: failed to process structured comment:
+%!  pfcRetractType(trigger(Pos), +X) is det.
+%
+%   Retracts a trigger from the database. If the trigger is found, it is 
+%   retracted, and `unFc/1` is called to handle any necessary cleanup. 
+%   If the trigger is not found, a warning is issued.
+%
+%   @arg Pos  The position or type of the trigger (positive, negative).
+%   @arg X    The trigger to be retracted.
+%
+%   @example
+%     % Retract a positive trigger.
+%     ?- pfcRetractType(trigger(positive), my_trigger).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(action,+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386: PlDoc: failed to process structured comment:
+%!  pfcRetractType(action, +X) is det.
+%
+%   Retracts an action trace by invoking `pfcRemActionTrace/1`.
+%
+%   @arg X  The action trace to be removed.
+%
+%   @example
+%     % Retract an action trace.
+%     ?- pfcRetractType(action, pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422:
+Warning:    Invalid mode declaration in PlDoc comment: pfcAddType(fact('Type'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422: PlDoc: failed to process structured comment:
+%!  pfcAddType(fact(Type), +X) is det.
+%
+%   Adds a fact to the database. If the fact is unique, it is asserted; 
+%   otherwise, it is skipped.
+%
+%   @arg Type  The specific type of the fact.
+%   @arg X     The fact to be added.
+%
+%   @example
+%     % Add a unique fact to the database.
+%     ?- pfcAddType(fact(my_type), my_fact).
+%
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -365,10 +511,13 @@ Script started on 2024-10-23 20:20:30+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         (= 2  "Excessive result: (limit! 0 (sequential (1 2 3))))]")
 P;HTML|
-;                                         (= 2  "0.04user 0.00system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26444maxresident)k")
+;                                         (= 2  "0.03user 0.00system 0:00.04elapsed 95%CPU (0avgtext+0avgdata 26056maxresident)k")
 P;HTML|
-;                                         (= 2  "0inputs+0outputs (0major+3113minor)pagefaults 0swaps")
-P;HTML|
+;                                         (= 2  "0inputs+0outputs (0major+3107minor)pagefaults 0swaps")
+<span class="ansi1 ansi90"
+>
+Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/limit_tests.metta is 1.99K bytes (71 lines)
+</span>P;HTML|
 ;                                        (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/limit_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/limit_tests.metta)
 
 ;;;; limit! returns the first N results
@@ -380,7 +529,7 @@ Script started on 2024-10-23 20:20:30+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000173 secs. (173.03 microseconds) 
+; took 0.000183 secs. (183.33 microseconds) 
 
 !(assertEqualToResult (limit! 0 (sequential (1 2 3))) ())
 
@@ -396,7 +545,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000277 secs. (276.72 microseconds) 
+; took 0.000283 secs. (282.68 microseconds) 
 
 !(assertEqualToResult (limit! 2 (sequential (1 2 3))) (1 2))
 
@@ -435,7 +584,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000362 secs. (362.14 microseconds) 
+; took 0.000345 secs. (345.04 microseconds) 
 
 !(assertEqualToResult (get-state! &var) (2))
 
@@ -448,7 +597,7 @@ Deterministic: ()
 >!(change-state! &var 0)
 
 </span>
-Deterministic: (State  0 $_3628)
+Deterministic: (State  0 $_3634)
 <span class="ansi38-013099040"
 >!(assertEqualToResult (get-state! &var) (0))
 
@@ -457,7 +606,7 @@ Deterministic: (State  0 $_3628)
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000315 secs. (314.69 microseconds) 
+; took 0.000320 secs. (320.38 microseconds) 
 
 !(assertEqualToResult (get-state! &var) (0))
 
@@ -474,7 +623,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.30 milliseconds) 
+; took 0.005 secs. (5.23 milliseconds) 
 
 !(assertEqualToResult (limit! (sequential (1 2 3)) (sequential ((increment) (increment) (increment)))) (1 2 3 4 5 6))
 
@@ -490,7 +639,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000381 secs. (380.55 microseconds) 
+; took 0.000319 secs. (319.32 microseconds) 
 
 !(assertEqualToResult (get-state! &var) (6))
 
@@ -511,7 +660,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.40 milliseconds) 
+; took 0.002 secs. (2.32 milliseconds) 
 
 !(assertEqualToResult (limit! 4 (infinite)) (1 2 3 4))
 
@@ -528,7 +677,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000179 secs. (178.81 microseconds) 
+; took 0.000175 secs. (174.77 microseconds) 
 
 !(assertEqualToResult (number-of (+ 1 2)) (1))
 
@@ -545,7 +694,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000299 secs. (298.71 microseconds) 
+; took 0.000250 secs. (249.95 microseconds) 
 
 !(assertEqualToResult (number-of (superpose (1 2 3))) (3))
 
@@ -558,7 +707,7 @@ Deterministic: ()
 >!(change-state! &var 0)
 
 </span>
-Deterministic: (State  0 $_3622)
+Deterministic: (State  0 $_3628)
 <span class="ansi38-013099040"
 >!(assertEqualToResult (number-of (limit! 2 (sequential ((increment) (increment) (increment))))) (2))
 
@@ -567,7 +716,7 @@ Deterministic: (State  0 $_3622)
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.10 milliseconds) 
+; took 0.002 secs. (2.01 milliseconds) 
 
 !(assertEqualToResult (number-of (limit! 2 (sequential ((increment) (increment) (increment))))) (2))
 
@@ -583,7 +732,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000353 secs. (352.82 microseconds) 
+; took 0.000305 secs. (304.99 microseconds) 
 
 !(assertEqualToResult (get-state! &var) (2))
 
@@ -595,7 +744,7 @@ Deterministic: ()
 >!(change-state! &var 0)
 
 </span>
-Deterministic: (State  0 $_3622)
+Deterministic: (State  0 $_3628)
 <span class="ansi38-013099040"
 >!(assertEqualToResult (number-of (limit! 4 (infinite))) (4))
 
@@ -604,7 +753,7 @@ Deterministic: (State  0 $_3622)
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.13</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.45 milliseconds) 
+; took 0.002 secs. (2.41 milliseconds) 
 
 !(assertEqualToResult (number-of (limit! 4 (infinite))) (4))
 
@@ -625,7 +774,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000805 secs. (805.05 microseconds) 
+; took 0.000797 secs. (796.91 microseconds) 
 
 !(assertEqualToResult (number-of (test $x)) (2))
 
@@ -642,7 +791,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000332 secs. (331.66 microseconds) 
+; took 0.000320 secs. (320.23 microseconds) 
 
 !(assertEqualToResult (offset! 2 (sequential (1 2 3 4))) (3 4))
 
@@ -655,7 +804,7 @@ Deterministic: ()
 >!(change-state! &var 0)
 
 </span>
-Deterministic: (State  0 $_3622)
+Deterministic: (State  0 $_3628)
 <span class="ansi38-013099040"
 >!(assertEqualToResult (offset! 2 (sequential ((increment) (increment) (increment) (increment)))) (3 4))
 
@@ -664,7 +813,7 @@ Deterministic: (State  0 $_3622)
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.65 milliseconds) 
+; took 0.004 secs. (3.69 milliseconds) 
 
 !(assertEqualToResult (offset! 2 (sequential ((increment) (increment) (increment) (increment)))) (3 4))
 
@@ -681,7 +830,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.17</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.43 milliseconds) 
+; took 0.002 secs. (2.48 milliseconds) 
 
 !(assertEqualToResult (offset! 2 (limit! 4 (infinite))) (3 4))
 
@@ -698,7 +847,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.LIMIT-TESTS.18</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.24 milliseconds) 
+; took 0.004 secs. (4.31 milliseconds) 
 
 !(assertEqualToResult (limit! 4 (offset! 2 (infinite))) (3 4 5 6))
 
@@ -707,7 +856,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 651,068 inferences, 0.139 CPU in 0.139 seconds (100% CPU, 4697382 Lips)
+% 801,796 inferences, 0.165 CPU in 0.168 seconds (99% CPU, 4849255 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/limit_tests.metta  0)
 <span class="ansi1"
@@ -846,21 +995,21 @@ Deterministic: ()<span class="ansi32"
 [()]
 [()]
 [()]
+[(State  0 $_3634)]
+[()]
+[()]
+[()]
+[()]
+[()]
+[()]
+[(State  0 $_3628)]
+[()]
+[()]
 [(State  0 $_3628)]
 [()]
 [()]
 [()]
-[()]
-[()]
-[()]
-[(State  0 $_3622)]
-[()]
-[()]
-[(State  0 $_3622)]
-[()]
-[()]
-[()]
-[(State  0 $_3622)]
+[(State  0 $_3628)]
 [()]
 [()]
 [()]
@@ -869,7 +1018,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-23 20:20:36+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-24 23:41:35+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
