@@ -21,8 +21,153 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-23 20:22:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
-P;HTML|
+Script started on 2024-10-24 19:33:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+<span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490:
+Warning:    Invalid mode declaration in PlDoc comment: fcTmsMode/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1490: PlDoc: failed to process structured comment:
+%!  fcTmsMode/1 is det.
+%
+%   Controls the Truth Maintenance System (TMS) algorithm by setting its mode. 
+%   The mode can be one of the following:
+%     - `none`: Disables the TMS algorithm.
+%     - `local`: Uses a local version of the TMS.
+%     - `cycles`: Uses a cycle-based TMS algorithm.
+%
+%   @example
+%     % Set the default TMS mode to 'cycles' if it isn't defined.
+%     ?- fcTmsMode(cycles).
+%
+% Ensure the default TMS mode is 'cycles' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505:
+Warning:    Invalid mode declaration in PlDoc comment: pfcSearch/1 is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:1505: PlDoc: failed to process structured comment:
+%!  pfcSearch/1 is det.
+%
+%   Specifies the search strategy used by the PFC (Prolog Forward Chaining) 
+%   system. The strategy can be one of:
+%     - `direct`: Executes search directly without expanding paths.
+%     - `depth`: Uses depth-first search.
+%     - `breadth`: Uses breadth-first search.
+%
+%   @example
+%     % Set the default search strategy to 'direct' if not defined.
+%     ?- pfcSearch(direct).
+%
+% Ensure the default search strategy is 'direct' if not defined.
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRemActionTrace(+pfcAction('A'))is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2294: PlDoc: failed to process structured comment:
+%!  pfcRemActionTrace(+pfcAction(A)) is det.
+%
+%   Removes an action trace by executing the corresponding undo method. If an 
+%   undo method is defined for the action, it is called using the system's 
+%   trigger mechanism.
+%
+%   @arg pfcAction(A)  The action trace to be removed.
+%
+%   @example
+%     % Remove a previously added action trace.
+%     ?- pfcRemActionTrace(pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(fact(_112622),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2336: PlDoc: failed to process structured comment:
+%!  pfcRetractType(fact(_), +X) is det.
+%
+%   Retracts a fact from the database. If the fact has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original fact.
+%
+%   @arg X  The fact to be retracted.
+%
+%   @example
+%     % Retract a fact with or without database context.
+%     ?- pfcRetractType(fact(_), my_fact).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(rule(_120566),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2352: PlDoc: failed to process structured comment:
+%!  pfcRetractType(rule(_), +X) is det.
+%
+%   Retracts a rule from the database. If the rule has been stored with a 
+%   database context, it retracts the modified version; otherwise, it retracts 
+%   the original rule.
+%
+%   @arg X  The rule to be retracted.
+%
+%   @example
+%     % Retract a rule with or without database context.
+%     ?- pfcRetractType(rule(_), my_rule).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(trigger('Pos'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2368: PlDoc: failed to process structured comment:
+%!  pfcRetractType(trigger(Pos), +X) is det.
+%
+%   Retracts a trigger from the database. If the trigger is found, it is 
+%   retracted, and `unFc/1` is called to handle any necessary cleanup. 
+%   If the trigger is not found, a warning is issued.
+%
+%   @arg Pos  The position or type of the trigger (positive, negative).
+%   @arg X    The trigger to be retracted.
+%
+%   @example
+%     % Retract a positive trigger.
+%     ?- pfcRetractType(trigger(positive), my_trigger).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386:
+Warning:    Invalid mode declaration in PlDoc comment: pfcRetractType(action,+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2386: PlDoc: failed to process structured comment:
+%!  pfcRetractType(action, +X) is det.
+%
+%   Retracts an action trace by invoking `pfcRemActionTrace/1`.
+%
+%   @arg X  The action trace to be removed.
+%
+%   @example
+%     % Retract an action trace.
+%     ?- pfcRetractType(action, pfcAction(my_action)).
+%
+
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422:
+Warning:    Invalid mode declaration in PlDoc comment: pfcAddType(fact('Type'),+'X')is det
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_pfc_base.pl:2422: PlDoc: failed to process structured comment:
+%!  pfcAddType(fact(Type), +X) is det.
+%
+%   Adds a fact to the database. If the fact is unique, it is asserted; 
+%   otherwise, it is skipped.
+%
+%   @arg Type  The specific type of the fact.
+%   @arg X     The fact to be added.
+%
+%   @example
+%     % Add a unique fact to the database.
+%     ?- pfcAddType(fact(my_type), my_fact).
+%
+
+</span>P;HTML|
 ;           (set_option_value  compat false)
 
 P;HTML|
@@ -390,7 +535,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 ;;;
 ;;exec([assertEqualToResult,[or,[superpose,[False,True]],[superpose,[False,True]]],[False,True,True,True]])
 <span class="ansi32"
->% 131,968 inferences, 0.032 CPU in 0.034 seconds (94% CPU, 4161749 Lips)
+>% 131,965 inferences, 0.031 CPU in 0.033 seconds (93% CPU, 4302519 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/or_test.metta  0)
 <br/> <a href="#" onclick="window.history.back(); return false;"
@@ -522,7 +667,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-23 20:22:31+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-24 19:33:11+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
