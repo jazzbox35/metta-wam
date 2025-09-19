@@ -331,7 +331,9 @@ allow_repeats_eval_(_):- !.
 allow_repeats_eval_(_):- option_value(no_repeats,false),!.
 allow_repeats_eval_(X):- \+ is_list(X),!,fail.
 allow_repeats_eval_([F|_]):- atom(F),allow_repeats_eval_f(F).
-allow_repeats_eval_f('superpose').
+allow_repeats_eval_([F|_]):- 
+    atom(F), 
+    (is_superpositional(F) ; allow_repeats_eval_f(F)).
 allow_repeats_eval_f('collapse').
 
 as_prolog_x(_,Self,X,XX):- quietly(as_prolog(0,Self,X,XX)), !.
@@ -2220,7 +2222,6 @@ eval_10(Eq,RetType,Depth,Self,['collapse',List],RetVal):- is_list(List),
 eval_10(Eq,RetType,Depth,Self,['collapse',List],Res):-!,
  findall_eval(Eq,RetType,Depth,Self,List,Res).
 
-
 eval_10(Eq,RetType,Depth,Self,['superpose',List],Res):- !,
        member(E,List),
        eval_ret(Eq,RetType,Depth,Self,E,Res).
@@ -2247,11 +2248,13 @@ get_sa_p1(P3,E,Cmpd,SA):-  compound(Cmpd), get_sa_p2(P3,E,Cmpd,SA).
 get_sa_p2(P3,E,Cmpd,call(P3,N1,Cmpd)):- arg(N1,Cmpd,E),nocut.
 get_sa_p2(P3,E,Cmpd,SA):- arg(_,Cmpd,Arg),get_sa_p1(P3,E,Arg,SA).
 
+% Replace hardcoded superpose check with trait check
 eval20_failed(Eq,RetType,Depth,Self, Term, Res):-
-  notrace(( get_sa_p1(setarg,ST,Term,P1), % ST\==Term,
-   compound(ST), ST = [F,List],F=='superpose',nonvar(List), %maplist(atomic,List),
+  notrace(( get_sa_p1(setarg,ST,Term,P1),
+   compound(ST), ST = [F,List],
+   is_superpositional(F),  % CHANGED: was F=='superpose'
+   nonvar(List),
    call(P1,Var))), !,
-   %max_counting(F,20),
    member(Var,List),
    eval_args(Eq,RetType,Depth,Self, Term, Res).
 
@@ -3171,7 +3174,7 @@ eval_20(Eq,RetType,Depth,Self,['concurrent-forall!',Gen,Test|Options],NoResult):
 eval_20(Eq,RetType,Depth,Self,['hyperpose',ArgL],Res):- !,
    metta_hyperpose(Eq,RetType,Depth,Self,ArgL,Res).
 
-         %eval_args(Eq,RetType,Depth,Self,['superpose',ArgL],Res)).
+         %eval_args(Eq,RetType,Depth,Self,['superpose',ArgL],Res).
 
 
 

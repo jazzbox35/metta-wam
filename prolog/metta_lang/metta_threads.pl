@@ -676,30 +676,26 @@ maplist_([X1|Xs1], [X2|Xs2], [X3|Xs3], [X4|Xs4], [X5|Xs5], [X6|Xs6], [X7|Xs7], G
 %   @arg InList The input list.
 %   @arg Res The result.
 %
+%  hyperpose that uses existing concurrent maplist implementation
 metta_hyperpose(Eq, RetType, Depth, MSpace, InList, Res) :-
- \+ option_value(threading,false),!,
- %with_metta_ctx(Eq, RetType, Depth, MSpace, ['hyperpose'|InList], metta_hyperpose_v0(eval, InList, Res)).
-  with_metta_ctx(Eq, RetType, Depth, MSpace, ['hyperpose'|InList], metta_hyperpose_v0(eval_args(Eq, RetType, Depth, MSpace), InList, Res)).
-
-metta_hyperpose(Eq, RetType, Depth, MSpace, InList, Res) :-
-    % This part of the code is currently skipped with fail.
-    % fail,
     \+ option_value(threading,false),
-    % Check if InList has two or more elements.
-    InList = [_,_|_],!,
-    !,  % Cut to ensure threading is used.
-    % Setup concurrent processing with cleanup.
-    setup_call_cleanup(
-             % Assert results after concurrent computation.
-             concurrent_assert_result(eval_args(Eq, RetType, Depth, MSpace), InList, Tag),
-             % Gather each result in order.
-             each_result_in_order(Tag, InList, Res),
-             % Cleanup the results after processing.
-             cleanup_results(Tag)).
+    InList = [_,_|_],  % At least 2 elements
+    !,
+    % Use existing metta_concurrent_maplist
+    metta_concurrent_maplist(
+        eval_hyperpose_element(Eq,RetType,Depth,MSpace), 
+        InList, 
+        Results
+    ),
+    member(Res, Results).
 
-metta_hyperpose(Eq, RetType, Depth, MSpace, ArgL, Res) :-
-    % Evaluate the equation using single-threaded approach.
-    eval_args(Eq, RetType, Depth, MSpace, ['superpose', ArgL], Res).
+% Fallback to superpose behavior
+metta_hyperpose(Eq, RetType, Depth, MSpace, InList, Res) :-
+    eval_args(Eq, RetType, Depth, MSpace, ['superpose', InList], Res).
+
+% Helper for concurrent evaluation
+eval_hyperpose_element(Eq,RetType,Depth,MSpace, Element, Result) :-
+    eval_args(Eq, RetType, Depth, MSpace, Element, Result).
 
 %!  concurrent_assert_result(:P2, +InList, -Tag) is det.
 %

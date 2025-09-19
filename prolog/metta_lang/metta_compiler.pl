@@ -2161,7 +2161,10 @@ compile_this_f(F):- buffer_src_isa(F, 'Compiled').
 compile_this_f(F):- interpet_this_f(F), !, fail.
 compile_this_f(F):- compile_this_s(F), !.
 compile_this_f(F):- buffer_src([':', F, [Ar|_]]), Ar=='->', !.
-compile_this_s('superpose').
+% OLD: compile_this_s('superpose').
+% NEW: Use trait-based checking
+compile_this_s(F) :- 
+    is_superpositional(F).
 compile_this_s('match').
 compile_this_s('do').
 compile_this_s('do-all').

@@ -892,6 +892,38 @@ mc('limit',N,S,R) :- integer(N),N>=0,limit(N,as_p1_exec(S,R)).
 transpiler_predicate_store(builtin, 'limit!', [2], '@doc', '@doc', [x(doeval,eager,[number]),x(doeval,lazy,[])], x(doeval,eager,[])).
 mc('limit!',N,S,R) :- integer(N),N>=0,limit(N,as_p1_exec(S,R)).
 
+% SUPERPOSITIONAL TRAIT SYSTEM
+% Define functions that implement superpositional behavior
+
+superpositional_function('superpose').
+superpositional_function('hyperpose').
+% add others too when needed
+
+% Trait checker predicate
+is_superpositional(FuncName) :-
+    superpositional_function(FuncName).
+
+% Register hyperpose with transpiler
+transpiler_predicate_store(builtin, hyperpose, [1], '@doc', '@doc', 
+                          [x(doeval,eager,[])], x(noeval,eager,[])).
+
+% Implement mc predicate for hyperpose with concurrent_maplist
+mc('hyperpose',S,R) :- 
+    is_list(S), 
+    length(S, Len),
+    (   Len >= 2,
+        \+ option_value(threading,false)
+    ->  concurrent_maplist(eval_superpositional_element, S, Results),
+        member(R, Results)
+    ;   % Fallback to regular superpose behavior
+        member(E, S), 
+        as_p1_exec(E, R)
+    ).
+
+% Helper predicate for concurrent evaluation
+eval_superpositional_element(Element, Result) :-
+    as_p1_exec(Element, Result).
+
 %%%%%%%%%%%%%%%%%%%%% superpose, collapse
 
 transpiler_predicate_store(builtin, superpose, [1], '@doc', '@doc', [x(doeval,eager,[])], x(noeval,eager,[])).
