@@ -16,6 +16,7 @@ total_moves = 0
 game_over = False
 while game_over == False:
     p("g.")
+    game_over = bool(p("guimessage(checkmate, _, _)"))
     total_moves = total_moves + 1
     print("Total Moves>" + str(total_moves))
     time.sleep(2)
@@ -27,9 +28,7 @@ while game_over == False:
         Move = bool(p(command))
         if Move:
             print("Random move " + command)
-    total_moves = total_moves + 1
+            total_moves = total_moves + 1
     print("Total Moves>" + str(total_moves))
     time.sleep(2)
-    #game_over = prolog.query("guimessage(checkmate, _, _).")
-    game_over = bool(p("guimessage(checkmate, _, _)"))
-#print("Total Moves>" + str(total_moves))
+print("Grand Total Moves>" + str(total_moves))
