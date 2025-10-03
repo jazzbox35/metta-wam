@@ -19,7 +19,7 @@ while game_over == False:
     game_over = bool(p("guimessage(checkmate, _, _)"))
     total_moves = total_moves + 1
     print("Total Moves>" + str(total_moves))
-    time.sleep(2)
+    #time.sleep(2)
     Move = False
     while Move == False and game_over == False:
         x = random.randint(1, 8)
@@ -30,5 +30,5 @@ while game_over == False:
             print("Random move " + command)
             total_moves = total_moves + 1
     print("Total Moves>" + str(total_moves))
-    time.sleep(2)
+    #time.sleep(2)
 print("Grand Total Moves>" + str(total_moves))
