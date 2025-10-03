@@ -3,6 +3,7 @@
 
 from pyswip import Prolog
 import random
+import time
 plfile = "examples/games/GreedyChessOriginalProlog.pl"
 prolog = Prolog()
 print(prolog.consult(plfile))
@@ -16,15 +17,19 @@ game_over = False
 while game_over == False:
     p("g.")
     total_moves = total_moves + 1
+    print("Total Moves>" + str(total_moves))
+    time.sleep(2)
     Move = False
     while Move == False and game_over == False:
         x = random.randint(1, 8)
-        y = random.randint(1,3)
+        y = random.randint(1,8)
         command = "m(" + str(x) + "," + str(y) + "," + str(random.randint(1, 8)) + "," + str(random.randint(1,8)) + ")."
         Move = bool(p(command))
         if Move:
             print("Random move " + command)
-            total_moves = total_moves + 1
+    total_moves = total_moves + 1
+    print("Total Moves>" + str(total_moves))
+    time.sleep(2)
     #game_over = prolog.query("guimessage(checkmate, _, _).")
     game_over = bool(p("guimessage(checkmate, _, _)"))
-print("Total Moves>" + str(total_moves))
+#print("Total Moves>" + str(total_moves))
