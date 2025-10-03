@@ -263,6 +263,8 @@ m(A, B, C, D) :-
     return_entire_box(F, H, E),  % Retrieve the source box details.
     return_entire_box(G, I, E),  % Retrieve the destination box details.
     (len(I, 2); not(samecolor(H, I))), % Ensure the destination is valid (empty or opponent's piece).
+    len(H, 4),
+    nth1(3, H, s),
     !,
     clear_route(H, I, E),        % Validate the path for the piece.
     move_piece(H, I, E, J),      % Make the move and update the board state.
